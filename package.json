@@ -1,0 +1,13 @@
+{
+  "devDependencies": {
+    "cypress": "^13.3.2",
+    "cypress-mochawesome-reporter": "^3.6.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "_comment": "Not sure that clean-reports below will work on Windows",
+    "clean-reports": "rm -R -f cypress/reports && mkdir cypress/reports",
+    "sauce-demo": "npm run clean-reports && npx cypress run --browser chrome --spec ./cypress/e2e/sauce-demo-site/*.cy.js",
+    "ready-to-test": "npm run clean-reports && npx cypress run --browser chrome --spec ./cypress/e2e/ready-to-test-github-page/*.cy.js"
+  }
+}

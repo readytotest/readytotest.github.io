@@ -1,0 +1,44 @@
+body {background-color: black;
+    font-family: tahoma;
+    font-size: 15pt;
+    color: snow;}
+    
+    h1 {
+        color:  snow;
+      }
+      
+      h2 {
+        color:  snow;
+      }
+      
+      a:link {
+        text-decoration: none;
+      }
+      
+      a:visited {
+        text-decoration: none;
+      }
+      
+      a:hover {
+        text-decoration: underline;
+      }
+      
+      a:active {
+        text-decoration: underline;
+      }
+      
+      a:link {
+        color: hotpink;
+      }
+      
+      a:visited {
+        color: hotpink;
+      }
+      
+      a:hover {
+        color: hotpink;
+      }
+      
+      a:active {
+        color: hotpink;
+      }
