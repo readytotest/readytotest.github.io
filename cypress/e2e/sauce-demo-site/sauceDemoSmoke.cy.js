@@ -10,7 +10,11 @@ describe('Sauce Demo Smoke Test', () => {
     beforeEach(() => {
 
         cy.visit(Cypress.env('sauceDemoUrl'));
-        cy.log('Visit Sauce Demo site');
+        sauceDemoLoginPage.enterUsername(sauceDemoTestData.loginCredentials.usernameValid);
+        sauceDemoLoginPage.enterPassword(sauceDemoTestData.loginCredentials.passwordValid);
+        sauceDemoLoginPage.clickLoginButton();      
+        sauceDemoProductsPage.confirmOnProductPage();
+        cy.log('login successful!')
       
       });
 
@@ -23,13 +27,8 @@ describe('Sauce Demo Smoke Test', () => {
       
     });
         
-it('Log in, add/delete items, complete check out', () => {
-  sauceDemoLoginPage.enterUsername(sauceDemoTestData.loginCredentials.usernameValid);
-  sauceDemoLoginPage.enterPassword(sauceDemoTestData.loginCredentials.passwordValid);
-  sauceDemoLoginPage.clickLoginButton();      
-  sauceDemoProductsPage.confirmOnProductPage();
-  cy.log('login successful!')
-
+it('Add/delete items, complete check out', () => {
+ 
   sauceDemoProductsPage.addBackpackToCart();
   sauceDemoProductsPage.removeBackpackFromCart();
   sauceDemoProductsPage.addBikeLightToCart();
