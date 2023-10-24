@@ -14,7 +14,7 @@ describe('Sauce Demo Smoke Test', () => {
         sauceDemoLoginPage.enterPassword(sauceDemoTestData.loginCredentials.passwordValid);
         sauceDemoLoginPage.clickLoginButton();      
         sauceDemoProductsPage.confirmOnProductPage();
-        cy.log('login successful!')
+        cy.log('Login successful!')
       
       });
 
@@ -23,7 +23,7 @@ describe('Sauce Demo Smoke Test', () => {
       sauceDemoHamburgerMenu.openHamburgerMenu();
       sauceDemoHamburgerMenu.clickLogoutButton();
       sauceDemoLoginPage.confirmLoginButtonExists();
-      cy.log('Logout Sauce Demo site');
+      cy.log('Logout successful!');
       
     });
         

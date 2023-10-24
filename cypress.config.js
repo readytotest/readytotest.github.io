@@ -14,6 +14,7 @@ module.exports = defineConfig({
   
   env: {
     sauceDemoUrl: 'https://www.saucedemo.com',
+    orangeDemoUrl: 'https://opensource-demo.orangehrmlive.com'
   },
 
   e2e: {

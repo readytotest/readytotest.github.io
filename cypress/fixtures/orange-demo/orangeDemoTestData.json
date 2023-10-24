@@ -1,0 +1,26 @@
+{  
+    "loginCredentials": {
+    "usernameValid": "Admin",
+    "passwordValid": "admin123"
+    },
+
+    "myInfo": {
+      "workEmail": "name@notarealemailaddress1234343d-adfadfafasdf.org",
+      "passwordValid": "admin123"
+      },
+
+    "_comment": {
+      "note": "this is a placeholder for comments"
+    },
+    
+    "_dataPlaceholder": {
+      "dataPlaceholder": "justAPlaceholder",
+      "dataPlaceholder2": "justAPlaceholder",
+      "dataPlaceholder3": "justAPlaceholder"
+    },
+    
+    "_defaultPlaceholder": "justAPlaceholder",
+    "_defaultPlaceholder2": "justAPlaceholder",
+    "_defaultPlaceholder3": "justAPlaceholder"
+    
+    }

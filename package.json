@@ -9,5 +9,8 @@
     "clean-reports": "rm -R -f cypress/reports && mkdir cypress/reports",
     "sauce-demo": "npm run clean-reports && npx cypress run --browser chrome --spec ./cypress/tests/sauce-demo-site/*.cy.js",
     "ready-to-test": "npm run clean-reports && npx cypress run --browser chrome --spec ./cypress/tests/ready-to-test-github-page/*.cy.js"
+  },
+  "dependencies": {
+    "cypress-real-events": "^1.10.3"
   }
 }
