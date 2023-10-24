@@ -7,7 +7,7 @@ import orangeDemoMyInfoPage from '../../pages/orange-demo-pom/orangeDemoMyInfoPa
 
 const numRandom = () => Math.floor((Math.random() + 1) * 9999);
 const insertNum = numRandom();
-const randomEmailGenerator = `user@testemail-${insertNum}.org`;
+const randomEmailGenerator = `user@fake-email-${insertNum}.org`;
 
 describe('Orange Demo Smoke Test', () => {
 
