@@ -11,9 +11,9 @@ import orangeDemoBuzzPage from '../../pages/orange-demo-pom/orangeDemoBuzzPage';
 like https://fakerjs.dev/ when I get time */
 const numRandom = () => Math.floor((Math.random() + 1) * 9999);
 const insertNum = numRandom();
-const randomEmailGenerator = `user@fake-email-${insertNum}.org`;
-const randomFirstNameGenerator = `firstname${insertNum}`;
-const randomLastNameGenerator = `lastname${insertNum}`;
+const randomEmailGenerator = `john.smith${insertNum}@fake-email-${insertNum}.org`;
+const randomFirstNameGenerator = `John${insertNum}`;
+const randomLastNameGenerator = `Smith${insertNum}`;
 
 
 describe('Orange Demo Smoke Test', () => {
