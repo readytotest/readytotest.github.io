@@ -1,3 +1,5 @@
+import orangeDemoTestData from '../../fixtures/orange-demo/orangeDemoTestData.json';
+
 class orangeDemoBuzzPage{
 
     elements = {
@@ -6,8 +8,8 @@ class orangeDemoBuzzPage{
        
     }
 
-    typeBuzzMessage(inputBuzzMessage) {
-        this.elements.buzzMessageField().type(inputBuzzMessage);
+    typeBuzzMessage() {
+        this.elements.buzzMessageField().type(orangeDemoTestData.formData.buzzMessageText);
     }
 
     postBuzzMessage() {

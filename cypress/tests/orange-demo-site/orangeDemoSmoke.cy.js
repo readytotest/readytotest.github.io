@@ -6,16 +6,6 @@ import orangeDemoVerticalMenu from '../../pages/orange-demo-pom/orangeDemoVertic
 import orangeDemoMyInfoPage from '../../pages/orange-demo-pom/orangeDemoMyInfoPage';
 import orangeDemoBuzzPage from '../../pages/orange-demo-pom/orangeDemoBuzzPage';
 
-
-/* Need to look into another alternative for random data
-like https://fakerjs.dev/ when I get time */
-const numRandom = () => Math.floor((Math.random() + 1) * 9999);
-const insertNum = numRandom();
-const randomEmailGenerator = `john.smith${insertNum}@fake-email-${insertNum}.org`;
-const randomFirstNameGenerator = `John${insertNum}`;
-const randomLastNameGenerator = `Smith${insertNum}`;
-
-
 describe('Orange Demo Smoke Test', () => {
 
     beforeEach(() => {
@@ -49,11 +39,17 @@ describe('Orange Demo Smoke Test', () => {
         orangeDemoMyInfoPage.clickPersonalDetailsLink();
         orangeDemoMyInfoPage.clearFirstNameField();
         orangeDemoMyInfoPage.checkIfFirstNameFieldEmpty();
-        orangeDemoMyInfoPage.typeFirstName(randomFirstNameGenerator);
+        orangeDemoMyInfoPage.typeFirstName();
         orangeDemoMyInfoPage.checkIfFirstNameFieldNotEmpty();
+
+        orangeDemoMyInfoPage.clearMiddleNameField();
+        orangeDemoMyInfoPage.checkIfMiddleNameFieldEmpty();
+        orangeDemoMyInfoPage.typeMiddleName();
+        orangeDemoMyInfoPage.checkIfMiddleNameFieldNotEmpty();
+
         orangeDemoMyInfoPage.clearLastNameField();
         orangeDemoMyInfoPage.checkIfLastNameFieldEmpty();
-        orangeDemoMyInfoPage.typeLastName(randomLastNameGenerator);
+        orangeDemoMyInfoPage.typeLastName();
         orangeDemoMyInfoPage.checkIfLastNameFieldNotEmpty();
         orangeDemoMyInfoPage.clickFirstMyInfoSaveButton();
         //This wait is required or save won't occur
@@ -63,7 +59,7 @@ describe('Orange Demo Smoke Test', () => {
         orangeDemoMyInfoPage.clickContactDetailsLink();
         orangeDemoMyInfoPage.clearWorkEmailField();
         orangeDemoMyInfoPage.checkIfWorkEmailFieldEmpty();
-        orangeDemoMyInfoPage.typeWorkEmail(randomEmailGenerator);
+        orangeDemoMyInfoPage.typeWorkEmail();
         orangeDemoMyInfoPage.checkIfWorkEmailFieldNotEmpty();
         orangeDemoMyInfoPage.clickFirstMyInfoSaveButton();
         //This wait is required or save won't occur
@@ -75,7 +71,7 @@ describe('Orange Demo Smoke Test', () => {
     it('Buzz: add post. Dashboard: check if buzz post appears and confirm headings on page', () => {
         
         orangeDemoVerticalMenu.clickBuzzLink();
-        orangeDemoBuzzPage.typeBuzzMessage(orangeDemoTestData.formData.buzzMessageText);
+        orangeDemoBuzzPage.typeBuzzMessage();
         orangeDemoBuzzPage.postBuzzMessage();
         orangeDemoVerticalMenu.clickDashboardLink();
         orangeDemoDashboardPage.confirmDashboardBuzzFeed();

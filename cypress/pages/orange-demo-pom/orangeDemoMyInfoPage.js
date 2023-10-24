@@ -1,9 +1,19 @@
+/* Need to look into another alternative for random data
+like https://fakerjs.dev/ when I get time */
+const numRandom = () => Math.floor((Math.random() + 1) * 9999);
+const insertNum = numRandom();
+const randomEmailGenerator = `john.smith${insertNum}@fake-email-${insertNum}.org`;
+const randomFirstNameGenerator = `John${insertNum}`;
+const randomMiddleNameGenerator = `Jacob${insertNum}`;
+const randomLastNameGenerator = `Smith${insertNum}`;
+
 class orangeDemoMyInfoPage{
 
     elements = {
         personalDetailsLink:() => cy.contains('.orangehrm-tabs-item', 'Personal Details'),
         contactDetailsLink:() => cy.contains('.orangehrm-tabs-item', 'Contact Details'),
         firstNameField:() => cy.get('input[name="firstName"]'),
+        middleNameField:() => cy.get('input[name="middleName"]'),
         lastNameField:() => cy.get('input[name="lastName"]'),
         //Don't like using nth child from the Cypress selector tool, but couldn't get anything else to work
         workEmailField:() => cy.get(':nth-child(9) > .oxd-grid-3 > :nth-child(1) > .oxd-input-group > :nth-child(2) > .oxd-input'),
@@ -28,6 +38,10 @@ class orangeDemoMyInfoPage{
         this.elements.firstNameField().clear();
     }
 
+    clearMiddleNameField(){
+        this.elements.middleNameField().clear();
+    }
+
     clearLastNameField(){
         this.elements.lastNameField().clear();
     }
@@ -38,6 +52,10 @@ class orangeDemoMyInfoPage{
 
     checkIfFirstNameFieldEmpty(){
         this.elements.firstNameField().invoke('val').should('be.empty');
+    } 
+
+    checkIfMiddleNameFieldEmpty(){
+        this.elements.middleNameField().invoke('val').should('be.empty');
     } 
 
     checkIfLastNameFieldEmpty(){
@@ -52,20 +70,28 @@ class orangeDemoMyInfoPage{
         this.elements.firstNameField().invoke('val').should('not.be.empty');
     } 
 
+    checkIfMiddleNameFieldNotEmpty(){
+        this.elements.middleNameField().invoke('val').should('not.be.empty');
+    } 
+
     checkIfLastNameFieldNotEmpty(){
         this.elements.lastNameField().invoke('val').should('not.be.empty');
     } 
 
-    typeWorkEmail(inputWorkEmail){
-        this.elements.workEmailField().type(inputWorkEmail);
+    typeWorkEmail(){
+        this.elements.workEmailField().type(randomEmailGenerator);
     }
 
-    typeFirstName(inputFirstName){
-        this.elements.firstNameField().type(inputFirstName);
+    typeFirstName(){
+        this.elements.firstNameField().type(randomFirstNameGenerator);
     }
 
-    typeLastName(inputLastName){
-        this.elements.lastNameField().type(inputLastName);
+    typeMiddleName(){
+        this.elements.middleNameField().type(randomMiddleNameGenerator);
+    }
+
+    typeLastName(){
+        this.elements.lastNameField().type(randomLastNameGenerator);
     }
 
     clickFirstMyInfoSaveButton(){
