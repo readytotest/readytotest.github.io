@@ -15,8 +15,8 @@ class orangeDemoMyInfoPage{
         firstNameField:() => cy.get('input[name="firstName"]'),
         middleNameField:() => cy.get('input[name="middleName"]'),
         lastNameField:() => cy.get('input[name="lastName"]'),
-        //Don't like using nth child from the Cypress selector tool, but couldn't get anything else to work
-        workEmailField:() => cy.get(':nth-child(9) > .oxd-grid-3 > :nth-child(1) > .oxd-input-group > :nth-child(2) > .oxd-input'),
+        //Don't like using eq index, but there aren't any unique attributes available
+        workEmailField:() => cy.get('.oxd-input').eq(9),
         myInfoSaveButton:() => cy.get('button[type="submit"]'),
         toastMessage:() =>  cy.get('#oxd-toaster_1')
 
