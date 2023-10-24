@@ -42,7 +42,7 @@ describe('Orange Demo Smoke Test', () => {
       
     });
 
-    it('My Info: Edit Name and Work Email', () => {
+    it('My Info: edit name and work email', () => {
      
         orangeDemoVerticalMenu.clickMyInfoLink();
         
@@ -72,7 +72,7 @@ describe('Orange Demo Smoke Test', () => {
                  
         })
 
-    it('Buzz: add post. Dashboard: check if post Appears and confirm headings on page', () => {
+    it('Buzz: add post. Dashboard: check if buzz post appears and confirm headings on page', () => {
         
         orangeDemoVerticalMenu.clickBuzzLink();
         orangeDemoBuzzPage.typeBuzzMessage(orangeDemoTestData.formData.buzzMessageText);
