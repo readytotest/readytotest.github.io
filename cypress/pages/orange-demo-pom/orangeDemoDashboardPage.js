@@ -4,6 +4,7 @@ class orangeDemoDashboardPage{
         dashboardHeader:() => cy.contains('.oxd-topbar-header-breadcrumb', 'Dashboard'),
         dashboardTimeAtWork:() => cy.contains('.oxd-text.oxd-text--p', 'Time at Work'),
         dashboardMyActions:() => cy.contains('.oxd-text.oxd-text--p', 'My Actions'),
+        dashboardBuzzFeed:() => cy.get('.oxd-text.oxd-text--p.orangehrm-buzz-widget-body')
                
     }
 
@@ -17,6 +18,10 @@ class orangeDemoDashboardPage{
 
     confirmDashboardMyActions() {
         this.elements.dashboardMyActions().should('be.visible');
+    }
+
+    confirmDashboardBuzzFeed() {
+        this.elements.dashboardBuzzFeed().first().should('include.text', 'buzz-post-test-text')
     }
 
 }

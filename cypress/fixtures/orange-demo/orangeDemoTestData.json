@@ -4,8 +4,8 @@
     "passwordValid": "admin123"
     },
 
-    "_comment": {
-      "note": "this is a placeholder for comments"
+    "formData": {
+      "buzzMessageText": "buzz-post-test-text"
     },
     
     "_dataPlaceholder": {

@@ -2,16 +2,16 @@ class orangeDemoProfileMenu{
 
     elements = {
         profileMenu: () => cy.get('p[class="oxd-userdropdown-name"]'),
-        profileMenuLogout: () => cy.get('[href="/web/index.php/auth/logout"]') 
+        profileMenuLogout: () => cy.contains('.oxd-userdropdown-link', 'Logout') 
        
     }
 
     openProfileMenu(){
-        this.elements.profileMenu().click();
+        this.elements.profileMenu().realClick();
     }
 
     clickLogoutMenu(){
-        this.elements.profileMenuLogout().click();
+        this.elements.profileMenuLogout().realClick();
     }
 
 }
