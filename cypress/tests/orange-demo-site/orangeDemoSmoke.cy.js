@@ -1,5 +1,5 @@
 import orangeDemoLoginPage from '../../pages/orange-demo-pom/orangeDemoLoginPage';
-import orangeDemoDashboardPage, { confirmDashboardMyActions, confirmDashboardTimeAtWork } from '../../pages/orange-demo-pom/orangeDemoDashboardPage';
+import orangeDemoDashboardPage from '../../pages/orange-demo-pom/orangeDemoDashboardPage';
 import orangeDemoTestData from '../../fixtures/orange-demo/orangeDemoTestData.json';
 import orangeDemoProfileMenu from '../../pages/orange-demo-pom/orangeDemoProfileMenu';
 import orangeDemoVerticalMenu from '../../pages/orange-demo-pom/orangeDemoVerticalMenu';
