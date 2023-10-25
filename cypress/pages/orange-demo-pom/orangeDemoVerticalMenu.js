@@ -4,6 +4,7 @@ class orangeDemoVerticalMenu{
         dashboardLink:() => cy.contains('.oxd-main-menu-item', 'Dashboard'),
         myInfoLink:() => cy.contains('.oxd-main-menu-item', 'My Info'),
         buzzLink: () => cy.contains('.oxd-main-menu-item', 'Buzz'),
+        recruitmentLink: () => cy.contains('.oxd-main-menu-item', 'Recruitment'),
 
     }
 
@@ -17,6 +18,10 @@ class orangeDemoVerticalMenu{
 
     clickBuzzLink(){
         this.elements.buzzLink().click();
+    }
+
+    clickRecruitmentLink(){
+        this.elements.recruitmentLink().click();
     }
 }
 

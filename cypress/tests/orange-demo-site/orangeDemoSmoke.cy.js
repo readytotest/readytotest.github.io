@@ -5,6 +5,8 @@ import orangeDemoProfileMenu from '../../pages/orange-demo-pom/orangeDemoProfile
 import orangeDemoVerticalMenu from '../../pages/orange-demo-pom/orangeDemoVerticalMenu';
 import orangeDemoMyInfoPage from '../../pages/orange-demo-pom/orangeDemoMyInfoPage';
 import orangeDemoBuzzPage from '../../pages/orange-demo-pom/orangeDemoBuzzPage';
+import orangeDemoRecruitmentPage from '../../pages/orange-demo-pom/orangeDemoRecruitmentPage';
+import { realClick } from 'cypress-real-events/commands/realClick';
 
 describe('Orange Demo Smoke Test', () => {
 
@@ -32,52 +34,81 @@ describe('Orange Demo Smoke Test', () => {
       
     });
 
-    it('My Info: edit name and work email', () => {
-     
-        orangeDemoVerticalMenu.clickMyInfoLink();
+        it('My Info: edit name and work email', () => {
         
-        orangeDemoMyInfoPage.clickPersonalDetailsLink();
-        orangeDemoMyInfoPage.clearFirstNameField();
-        orangeDemoMyInfoPage.checkIfFirstNameFieldEmpty();
-        orangeDemoMyInfoPage.typeFirstName();
-        orangeDemoMyInfoPage.checkIfFirstNameFieldNotEmpty();
+            orangeDemoVerticalMenu.clickMyInfoLink();
+            
+            orangeDemoMyInfoPage.clickPersonalDetailsLink();
+            orangeDemoMyInfoPage.clearFirstNameField();
+            orangeDemoMyInfoPage.checkIfFirstNameFieldEmpty();
+            orangeDemoMyInfoPage.typeFirstName();
+            orangeDemoMyInfoPage.checkIfFirstNameFieldNotEmpty();
 
-        orangeDemoMyInfoPage.clearMiddleNameField();
-        orangeDemoMyInfoPage.checkIfMiddleNameFieldEmpty();
-        orangeDemoMyInfoPage.typeMiddleName();
-        orangeDemoMyInfoPage.checkIfMiddleNameFieldNotEmpty();
+            orangeDemoMyInfoPage.clearMiddleNameField();
+            orangeDemoMyInfoPage.checkIfMiddleNameFieldEmpty();
+            orangeDemoMyInfoPage.typeMiddleName();
+            orangeDemoMyInfoPage.checkIfMiddleNameFieldNotEmpty();
 
-        orangeDemoMyInfoPage.clearLastNameField();
-        orangeDemoMyInfoPage.checkIfLastNameFieldEmpty();
-        orangeDemoMyInfoPage.typeLastName();
-        orangeDemoMyInfoPage.checkIfLastNameFieldNotEmpty();
-        orangeDemoMyInfoPage.clickFirstMyInfoSaveButton();
-        //This wait is required or save won't occur
-        cy.wait(1000);
-        orangeDemoMyInfoPage.confirmSaveSuccessful();
+            orangeDemoMyInfoPage.clearLastNameField();
+            orangeDemoMyInfoPage.checkIfLastNameFieldEmpty();
+            orangeDemoMyInfoPage.typeLastName();
+            orangeDemoMyInfoPage.checkIfLastNameFieldNotEmpty();
+            orangeDemoMyInfoPage.clickFirstMyInfoSaveButton();
+            //This wait is required or save won't occur
+            cy.wait(1000);
+            orangeDemoMyInfoPage.confirmMyInfoSaveSuccessful();
 
-        orangeDemoMyInfoPage.clickContactDetailsLink();
-        orangeDemoMyInfoPage.clearWorkEmailField();
-        orangeDemoMyInfoPage.checkIfWorkEmailFieldEmpty();
-        orangeDemoMyInfoPage.typeWorkEmail();
-        orangeDemoMyInfoPage.checkIfWorkEmailFieldNotEmpty();
-        orangeDemoMyInfoPage.clickFirstMyInfoSaveButton();
-        //This wait is required or save won't occur
-        cy.wait(1000);
-        orangeDemoMyInfoPage.confirmSaveSuccessful();
+            orangeDemoMyInfoPage.clickContactDetailsLink();
+            orangeDemoMyInfoPage.clearWorkEmailField();
+            orangeDemoMyInfoPage.checkIfWorkEmailFieldEmpty();
+            orangeDemoMyInfoPage.typeWorkEmail();
+            orangeDemoMyInfoPage.checkIfWorkEmailFieldNotEmpty();
+            orangeDemoMyInfoPage.clickFirstMyInfoSaveButton();
+            //This wait is required or save won't occur
+            cy.wait(1000);
+            orangeDemoMyInfoPage.confirmMyInfoSaveSuccessful();
                  
         })
 
-    it('Buzz: add post. Dashboard: check if buzz post appears and confirm headings on page', () => {
+        it('Buzz: add post. Dashboard: check if buzz post appears and confirm headings on page', () => {
         
-        orangeDemoVerticalMenu.clickBuzzLink();
-        orangeDemoBuzzPage.typeBuzzMessage();
-        orangeDemoBuzzPage.postBuzzMessage();
-        orangeDemoVerticalMenu.clickDashboardLink();
-        orangeDemoDashboardPage.confirmDashboardBuzzFeed();
-        orangeDemoDashboardPage.confirmDashboardTimeAtWork();
-        orangeDemoDashboardPage.confirmDashboardMyActions();
-                  
+            orangeDemoVerticalMenu.clickBuzzLink();
+            orangeDemoBuzzPage.typeBuzzMessage();
+            orangeDemoBuzzPage.postBuzzMessage();
+            orangeDemoVerticalMenu.clickDashboardLink();
+            orangeDemoDashboardPage.confirmDashboardBuzzFeed();
+            orangeDemoDashboardPage.confirmDashboardTimeAtWork();
+            orangeDemoDashboardPage.confirmDashboardMyActions();
+                    
         })
+
+        it('Recruitment: add candidate and upload resume', () => {
+        
+            orangeDemoVerticalMenu.clickRecruitmentLink();
+            //Deleting all candidate records, so the candidate we add is the first/only record
+            orangeDemoRecruitmentPage.clickSelectAllCandidatesRecordsCheckbox();
+            orangeDemoRecruitmentPage.clickDeleteSelectedCandidatesRecordsButton();
+            orangeDemoRecruitmentPage.confirmDeleteSelectedCandidatesRecordsModal();
+            orangeDemoRecruitmentPage.clickAddCandidateButton();
+            orangeDemoRecruitmentPage.typeCandidateFirstName();
+            orangeDemoRecruitmentPage.typeCandidateMiddleName();
+            orangeDemoRecruitmentPage.typeCandidateLastName();
+            orangeDemoRecruitmentPage.typeCandidateEmail();
+            orangeDemoRecruitmentPage.openCandidateVacancyMenu();
+            orangeDemoRecruitmentPage.selectSeniorQaLeadFromCandidateVacancyMenu();
+            orangeDemoRecruitmentPage.uploadResume()
+            //Intermittently doesn't upload the file. Add wait to see if it helps.
+            cy.wait(5000);
+            orangeDemoRecruitmentPage.clickCandidateSaveButton();
+            orangeDemoRecruitmentPage.confirmCandidateSaveSuccessful();
+            orangeDemoRecruitmentPage.clickCandidatesHeaderButton();
+            orangeDemoRecruitmentPage.confirmCandidateWasAdded();
+            orangeDemoRecruitmentPage.viewProfileOfFirstPersonListedInCandidateRecords();
+            orangeDemoRecruitmentPage.confirmCandidateProfile();
+            orangeDemoRecruitmentPage.confirmResumeWasUploaded();
+            orangeDemoRecruitmentPage.downloadResume();
+            orangeDemoRecruitmentPage.confirmResumeWasDownloaded();
+            })
+            
         
       });
