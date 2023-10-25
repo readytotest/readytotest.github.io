@@ -11,7 +11,7 @@ module.exports = defineConfig({
   viewportHeight: 1080,
   viewportWidth: 1920,
   chromeWebSecurity: false, //need this to test the sauce demo site with the GUI, otherwise the page won't load completely
-  "downloadsFolder": "cypress/downloads",
+  video: true,
   
   env: {
     sauceDemoUrl: 'https://www.saucedemo.com',
