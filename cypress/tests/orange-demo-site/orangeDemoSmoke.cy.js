@@ -106,7 +106,6 @@ describe('Orange Demo Smoke Test', () => {
             orangeDemoClaimPage.selectUnitedStatesDollarFromCurrencyMenu();
             orangeDemoClaimPage.typeCommentInRemarksSection();
             orangeDemoClaimPage.clickCreateClaimButton();
-            orangeDemoClaimPage.confirmSubmitClaimSuccessToast();
             orangeDemoClaimPage.clickAddExpenseButton();
             orangeDemoClaimPage.clickExpenseTypeModalMenu();
             orangeDemoClaimPage.selectFuelAllowanceFromexpenseTypeModalMenu();
@@ -115,6 +114,7 @@ describe('Orange Demo Smoke Test', () => {
             orangeDemoClaimPage.addNoteToExpense();
             orangeDemoClaimPage.clickExpenseModalSaveButton();
             orangeDemoClaimPage.clickSubmitClaimButton();
+            orangeDemoClaimPage.confirmSubmitClaimSuccessToast();
         
             })    
             

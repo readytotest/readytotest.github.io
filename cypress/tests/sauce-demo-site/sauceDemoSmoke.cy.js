@@ -17,15 +17,6 @@ describe('Sauce Demo Smoke Test', () => {
         cy.log('Login successful!')
       
       });
-
-    afterEach(() => {
-
-      sauceDemoHamburgerMenu.openHamburgerMenu();
-      sauceDemoHamburgerMenu.clickLogoutButton();
-      sauceDemoLoginPage.confirmLoginButtonExists();
-      cy.log('Logout successful!');
-      
-    });
         
 it('Add/delete items, complete check out', () => {
  
