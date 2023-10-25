@@ -85,7 +85,6 @@ describe('Orange Demo Smoke Test', () => {
         it('Recruitment: add candidate and upload resume', () => {
         
             orangeDemoVerticalMenu.clickRecruitmentLink();
-            //Deleting all candidate records, so the candidate we add is the first/only record
             orangeDemoRecruitmentPage.clickSelectAllCandidatesRecordsCheckbox();
             orangeDemoRecruitmentPage.clickDeleteSelectedCandidatesRecordsButton();
             orangeDemoRecruitmentPage.confirmDeleteSelectedCandidatesRecordsModal();
@@ -97,7 +96,7 @@ describe('Orange Demo Smoke Test', () => {
             orangeDemoRecruitmentPage.openCandidateVacancyMenu();
             orangeDemoRecruitmentPage.selectSeniorQaLeadFromCandidateVacancyMenu();
             orangeDemoRecruitmentPage.uploadResume()
-            //Intermittently doesn't upload the file. Add wait to see if it helps.
+            //Intermittently doesn't upload the file. The wait seems to make it happen less frequently.
             cy.wait(5000);
             orangeDemoRecruitmentPage.clickCandidateSaveButton();
             orangeDemoRecruitmentPage.confirmCandidateSaveSuccessful();
