@@ -14,6 +14,7 @@
 - Run Cypress from terminal (Not GUI) to output reports
 
 + npm run clean-reports-and-downloads //removes reports and downloads directories and recreates them
-+ npm run sauce-demo //runs tests implemented in page object model
++ npm run sauce-demo //runs tests implemented using page object model
++ npm run orange-demo //run tests implemented using page object model
 + npm run ready-to-test //quick smoke test for my GitHub page
 ```
