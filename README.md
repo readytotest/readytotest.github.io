@@ -1,6 +1,6 @@
 # Test Automation with Cypress
 - This repo contains the files for the GitHub Page https://readytotest.github.io
-- This repo contains Cypress scripts
+- This repo contains Cypress scripts that test <a href="https://opensource-demo.orangehrmlive.com">OrangeHRM Demo</a> and <a href="https://www.saucedemo.com">Sauce Demo</a>
 
 ```diff
 @@ An experimental repo for tinkering with Cypress @@
