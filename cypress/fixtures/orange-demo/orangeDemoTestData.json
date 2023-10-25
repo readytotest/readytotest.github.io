@@ -5,7 +5,11 @@
     },
 
     "formData": {
-      "buzzMessageText": "buzz-post-test-text"
+      "buzzMessageText": "buzz-post-test-text",
+      "claimRemarksSectionText": "claim-remarks-test-text",
+      "expenseDatePicker": "2023-10-01",
+      "expenseAmount": "45.99",
+      "expenseNote": "expense-note-test-text"
     },
     
     "_dataPlaceholder": {

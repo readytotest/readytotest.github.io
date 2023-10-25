@@ -6,7 +6,7 @@ import orangeDemoVerticalMenu from '../../pages/orange-demo-pom/orangeDemoVertic
 import orangeDemoMyInfoPage from '../../pages/orange-demo-pom/orangeDemoMyInfoPage';
 import orangeDemoBuzzPage from '../../pages/orange-demo-pom/orangeDemoBuzzPage';
 import orangeDemoRecruitmentPage from '../../pages/orange-demo-pom/orangeDemoRecruitmentPage';
-import { realClick } from 'cypress-real-events/commands/realClick';
+import orangeDemoClaimPage from '../../pages/orange-demo-pom/orangeDemoClaimPage';
 
 describe('Orange Demo Smoke Test', () => {
 
@@ -20,19 +20,6 @@ describe('Orange Demo Smoke Test', () => {
         cy.log('Login successful!')
       
       });
-
-    afterEach(() => {
-
-        orangeDemoProfileMenu.openProfileMenu();
-        orangeDemoProfileMenu.clickLogoutMenu();
-        /*Need to add the wait because if one of the it blocks fails, then 
-        after each will fail on confirming the login button unless the wait is there.
-        The wait isn't required if all it blocks pass???? */
-        cy.wait(1000);
-        orangeDemoLoginPage.confirmLoginButtonExists();
-        cy.log('Logout successful!');
-      
-    });
 
         it('My Info: edit name and work email', () => {
         
@@ -56,7 +43,7 @@ describe('Orange Demo Smoke Test', () => {
             orangeDemoMyInfoPage.clickFirstMyInfoSaveButton();
             //This wait is required or save won't occur
             cy.wait(1000);
-            orangeDemoMyInfoPage.confirmMyInfoSaveSuccessful();
+            orangeDemoMyInfoPage.confirmMyInfoSaveSuccessToast();
 
             orangeDemoMyInfoPage.clickContactDetailsLink();
             orangeDemoMyInfoPage.clearWorkEmailField();
@@ -66,7 +53,7 @@ describe('Orange Demo Smoke Test', () => {
             orangeDemoMyInfoPage.clickFirstMyInfoSaveButton();
             //This wait is required or save won't occur
             cy.wait(1000);
-            orangeDemoMyInfoPage.confirmMyInfoSaveSuccessful();
+            orangeDemoMyInfoPage.confirmMyInfoSaveSuccessToast();
                  
         })
 
@@ -96,10 +83,10 @@ describe('Orange Demo Smoke Test', () => {
             orangeDemoRecruitmentPage.openCandidateVacancyMenu();
             orangeDemoRecruitmentPage.selectSeniorQaLeadFromCandidateVacancyMenu();
             orangeDemoRecruitmentPage.uploadResume()
-            //Intermittently doesn't upload the file. The wait seems to make it happen less frequently.
+            //Added wait due to issues with file not uploading intermittently
             cy.wait(5000);
             orangeDemoRecruitmentPage.clickCandidateSaveButton();
-            orangeDemoRecruitmentPage.confirmCandidateSaveSuccessful();
+            orangeDemoRecruitmentPage.confirmCandidateSaveSuccessToast();
             orangeDemoRecruitmentPage.clickCandidatesHeaderButton();
             orangeDemoRecruitmentPage.confirmCandidateWasAdded();
             orangeDemoRecruitmentPage.viewProfileOfFirstPersonListedInCandidateRecords();
@@ -108,6 +95,28 @@ describe('Orange Demo Smoke Test', () => {
             orangeDemoRecruitmentPage.downloadResume();
             orangeDemoRecruitmentPage.confirmResumeWasDownloaded();
             })
+
+        it('Claim: add claim', () => {
+        
+            orangeDemoVerticalMenu.clickClaimLink();
+            orangeDemoClaimPage.clickSubmitClaimHeaderButton();
+            orangeDemoClaimPage.openEventMenu();
+            orangeDemoClaimPage.selectTravelAllowanceFromEventMenu();
+            orangeDemoClaimPage.openCurrencyMenu();
+            orangeDemoClaimPage.selectUnitedStatesDollarFromCurrencyMenu();
+            orangeDemoClaimPage.typeCommentInRemarksSection();
+            orangeDemoClaimPage.clickCreateClaimButton();
+            orangeDemoClaimPage.confirmSubmitClaimSuccessToast();
+            orangeDemoClaimPage.clickAddExpenseButton();
+            orangeDemoClaimPage.clickExpenseTypeModalMenu();
+            orangeDemoClaimPage.selectFuelAllowanceFromexpenseTypeModalMenu();
+            orangeDemoClaimPage.typeDateIntoExpenseDatePicker();
+            orangeDemoClaimPage.inputExpenseAmount();
+            orangeDemoClaimPage.addNoteToExpense();
+            orangeDemoClaimPage.clickExpenseModalSaveButton();
+            orangeDemoClaimPage.clickSubmitClaimButton();
+        
+            })    
             
         
       });

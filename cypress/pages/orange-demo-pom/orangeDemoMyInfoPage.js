@@ -91,7 +91,7 @@ class orangeDemoMyInfoPage{
         this.elements.myInfoSaveButton().first().click();
     }
 
-    confirmMyInfoSaveSuccessful(){
+    confirmMyInfoSaveSuccessToast(){
         this.elements.toastMessage().should('include.text', 'Success');
     }
 

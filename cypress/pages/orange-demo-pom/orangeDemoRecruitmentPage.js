@@ -71,7 +71,7 @@ class orangeDemoRecruitmentPage{
         this.elements.candidateSaveButton().click();
     }
 
-    confirmCandidateSaveSuccessful(){
+    confirmCandidateSaveSuccessToast(){
         this.elements.toastMessage().should('include.text', 'Success');
     }
 
