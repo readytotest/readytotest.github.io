@@ -11,7 +11,10 @@ class orangeDemoMyInfoPage{
         //Don't like using eq index, but there aren't any unique attributes available
         workEmailField:() => cy.get('.oxd-input').eq(9),
         myInfoSaveButton:() => cy.get('button[type="submit"]'),
-        toastMessage:() =>  cy.get('#oxd-toaster_1')
+        toastMessage:() =>  cy.get('#oxd-toaster_1'),
+        profilePhoto:() => cy.get('.employee-image'),
+        uploadPhoto: () => cy.get('.oxd-file-input'),
+        profilePhotoSaveButton:() => cy.get('button[type="submit"]'),
 
     }
 
@@ -85,6 +88,22 @@ class orangeDemoMyInfoPage{
 
     typeLastName(){
         this.elements.lastNameField().type(randomLastNameGenerator);
+    }
+
+    clickProfilePhoto(){
+        this.elements.profilePhoto().click();
+    }
+
+    clickUploadPhotoButton(){
+        this.elements.uploadPhotoButton().click();
+    }
+
+    uploadProfilePhoto(){
+        this.elements.uploadPhoto().selectFile('cypress/fixtures/jpg-dummy-file.jpg', { force:true });
+    }
+
+    clickProfilePhotoSaveButton(){
+        this.elements.profilePhotoSaveButton().click();
     }
 
     clickFirstMyInfoSaveButton(){
