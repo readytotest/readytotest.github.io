@@ -101,7 +101,7 @@ describe('Orange Demo Smoke Test', () => {
             orangeDemoRecruitmentPage.confirmResumeWasDownloaded();
             })
 
-        it('Claim: add claim', () => {
+        it('Claim: Add claim, add expense, submit claim', () => {
         
             orangeDemoVerticalMenu.clickClaimLink();
             orangeDemoClaimPage.clickSubmitClaimHeaderButton();
