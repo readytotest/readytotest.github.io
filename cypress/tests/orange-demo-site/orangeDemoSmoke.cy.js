@@ -46,8 +46,6 @@ describe('Orange Demo Smoke Test', () => {
             orangeDemoMyInfoPage.typeLastName();
             orangeDemoMyInfoPage.checkIfLastNameFieldNotEmpty();
             orangeDemoMyInfoPage.clickFirstMyInfoSaveButton();
-            //This wait is required or save won't occur
-            cy.wait(1000);
             orangeDemoMyInfoPage.confirmMyInfoSaveSuccessToast();
 
             orangeDemoMyInfoPage.clickContactDetailsLink();
@@ -56,8 +54,6 @@ describe('Orange Demo Smoke Test', () => {
             orangeDemoMyInfoPage.typeWorkEmail();
             orangeDemoMyInfoPage.checkIfWorkEmailFieldNotEmpty();
             orangeDemoMyInfoPage.clickFirstMyInfoSaveButton();
-            //This wait is required or save won't occur
-            cy.wait(1000);
             orangeDemoMyInfoPage.confirmMyInfoSaveSuccessToast();
                  
         })
@@ -74,7 +70,7 @@ describe('Orange Demo Smoke Test', () => {
                     
         })
 
-        it('Recruitment: add candidate and upload resume', () => {
+        it('Recruitment: delete candidates, add candidate and upload resume', () => {
         
             orangeDemoVerticalMenu.clickRecruitmentLink();
             orangeDemoRecruitmentPage.clickSelectAllCandidatesRecordsCheckbox();
@@ -88,8 +84,6 @@ describe('Orange Demo Smoke Test', () => {
             orangeDemoRecruitmentPage.openCandidateVacancyMenu();
             orangeDemoRecruitmentPage.selectSeniorQaLeadFromCandidateVacancyMenu();
             orangeDemoRecruitmentPage.uploadResume()
-            //Added wait due to issues with file not uploading intermittently
-            cy.wait(5000);
             orangeDemoRecruitmentPage.clickCandidateSaveButton();
             orangeDemoRecruitmentPage.confirmCandidateSaveSuccessToast();
             orangeDemoRecruitmentPage.clickCandidatesHeaderButton();

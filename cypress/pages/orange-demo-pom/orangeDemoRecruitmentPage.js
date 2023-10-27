@@ -76,7 +76,7 @@ class orangeDemoRecruitmentPage{
     }
 
     uploadResume(){
-        this.elements.resumeFileUpload().selectFile('cypress/fixtures/pdf-dummy-file.pdf', { force:true });
+        this.elements.resumeFileUpload().selectFile('cypress/fixtures/pdf-dummy-file.pdf', { force:true }).wait(3000);
     }
 
     clickCandidatesHeaderButton(){

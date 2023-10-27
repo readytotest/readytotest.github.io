@@ -107,7 +107,7 @@ class orangeDemoMyInfoPage{
     }
 
     clickFirstMyInfoSaveButton(){
-        this.elements.myInfoSaveButton().first().click();
+        this.elements.myInfoSaveButton().first().click().wait(1000);
     }
 
     confirmMyInfoSaveSuccessToast(){
