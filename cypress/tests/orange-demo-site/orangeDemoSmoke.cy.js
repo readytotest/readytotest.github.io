@@ -24,8 +24,6 @@ describe('Orange Demo Smoke Test', () => {
        it('My Info: change photo, edit name and work email', () => {
         
             orangeDemoVerticalMenu.clickMyInfoLink();
-
-            orangeDemoVerticalMenu.clickMyInfoLink();
             orangeDemoMyInfoPage.clickProfilePhoto();
             orangeDemoMyInfoPage.uploadProfilePhoto();
             orangeDemoMyInfoPage.clickProfilePhotoSaveButton();
