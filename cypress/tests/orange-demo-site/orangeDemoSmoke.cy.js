@@ -55,6 +55,9 @@ describe('Orange Demo Smoke Test', () => {
             orangeDemoMyInfoPage.checkIfWorkEmailFieldNotEmpty();
             orangeDemoMyInfoPage.clickFirstMyInfoSaveButton();
             orangeDemoMyInfoPage.confirmMyInfoSaveSuccessToast();
+            
+            orangeDemoMyInfoPage.confirmNameOfLoggedInUser();
+            orangeDemoMyInfoPage.confirmWorkEmail();
                  
         })
 

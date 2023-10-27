@@ -15,6 +15,7 @@ class orangeDemoMyInfoPage{
         profilePhoto:() => cy.get('.employee-image'),
         uploadPhoto: () => cy.get('.oxd-file-input'),
         profilePhotoSaveButton:() => cy.get('button[type="submit"]'),
+        nameOfLoggedInUser:() => cy.get('.oxd-userdropdown-name')
 
     }
 
@@ -112,6 +113,14 @@ class orangeDemoMyInfoPage{
 
     confirmMyInfoSaveSuccessToast(){
         this.elements.toastMessage().should('include.text', 'Success');
+    }
+
+    confirmNameOfLoggedInUser(){
+       this.elements.nameOfLoggedInUser().should('include.text', 'John999');
+    }
+
+    confirmWorkEmail(){
+        this.elements.workEmailField().should('include.value', 'john.smith999');
     }
 
 }
