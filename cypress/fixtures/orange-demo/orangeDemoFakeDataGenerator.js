@@ -7,4 +7,4 @@ const randomFirstNameGenerator = `John999${insertNum}`;
 const randomMiddleNameGenerator = `Jacob999${insertNum}`;
 const randomLastNameGenerator = `Smith999${insertNum}`;
 
-export { numRandom, insertNum, randomEmailGenerator, randomFirstNameGenerator, randomMiddleNameGenerator, randomLastNameGenerator };
+export { numRandom, randomEmailGenerator, randomFirstNameGenerator, randomMiddleNameGenerator, randomLastNameGenerator };
