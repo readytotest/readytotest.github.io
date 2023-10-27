@@ -1,20 +1,21 @@
 # Test Automation with Cypress
 - This repo contains the files for the GitHub Page https://readytotest.github.io
 - This repo contains Cypress scripts that test <a href="https://opensource-demo.orangehrmlive.com">OrangeHRM Demo</a> and <a href="https://www.saucedemo.com">Sauce Demo</a>
+- ..
 
 ```diff
 @@ An experimental repo for tinkering with Cypress @@
 
 # Whenever a commit is pushed to the main branch, GH Actions runs a smoke test against the GH Page
 
-! I'm using macOS locally and Ubuntu in the GH Runner 
-! If you are using Windows, things may not work as expected like clean-reports-and-downloads
-! You may need to empty the reports and downloads directories manually
+! I find demo sites on the internet and write automation tests against them
+! Currently working on tests for the OrangeHRM demo site
 
 - Run Cypress from terminal (Not GUI) to output reports
 
 + npm run clean-reports-and-downloads //removes reports and downloads directories and recreates them
-+ npm run sauce-demo //runs tests implemented using page object model
-+ npm run orange-demo //run tests implemented using page object model
++ npm run sauce-demo //cleans reports and download directories, then runs tests against Sauce Demo site
++ npm run orange-demo //cleans reports and download directories, then runs tests against OrangeHRM demo site
 + npm run ready-to-test //quick smoke test for my GitHub page
++ npx cypress run //runs all spec files listed in any directory or subdirectory in this project
 ```
