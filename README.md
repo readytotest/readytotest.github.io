@@ -18,6 +18,6 @@
 + npm run sauce-demo //cleans reports and download directories, then runs tests against Sauce Demo site
 + npm run orange-demo //cleans reports and download directories, then runs tests against OrangeHRM demo site
 + npm run ready-to-test //quick smoke test for my GitHub page
-+ npx cypress run //runs all spec files listed in any directory or subdirectory in this project
++ npx cypress run //runs all spec files in any directory or subdirectory in this project
 + npx cypress open //opens Cypress GUI if you want to to run from there
 ```
