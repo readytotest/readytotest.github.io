@@ -120,6 +120,10 @@ describe('Orange Demo Smoke Test', () => {
             orangeDemoClaimPage.clickExpenseModalSaveButton();
             orangeDemoClaimPage.clickSubmitClaimButton();
             orangeDemoClaimPage.confirmSubmitClaimSuccessToast();
+            orangeDemoClaimPage.clickMyClaimsHeaderButton();
+            orangeDemoClaimPage.confirmClaimDescription();
+            orangeDemoClaimPage.confirmClaimStatus();
+            orangeDemoClaimPage.confirmClaimAmount();
         
             })    
             

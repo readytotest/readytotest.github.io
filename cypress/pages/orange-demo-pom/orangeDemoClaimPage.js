@@ -21,6 +21,9 @@ class orangeDemoRecruitmentPage{
         expenseNoteField:() => cy.get('textarea').eq(1),
         expenseModalSaveButton:() => cy.contains('button', 'Save'),
         submitClaimButton:() => cy.contains('button', 'Submit'),
+        claimDescription:() => cy.get('.oxd-table-cell.oxd-padding-cell').eq(2),
+        claimStatus:() => cy.get('.oxd-table-cell.oxd-padding-cell').eq(5),
+        claimAmount:() => cy.get('.oxd-table-cell.oxd-padding-cell').eq(6)
        
     }
 
@@ -86,6 +89,22 @@ class orangeDemoRecruitmentPage{
 
     clickSubmitClaimButton(){
         this.elements.submitClaimButton().click();
+    }
+
+    clickMyClaimsHeaderButton(){
+        this.elements.myClaimsHeaderButton().click();
+    }
+
+    confirmClaimDescription(){
+        this.elements.claimDescription().should('include.text', orangeDemoTestData.formData.claimRemarksSectionText);
+    }
+
+    confirmClaimStatus(){
+        this.elements.claimStatus().should('include.text', 'Submitted');
+    }
+
+    confirmClaimAmount(){
+        this.elements.claimAmount().should('include.text', orangeDemoTestData.formData.expenseAmount);
     }
 
 }
