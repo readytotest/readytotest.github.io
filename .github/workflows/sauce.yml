@@ -13,7 +13,7 @@ jobs:
         - name: Test
           uses: cypress-io/github-action@v6
           with:
-            command: npm run orange-demo
+            command: npm run sauce-demo
 
         - name: Upload Report to GitHub
           uses: actions/upload-artifact@v3.1.3
