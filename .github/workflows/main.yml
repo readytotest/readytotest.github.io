@@ -1,4 +1,4 @@
-name: Run Smoke Test on readytotest GitHub Page
+name: Smoke test readytotest (on push/pr)
 on:
  workflow_dispatch:
  push:
