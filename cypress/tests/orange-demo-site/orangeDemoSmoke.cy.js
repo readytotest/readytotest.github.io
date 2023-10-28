@@ -1,7 +1,6 @@
 import orangeDemoLoginPage from '../../pages/orange-demo-pom/orangeDemoLoginPage';
 import orangeDemoDashboardPage from '../../pages/orange-demo-pom/orangeDemoDashboardPage';
 import orangeDemoTestData from '../../fixtures/orange-demo/orangeDemoTestData.json';
-import orangeDemoProfileMenu from '../../pages/orange-demo-pom/orangeDemoProfileMenu';
 import orangeDemoVerticalMenu from '../../pages/orange-demo-pom/orangeDemoVerticalMenu';
 import orangeDemoMyInfoPage from '../../pages/orange-demo-pom/orangeDemoMyInfoPage';
 import orangeDemoBuzzPage from '../../pages/orange-demo-pom/orangeDemoBuzzPage';
