@@ -1,7 +1,10 @@
 {
 "loginCredentials": {
     "usernameValid": "standard_user",
-    "passwordValid": "secret_sauce"
+    "passwordValid": "secret_sauce",
+    "usernameInvalid": "thisusernamewontwork",
+    "passwordInvalid": "thispasswordwontwork",
+    "usernameLockedOut": "locked_out_user"
   },
 
 "customerInfo": {
