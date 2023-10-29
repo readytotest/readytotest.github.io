@@ -8,7 +8,6 @@
 
 # Whenever a commit is pushed to the main branch, GH Actions runs a smoke test against the GH Page
 
-! I find demo sites on the internet and write automation tests against them
 ! Currently working on tests for the OrangeHRM demo site
 
 - Run Cypress from terminal (Not GUI) to output reports
