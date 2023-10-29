@@ -6,7 +6,7 @@
 ```diff
 @@ An experimental repo for tinkering with Cypress @@
 
-# Whenever a commit is pushed to the main branch, GH Actions runs a smoke test against the GH Page
+# Upon commit or PR, GH Actions runs a test against my GH Page
 
 ! Currently working on tests for the OrangeHRM demo site
 
