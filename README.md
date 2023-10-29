@@ -11,7 +11,6 @@
 ! Currently working on tests for the OrangeHRM demo site
 
 - Run Cypress from terminal (Not GUI) to output reports
-- Reports, videos, and screenshots are created automatically whenever you run Cypress from terminal
 
 + npm run clean-reports-and-downloads //removes reports and downloads directories and recreates them
 + npm run sauce-demo //cleans reports and download directories, then runs tests against Sauce Demo site
