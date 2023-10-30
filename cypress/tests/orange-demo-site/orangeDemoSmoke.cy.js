@@ -6,6 +6,7 @@ import orangeDemoMyInfoPage from '../../pages/orange-demo-pom/orangeDemoMyInfoPa
 import orangeDemoBuzzPage from '../../pages/orange-demo-pom/orangeDemoBuzzPage';
 import orangeDemoRecruitmentPage from '../../pages/orange-demo-pom/orangeDemoRecruitmentPage';
 import orangeDemoClaimPage from '../../pages/orange-demo-pom/orangeDemoClaimPage';
+import orangeDemoAdminPage from '../../pages/orange-demo-pom/orangeDemoAdminPage';
 
 describe('Orange Demo Smoke Test', () => {
 
@@ -120,6 +121,20 @@ describe('Orange Demo Smoke Test', () => {
             orangeDemoClaimPage.confirmClaimAmount();
         
             })    
+
+        it('Admin: add sections to test here', () => {
+            orangeDemoVerticalMenu.clickAdminLink();
+            orangeDemoAdminPage.clickOrganizationMenu();
+            orangeDemoAdminPage.clickGeneralInfoSubMenu();
+            orangeDemoAdminPage.clickEditGeneralInfoSlider();
+            orangeDemoAdminPage.clearOrganizationNameField();
+            orangeDemoAdminPage.checkIfOrganizationNameFieldEmpty();
+            orangeDemoAdminPage.typeOrganizationName();
+            orangeDemoAdminPage.checkIfOrganizationNameFieldNotEmpty();
+            orangeDemoAdminPage.clickOrganizationSaveButton();
+        
+            orangeDemoAdminPage.confirmOrganizationName();
+        })
             
         
       });

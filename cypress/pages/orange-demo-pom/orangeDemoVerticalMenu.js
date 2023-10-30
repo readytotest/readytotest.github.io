@@ -6,6 +6,7 @@ class orangeDemoVerticalMenu{
         buzzLink: () => cy.contains('.oxd-main-menu-item', 'Buzz'),
         recruitmentLink: () => cy.contains('.oxd-main-menu-item', 'Recruitment'),
         claimLink: () => cy.contains('.oxd-main-menu-item', 'Claim'),
+        adminLink: () => cy.contains('.oxd-main-menu-item', 'Admin'),
 
     }
 
@@ -28,6 +29,12 @@ class orangeDemoVerticalMenu{
     clickClaimLink(){
         this.elements.claimLink().click();
     }
+
+    clickAdminLink(){
+        this.elements.adminLink().click();
+    }
+
+
 }
 
 module.exports = new orangeDemoVerticalMenu();

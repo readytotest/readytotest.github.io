@@ -9,7 +9,8 @@
       "claimRemarksSectionText": "claim-remarks-test-text",
       "expenseDatePicker": "2023-10-01",
       "expenseAmount": "45.99",
-      "expenseNote": "expense-note-test-text"
+      "expenseNote": "expense-note-test-text",
+      "organizationName": "ACME Corporation"
     },
     
     "_dataPlaceholder": {
