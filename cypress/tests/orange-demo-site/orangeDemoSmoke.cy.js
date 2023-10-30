@@ -96,7 +96,7 @@ describe('Orange Demo Smoke Test', () => {
             orangeDemoRecruitmentPage.confirmResumeWasDownloaded();
             })
 
-        it('Claim: Add claim, add expense, submit claim', () => {
+        it('Claim: add claim, add expense, submit claim', () => {
         
             orangeDemoVerticalMenu.clickClaimLink();
             orangeDemoClaimPage.clickSubmitClaimHeaderButton();
@@ -122,7 +122,7 @@ describe('Orange Demo Smoke Test', () => {
         
             })    
 
-        it('Admin: add sections to test here', () => {
+        it('Admin: change organization name', () => {
             orangeDemoVerticalMenu.clickAdminLink();
             orangeDemoAdminPage.clickOrganizationMenu();
             orangeDemoAdminPage.clickGeneralInfoSubMenu();
@@ -132,7 +132,6 @@ describe('Orange Demo Smoke Test', () => {
             orangeDemoAdminPage.typeOrganizationName();
             orangeDemoAdminPage.checkIfOrganizationNameFieldNotEmpty();
             orangeDemoAdminPage.clickOrganizationSaveButton();
-        
             orangeDemoAdminPage.confirmOrganizationName();
         })
             
