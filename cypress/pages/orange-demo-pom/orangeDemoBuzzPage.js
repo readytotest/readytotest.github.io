@@ -18,7 +18,7 @@ class orangeDemoBuzzPage{
     }
 
     confirmBuzzMessage() {
-        this.elements.buzzMessageBodyText().first().should('include.text', orangeDemoTestData.formData.buzzMessageText);
+        this.elements.buzzMessageBodyText().first().wait(1000).should('include.text', orangeDemoTestData.formData.buzzMessageText);
     }
 }
 
