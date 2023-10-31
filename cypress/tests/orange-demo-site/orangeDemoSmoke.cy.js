@@ -7,6 +7,7 @@ import orangeDemoBuzzPage from '../../pages/orange-demo-pom/orangeDemoBuzzPage';
 import orangeDemoRecruitmentPage from '../../pages/orange-demo-pom/orangeDemoRecruitmentPage';
 import orangeDemoClaimPage from '../../pages/orange-demo-pom/orangeDemoClaimPage';
 import orangeDemoAdminPage from '../../pages/orange-demo-pom/orangeDemoAdminPage';
+import orangeDemoLeavePage from '../../pages/orange-demo-pom/orangeDemoLeavePage';
 
 describe('Orange Demo Smoke Test', () => {
 
@@ -140,6 +141,20 @@ describe('Orange Demo Smoke Test', () => {
             orangeDemoAdminPage.checkIfOrganizationNameFieldNotEmpty();
             orangeDemoAdminPage.clickOrganizationSaveButton();
             orangeDemoAdminPage.confirmOrganizationName();
+        })
+
+        it.only('Leave: add vacation credit', () => {
+            orangeDemoVerticalMenu.clickLeaveLink();
+            orangeDemoLeavePage.clickEntitlementsHeaderMenu();
+            orangeDemoLeavePage.clickAddEntitlementLink();
+            orangeDemoLeavePage.findEmployeeInEntitlementEmployeeNameField();
+            orangeDemoLeavePage.clickLeaveTypeDropdownMenu();
+            orangeDemoLeavePage.selectUsVacationFromLeaveTypeMenu();
+            orangeDemoLeavePage.addDaysToEntitlementField();
+            orangeDemoLeavePage.clickEntitlementSaveButton();
+            orangeDemoLeavePage.clickEntitlementConfirmSaveModal();
+            orangeDemoLeavePage.confirmFirstListedEntitlementdays();
+            
         })
             
         

@@ -3,10 +3,11 @@ class orangeDemoVerticalMenu{
     elements = {
         dashboardLink:() => cy.contains('.oxd-main-menu-item', 'Dashboard'),
         myInfoLink:() => cy.contains('.oxd-main-menu-item', 'My Info'),
-        buzzLink: () => cy.contains('.oxd-main-menu-item', 'Buzz'),
-        recruitmentLink: () => cy.contains('.oxd-main-menu-item', 'Recruitment'),
-        claimLink: () => cy.contains('.oxd-main-menu-item', 'Claim'),
-        adminLink: () => cy.contains('.oxd-main-menu-item', 'Admin'),
+        buzzLink:() => cy.contains('.oxd-main-menu-item', 'Buzz'),
+        recruitmentLink:() => cy.contains('.oxd-main-menu-item', 'Recruitment'),
+        claimLink:() => cy.contains('.oxd-main-menu-item', 'Claim'),
+        adminLink:() => cy.contains('.oxd-main-menu-item', 'Admin'),
+        leaveLink:() => cy.contains('.oxd-main-menu-item', 'Leave')
 
     }
 
@@ -32,6 +33,10 @@ class orangeDemoVerticalMenu{
 
     clickAdminLink(){
         this.elements.adminLink().click();
+    }
+
+    clickLeaveLink(){
+        this.elements.leaveLink().click();
     }
 
 

@@ -10,7 +10,8 @@
       "expenseDatePicker": "2023-10-01",
       "expenseAmount": "45.99",
       "expenseNote": "expense-note-test-text",
-      "organizationName": "ACME Corporation"
+      "organizationName": "ACME Corporation",
+      "vacationDays": "14"
     },
     
     "_dataPlaceholder": {

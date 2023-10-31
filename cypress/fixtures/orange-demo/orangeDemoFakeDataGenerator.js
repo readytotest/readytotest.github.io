@@ -4,5 +4,6 @@ const randomEmailGenerator = `john.smith999${insertNum}@fake-email-999${insertNu
 const randomFirstNameGenerator = `John999${insertNum}`;
 const randomMiddleNameGenerator = `Jacob999${insertNum}`;
 const randomLastNameGenerator = `Smith999${insertNum}`;
+const employeeStaticPartialFirstName = 'John999';
 
-export { randomEmailGenerator, randomFirstNameGenerator, randomMiddleNameGenerator, randomLastNameGenerator };
+export { employeeStaticPartialFirstName, randomEmailGenerator, randomFirstNameGenerator, randomMiddleNameGenerator, randomLastNameGenerator };
