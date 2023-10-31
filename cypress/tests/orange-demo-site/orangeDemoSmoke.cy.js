@@ -143,7 +143,7 @@ describe('Orange Demo Smoke Test', () => {
             orangeDemoAdminPage.confirmOrganizationName();
         })
 
-        it.only('Leave: add vacation credit', () => {
+        it('Leave: add vacation credit', () => {
             orangeDemoVerticalMenu.clickLeaveLink();
             orangeDemoLeavePage.clickEntitlementsHeaderMenu();
             orangeDemoLeavePage.clickAddEntitlementLink();
