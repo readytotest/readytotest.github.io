@@ -59,17 +59,24 @@ describe('Orange Demo Smoke Test', () => {
                  
         })
 
-        it('Buzz: add post. Dashboard: check if buzz post appears and confirm headings on page', () => {
+        it('Buzz: add post.', () => {
         
             orangeDemoVerticalMenu.clickBuzzLink();
             orangeDemoBuzzPage.typeBuzzMessage();
             orangeDemoBuzzPage.postBuzzMessage();
+            orangeDemoBuzzPage.confirmBuzzMessage();                    
+        })
+
+        it('Dashboard: check if buzz post appears and confirm a few headings', () => {
+        
             orangeDemoVerticalMenu.clickDashboardLink();
             orangeDemoDashboardPage.confirmDashboardBuzzFeed();
             orangeDemoDashboardPage.confirmDashboardTimeAtWork();
             orangeDemoDashboardPage.confirmDashboardMyActions();
                     
         })
+
+
 
         it('Recruitment: delete candidates, add candidate and upload resume', () => {
         
