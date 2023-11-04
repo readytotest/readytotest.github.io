@@ -143,7 +143,7 @@ describe('Orange Demo Smoke Test', () => {
             orangeDemoAdminPage.confirmOrganizationName();
         })
 
-        it('Leave: add vacation credit', () => {
+        it('Leave: add vacation days, apply leave days, check vacation balance', () => {
             orangeDemoVerticalMenu.clickLeaveLink();
             orangeDemoLeavePage.clickEntitlementsHeaderMenu();
             orangeDemoLeavePage.clickAddEntitlementLink();
@@ -154,6 +154,17 @@ describe('Orange Demo Smoke Test', () => {
             orangeDemoLeavePage.clickEntitlementSaveButton();
             orangeDemoLeavePage.clickEntitlementConfirmSaveModal();
             orangeDemoLeavePage.confirmFirstListedEntitlementdays();
+           
+            orangeDemoLeavePage.clickApplyHeaderMenu();
+            orangeDemoLeavePage.clickLeaveTypeDropdownMenu();
+            orangeDemoLeavePage.selectUsVacationFromLeaveTypeMenu();
+            orangeDemoLeavePage.typeDateIntoLeaveDatePickerStart();
+            orangeDemoLeavePage.typeDateIntoLeaveDatePickerEnd();
+            orangeDemoLeavePage.clickEntitlementSaveButton();
+
+            orangeDemoLeavePage.clickMyLeaveHeaderMenu();
+            orangeDemoLeavePage.confirmMyLeaveBalanceDaysFirstListed();
+
             
         })
             

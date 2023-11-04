@@ -4,6 +4,7 @@ import { employeeStaticPartialFirstName } from '/cypress/fixtures/orange-demo/or
 class orangeDemoLeavePage{
     elements = {
         entitlementsHeaderMenu:() => cy.contains('.oxd-topbar-body-nav-tab-item', 'Entitlements'),
+        myLeaveHeaderMenu:() => cy.contains('.oxd-topbar-body-nav-tab-item', 'My Leave'),
         addEntitlementLink:() => cy.contains('.oxd-topbar-body-nav-tab-link', 'Add Entitlements'),
         entitlementEmployeeNameField:() => cy.get('input[placeholder="Type for hints..."]'),
         leaveTypeDropdownMenu:() => cy.get('.oxd-select-text-input').first(),
@@ -11,7 +12,11 @@ class orangeDemoLeavePage{
         entitlementField:() => cy.get('.oxd-input').eq(1),
         entitlementSaveButton:() => cy.get('button[type="submit"]'),
         entitlementConfirmSaveModal:() => cy.contains('Confirm'),
-        firstListedEntitlementDays:() => cy.get('.oxd-table-cell.oxd-padding-cell').eq(5)
+        firstListedEntitlementDays:() => cy.get('.oxd-table-cell.oxd-padding-cell').eq(5),
+        applyHeaderMenu:() => cy.contains('.oxd-topbar-body-nav-tab-item', 'Apply'),
+        leaveDatePickerStart:() => cy.get('input[placeholder="yyyy-mm-dd"]').eq(0),
+        leaveDatePickerEnd:() => cy.get('input[placeholder="yyyy-mm-dd"]').eq(1),
+        myLeaveBalanceDaysFirstListed:() => cy.get('.oxd-table-cell.oxd-padding-cell').eq(4)
 
 
     }
@@ -49,8 +54,38 @@ class orangeDemoLeavePage{
     }
 
     confirmFirstListedEntitlementdays(){
-        this.elements.firstListedEntitlementDays().should('have.text', orangeDemoTestData.formData.vacationDays)
+        this.elements.firstListedEntitlementDays().should('have.text', orangeDemoTestData.formData.vacationDays);
     }
+
+    clickApplyHeaderMenu() {
+        this.elements.applyHeaderMenu().click();
+    }
+
+    clickLeaveTypeDropdownMenu(){
+        this.elements.leaveTypeDropdownMenu().click();
+    }
+
+    selectUsVacationFromLeaveTypeMenu(){
+        this.elements.leaveTypeUsVacation().click();
+    }
+
+    typeDateIntoLeaveDatePickerStart(){
+        this.elements.leaveDatePickerStart().click().type(orangeDemoTestData.formData.leaveDateStart).click();
+    }
+    /*You have to add a clear here as the end date defaults to be the same as the start date. You got to clear it out if you are requesting more than one day off */
+    typeDateIntoLeaveDatePickerEnd(){
+        this.elements.leaveDatePickerEnd().click().clear().type(orangeDemoTestData.formData.leaveDateEnd).click();
+    }
+
+    clickMyLeaveHeaderMenu(){
+        this.elements.myLeaveHeaderMenu().click();
+    }
+
+    confirmMyLeaveBalanceDaysFirstListed(){
+        this.elements.myLeaveBalanceDaysFirstListed().should('have.text', orangeDemoTestData.formData.vacationDaysBalanceAfterLeaveRequest);
+    }
+
+
 }
 
 module.exports = new orangeDemoLeavePage()
