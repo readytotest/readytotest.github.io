@@ -5,5 +5,7 @@ const randomFirstNameGenerator = `John999${insertNum}`;
 const randomMiddleNameGenerator = `Jacob999${insertNum}`;
 const randomLastNameGenerator = `Smith999${insertNum}`;
 const employeeStaticPartialFirstName = 'John999';
+const usernameGenerator = `userlogin${insertNum}`;
+const passwordGenerator = `testpassword${insertNum}`;
 
-export { employeeStaticPartialFirstName, randomEmailGenerator, randomFirstNameGenerator, randomMiddleNameGenerator, randomLastNameGenerator };
+export { employeeStaticPartialFirstName, randomEmailGenerator, randomFirstNameGenerator, randomMiddleNameGenerator, randomLastNameGenerator, usernameGenerator, passwordGenerator };

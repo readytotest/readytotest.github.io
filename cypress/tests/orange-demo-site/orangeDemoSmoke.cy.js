@@ -8,6 +8,7 @@ import orangeDemoRecruitmentPage from '../../pages/orange-demo-pom/orangeDemoRec
 import orangeDemoClaimPage from '../../pages/orange-demo-pom/orangeDemoClaimPage';
 import orangeDemoAdminPage from '../../pages/orange-demo-pom/orangeDemoAdminPage';
 import orangeDemoLeavePage from '../../pages/orange-demo-pom/orangeDemoLeavePage';
+import orangeDemoPimPage from '../../pages/orange-demo-pom/orangeDemoPimPage';
 
 describe('Orange Demo Smoke Test', () => {
 
@@ -167,6 +168,23 @@ describe('Orange Demo Smoke Test', () => {
 
             
         })
-            
+
+        it('PIM: add employee and create login', () => {
+            orangeDemoVerticalMenu.clickPimLink();
+            orangeDemoPimPage.clickPimAddButton();
+            orangeDemoPimPage.typePimFirstNameField();
+            orangeDemoPimPage.typePimLastNameField();
+            orangeDemoPimPage.clickPimCreateLoginDetailsSlider();
+            orangeDemoPimPage.typePimUsernameField();
+            orangeDemoPimPage.typePimPasswordField1();
+            orangeDemoPimPage.typePimPasswordField2();
+            orangeDemoPimPage.clickPimSaveButton();
+            orangeDemoVerticalMenu.clickPimLink();
+            orangeDemoPimPage.findEmployeeInPimEmployeeNameField();
+            orangeDemoPimPage.clickPimSearchButton();
+            orangeDemoPimPage.confirmEmployeeAdded();
         
-      });
+      })
+
+
+    });
