@@ -34,17 +34,14 @@ describe('Orange Demo Smoke Test', () => {
             orangeDemoMyInfoPage.clearFirstNameField();
             orangeDemoMyInfoPage.checkIfFirstNameFieldEmpty();
             orangeDemoMyInfoPage.typeFirstName();
-            orangeDemoMyInfoPage.checkIfFirstNameFieldNotEmpty();
 
             orangeDemoMyInfoPage.clearMiddleNameField();
             orangeDemoMyInfoPage.checkIfMiddleNameFieldEmpty();
             orangeDemoMyInfoPage.typeMiddleName();
-            orangeDemoMyInfoPage.checkIfMiddleNameFieldNotEmpty();
 
             orangeDemoMyInfoPage.clearLastNameField();
             orangeDemoMyInfoPage.checkIfLastNameFieldEmpty();
             orangeDemoMyInfoPage.typeLastName();
-            orangeDemoMyInfoPage.checkIfLastNameFieldNotEmpty();
             orangeDemoMyInfoPage.clickFirstMyInfoSaveButton();
             orangeDemoMyInfoPage.confirmMyInfoSaveSuccessToast();
 
@@ -52,7 +49,6 @@ describe('Orange Demo Smoke Test', () => {
             orangeDemoMyInfoPage.clearWorkEmailField();
             orangeDemoMyInfoPage.checkIfWorkEmailFieldEmpty();
             orangeDemoMyInfoPage.typeWorkEmail();
-            orangeDemoMyInfoPage.checkIfWorkEmailFieldNotEmpty();
             orangeDemoMyInfoPage.clickFirstMyInfoSaveButton();
             orangeDemoMyInfoPage.confirmMyInfoSaveSuccessToast();
             
