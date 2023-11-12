@@ -2,7 +2,7 @@ import sauceDemoLoginPage from '../../pages/sauce-demo-pom/sauceDemoLoginPage';
 import sauceDemoTestData from '../../fixtures/sauce-demo/sauceDemoTestData.json';
 import sauceDemoProductsPage from '../../pages/sauce-demo-pom/sauceDemoProductsPage';
 
-describe('Login Tests', () => {
+describe('Sauce Demo Login Tests', () => {
 
     beforeEach(() => {
 
