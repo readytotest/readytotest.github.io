@@ -1,14 +1,12 @@
 # Test Automation with Cypress
-- This repo contains the files for the GitHub Page https://readytotest.github.io
-- This repo contains Cypress scripts that test <a href="https://opensource-demo.orangehrmlive.com">OrangeHRM Demo</a>, <a href="https://www.saucedemo.com">Sauce Demo</a>, and  <a href="https://readytotest.github.io">My GitHub Page</a>
-- This repo contains <a href="https://github.com/readytotest/readytotest.github.io/actions">GitHub Actions Workflows</a> for running tests
+This repo contains Cypress scripts that test <a href="https://opensource-demo.orangehrmlive.com">OrangeHRM Demo</a>, <a href="https://www.saucedemo.com">Sauce Demo</a>, and  <a href="https://readytotest.github.io">My GitHub Page</a>
 
 ```diff
-@@ An experimental repo for tinkering with Cypress @@
+@@ Sample/demo Cypress scripts @@
 
 # Upon commit or PR, GH Actions runs a test against my GH Page
 
-! Currently working on tests for the OrangeHRM demo site
+! Repo contributors can manually run Cypress scripts from GH Actions
 
 - Run Cypress from terminal (Not GUI) to output reports
 
@@ -16,6 +14,4 @@
 + npm run sauce-demo //cleans reports and download directories, then runs tests against Sauce Demo site
 + npm run orange-demo //cleans reports and download directories, then runs tests against OrangeHRM demo site
 + npm run ready-to-test //cleans reports and download directories, then runs tests against my GitHub page
-+ npx cypress run //runs all spec files in any directory or subdirectory in this project
-+ npx cypress open //opens Cypress GUI if you want to to run from there
 ```
