@@ -6,7 +6,7 @@ xhttp.onreadystatechange = function() {
     let repos = JSON.parse(this.responseText);
     writeMain.innerHTML = ("Repository Last Commit<br>");
     repos.forEach((repo)=>{
-    writeMain.insertAdjacentHTML('beforeend', `${repo.name}: <a href="${repo.html_url}">URL</a> ${new Date(repo.pushed_at)}<br>`);
+    writeMain.insertAdjacentHTML('beforeend', `<a href="${repo.html_url}">${repo.name}: ${new Date(repo.pushed_at)}</a><br>`);
     });
  }
 };
