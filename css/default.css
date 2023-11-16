@@ -42,3 +42,8 @@ body {background-color: black;
       a:active {
         color: hotpink;
       }
+
+      pre {
+        margin: 0;
+      }
+    
