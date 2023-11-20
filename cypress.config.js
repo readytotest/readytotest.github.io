@@ -1,6 +1,7 @@
 const { defineConfig } = require("cypress");
 
 module.exports = defineConfig({
+  projectId: "dm22wp", //for Cypress Cloud
   reporter: 'cypress-mochawesome-reporter',
   video: true,
   numTestsKeptInMemory: 5,

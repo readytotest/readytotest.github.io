@@ -1,4 +1,4 @@
-name: Smoke test sauce demo (manual only)
+name: Sauce demo smoke and login tests - Cypress Cloud (manual only)
 on:
  workflow_dispatch:
  
@@ -6,6 +6,10 @@ jobs:
  Cypress-Smoke-Test:
    runs-on: ubuntu-latest
    timeout-minutes: 10
+   strategy:
+    fail-fast: false # https://github.com/cypress-io/github-action/issues/48
+    matrix:
+      containers: [1, 2] # Uses 2 parallel instances
    steps:
         - name: Checkout Repo
           uses: actions/checkout@v4.1.1
@@ -14,6 +18,10 @@ jobs:
           uses: cypress-io/github-action@v6
           with:
             command: npm run sauce-demo
+            record: true
+            parallel: true
+          env:
+              CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
 
         - name: Upload Report to GitHub
           uses: actions/upload-artifact@v3.1.3
