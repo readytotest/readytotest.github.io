@@ -23,12 +23,3 @@ jobs:
           env:
               CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
               GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-        - name: Upload Report to GitHub
-          uses: actions/upload-artifact@v3.1.3
-          if: always()
-          with:
-              name: Test Results + Video
-              path: ./cypress/reports/
-              if-no-files-found: warn
-              retention-days: 60
