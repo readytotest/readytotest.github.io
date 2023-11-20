@@ -1,4 +1,4 @@
-name: Smoke test readytotest (on push/pr)
+name: readytotest Smoke (on push/pr)
 on:
  workflow_dispatch:
  push:

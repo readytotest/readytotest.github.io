@@ -1,4 +1,4 @@
-name: Sauce demo - Cypress Cloud (manual only)
+name: Sauce demo Cypress Cloud (manual only)
 on:
  workflow_dispatch:
  
