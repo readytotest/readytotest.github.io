@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "_comment": "Not sure that clean-reports below will work on Windows",
     "clean-reports-and-downloads": "rm -R -f cypress/reports && rm -R -f cypress/downloads && mkdir cypress/reports && mkdir cypress/downloads",
-    "sauce-demo": "npm run clean-reports-and-downloads && npx cypress run --browser chrome --record --spec './cypress/tests/sauce-demo-site/*.cy.js'",
+    "sauce-demo": "npm run clean-reports-and-downloads && npx cypress run --browser chrome --record --parallel --spec './cypress/tests/sauce-demo-site/*.cy.js'",
     "ready-to-test": "npm run clean-reports-and-downloads && npx cypress run --browser chrome --spec ./cypress/tests/ready-to-test-github-page/readyToTestSmoke.cy.js",
     "orange-demo": "npm run clean-reports-and-downloads && npx cypress run --browser chrome --spec ./cypress/tests/orange-demo-site/orangeDemoSmoke.cy.js"
   },
