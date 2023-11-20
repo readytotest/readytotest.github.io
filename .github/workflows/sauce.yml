@@ -1,4 +1,4 @@
-name: Sauce demo smoke and login tests - Cypress Cloud (manual only)
+name: Sauce demo - Cypress Cloud (manual only)
 on:
  workflow_dispatch:
  
@@ -22,6 +22,7 @@ jobs:
             parallel: true
           env:
               CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
+              GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
         - name: Upload Report to GitHub
           uses: actions/upload-artifact@v3.1.3
