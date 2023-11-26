@@ -1,5 +1,5 @@
 
-fetch('http://api.weather.gov')
+fetch('https://api.weather.gov')
   .then(response => response.json())
   .then(response => { document.querySelector("weather-api-status").textContent = (response.status)
 })
