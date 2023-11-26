@@ -36,7 +36,7 @@ return response;
 return response;
 })
 
-.then(response => { document.querySelector("weather-instruction").innerHTML = (response.features[0]?.properties.instruction)
+.then(response => { document.querySelector("weather-instruction").innerHTML = String((response.features[0]?.properties.instruction))
 return response;
 })
 
@@ -65,6 +65,6 @@ return response;
 return response;
 })
 
-.then(response => { document.querySelector("weather-instruction2").innerHTML = (response.features[1]?.properties.instruction)
+.then(response => { document.querySelector("weather-instruction2").innerHTML = String((response.features[1]?.properties.instruction))
 return response;
 })
