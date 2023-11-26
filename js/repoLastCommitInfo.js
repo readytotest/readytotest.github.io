@@ -1,4 +1,4 @@
-let writeMain = document.querySelector('main');
+let writeMain = document.querySelector('repo-update-timestamp');
 
 var xhttp = new XMLHttpRequest();
 xhttp.onreadystatechange = function() {
