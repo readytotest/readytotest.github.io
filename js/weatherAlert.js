@@ -1,7 +1,11 @@
 
+fetch('http://api.weather.gov')
+  .then(response => response.json())
+  .then(response => { document.querySelector("weather-api-status").textContent = (response.status)
+})
+
 fetch('https://api.weather.gov/alerts/active?area=AK') 
 .then(response => response.json()) 
-//.then(response => console.log(response.title))
 
 .then(response => { document.querySelector("weather-title").textContent = (response.title)
 return response;
