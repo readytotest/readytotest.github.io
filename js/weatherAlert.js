@@ -2,12 +2,11 @@
 //API status
 fetch('https://api.weather.gov')
 .then(response => response.json())
-
 .then(response => { document.querySelector("weather-api-status").textContent = (response.status)
 })
 
 //Weather alert
-fetch('https://api.weather.gov/alerts/active') 
+fetch('https://api.weather.gov/alerts/active?area=CA') 
 .then(response => response.json()) 
 
 .then(response => { document.querySelector("weather-title").textContent = (response.title)
@@ -20,6 +19,10 @@ return response;
 
 //Alert 1 if available
 .then(response => { document.querySelector("weather-sender-name").textContent= (response.features[0]?.properties.senderName)
+return response;   
+})
+
+.then(response => { document.querySelector("weather-time-sent").textContent= (response.features[0]?.properties.sent)
 return response;   
 })
 
@@ -56,6 +59,10 @@ return response;
 return response;   
 })
 
+.then(response => { document.querySelector("weather-time-sent2").textContent= (response.features[1]?.properties.sent)
+return response;   
+})
+
 .then(response => { document.querySelector("weather-headline2").textContent = (response.features[1]?.properties.headline)
 return response;   
 })
@@ -86,6 +93,10 @@ return response;
 
 //Alert 3 if available
 .then(response => { document.querySelector("weather-sender-name3").textContent= (response.features[2]?.properties.senderName)
+return response;   
+})
+
+.then(response => { document.querySelector("weather-time-sent3").textContent= (response.features[2]?.properties.sent)
 return response;   
 })
 
@@ -122,6 +133,10 @@ return response;
 return response;   
 })
 
+.then(response => { document.querySelector("weather-time-sent4").textContent= (response.features[3]?.properties.sent)
+return response;   
+})
+
 .then(response => { document.querySelector("weather-headline4").textContent = (response.features[3]?.properties.headline)
 return response;   
 })
@@ -152,6 +167,10 @@ return response;
 
 //Alert 5 if available
 .then(response => { document.querySelector("weather-sender-name5").textContent= (response.features[4]?.properties.senderName)
+return response;   
+})
+
+.then(response => { document.querySelector("weather-time-sent5").textContent= (response.features[4]?.properties.sent)
 return response;   
 })
 
@@ -188,6 +207,10 @@ return response;
 return response;   
 })
 
+.then(response => { document.querySelector("weather-time-sent6").textContent= (response.features[5]?.properties.sent)
+return response;   
+})
+
 .then(response => { document.querySelector("weather-headline6").textContent = (response.features[5]?.properties.headline)
 return response;   
 })
@@ -221,6 +244,10 @@ return response;
 return response;   
 })
 
+.then(response => { document.querySelector("weather-time-sent7").textContent= (response.features[6]?.properties.sent)
+return response;   
+})
+
 .then(response => { document.querySelector("weather-headline7").textContent = (response.features[6]?.properties.headline)
 return response;   
 })
@@ -251,6 +278,10 @@ return response;
 
 //Alert 8 if available
 .then(response => { document.querySelector("weather-sender-name8").textContent= (response.features[7]?.properties.senderName)
+return response;   
+})
+
+.then(response => { document.querySelector("weather-time-sent8").textContent= (response.features[8]?.properties.sent)
 return response;   
 })
 
