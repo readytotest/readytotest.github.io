@@ -7,7 +7,7 @@ fetch('https://api.weather.gov')
 })
 
 //Weather alert
-fetch('https://api.weather.gov/alerts/active?area=AK') 
+fetch('https://api.weather.gov/alerts/active') 
 .then(response => response.json()) 
 
 .then(response => { document.querySelector("weather-title").textContent = (response.title)
@@ -19,6 +19,10 @@ return response;
 })
 
 //Alert 1 if available
+.then(response => { document.querySelector("weather-sender-name").textContent= (response.features[0]?.properties.senderName)
+return response;   
+})
+
 .then(response => { document.querySelector("weather-headline").textContent= (response.features[0]?.properties.headline)
 return response;   
 })
@@ -48,6 +52,10 @@ return response;
 })
 
 //Alert 2 if available
+.then(response => { document.querySelector("weather-sender-name2").textContent= (response.features[1]?.properties.senderName)
+return response;   
+})
+
 .then(response => { document.querySelector("weather-headline2").textContent = (response.features[1]?.properties.headline)
 return response;   
 })
@@ -77,6 +85,10 @@ return response;
 })
 
 //Alert 3 if available
+.then(response => { document.querySelector("weather-sender-name3").textContent= (response.features[2]?.properties.senderName)
+return response;   
+})
+
 .then(response => { document.querySelector("weather-headline3").textContent = (response.features[2]?.properties.headline)
 return response;   
 })
@@ -106,6 +118,10 @@ return response;
 })
 
 //Alert 4 if available
+.then(response => { document.querySelector("weather-sender-name4").textContent= (response.features[3]?.properties.senderName)
+return response;   
+})
+
 .then(response => { document.querySelector("weather-headline4").textContent = (response.features[3]?.properties.headline)
 return response;   
 })
@@ -135,6 +151,10 @@ return response;
 })
 
 //Alert 5 if available
+.then(response => { document.querySelector("weather-sender-name5").textContent= (response.features[4]?.properties.senderName)
+return response;   
+})
+
 .then(response => { document.querySelector("weather-headline5").textContent = (response.features[4]?.properties.headline)
 return response;   
 })
@@ -164,6 +184,10 @@ return response;
 })
 
 //Alert 6 if available
+.then(response => { document.querySelector("weather-sender-name6").textContent= (response.features[5]?.properties.senderName)
+return response;   
+})
+
 .then(response => { document.querySelector("weather-headline6").textContent = (response.features[5]?.properties.headline)
 return response;   
 })
@@ -193,6 +217,10 @@ return response;
 })
 
 //Alert 7 if available
+.then(response => { document.querySelector("weather-sender-name7").textContent= (response.features[6]?.properties.senderName)
+return response;   
+})
+
 .then(response => { document.querySelector("weather-headline7").textContent = (response.features[6]?.properties.headline)
 return response;   
 })
@@ -222,6 +250,10 @@ return response;
 })
 
 //Alert 8 if available
+.then(response => { document.querySelector("weather-sender-name8").textContent= (response.features[7]?.properties.senderName)
+return response;   
+})
+
 .then(response => { document.querySelector("weather-headline8").textContent = (response.features[7]?.properties.headline)
 return response;   
 })
