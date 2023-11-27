@@ -221,5 +221,34 @@ return response;
 return response;
 })
 
+//Alert 8 if available
+.then(response => { document.querySelector("weather-headline8").textContent = (response.features[7]?.properties.headline)
+return response;   
+})
+
+.then(response => { document.querySelector("weather-headline-extra8").textContent = (response.features[7]?.properties.parameters.NWSheadline)
+return response;
+})
+
+.then(response => { document.querySelector("weather-severity8").textContent = (response.features[7]?.properties.severity)
+return response;
+})
+
+.then(response => { document.querySelector("weather-event8").textContent = (response.features[7]?.properties.event)
+return response;
+})
+
+.then(response => { document.querySelector("weather-area-description8").textContent = (response.features[7]?.properties.areaDesc)
+return response;
+})
+
+.then(response => { document.querySelector("weather-description8").textContent = (response.features[7]?.properties.description)
+return response;
+})
+
+.then(response => { document.querySelector("weather-instruction8").textContent = (response.features[7]?.properties.instruction)
+return response;
+})
+
 
 
