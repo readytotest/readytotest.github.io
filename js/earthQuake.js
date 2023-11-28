@@ -1,7 +1,10 @@
 fetch('https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_hour.geojson') 
 .then(response => response.json()) 
 
-.then(response => { document.querySelector("earthquake-place").textContent = (response.features[0]?.properties.place)
+//The response is in Unix Time, which isn't human readable so converting time to Pacific.
+.then(response => { document.querySelector("earthquake-time").textContent = new Date((response.features[0]?.properties.time)).toLocaleString("en-US", {
+    timeZone: "America/Los_Angeles"
+  })
 return response;
 })
 
@@ -9,7 +12,7 @@ return response;
 return response;
 })
 
-.then(response => { document.querySelector("earthquake-time").textContent = (response.features[0]?.properties.time)
+.then(response => { document.querySelector("earthquake-place").textContent = (response.features[0]?.properties.place)
 return response;
 })
 
