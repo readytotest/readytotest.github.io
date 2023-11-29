@@ -24,6 +24,6 @@ return response;
 return response;
 })
 
-.then(response => { document.querySelector("earthquake-depth").textContent = (response.features[0]?.geometry.coordinates[2])
+.then(response => { document.querySelector("earthquake-depth").textContent = (response.features[0]?.geometry.coordinates[2]).toFixed(2)
 return response;
 })
