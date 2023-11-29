@@ -8,7 +8,7 @@ fetch('https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_hour.geojso
 return response;
 })
 
-.then(response => { document.querySelector("earthquake-mag").textContent = (response.features[0]?.properties.mag)
+.then(response => { document.querySelector("earthquake-mag").textContent = (response.features[0]?.properties.mag).toFixed(2)
 return response;
 })
 
