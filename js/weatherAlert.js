@@ -6,7 +6,7 @@ fetch('https://api.weather.gov')
 })
 
 //Weather alert
-fetch('https://api.weather.gov/alerts/active?area=CA') 
+fetch('https://api.weather.gov/alerts/active?area=AK') 
 .then(response => response.json()) 
 
 .then(response => { document.querySelector("weather-title").textContent = (response.title)
