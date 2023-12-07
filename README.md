@@ -1,6 +1,8 @@
 # Test Automation with Cypress
 This repo contains Cypress scripts that test <a href="https://opensource-demo.orangehrmlive.com">OrangeHRM Demo</a>, <a href="https://www.saucedemo.com">Sauce Demo</a>, and  <a href="https://readytotest.github.io">My GitHub Page</a>
 
+[![Sauce Demo GH Actions Parallel](https://img.shields.io/endpoint?url=https://cloud.cypress.io/badge/detailed/dm22wp&style=flat&logo=cypress)](https://cloud.cypress.io/projects/dm22wp/runs)
+
 ```diff
 @@ Sample/demo Cypress scripts @@
 
