@@ -20,7 +20,7 @@ jobs:
             command: npm run ready-to-test
 
         - name: Upload Report to GitHub
-          uses: actions/upload-artifact@v3.1.3
+          uses: actions/upload-artifact@v4.0.0
           if: always()
           with:
               name: Test Results + Video
