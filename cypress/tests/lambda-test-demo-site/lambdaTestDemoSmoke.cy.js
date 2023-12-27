@@ -10,7 +10,8 @@ describe('Smoke Test LambdaTest eCommerce Playground', () => {
     beforeEach(() => {
 
         cy.visit(Cypress.env('lambdaTestDemoUrl'))
-        cy.contains('strong', 'This is a dummy website for Web Automation Testing').should('have.text', 'This is a dummy website for Web Automation Testing')
+        //Move next line under pages later
+        cy.get('div[data-id="217838"]').find('strong').should('have.text', 'This is a dummy website for Web Automation Testing')
         cy.log('Visit site successful!')
       
       })
