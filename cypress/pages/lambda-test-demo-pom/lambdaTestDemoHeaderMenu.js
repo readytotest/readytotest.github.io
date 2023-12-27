@@ -2,8 +2,7 @@ class lambdaTestDemoHeaderMenu{
 
     elements = {
         headerMyAccount:() => cy.get('.nav-item.dropdown.dropdown-hoverable').last(),
-        headerMyAccountRegisterSubmenu:() => cy.contains('span[class="title"]', 'Register')
-
+        headerMyAccountRegisterSubmenu:() => cy.get('.mz-sub-menu-96.dropdown-menu').find('span').contains('Register'),
        
     }
 
@@ -12,7 +11,7 @@ class lambdaTestDemoHeaderMenu{
         }
 
         clickHeaderMyAccountRegisterSubmenu() {
-            this.elements.headerMyAccountRegisterSubmenu().click({force:true});
+            this.elements.headerMyAccountRegisterSubmenu().click();
        }
 
  
