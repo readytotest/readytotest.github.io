@@ -1,17 +1,19 @@
 class lambdaTestDemoHeaderMenu{
 
     elements = {
-        headerMyAccount:() => cy.get('.nav-item.dropdown.dropdown-hoverable').last()
-
-      
+        headerMyAccount:() => cy.get('.nav-item.dropdown.dropdown-hoverable').last(),
+        headerMyAccountRegisterSubmenu:() => cy.contains('span[class="title"]', 'Register')
 
        
     }
 
-    mouseHoverHeaderMyAccount() {
-        //add wait so hover works, otherwise hover won't work here????
-        this.elements.headerMyAccount().wait(1).realHover();
-    }
+        mouseHoverHeaderMyAccount() {
+            this.elements.headerMyAccount().wait(1).realHover();
+        }
+
+        clickHeaderMyAccountRegisterSubmenu() {
+            this.elements.headerMyAccountRegisterSubmenu().click({force:true});
+       }
 
  
 
