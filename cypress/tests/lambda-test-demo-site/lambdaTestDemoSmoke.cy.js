@@ -1,3 +1,7 @@
+/* Note: This is a work in progress
+Will remove this comment when finished with this script
+*/
+
 import lambdaTestDemoHeaderMenu from "../../pages/lambda-test-demo-pom/lambdaTestDemoHeaderMenu";
 import lambdaTestDemoRegisterPage from "../../pages/lambda-test-demo-pom/lambdaTestDemoRegisterPage";
 
