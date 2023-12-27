@@ -15,5 +15,6 @@ This repo contains Cypress scripts that test <a href="https://opensource-demo.or
 + npm run clean-reports-and-downloads //removes reports and downloads directories and recreates them
 + npm run sauce-demo //GitHub Actions/Cypress Cloud uses this command. Trigger run manually from GitHub Actions workflow
 + npm run orange-demo //cleans reports and download directories, then runs tests against OrangeHRM demo site
++ npm run lambda-test-demo //cleans reports and download directories, then runs tests against LambdaTest demo site
 + npm run ready-to-test //cleans reports and download directories, then runs tests against my GitHub page
 ```
