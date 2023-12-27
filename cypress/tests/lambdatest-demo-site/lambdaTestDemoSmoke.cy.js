@@ -1,6 +1,6 @@
 import lambdaTestDemoHeaderMenu from "../../pages/lambda-test-demo-pom/lambdaTestDemoHeaderMenu";
 
-describe('Smoke Test GitHub Page', () => {
+describe('Smoke Test LambdaTest eCommerce Playground', () => {
 
     beforeEach(() => {
 
