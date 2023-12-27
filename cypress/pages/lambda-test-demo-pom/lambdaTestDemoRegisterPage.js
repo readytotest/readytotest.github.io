@@ -10,11 +10,11 @@ class lambdaTestDemoRegisterPage{
     }
 
         fillOutRegisterFirstNameField() {
-            this.elements.registerFirstNameField().type(faker.name.firstName());
+            this.elements.registerFirstNameField().type(faker.person.firstName());
         }
 
         fillOutRegisterLastNameField() {
-            this.elements.registerLastNameField().type(faker.name.lastName());
+            this.elements.registerLastNameField().type(faker.person.lastName());
         }
 
        
