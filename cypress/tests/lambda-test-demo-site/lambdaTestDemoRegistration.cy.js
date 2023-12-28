@@ -1,11 +1,12 @@
-/* Note: This is a work in progress
-Will remove this comment when finished with this script
-*/
-
 import lambdaTestDemoHeaderMenu from "../../pages/lambda-test-demo-pom/lambdaTestDemoHeaderMenu";
 import lambdaTestDemoRegisterPage from "../../pages/lambda-test-demo-pom/lambdaTestDemoRegisterPage";
 
+/*Let's run through the registration 5 times in a row
+All 5 users will have the same first name and password, but different last names and other info*/
+var i = 0;
+    for (i = 0; i < 5 ; i++) { 
 describe('Registration Test LambdaTest eCommerce Playground', () => {
+    
   
     beforeEach(() => {
 
@@ -17,10 +18,8 @@ describe('Registration Test LambdaTest eCommerce Playground', () => {
       })
      
    it('Register a new user', () => {
-    //Let's run through the registration 5 times in a row
-    //All 5 users will have the same first name and password, but different last names and other info
-    var i = 0;
-    for (i = 0; i < 5 ; i++) { 
+    
+    
         lambdaTestDemoHeaderMenu.mouseHoverHeaderMyAccount();
         lambdaTestDemoHeaderMenu.clickHeaderMyAccountRegisterSubmenu();
         lambdaTestDemoRegisterPage.fillOutRegisterFirstNameField();
@@ -35,10 +34,10 @@ describe('Registration Test LambdaTest eCommerce Playground', () => {
         lambdaTestDemoHeaderMenu.mouseHoverHeaderMyAccount();
         lambdaTestDemoHeaderMenu.clickHeaderMyAccountLogout();
         //Move under pages later
-        cy.get('h1').should('have.text', ' Account Logout')
-    
-    }
+        cy.get('h1').should('have.text', ' Account Logout')    
        
     })
 
+
 });
+}

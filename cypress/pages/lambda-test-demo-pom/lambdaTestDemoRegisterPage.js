@@ -38,11 +38,11 @@ class lambdaTestDemoRegisterPage{
         }
 
         fillOutRegisterPasswordField() {
-            this.elements.registerPasswordField().type(pwGenerator);
+            this.elements.registerPasswordField().type(pwGenerator, { log: false });
         }
 
         fillOutRegisterPasswordConfirmField() {
-            this.elements.registerPasswordConfirmField().type(pwGenerator);
+            this.elements.registerPasswordConfirmField().type(pwGenerator, { log: false });
         }
 
         fillOutRegisterAgreeCheckbox() {
