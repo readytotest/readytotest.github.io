@@ -5,7 +5,11 @@ Will remove this comment when finished with this script
 import lambdaTestDemoHeaderMenu from "../../pages/lambda-test-demo-pom/lambdaTestDemoHeaderMenu";
 import lambdaTestDemoRegisterPage from "../../pages/lambda-test-demo-pom/lambdaTestDemoRegisterPage";
 
-describe('Smoke Test LambdaTest eCommerce Playground', () => {
+describe('Registration Test LambdaTest eCommerce Playground', () => {
+    //Let's run through the registration 5 times in a row
+    //All 5 users will have the same first name and password, but different last names and other info
+    var i = 0;
+    for (i = 0; i < 5 ; i++) { 
 
     beforeEach(() => {
 
@@ -30,4 +34,5 @@ describe('Smoke Test LambdaTest eCommerce Playground', () => {
         lambdaTestDemoRegisterPage.verifyRegisterSuccessConfirmationText();
        
     })
+}
 });
