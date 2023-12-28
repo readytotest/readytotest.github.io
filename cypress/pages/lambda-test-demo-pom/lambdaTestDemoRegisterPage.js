@@ -30,7 +30,7 @@ class lambdaTestDemoRegisterPage{
         }
 
         fillOutRegisterEmailField() {
-            this.elements.registerEmailField().type(`${firstNameGenerator}${faker.string.numeric(2)}@qa-testing-test-${faker.string.numeric(5)}.net`);
+            this.elements.registerEmailField().type(`${firstNameGenerator}${faker.string.numeric(2)}@qa-cypress-test-automation-${faker.string.numeric(5)}.net`);
         }
 
         fillOutRegisterPhoneField() {
@@ -53,7 +53,7 @@ class lambdaTestDemoRegisterPage{
             this.elements.registerContinueButton().click();
         }
 
-        verifyRegisterSuccessconfirmationText() {
+        verifyRegisterSuccessConfirmationText() {
             this.elements.registerSuccessConfirmationText().should('include.text', 'Your Account Has Been Created!');
         }
        

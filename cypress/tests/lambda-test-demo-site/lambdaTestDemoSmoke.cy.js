@@ -27,7 +27,7 @@ describe('Smoke Test LambdaTest eCommerce Playground', () => {
         lambdaTestDemoRegisterPage.fillOutRegisterPasswordConfirmField();
         lambdaTestDemoRegisterPage.fillOutRegisterAgreeCheckbox();
         lambdaTestDemoRegisterPage.clickRegisterContinueButton();
-        lambdaTestDemoRegisterPage.verifyRegisterSuccessconfirmationText();
+        lambdaTestDemoRegisterPage.verifyRegisterSuccessConfirmationText();
        
     })
 });
