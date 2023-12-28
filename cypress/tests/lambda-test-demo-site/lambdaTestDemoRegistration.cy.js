@@ -6,11 +6,7 @@ import lambdaTestDemoHeaderMenu from "../../pages/lambda-test-demo-pom/lambdaTes
 import lambdaTestDemoRegisterPage from "../../pages/lambda-test-demo-pom/lambdaTestDemoRegisterPage";
 
 describe('Registration Test LambdaTest eCommerce Playground', () => {
-    //Let's run through the registration 5 times in a row
-    //All 5 users will have the same first name and password, but different last names and other info
-    var i = 0;
-    for (i = 0; i < 5 ; i++) { 
-
+  
     beforeEach(() => {
 
         cy.visit(Cypress.env('lambdaTestDemoUrl'))
@@ -21,6 +17,10 @@ describe('Registration Test LambdaTest eCommerce Playground', () => {
       })
      
    it('Register a new user', () => {
+    //Let's run through the registration 5 times in a row
+    //All 5 users will have the same first name and password, but different last names and other info
+    var i = 0;
+    for (i = 0; i < 5 ; i++) { 
         lambdaTestDemoHeaderMenu.mouseHoverHeaderMyAccount();
         lambdaTestDemoHeaderMenu.clickHeaderMyAccountRegisterSubmenu();
         lambdaTestDemoRegisterPage.fillOutRegisterFirstNameField();
@@ -32,7 +32,13 @@ describe('Registration Test LambdaTest eCommerce Playground', () => {
         lambdaTestDemoRegisterPage.fillOutRegisterAgreeCheckbox();
         lambdaTestDemoRegisterPage.clickRegisterContinueButton();
         lambdaTestDemoRegisterPage.verifyRegisterSuccessConfirmationText();
+        lambdaTestDemoHeaderMenu.mouseHoverHeaderMyAccount();
+        lambdaTestDemoHeaderMenu.clickHeaderMyAccountLogout();
+        //Move under pages later
+        cy.get('h1').should('have.text', ' Account Logout')
+    
+    }
        
     })
-}
+
 });

@@ -3,6 +3,7 @@ class lambdaTestDemoHeaderMenu{
     elements = {
         headerMyAccount:() => cy.get('.nav-item.dropdown.dropdown-hoverable').last(),
         headerMyAccountRegisterSubmenu:() => cy.get('.mz-sub-menu-96.dropdown-menu').find('span').contains('Register'),
+        headerMyAccountLogout:() => cy.get('a[href="https://ecommerce-playground.lambdatest.io/index.php?route=account/logout"]').first(),
        
     }
 
@@ -11,7 +12,11 @@ class lambdaTestDemoHeaderMenu{
         }
 
         clickHeaderMyAccountRegisterSubmenu() {
-            this.elements.headerMyAccountRegisterSubmenu().click();
+            this.elements.headerMyAccountRegisterSubmenu().click({force:true});
+       }
+
+       clickHeaderMyAccountLogout() {
+        this.elements.headerMyAccountLogout().click({force:true});
        }
 
  
