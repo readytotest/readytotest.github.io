@@ -1,0 +1,25 @@
+name: LambdaTest Registration (manual only)
+on:
+ workflow_dispatch:
+ 
+jobs:
+ Cypress-Smoke-Test:
+   runs-on: ubuntu-latest
+   timeout-minutes: 10
+   steps:
+        - name: Checkout Repo
+          uses: actions/checkout@v4.1.1
+
+        - name: Test
+          uses: cypress-io/github-action@v6
+          with:
+            command: npm run lambda-test-demo
+
+        - name: Upload Report to GitHub
+          uses: actions/upload-artifact@v4.0.0
+          if: always()
+          with:
+              name: Test Results + Video
+              path: ./cypress/reports/
+              if-no-files-found: warn
+              retention-days: 60
