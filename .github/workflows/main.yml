@@ -1,4 +1,4 @@
-name: readytotest Smoke (on push/pr)
+name: readytotest Smoke (page build + manual)
 on:
  workflow_dispatch:
  page_build:
