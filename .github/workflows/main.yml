@@ -1,4 +1,4 @@
-name: readytotest Smoke (page build + time + manual)
+name: readytotest Smoke (page build + schedule + manual)
 on:
  workflow_dispatch:
  page_build:
