@@ -13,8 +13,11 @@ jobs:
    steps:
         - name: Checkout Repo
           uses: actions/checkout@v4.1.1
-        #Output current directory to GitHub Console
-        - run: ls
+        
+        - name: List node version and current directory
+          run: |
+            node -v
+            ls
 
         - name: Test
           uses: cypress-io/github-action@v6
