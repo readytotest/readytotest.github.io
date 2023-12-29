@@ -1,10 +1,8 @@
 name: readytotest Smoke (on push/pr)
 on:
  workflow_dispatch:
- push:
-   branches:
-     - main
- pull_request:
+ page_build:
+
 
 jobs:
  Cypress-Smoke-Test:
