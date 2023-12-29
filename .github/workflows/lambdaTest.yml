@@ -1,4 +1,4 @@
-name: LambdaTest Registration (manual only)
+name: LambdaTest Registration (manual)
 on:
  workflow_dispatch:
  

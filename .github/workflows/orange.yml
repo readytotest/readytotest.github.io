@@ -1,4 +1,4 @@
-name: Orange Demo Smoke (manual only)
+name: Orange Smoke (manual)
 on:
  workflow_dispatch:
  

@@ -1,4 +1,4 @@
-name: Sauce demo Cypress Cloud Parallel (manual only)
+name: Sauce Cypress Cloud Parallel (manual)
 on:
  workflow_dispatch:
  

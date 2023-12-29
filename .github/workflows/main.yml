@@ -1,7 +1,9 @@
-name: readytotest Smoke (page build + manual)
+name: readytotest Smoke (page build + time + manual)
 on:
  workflow_dispatch:
  page_build:
+ schedule:
+   - cron: '00 17 * * *' #Daily 17:00 UTC
 
 
 jobs:
