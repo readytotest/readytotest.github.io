@@ -4,7 +4,7 @@ module.exports = defineConfig({
   projectId: "dm22wp", //for Cypress Cloud
   reporter: 'cypress-mochawesome-reporter',
   video: true,
-  numTestsKeptInMemory: 5,
+  numTestsKeptInMemory: 25,
   experimentalMemoryManagement: true,
   screenshotOnRunFailure: true,
   trashAssetsBeforeRuns: true,
