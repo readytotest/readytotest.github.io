@@ -14,7 +14,7 @@ describe('Smoke Test GitHub Page', () => {
         cy.get('body').should('include.text', 'Ready to Test (QA) GitHub Profile')
         cy.get('body').should('include.text', 'Cypress Test Automation Scripts')
         cy.get('body').should('include.text', 'Cypress Cloud Report')
-        cy.get('body').should('include.text', 'GitHub Actions in My Repo')
+        cy.get('body').should('include.text', 'GitHub Actions')
         cy.get('body').should('include.text', 'National Weather Service API')
         cy.get('body').should('include.text', 'Postman API Testing')
         cy.get('body').should('include.text', 'Most Recent Earthquake')
