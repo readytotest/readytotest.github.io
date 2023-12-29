@@ -10,6 +10,17 @@ jobs:
         - name: Checkout Repo
           uses: actions/checkout@v4.1.1
 
+        - name: Setup Node.js environment
+          uses: actions/setup-node@v4.0.1
+          with:
+            node-version: 20.10.0      
+        
+        - name: Print system node version, Cypress version, and current directory
+          run: |
+            node -v
+            npx cypress -v
+            ls
+
         - name: Test
           uses: cypress-io/github-action@v6
           with:
