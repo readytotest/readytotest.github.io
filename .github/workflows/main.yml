@@ -14,9 +14,10 @@ jobs:
         - name: Checkout Repo
           uses: actions/checkout@v4.1.1
         
-        - name: List node version and current directory
+        - name: Print system node version, Cypress version, and current directory
           run: |
             node -v
+            npx cypress -v
             ls
 
         - name: Test
