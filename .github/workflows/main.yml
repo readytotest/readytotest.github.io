@@ -7,13 +7,13 @@ on:
 
 
 jobs:
- GitHub-Page-Check:
+ Cypress-Smoke-Test:
    runs-on: ubuntu-latest
    timeout-minutes: 10
    steps:
        
         - name: Message
-          run: This performs a quick test of my GitHub page and runs after each page build and daily at 17:00 UTC
+          run: echo After page build and daily at 17:00 UTC, a test of the GitHub page occurs.
 
         - name: Checkout Repo
           uses: actions/checkout@v4.1.1
@@ -31,7 +31,7 @@ jobs:
         - name: Test
           uses: cypress-io/github-action@v6
           with:
-            command: npm run ready-to-test #readyToTestSmoke.cy
+            command: npm run ready-to-test
 
         - name: Upload Report to GitHub
           uses: actions/upload-artifact@v4.0.0
