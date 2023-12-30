@@ -1,4 +1,8 @@
-import { faker } from '@faker-js/faker';
+/*There was a 10 second delay loading the Cypress tests using --> import { faker } from '@faker-js/faker'
+Note to self: Use en_US locale to reduce the startup time if using Faker .*/
+
+import { faker } from '@faker-js/faker/locale/en_US';
+
 
 //Have to use a variable here otherwise the pw and the confirm pw won't match
 const pwGenerator = faker.internet.password({ length: 8, memorable: true, prefix: 'Q@1' })
