@@ -13,7 +13,7 @@ jobs:
    steps:
        
         - name: Message
-          run: echo After page build and daily at 17:00 UTC, a test of the GitHub page occurs.
+          run: This is doing a quick test of my GitHub page and runs after each page build and daily at 17:00 UTC (readyToTestSmoke.cy)
 
         - name: Checkout Repo
           uses: actions/checkout@v4.1.1
