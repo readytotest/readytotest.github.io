@@ -3,7 +3,7 @@ on:
  workflow_dispatch:
  
 jobs:
- Cypress-Smoke-Test:
+ Sauce-Tests-Cypress-Cloud-Parallel:
    runs-on: ubuntu-latest
    timeout-minutes: 10
    strategy:
