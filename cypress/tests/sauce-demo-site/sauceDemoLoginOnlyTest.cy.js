@@ -1,6 +1,6 @@
-import SauceDemoLoginPage from '../../pages/sauce-demo-pom/SauceDemoLoginPage';
+import SauceDemoLoginPage from '../../pages/sauce-demo-pom/sauceDemoLoginPage';
 import sauceDemoTestData from '../../fixtures/sauce-demo/sauceDemoTestData.json';
-import SauceDemoProductsPage from '../../pages/sauce-demo-pom/SauceDemoProductsPage';
+import SauceDemoProductsPage from '../../pages/sauce-demo-pom/sauceDemoProductsPage';
 
 describe('Sauce Demo Login Tests', () => {
 
