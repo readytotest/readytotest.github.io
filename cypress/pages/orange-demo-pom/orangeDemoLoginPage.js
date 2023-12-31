@@ -1,4 +1,4 @@
-class orangeDemoLoginPage{
+class OrangeDemoLoginPage{
 
     elements = {
         usernameLogin: () => cy.get('input[name="username"]'),
@@ -24,4 +24,4 @@ class orangeDemoLoginPage{
 
 }
 
-module.exports = new orangeDemoLoginPage();
+module.exports = new OrangeDemoLoginPage();

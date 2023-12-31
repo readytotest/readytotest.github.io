@@ -1,4 +1,4 @@
-class orangeDemoProfileMenu{
+class OrangeDemoProfileMenu{
 
     elements = {
         profileMenu: () => cy.get('p[class="oxd-userdropdown-name"]'),
@@ -16,4 +16,4 @@ class orangeDemoProfileMenu{
 
 }
 
-module.exports = new orangeDemoProfileMenu();
+module.exports = new OrangeDemoProfileMenu();

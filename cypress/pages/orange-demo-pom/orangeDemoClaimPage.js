@@ -1,7 +1,7 @@
 
 import orangeDemoTestData from '../../fixtures/orange-demo/orangeDemoTestData.json';
 
-class orangeDemoRecruitmentPage{
+class OrangeDemoClaimPage{
 
     elements = {
         eventMenu:() => cy.get('.oxd-select-text-input').eq(0),
@@ -109,4 +109,4 @@ class orangeDemoRecruitmentPage{
 
 }
 
-module.exports = new orangeDemoRecruitmentPage();
+module.exports = new OrangeDemoClaimPage();

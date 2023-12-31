@@ -1,6 +1,6 @@
 import { randomEmailGenerator, randomFirstNameGenerator, randomMiddleNameGenerator, randomLastNameGenerator } from '/cypress/fixtures/orange-demo/orangeDemoFakeDataGenerator.js';
 
-class orangeDemoMyInfoPage{
+class OrangeDemoMyInfoPage{
 
     elements = {
         personalDetailsLink:() => cy.contains('.orangehrm-tabs-item', 'Personal Details'),
@@ -125,4 +125,4 @@ class orangeDemoMyInfoPage{
 
 }
 
-module.exports = new orangeDemoMyInfoPage();
+module.exports = new OrangeDemoMyInfoPage();

@@ -1,6 +1,6 @@
 import { randomEmailGenerator, randomFirstNameGenerator, randomMiddleNameGenerator, randomLastNameGenerator } from '/cypress/fixtures/orange-demo/orangeDemoFakeDataGenerator.js';
 
-class orangeDemoRecruitmentPage{
+class OrangeDemoRecruitmentPage{
 
     elements = {
         selectAllCandidatesRecordsCheckbox:() => cy.get('.oxd-checkbox-wrapper').first(),
@@ -109,4 +109,4 @@ class orangeDemoRecruitmentPage{
 
 }
 
-module.exports = new orangeDemoRecruitmentPage();
+module.exports = new OrangeDemoRecruitmentPage();

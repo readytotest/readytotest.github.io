@@ -1,4 +1,4 @@
-class orangeDemoVerticalMenu{
+class OrangeDemoVerticalMenu{
 
     elements = {
         dashboardLink:() => cy.contains('.oxd-main-menu-item', 'Dashboard'),
@@ -47,4 +47,4 @@ class orangeDemoVerticalMenu{
 
 }
 
-module.exports = new orangeDemoVerticalMenu();
+module.exports = new OrangeDemoVerticalMenu();

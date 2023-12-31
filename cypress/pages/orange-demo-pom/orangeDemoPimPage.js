@@ -1,6 +1,6 @@
 import { randomEmailGenerator, randomFirstNameGenerator, randomMiddleNameGenerator, randomLastNameGenerator, usernameGenerator, passwordGenerator } from '/cypress/fixtures/orange-demo/orangeDemoFakeDataGenerator.js';
 
-class orangeDemoPimPage{
+class OrangeDemoPimPage{
 
     elements = {
         pimAddButton:() => cy.contains('button', 'Add'),
@@ -68,4 +68,4 @@ class orangeDemoPimPage{
 
 }
 
-module.exports = new orangeDemoPimPage
+module.exports = new OrangeDemoPimPage

@@ -1,6 +1,6 @@
 import orangeDemoTestData from '../../fixtures/orange-demo/orangeDemoTestData.json';
 
-class orangeDemoAdminPage{
+class OrangeDemoAdminPage{
 
     elements = {
         organizationMenu:() => cy.contains('.oxd-topbar-body-nav-tab-item', 'Organization'),
@@ -51,4 +51,4 @@ class orangeDemoAdminPage{
 
 
 }
-module.exports = new orangeDemoAdminPage();
+module.exports = new OrangeDemoAdminPage();

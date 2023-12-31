@@ -1,6 +1,6 @@
 import orangeDemoTestData from '../../fixtures/orange-demo/orangeDemoTestData.json';
 
-class orangeDemoBuzzPage{
+class OrangeDemoBuzzPage{
 
     elements = {
         buzzMessageField:() => cy.get('.oxd-buzz-post-input'),
@@ -22,4 +22,4 @@ class orangeDemoBuzzPage{
     }
 }
 
-module.exports = new orangeDemoBuzzPage();
+module.exports = new OrangeDemoBuzzPage();

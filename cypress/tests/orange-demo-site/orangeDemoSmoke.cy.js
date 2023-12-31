@@ -1,76 +1,76 @@
-import orangeDemoLoginPage from '../../pages/orange-demo-pom/orangeDemoLoginPage';
-import orangeDemoDashboardPage from '../../pages/orange-demo-pom/orangeDemoDashboardPage';
+import OrangeDemoLoginPage from '../../pages/orange-demo-pom/OrangeDemoLoginPage';
+import OrangeDemoDashboardPage from '../../pages/orange-demo-pom/OrangeDemoDashboardPage';
 import orangeDemoTestData from '../../fixtures/orange-demo/orangeDemoTestData.json';
-import orangeDemoVerticalMenu from '../../pages/orange-demo-pom/orangeDemoVerticalMenu';
-import orangeDemoMyInfoPage from '../../pages/orange-demo-pom/orangeDemoMyInfoPage';
-import orangeDemoBuzzPage from '../../pages/orange-demo-pom/orangeDemoBuzzPage';
-import orangeDemoRecruitmentPage from '../../pages/orange-demo-pom/orangeDemoRecruitmentPage';
-import orangeDemoClaimPage from '../../pages/orange-demo-pom/orangeDemoClaimPage';
-import orangeDemoAdminPage from '../../pages/orange-demo-pom/orangeDemoAdminPage';
-import orangeDemoLeavePage from '../../pages/orange-demo-pom/orangeDemoLeavePage';
-import orangeDemoPimPage from '../../pages/orange-demo-pom/orangeDemoPimPage';
+import OrangeDemoVerticalMenu from '../../pages/orange-demo-pom/OrangeDemoVerticalMenu';
+import OrangeDemoMyInfoPage from '../../pages/orange-demo-pom/OrangeDemoMyInfoPage';
+import OrangeDemoBuzzPage from '../../pages/orange-demo-pom/OrangeDemoBuzzPage';
+import OrangeDemoRecruitmentPage from '../../pages/orange-demo-pom/OrangeDemoRecruitmentPage';
+import OrangeDemoClaimPage from '../../pages/orange-demo-pom/OrangeDemoClaimPage';
+import OrangeDemoAdminPage from '../../pages/orange-demo-pom/OrangeDemoAdminPage';
+import OrangeDemoLeavePage from '../../pages/orange-demo-pom/OrangeDemoLeavePage';
+import OrangeDemoPimPage from '../../pages/orange-demo-pom/OrangeDemoPimPage';
 
 describe('Orange Demo Smoke Test', () => {
 
     beforeEach(() => {
 
         cy.visit(Cypress.env('orangeDemoUrl'));
-        orangeDemoLoginPage.enterUsername(orangeDemoTestData.loginCredentials.usernameValid);
-        orangeDemoLoginPage.enterPassword(orangeDemoTestData.loginCredentials.passwordValid);
-        orangeDemoLoginPage.clickLoginButton();      
-        orangeDemoDashboardPage.confirmOnDashboardPage();
+        OrangeDemoLoginPage.enterUsername(orangeDemoTestData.loginCredentials.usernameValid);
+        OrangeDemoLoginPage.enterPassword(orangeDemoTestData.loginCredentials.passwordValid);
+        OrangeDemoLoginPage.clickLoginButton();      
+        OrangeDemoDashboardPage.confirmOnDashboardPage();
         cy.log('Login successful!')
       
       });
 
        it('My Info: change photo, edit name and work email', () => {
         
-            orangeDemoVerticalMenu.clickMyInfoLink();
-            orangeDemoMyInfoPage.clickProfilePhoto();
-            orangeDemoMyInfoPage.uploadProfilePhoto();
-            orangeDemoMyInfoPage.clickProfilePhotoSaveButton();
+            OrangeDemoVerticalMenu.clickMyInfoLink();
+            OrangeDemoMyInfoPage.clickProfilePhoto();
+            OrangeDemoMyInfoPage.uploadProfilePhoto();
+            OrangeDemoMyInfoPage.clickProfilePhotoSaveButton();
             
-            orangeDemoMyInfoPage.clickPersonalDetailsLink();
-            orangeDemoMyInfoPage.clearFirstNameField();
-            orangeDemoMyInfoPage.checkIfFirstNameFieldEmpty();
-            orangeDemoMyInfoPage.typeFirstName();
+            OrangeDemoMyInfoPage.clickPersonalDetailsLink();
+            OrangeDemoMyInfoPage.clearFirstNameField();
+            OrangeDemoMyInfoPage.checkIfFirstNameFieldEmpty();
+            OrangeDemoMyInfoPage.typeFirstName();
 
-            orangeDemoMyInfoPage.clearMiddleNameField();
-            orangeDemoMyInfoPage.checkIfMiddleNameFieldEmpty();
-            orangeDemoMyInfoPage.typeMiddleName();
+            OrangeDemoMyInfoPage.clearMiddleNameField();
+            OrangeDemoMyInfoPage.checkIfMiddleNameFieldEmpty();
+            OrangeDemoMyInfoPage.typeMiddleName();
 
-            orangeDemoMyInfoPage.clearLastNameField();
-            orangeDemoMyInfoPage.checkIfLastNameFieldEmpty();
-            orangeDemoMyInfoPage.typeLastName();
-            orangeDemoMyInfoPage.clickFirstMyInfoSaveButton();
-            orangeDemoMyInfoPage.confirmMyInfoSaveSuccessToast();
+            OrangeDemoMyInfoPage.clearLastNameField();
+            OrangeDemoMyInfoPage.checkIfLastNameFieldEmpty();
+            OrangeDemoMyInfoPage.typeLastName();
+            OrangeDemoMyInfoPage.clickFirstMyInfoSaveButton();
+            OrangeDemoMyInfoPage.confirmMyInfoSaveSuccessToast();
 
-            orangeDemoMyInfoPage.clickContactDetailsLink();
-            orangeDemoMyInfoPage.clearWorkEmailField();
-            orangeDemoMyInfoPage.checkIfWorkEmailFieldEmpty();
-            orangeDemoMyInfoPage.typeWorkEmail();
-            orangeDemoMyInfoPage.clickFirstMyInfoSaveButton();
-            orangeDemoMyInfoPage.confirmMyInfoSaveSuccessToast();
+            OrangeDemoMyInfoPage.clickContactDetailsLink();
+            OrangeDemoMyInfoPage.clearWorkEmailField();
+            OrangeDemoMyInfoPage.checkIfWorkEmailFieldEmpty();
+            OrangeDemoMyInfoPage.typeWorkEmail();
+            OrangeDemoMyInfoPage.clickFirstMyInfoSaveButton();
+            OrangeDemoMyInfoPage.confirmMyInfoSaveSuccessToast();
             
-            orangeDemoMyInfoPage.confirmNameOfLoggedInUser();
-            orangeDemoMyInfoPage.confirmWorkEmail();
+            OrangeDemoMyInfoPage.confirmNameOfLoggedInUser();
+            OrangeDemoMyInfoPage.confirmWorkEmail();
                  
         })
 
         it('Buzz: add post.', () => {
         
-            orangeDemoVerticalMenu.clickBuzzLink();
-            orangeDemoBuzzPage.typeBuzzMessage();
-            orangeDemoBuzzPage.postBuzzMessage();
-            orangeDemoBuzzPage.confirmBuzzMessage();                    
+            OrangeDemoVerticalMenu.clickBuzzLink();
+            OrangeDemoBuzzPage.typeBuzzMessage();
+            OrangeDemoBuzzPage.postBuzzMessage();
+            OrangeDemoBuzzPage.confirmBuzzMessage();                    
         })
 
         it('Dashboard: check if buzz post appears and confirm a few headings', () => {
         
-            orangeDemoVerticalMenu.clickDashboardLink();
-            orangeDemoDashboardPage.confirmDashboardBuzzFeed();
-            orangeDemoDashboardPage.confirmDashboardTimeAtWork();
-            orangeDemoDashboardPage.confirmDashboardMyActions();
+            OrangeDemoVerticalMenu.clickDashboardLink();
+            OrangeDemoDashboardPage.confirmDashboardBuzzFeed();
+            OrangeDemoDashboardPage.confirmDashboardTimeAtWork();
+            OrangeDemoDashboardPage.confirmDashboardMyActions();
                     
         })
 
@@ -78,107 +78,107 @@ describe('Orange Demo Smoke Test', () => {
 
         it('Recruitment: delete candidates, add candidate and upload resume', () => {
         
-            orangeDemoVerticalMenu.clickRecruitmentLink();
-            orangeDemoRecruitmentPage.clickSelectAllCandidatesRecordsCheckbox();
-            orangeDemoRecruitmentPage.clickDeleteSelectedCandidatesRecordsButton();
-            orangeDemoRecruitmentPage.confirmDeleteSelectedCandidatesRecordsModal();
-            orangeDemoRecruitmentPage.clickAddCandidateButton();
-            orangeDemoRecruitmentPage.typeCandidateFirstName();
-            orangeDemoRecruitmentPage.typeCandidateMiddleName();
-            orangeDemoRecruitmentPage.typeCandidateLastName();
-            orangeDemoRecruitmentPage.typeCandidateEmail();
-            orangeDemoRecruitmentPage.openCandidateVacancyMenu();
-            orangeDemoRecruitmentPage.selectSeniorQaLeadFromCandidateVacancyMenu();
-            orangeDemoRecruitmentPage.uploadResume()
-            orangeDemoRecruitmentPage.clickCandidateSaveButton();
-            orangeDemoRecruitmentPage.confirmCandidateSaveSuccessToast();
-            orangeDemoRecruitmentPage.clickCandidatesHeaderButton();
-            orangeDemoRecruitmentPage.confirmCandidateWasAdded();
-            orangeDemoRecruitmentPage.viewProfileOfFirstPersonListedInCandidateRecords();
-            orangeDemoRecruitmentPage.confirmCandidateProfile();
-            orangeDemoRecruitmentPage.confirmResumeWasUploaded();
-            orangeDemoRecruitmentPage.downloadResume();
-            orangeDemoRecruitmentPage.confirmResumeWasDownloaded();
+            OrangeDemoVerticalMenu.clickRecruitmentLink();
+            OrangeDemoRecruitmentPage.clickSelectAllCandidatesRecordsCheckbox();
+            OrangeDemoRecruitmentPage.clickDeleteSelectedCandidatesRecordsButton();
+            OrangeDemoRecruitmentPage.confirmDeleteSelectedCandidatesRecordsModal();
+            OrangeDemoRecruitmentPage.clickAddCandidateButton();
+            OrangeDemoRecruitmentPage.typeCandidateFirstName();
+            OrangeDemoRecruitmentPage.typeCandidateMiddleName();
+            OrangeDemoRecruitmentPage.typeCandidateLastName();
+            OrangeDemoRecruitmentPage.typeCandidateEmail();
+            OrangeDemoRecruitmentPage.openCandidateVacancyMenu();
+            OrangeDemoRecruitmentPage.selectSeniorQaLeadFromCandidateVacancyMenu();
+            OrangeDemoRecruitmentPage.uploadResume()
+            OrangeDemoRecruitmentPage.clickCandidateSaveButton();
+            OrangeDemoRecruitmentPage.confirmCandidateSaveSuccessToast();
+            OrangeDemoRecruitmentPage.clickCandidatesHeaderButton();
+            OrangeDemoRecruitmentPage.confirmCandidateWasAdded();
+            OrangeDemoRecruitmentPage.viewProfileOfFirstPersonListedInCandidateRecords();
+            OrangeDemoRecruitmentPage.confirmCandidateProfile();
+            OrangeDemoRecruitmentPage.confirmResumeWasUploaded();
+            OrangeDemoRecruitmentPage.downloadResume();
+            OrangeDemoRecruitmentPage.confirmResumeWasDownloaded();
             })
 
         it('Claim: add claim, add expense, submit claim', () => {
         
-            orangeDemoVerticalMenu.clickClaimLink();
-            orangeDemoClaimPage.clickSubmitClaimHeaderButton();
-            orangeDemoClaimPage.openEventMenu();
-            orangeDemoClaimPage.selectTravelAllowanceFromEventMenu();
-            orangeDemoClaimPage.openCurrencyMenu();
-            orangeDemoClaimPage.selectUnitedStatesDollarFromCurrencyMenu();
-            orangeDemoClaimPage.typeCommentInRemarksSection();
-            orangeDemoClaimPage.clickCreateClaimButton();
-            orangeDemoClaimPage.clickAddExpenseButton();
-            orangeDemoClaimPage.clickExpenseTypeModalMenu();
-            orangeDemoClaimPage.selectFuelAllowanceFromexpenseTypeModalMenu();
-            orangeDemoClaimPage.typeDateIntoExpenseDatePicker();
-            orangeDemoClaimPage.inputExpenseAmount();
-            orangeDemoClaimPage.addNoteToExpense();
-            orangeDemoClaimPage.clickExpenseModalSaveButton();
-            orangeDemoClaimPage.clickSubmitClaimButton();
-            orangeDemoClaimPage.confirmSubmitClaimSuccessToast();
-            orangeDemoClaimPage.clickMyClaimsHeaderButton();
-            orangeDemoClaimPage.confirmClaimDescription();
-            orangeDemoClaimPage.confirmClaimStatus();
-            orangeDemoClaimPage.confirmClaimAmount();
+            OrangeDemoVerticalMenu.clickClaimLink();
+            OrangeDemoClaimPage.clickSubmitClaimHeaderButton();
+            OrangeDemoClaimPage.openEventMenu();
+            OrangeDemoClaimPage.selectTravelAllowanceFromEventMenu();
+            OrangeDemoClaimPage.openCurrencyMenu();
+            OrangeDemoClaimPage.selectUnitedStatesDollarFromCurrencyMenu();
+            OrangeDemoClaimPage.typeCommentInRemarksSection();
+            OrangeDemoClaimPage.clickCreateClaimButton();
+            OrangeDemoClaimPage.clickAddExpenseButton();
+            OrangeDemoClaimPage.clickExpenseTypeModalMenu();
+            OrangeDemoClaimPage.selectFuelAllowanceFromexpenseTypeModalMenu();
+            OrangeDemoClaimPage.typeDateIntoExpenseDatePicker();
+            OrangeDemoClaimPage.inputExpenseAmount();
+            OrangeDemoClaimPage.addNoteToExpense();
+            OrangeDemoClaimPage.clickExpenseModalSaveButton();
+            OrangeDemoClaimPage.clickSubmitClaimButton();
+            OrangeDemoClaimPage.confirmSubmitClaimSuccessToast();
+            OrangeDemoClaimPage.clickMyClaimsHeaderButton();
+            OrangeDemoClaimPage.confirmClaimDescription();
+            OrangeDemoClaimPage.confirmClaimStatus();
+            OrangeDemoClaimPage.confirmClaimAmount();
         
             })    
 
         it('Admin: change organization name', () => {
-            orangeDemoVerticalMenu.clickAdminLink();
-            orangeDemoAdminPage.clickOrganizationMenu();
-            orangeDemoAdminPage.clickGeneralInfoSubMenu();
-            orangeDemoAdminPage.clickEditGeneralInfoSlider();
-            orangeDemoAdminPage.clearOrganizationNameField();
-            orangeDemoAdminPage.checkIfOrganizationNameFieldEmpty();
-            orangeDemoAdminPage.typeOrganizationName();
-            orangeDemoAdminPage.checkIfOrganizationNameFieldNotEmpty();
-            orangeDemoAdminPage.clickOrganizationSaveButton();
-            orangeDemoAdminPage.confirmOrganizationName();
+            OrangeDemoVerticalMenu.clickAdminLink();
+            OrangeDemoAdminPage.clickOrganizationMenu();
+            OrangeDemoAdminPage.clickGeneralInfoSubMenu();
+            OrangeDemoAdminPage.clickEditGeneralInfoSlider();
+            OrangeDemoAdminPage.clearOrganizationNameField();
+            OrangeDemoAdminPage.checkIfOrganizationNameFieldEmpty();
+            OrangeDemoAdminPage.typeOrganizationName();
+            OrangeDemoAdminPage.checkIfOrganizationNameFieldNotEmpty();
+            OrangeDemoAdminPage.clickOrganizationSaveButton();
+            OrangeDemoAdminPage.confirmOrganizationName();
         })
 
         it('Leave: add vacation days, apply leave days, check vacation balance', () => {
-            orangeDemoVerticalMenu.clickLeaveLink();
-            orangeDemoLeavePage.clickEntitlementsHeaderMenu();
-            orangeDemoLeavePage.clickAddEntitlementLink();
-            orangeDemoLeavePage.findEmployeeInEntitlementEmployeeNameField();
-            orangeDemoLeavePage.clickLeaveTypeDropdownMenu();
-            orangeDemoLeavePage.selectUsVacationFromLeaveTypeMenu();
-            orangeDemoLeavePage.addDaysToEntitlementField();
-            orangeDemoLeavePage.clickEntitlementSaveButton();
-            orangeDemoLeavePage.clickEntitlementConfirmSaveModal();
-            orangeDemoLeavePage.confirmFirstListedEntitlementdays();
+            OrangeDemoVerticalMenu.clickLeaveLink();
+            OrangeDemoLeavePage.clickEntitlementsHeaderMenu();
+            OrangeDemoLeavePage.clickAddEntitlementLink();
+            OrangeDemoLeavePage.findEmployeeInEntitlementEmployeeNameField();
+            OrangeDemoLeavePage.clickLeaveTypeDropdownMenu();
+            OrangeDemoLeavePage.selectUsVacationFromLeaveTypeMenu();
+            OrangeDemoLeavePage.addDaysToEntitlementField();
+            OrangeDemoLeavePage.clickEntitlementSaveButton();
+            OrangeDemoLeavePage.clickEntitlementConfirmSaveModal();
+            OrangeDemoLeavePage.confirmFirstListedEntitlementdays();
            
-            orangeDemoLeavePage.clickApplyHeaderMenu();
-            orangeDemoLeavePage.clickLeaveTypeDropdownMenu();
-            orangeDemoLeavePage.selectUsVacationFromLeaveTypeMenu();
-            orangeDemoLeavePage.typeDateIntoLeaveDatePickerStart();
-            orangeDemoLeavePage.typeDateIntoLeaveDatePickerEnd();
-            orangeDemoLeavePage.clickEntitlementSaveButton();
+            OrangeDemoLeavePage.clickApplyHeaderMenu();
+            OrangeDemoLeavePage.clickLeaveTypeDropdownMenu();
+            OrangeDemoLeavePage.selectUsVacationFromLeaveTypeMenu();
+            OrangeDemoLeavePage.typeDateIntoLeaveDatePickerStart();
+            OrangeDemoLeavePage.typeDateIntoLeaveDatePickerEnd();
+            OrangeDemoLeavePage.clickEntitlementSaveButton();
 
-            orangeDemoLeavePage.clickMyLeaveHeaderMenu();
-            orangeDemoLeavePage.confirmMyLeaveBalanceDaysFirstListed();
+            OrangeDemoLeavePage.clickMyLeaveHeaderMenu();
+            OrangeDemoLeavePage.confirmMyLeaveBalanceDaysFirstListed();
 
             
         })
 
         it('PIM: add employee and create login', () => {
-            orangeDemoVerticalMenu.clickPimLink();
-            orangeDemoPimPage.clickPimAddButton();
-            orangeDemoPimPage.typePimFirstNameField();
-            orangeDemoPimPage.typePimLastNameField();
-            orangeDemoPimPage.clickPimCreateLoginDetailsSlider();
-            orangeDemoPimPage.typePimUsernameField();
-            orangeDemoPimPage.typePimPasswordField1();
-            orangeDemoPimPage.typePimPasswordField2();
-            orangeDemoPimPage.clickPimSaveButton();
-            orangeDemoVerticalMenu.clickPimLink();
-            orangeDemoPimPage.findEmployeeInPimEmployeeNameField();
-            orangeDemoPimPage.clickPimSearchButton();
-            orangeDemoPimPage.confirmEmployeeAdded();
+            OrangeDemoVerticalMenu.clickPimLink();
+            OrangeDemoPimPage.clickPimAddButton();
+            OrangeDemoPimPage.typePimFirstNameField();
+            OrangeDemoPimPage.typePimLastNameField();
+            OrangeDemoPimPage.clickPimCreateLoginDetailsSlider();
+            OrangeDemoPimPage.typePimUsernameField();
+            OrangeDemoPimPage.typePimPasswordField1();
+            OrangeDemoPimPage.typePimPasswordField2();
+            OrangeDemoPimPage.clickPimSaveButton();
+            OrangeDemoVerticalMenu.clickPimLink();
+            OrangeDemoPimPage.findEmployeeInPimEmployeeNameField();
+            OrangeDemoPimPage.clickPimSearchButton();
+            OrangeDemoPimPage.confirmEmployeeAdded();
         
       })
 

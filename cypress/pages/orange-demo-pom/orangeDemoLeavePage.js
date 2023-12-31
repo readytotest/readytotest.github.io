@@ -1,7 +1,7 @@
 import orangeDemoTestData from '../../fixtures/orange-demo/orangeDemoTestData.json';
 import { employeeStaticPartialFirstName } from '/cypress/fixtures/orange-demo/orangeDemoFakeDataGenerator.js';
 
-class orangeDemoLeavePage{
+class OrangeDemoLeavePage{
     elements = {
         entitlementsHeaderMenu:() => cy.contains('.oxd-topbar-body-nav-tab-item', 'Entitlements'),
         myLeaveHeaderMenu:() => cy.contains('.oxd-topbar-body-nav-tab-item', 'My Leave'),
@@ -80,5 +80,5 @@ class orangeDemoLeavePage{
 
 }
 
-module.exports = new orangeDemoLeavePage()
+module.exports = new OrangeDemoLeavePage()
 //

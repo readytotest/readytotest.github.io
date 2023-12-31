@@ -1,6 +1,6 @@
 import orangeDemoTestData from '../../fixtures/orange-demo/orangeDemoTestData.json';
 
-class orangeDemoDashboardPage{
+class OrangeDemoDashboardPage{
 
     elements = {
         dashboardHeader:() => cy.contains('.oxd-topbar-header-breadcrumb', 'Dashboard'),
@@ -28,4 +28,4 @@ class orangeDemoDashboardPage{
 
 }
 
-module.exports = new orangeDemoDashboardPage();
+module.exports = new OrangeDemoDashboardPage();
