@@ -28,10 +28,10 @@ return response;
 return response;
 })
 
-.then(response => { var receivedUrl = response.features[0]?.properties.url.split("/");
+.then(response => { let receivedUrl = response.features[0]?.properties.url.split("/");
 /* By default the URL response includes /executive as the last directory and we are replacing that directory with /map
 because we want to have a link that points directly to the map page */
-var replaceLastDirectory = receivedUrl.slice(0, receivedUrl.length-0).join("/");
+let replaceLastDirectory = receivedUrl.slice(0, receivedUrl.length-0).join("/");
 document.querySelector("earthquake-url").innerHTML = `<a href="${replaceLastDirectory}/map" target="_blank" rel="noopener noreferrer">View on map</a>`
 return response;
 })
