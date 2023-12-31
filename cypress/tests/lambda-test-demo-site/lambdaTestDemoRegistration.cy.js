@@ -1,5 +1,5 @@
-import LambdaTestDemoHeaderMenu from "../../pages/lambda-test-demo-pom/LambdaTestDemoHeaderMenu";
-import LambdaTestDemoRegisterPage from "../../pages/lambda-test-demo-pom/LambdaTestDemoRegisterPage";
+import LambdaTestDemoHeaderMenu from "../../pages/lambda-test-demo-pom/lambdaTestDemoHeaderMenu";
+import LambdaTestDemoRegisterPage from "../../pages/lambda-test-demo-pom/lambdaTestDemoRegisterPage";
 
 /*Let's run through the registration 5 times in a row
 All 5 users will have the same first name and password, but different last names and other info*/
