@@ -7,7 +7,7 @@ This repo contains Cypress scripts that test <a href="https://opensource-demo.or
 
 [![Sauce Demo GH Actions Parallel](https://img.shields.io/endpoint?url=https://cloud.cypress.io/badge/detailed/dm22wp&style=flat&logo=cypress)](https://cloud.cypress.io/projects/dm22wp/runs)
 <br> 
-Note: Cypress Cloud only used for Sauce Demo specs. All other tests will use Mochawesome report.
+<sup>Note: Cypress Cloud only used for Sauce Demo specs. All other tests will use Mochawesome report.</sup>
 
 ```diff
 @@ Sample/demo Cypress scripts @@
