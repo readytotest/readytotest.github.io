@@ -12,7 +12,7 @@ Note: Cypress Cloud only used for Sauce Demo specs. All other tests will use Moc
 ```diff
 @@ Sample/demo Cypress scripts @@
 
-# Upon commit or PR, GH Actions runs a test against my GH Page
+# GH Actions runs a test against my GH Page after page build
 
 ! Repo contributors can manually run Cypress scripts from GH Actions
 
