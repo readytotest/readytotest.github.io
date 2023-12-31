@@ -1,5 +1,5 @@
-import lambdaTestDemoHeaderMenu from "../../pages/lambda-test-demo-pom/lambdaTestDemoHeaderMenu";
-import lambdaTestDemoRegisterPage from "../../pages/lambda-test-demo-pom/lambdaTestDemoRegisterPage";
+import LambdaTestDemoHeaderMenu from "../../pages/lambda-test-demo-pom/LambdaTestDemoHeaderMenu";
+import LambdaTestDemoRegisterPage from "../../pages/lambda-test-demo-pom/LambdaTestDemoRegisterPage";
 
 /*Let's run through the registration 5 times in a row
 All 5 users will have the same first name and password, but different last names and other info*/
@@ -19,19 +19,19 @@ describe('Registration Test LambdaTest eCommerce Playground', () => {
    it('Register a new user', () => {
     
     
-        lambdaTestDemoHeaderMenu.mouseHoverHeaderMyAccount();
-        lambdaTestDemoHeaderMenu.clickHeaderMyAccountRegisterSubmenu();
-        lambdaTestDemoRegisterPage.fillOutRegisterFirstNameField();
-        lambdaTestDemoRegisterPage.fillOutRegisterLastNameField();
-        lambdaTestDemoRegisterPage.fillOutRegisterEmailField();
-        lambdaTestDemoRegisterPage.fillOutRegisterPhoneField();
-        lambdaTestDemoRegisterPage.fillOutRegisterPasswordField();
-        lambdaTestDemoRegisterPage.fillOutRegisterPasswordConfirmField();
-        lambdaTestDemoRegisterPage.fillOutRegisterAgreeCheckbox();
-        lambdaTestDemoRegisterPage.clickRegisterContinueButton();
-        lambdaTestDemoRegisterPage.verifyRegisterSuccessConfirmationText();
-        lambdaTestDemoHeaderMenu.mouseHoverHeaderMyAccount();
-        lambdaTestDemoHeaderMenu.clickHeaderMyAccountLogout();
+        LambdaTestDemoHeaderMenu.mouseHoverHeaderMyAccount();
+        LambdaTestDemoHeaderMenu.clickHeaderMyAccountRegisterSubmenu();
+        LambdaTestDemoRegisterPage.fillOutRegisterFirstNameField();
+        LambdaTestDemoRegisterPage.fillOutRegisterLastNameField();
+        LambdaTestDemoRegisterPage.fillOutRegisterEmailField();
+        LambdaTestDemoRegisterPage.fillOutRegisterPhoneField();
+        LambdaTestDemoRegisterPage.fillOutRegisterPasswordField();
+        LambdaTestDemoRegisterPage.fillOutRegisterPasswordConfirmField();
+        LambdaTestDemoRegisterPage.fillOutRegisterAgreeCheckbox();
+        LambdaTestDemoRegisterPage.clickRegisterContinueButton();
+        LambdaTestDemoRegisterPage.verifyRegisterSuccessConfirmationText();
+        LambdaTestDemoHeaderMenu.mouseHoverHeaderMyAccount();
+        LambdaTestDemoHeaderMenu.clickHeaderMyAccountLogout();
         //Move under pages later
         cy.get('h1').should('have.text', ' Account Logout')    
        

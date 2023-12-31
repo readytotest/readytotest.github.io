@@ -1,4 +1,4 @@
-class lambdaTestDemoHeaderMenu{
+class LambdaTestDemoHeaderMenu{
 
     elements = {
         headerMyAccount:() => cy.get('.nav-item.dropdown.dropdown-hoverable').last(),
@@ -23,4 +23,4 @@ class lambdaTestDemoHeaderMenu{
 
 
 }
-module.exports = new lambdaTestDemoHeaderMenu();
+module.exports = new LambdaTestDemoHeaderMenu();

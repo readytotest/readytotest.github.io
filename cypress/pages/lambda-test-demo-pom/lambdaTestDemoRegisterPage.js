@@ -9,7 +9,7 @@ const pwGenerator = faker.internet.password({ length: 8, memorable: true, prefix
 //Using variable here so the beginning part of the email will match the first name
 const firstNameGenerator = faker.person.firstName()
 
-class lambdaTestDemoRegisterPage{
+class LambdaTestDemoRegisterPage{
 
     elements = {
         registerFirstNameField:() =>  cy.get('#input-firstname'),
@@ -66,4 +66,4 @@ class lambdaTestDemoRegisterPage{
 
 
 }
-module.exports = new lambdaTestDemoRegisterPage();
+module.exports = new LambdaTestDemoRegisterPage();
