@@ -61,14 +61,6 @@ class orangeDemoLeavePage{
         this.elements.applyHeaderMenu().click();
     }
 
-    clickLeaveTypeDropdownMenu(){
-        this.elements.leaveTypeDropdownMenu().click();
-    }
-
-    selectUsVacationFromLeaveTypeMenu(){
-        this.elements.leaveTypeUsVacation().click();
-    }
-
     typeDateIntoLeaveDatePickerStart(){
         this.elements.leaveDatePickerStart().click().type(orangeDemoTestData.formData.leaveDateStart).click();
     }
