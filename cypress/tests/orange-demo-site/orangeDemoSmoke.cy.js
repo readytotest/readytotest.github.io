@@ -1,14 +1,14 @@
-import OrangeDemoLoginPage from '../../pages/orange-demo-pom/OrangeDemoLoginPage';
-import OrangeDemoDashboardPage from '../../pages/orange-demo-pom/OrangeDemoDashboardPage';
+import OrangeDemoLoginPage from '../../pages/orange-demo-pom/orangeDemoLoginPage';
+import OrangeDemoDashboardPage from '../../pages/orange-demo-pom/orangeDemoDashboardPage';
 import orangeDemoTestData from '../../fixtures/orange-demo/orangeDemoTestData.json';
-import OrangeDemoVerticalMenu from '../../pages/orange-demo-pom/OrangeDemoVerticalMenu';
-import OrangeDemoMyInfoPage from '../../pages/orange-demo-pom/OrangeDemoMyInfoPage';
-import OrangeDemoBuzzPage from '../../pages/orange-demo-pom/OrangeDemoBuzzPage';
-import OrangeDemoRecruitmentPage from '../../pages/orange-demo-pom/OrangeDemoRecruitmentPage';
-import OrangeDemoClaimPage from '../../pages/orange-demo-pom/OrangeDemoClaimPage';
-import OrangeDemoAdminPage from '../../pages/orange-demo-pom/OrangeDemoAdminPage';
-import OrangeDemoLeavePage from '../../pages/orange-demo-pom/OrangeDemoLeavePage';
-import OrangeDemoPimPage from '../../pages/orange-demo-pom/OrangeDemoPimPage';
+import OrangeDemoVerticalMenu from '../../pages/orange-demo-pom/orangeDemoVerticalMenu';
+import OrangeDemoMyInfoPage from '../../pages/orange-demo-pom/orangeDemoMyInfoPage';
+import OrangeDemoBuzzPage from '../../pages/orange-demo-pom/orangeDemoBuzzPage';
+import OrangeDemoRecruitmentPage from '../../pages/orange-demo-pom/orangeDemoRecruitmentPage';
+import OrangeDemoClaimPage from '../../pages/orange-demo-pom/orangeDemoClaimPage';
+import OrangeDemoAdminPage from '../../pages/orange-demo-pom/orangeDemoAdminPage';
+import OrangeDemoLeavePage from '../../pages/orange-demo-pom/orangeDemoLeavePage';
+import OrangeDemoPimPage from '../../pages/orange-demo-pom/orangeDemoPimPage';
 
 describe('Orange Demo Smoke Test', () => {
 
