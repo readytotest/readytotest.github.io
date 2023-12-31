@@ -1,4 +1,4 @@
-class sauceDemoProductsPage{
+class SauceDemoProductsPage{
 
     elements = {
         productHeader:() => cy.contains('span[class="title"]', 'Products'),
@@ -30,4 +30,4 @@ class sauceDemoProductsPage{
     }
 }
 
-module.exports = new sauceDemoProductsPage();
+module.exports = new SauceDemoProductsPage();

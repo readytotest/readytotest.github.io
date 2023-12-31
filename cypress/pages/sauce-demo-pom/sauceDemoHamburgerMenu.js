@@ -1,4 +1,4 @@
-class sauceDemoHamburgerMenu{
+class SauceDemoHamburgerMenu{
 
     elements = {
         hamburgerMenu: () => cy.get('#react-burger-menu-btn'),
@@ -15,5 +15,5 @@ class sauceDemoHamburgerMenu{
 
 }
 
-module.exports = new sauceDemoHamburgerMenu();
+module.exports = new SauceDemoHamburgerMenu();
                      

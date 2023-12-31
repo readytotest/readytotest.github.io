@@ -1,4 +1,4 @@
-class sauceDemoLoginPage{
+class SauceDemoLoginPage{
 
     elements = {
         usernameLogin: () => cy.get('#user-name'),
@@ -41,4 +41,4 @@ class sauceDemoLoginPage{
 
 }
 
-module.exports = new sauceDemoLoginPage();
+module.exports = new SauceDemoLoginPage();

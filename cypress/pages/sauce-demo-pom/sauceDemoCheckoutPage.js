@@ -1,4 +1,4 @@
-class sauceDemoCheckoutPage{
+class SauceDemoCheckoutPage{
 
     elements = {
         firstNameField:() => cy.get('#first-name'),
@@ -72,4 +72,4 @@ class sauceDemoCheckoutPage{
 
 }
 
-module.exports = new sauceDemoCheckoutPage();
+module.exports = new SauceDemoCheckoutPage();

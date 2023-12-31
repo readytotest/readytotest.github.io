@@ -1,4 +1,4 @@
-class sauceDemoCartPage{
+class SauceDemoCartPage{
 
     elements = {
         checkoutButton:() => cy.get('#checkout'),
@@ -10,4 +10,4 @@ class sauceDemoCartPage{
     }
 }
 
-module.exports = new sauceDemoCartPage();
+module.exports = new SauceDemoCartPage();

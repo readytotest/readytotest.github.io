@@ -1,6 +1,6 @@
-import sauceDemoLoginPage from '../../pages/sauce-demo-pom/sauceDemoLoginPage';
+import SauceDemoLoginPage from '../../pages/sauce-demo-pom/SauceDemoLoginPage';
 import sauceDemoTestData from '../../fixtures/sauce-demo/sauceDemoTestData.json';
-import sauceDemoProductsPage from '../../pages/sauce-demo-pom/sauceDemoProductsPage';
+import SauceDemoProductsPage from '../../pages/sauce-demo-pom/SauceDemoProductsPage';
 
 describe('Sauce Demo Login Tests', () => {
 
@@ -12,48 +12,48 @@ describe('Sauce Demo Login Tests', () => {
 
     it('Valid username/password', () => {
 
-        sauceDemoLoginPage.enterUsername(sauceDemoTestData.loginCredentials.usernameValid);
-        sauceDemoLoginPage.enterPassword(sauceDemoTestData.loginCredentials.passwordValid);
-        sauceDemoLoginPage.clickLoginButton();      
-        sauceDemoProductsPage.confirmOnProductPage();
+        SauceDemoLoginPage.enterUsername(sauceDemoTestData.loginCredentials.usernameValid);
+        SauceDemoLoginPage.enterPassword(sauceDemoTestData.loginCredentials.passwordValid);
+        SauceDemoLoginPage.clickLoginButton();      
+        SauceDemoProductsPage.confirmOnProductPage();
     })
 
     it('Locked out user', () => {
 
-        sauceDemoLoginPage.enterUsername(sauceDemoTestData.loginCredentials.usernameLockedOut);
-        sauceDemoLoginPage.enterPassword(sauceDemoTestData.loginCredentials.passwordValid);
-        sauceDemoLoginPage.clickLoginButton();
-        sauceDemoLoginPage.confirmLockedOutMessage();
+        SauceDemoLoginPage.enterUsername(sauceDemoTestData.loginCredentials.usernameLockedOut);
+        SauceDemoLoginPage.enterPassword(sauceDemoTestData.loginCredentials.passwordValid);
+        SauceDemoLoginPage.clickLoginButton();
+        SauceDemoLoginPage.confirmLockedOutMessage();
     })
 
     it('Empty username', () => {
 
-        sauceDemoLoginPage.enterPassword(sauceDemoTestData.loginCredentials.passwordValid);
-        sauceDemoLoginPage.clickLoginButton();
-        sauceDemoLoginPage.confirmEmptyUsernameMessage();
+        SauceDemoLoginPage.enterPassword(sauceDemoTestData.loginCredentials.passwordValid);
+        SauceDemoLoginPage.clickLoginButton();
+        SauceDemoLoginPage.confirmEmptyUsernameMessage();
     })
 
     it('Empty password', () => {
 
-        sauceDemoLoginPage.enterUsername(sauceDemoTestData.loginCredentials.usernameValid);
-        sauceDemoLoginPage.clickLoginButton();
-        sauceDemoLoginPage.confirmEmptyPasswordMessage();
+        SauceDemoLoginPage.enterUsername(sauceDemoTestData.loginCredentials.usernameValid);
+        SauceDemoLoginPage.clickLoginButton();
+        SauceDemoLoginPage.confirmEmptyPasswordMessage();
     })
 
     it('Invalid username', () => {
 
-        sauceDemoLoginPage.enterUsername(sauceDemoTestData.loginCredentials.usernameInvalid);
-        sauceDemoLoginPage.enterPassword(sauceDemoTestData.loginCredentials.passwordValid);
-        sauceDemoLoginPage.clickLoginButton();
-        sauceDemoLoginPage.confirmInvalidUsernameOrPasswordMessage();
+        SauceDemoLoginPage.enterUsername(sauceDemoTestData.loginCredentials.usernameInvalid);
+        SauceDemoLoginPage.enterPassword(sauceDemoTestData.loginCredentials.passwordValid);
+        SauceDemoLoginPage.clickLoginButton();
+        SauceDemoLoginPage.confirmInvalidUsernameOrPasswordMessage();
     })
 
     it('Invalid password', () => {
 
-        sauceDemoLoginPage.enterUsername(sauceDemoTestData.loginCredentials.usernameValid);
-        sauceDemoLoginPage.enterPassword(sauceDemoTestData.loginCredentials.passwordInvalid);
-        sauceDemoLoginPage.clickLoginButton();
-        sauceDemoLoginPage.confirmInvalidUsernameOrPasswordMessage();
+        SauceDemoLoginPage.enterUsername(sauceDemoTestData.loginCredentials.usernameValid);
+        SauceDemoLoginPage.enterPassword(sauceDemoTestData.loginCredentials.passwordInvalid);
+        SauceDemoLoginPage.clickLoginButton();
+        SauceDemoLoginPage.confirmInvalidUsernameOrPasswordMessage();
     })
 
     
