@@ -1,7 +1,7 @@
-import SauceDemoLoginPage from '../../pages/sauce-demo-pom/SauceDemoLoginPage';
-import SauceDemoProductsPage from '../../pages/sauce-demo-pom/SauceDemoProductsPage';
-import SauceDemoCartPage from '../../pages/sauce-demo-pom/SauceDemoCartPage';
-import SauceDemoCheckoutPage from '../../pages/sauce-demo-pom/SauceDemoCheckoutPage';
+import SauceDemoLoginPage from '../../pages/sauce-demo-pom/sauceDemoLoginPage';
+import SauceDemoProductsPage from '../../pages/sauce-demo-pom/sauceDemoProductsPage';
+import SauceDemoCartPage from '../../pages/sauce-demo-pom/sauceDemoCartPage';
+import SauceDemoCheckoutPage from '../../pages/sauce-demo-pom/sauceDemoCheckoutPage';
 import sauceDemoTestData from '../../fixtures/sauce-demo/sauceDemoTestData.json';
 
 describe('Sauce Demo Smoke Test', () => {
