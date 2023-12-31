@@ -1,6 +1,6 @@
 import sauceDemoLoginPage from '../../pages/sauce-demo-pom/sauceDemoLoginPage';
 import sauceDemoProductsPage from '../../pages/sauce-demo-pom/sauceDemoProductsPage';
-import sauceDemoCartPage, { goCheckout } from '../../pages/sauce-demo-pom/sauceDemoCartPage';
+import sauceDemoCartPage from '../../pages/sauce-demo-pom/sauceDemoCartPage';
 import sauceDemoCheckoutPage from '../../pages/sauce-demo-pom/sauceDemoCheckoutPage';
 import sauceDemoTestData from '../../fixtures/sauce-demo/sauceDemoTestData.json';
 
