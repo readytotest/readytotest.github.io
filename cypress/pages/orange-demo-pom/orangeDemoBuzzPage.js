@@ -16,9 +16,10 @@ class OrangeDemoBuzzPage{
     postBuzzMessage() {
         this.elements.buzzMessagePostButton().click();
     }
-
+    
     confirmBuzzMessage() {
-        this.elements.buzzMessageBodyText().first().wait(1000).should('include.text', orangeDemoTestData.formData.buzzMessageText);
+        cy.reload();
+        this.elements.buzzMessageBodyText().first().should('include.text', orangeDemoTestData.formData.buzzMessageText);
     }
 }
 
