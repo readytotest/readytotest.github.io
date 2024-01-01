@@ -12,9 +12,9 @@
       "expenseNote": "expense-note-test-text",
       "organizationName": "ACME Corporation",
       "vacationDays": "14",
-      "leaveDateStart": "2023-12-01",
-      "leaveDateEnd": "2023-12-07",
-      "vacationDaysBalanceAfterLeaveRequest": "9.00"
+      "leaveDateStart": "2024-11-01",
+      "leaveDateEnd": "2024-11-01",
+      "vacationDaysBalanceAfterLeaveRequest": "13.00"
     },
     
     "_dataPlaceholder": {
