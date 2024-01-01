@@ -1,5 +1,5 @@
-import { randomFirstNameGenerator, randomLastNameGenerator, usernameGenerator, passwordGenerator } from '/cypress/fixtures/orange-demo/orangeDemoFakeDataGenerator.js';
-
+import { passwordGenerator } from '/cypress/fixtures/orange-demo/orangeDemoFakeDataGenerator.js';
+import orangeDemoTestData from '../../fixtures/orange-demo/orangeDemoTestData.json';
 class OrangeDemoPimPage{
 
     elements = {
@@ -22,11 +22,11 @@ class OrangeDemoPimPage{
    }
 
    typePimFirstNameField(){
-    this.elements.pimFirstNameField().type(randomFirstNameGenerator);
+    this.elements.pimFirstNameField().type(orangeDemoTestData.formData.employeeFirstName);
    }
 
    typePimLastNameField(){
-    this.elements.pimLastNameField().type(randomLastNameGenerator);
+    this.elements.pimLastNameField().type(orangeDemoTestData.formData.employeeLastName);
    }
 
    clickPimCreateLoginDetailsSlider(){
@@ -34,15 +34,15 @@ class OrangeDemoPimPage{
    }
 
    typePimUsernameField(){
-    this.elements.pimUsernameField().type(usernameGenerator);
+    this.elements.pimUsernameField().type(orangeDemoTestData.formData.employeeUsername);
    }
 
    typePimPasswordField1(){
-    this.elements.pimPasswordField1().type(passwordGenerator);
+    this.elements.pimPasswordField1().type(passwordGenerator, { log: false });
    }
 
    typePimPasswordField2(){
-    this.elements.pimPasswordField2().type(passwordGenerator);
+    this.elements.pimPasswordField2().type(passwordGenerator, { log: false });
    }
 
    clickPimSaveButton(){
@@ -50,11 +50,11 @@ class OrangeDemoPimPage{
    }
 
    confirmPimFirstNameField(){
-    this.elements.pimFirstNameField().should('have.value', randomFirstNameGenerator);
+    this.elements.pimFirstNameField().should('have.value', orangeDemoTestData.formData.employeeFirstName);
    }
 
    findEmployeeInPimEmployeeNameField(){
-    this.elements.pimEmployeeNameField().type(randomFirstNameGenerator).wait(2000).type("{upArrow}{enter}");
+    this.elements.pimEmployeeNameField().type(orangeDemoTestData.formData.employeeFirstName).wait(2000).type("{upArrow}{enter}");
 }
 
    clickPimSearchButton(){
@@ -62,7 +62,7 @@ class OrangeDemoPimPage{
 }
 
    confirmEmployeeAdded(){
-   this.elements.pimFirstListedLastName().should('have.text', randomLastNameGenerator);
+   this.elements.pimFirstListedLastName().should('have.text', orangeDemoTestData.formData.employeeLastName);
 }
 
 

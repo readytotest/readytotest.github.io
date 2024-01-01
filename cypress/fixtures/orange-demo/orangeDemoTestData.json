@@ -14,7 +14,10 @@
       "vacationDays": "14",
       "leaveDateStart": "2024-11-01",
       "leaveDateEnd": "2024-11-01",
-      "vacationDaysBalanceAfterLeaveRequest": "13.00"
+      "vacationDaysBalanceAfterLeaveRequest": "13.00",
+      "employeeFirstName": "Bob",
+      "employeeLastName": "Jones",
+      "employeeUsername": "bjones1"
     },
     
     "_dataPlaceholder": {
