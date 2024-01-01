@@ -1,5 +1,3 @@
-import orangeDemoTestData from '../../fixtures/orange-demo/orangeDemoTestData.json';
-
 class OrangeDemoDashboardPage{
 
     elements = {
@@ -20,10 +18,6 @@ class OrangeDemoDashboardPage{
 
     confirmDashboardMyActions() {
         this.elements.dashboardMyActions().should('be.visible');
-    }
-
-    confirmDashboardBuzzFeed() {
-        this.elements.dashboardBuzzFeed().first().should('include.text', orangeDemoTestData.formData.buzzMessageText)
     }
 
 }

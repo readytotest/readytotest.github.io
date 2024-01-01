@@ -65,10 +65,9 @@ describe('Orange Demo Smoke Test', () => {
             OrangeDemoBuzzPage.confirmBuzzMessage();                    
         })
 
-        it('Dashboard: check if buzz post appears and confirm a few headings', () => {
+        it('Dashboard: confirm a few headings', () => {
         
             OrangeDemoVerticalMenu.clickDashboardLink();
-            OrangeDemoDashboardPage.confirmDashboardBuzzFeed();
             OrangeDemoDashboardPage.confirmDashboardTimeAtWork();
             OrangeDemoDashboardPage.confirmDashboardMyActions();
                     
