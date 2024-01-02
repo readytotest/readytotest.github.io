@@ -15,6 +15,7 @@
     "lambda-test-demo": "npm run clean-reports-and-downloads && npx cypress run --browser chrome --spec ./cypress/tests/lambda-test-demo-site/lambdaTestDemoRegistration.cy.js"
   },
   "dependencies": {
-    "cypress-real-events": "^1.10.3"
+    "cypress-real-events": "^1.10.3",
+    "dayjs": "^1.11.10"
   }
 }
