@@ -13,7 +13,8 @@ fetch('https://api.weather.gov/alerts/active')
 return response;
 })
 
-.then(response => { document.querySelector("weather-updated").textContent = (response.updated)
+.then(response => { document.querySelector("weather-updated").textContent = new Date(response.updated.toLocaleString("en-US", {
+    timeZone: "America/Los_Angeles"}))
 return response;
 })
 
