@@ -23,4 +23,5 @@ This repo contains Cypress scripts that test <a href="https://opensource-demo.or
 + npm run orange-demo //cleans reports and download directories, then runs tests against OrangeHRM demo site
 + npm run lambda-test-demo //cleans reports and download directories, then runs tests against LambdaTest demo site
 + npm run ready-to-test //cleans reports and download directories, then runs tests against my GitHub page
++ npm run scratch-pad //cleans reports and download directories, then runs experimental tests
 ```
