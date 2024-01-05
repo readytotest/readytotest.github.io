@@ -7,6 +7,7 @@ This repo contains Cypress scripts that test <a href="https://opensource-demo.or
 
 [![GitHub Actions Main](https://github.com/readytotest/readytotest.github.io/actions/workflows/main.yml/badge.svg)](https://github.com/readytotest/readytotest.github.io/actions/workflows/main.yml)
 
+[![GitHub Actions GitGuardian](https://github.com/readytotest/readytotest.github.io/actions/workflows/gitGuardian.yml/badge.svg)](https://github.com/readytotest/readytotest.github.io/actions/workflows/gitGuardian.yml)
 
 [![Sauce Demo GH Actions Parallel](https://img.shields.io/endpoint?url=https://cloud.cypress.io/badge/detailed/dm22wp&style=flat&logo=cypress)](https://cloud.cypress.io/projects/dm22wp/runs)
 <br> 
