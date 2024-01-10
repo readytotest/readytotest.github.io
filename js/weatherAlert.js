@@ -1,13 +1,31 @@
+//https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch
 
 //API status
 fetch('https://api.weather.gov')
-.then(response => response.json())
+.then(response => {
+    if (!response.ok) {
+      throw new Error(`HTTP error! Status: ${response.status}`);
+    }
+    return response.json();
+  })
 .then(response => { document.querySelector("weather-api-status").textContent = (response.status)
 })
 
+.catch(error => {
+    console.error('Error fetching API status:', error.message);
+    alert('There was an error fetching API status. Please try again later.');
+  });
+
+
 //Weather alert
+
 fetch('https://api.weather.gov/alerts/active?limit=8') 
-.then(response => response.json()) 
+.then(response => {
+    if (!response.ok) {
+        throw new Error(`Weather Alerts HTTP error! Status: ${response.status}`);
+    }
+    return response.json();
+})
 
 .then(response => { document.querySelector("weather-title").textContent = (response.title)
 return response;
@@ -313,6 +331,11 @@ return response;
 .then(response => { document.querySelector("weather-instruction8").textContent = (response.features[7]?.properties.instruction)
 return response;
 })
+
+.catch(error => {
+    console.error('Error fetching weather data:', error.message);
+    alert('There was an error fetching weather data. Please try again later.');
+  });
 
 
 
