@@ -1,5 +1,10 @@
 fetch('https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_hour.geojson') 
-.then(response => response.json()) 
+.then(response => {
+  if (!response.ok) {
+    throw new Error(`HTTP error! Status: ${response.status}`);
+  }
+  return response.json();
+})
 
 //The response is in Unix Time, which isn't human readable so converting time to Pacific.
 .then(response => { document.querySelector("earthquake-time").textContent = new Date((response.features[0]?.properties.time)).toLocaleString("en-US", {
@@ -35,3 +40,8 @@ let replaceLastDirectory = receivedUrl.slice(0, receivedUrl.length-0).join("/");
 document.querySelector("earthquake-url").innerHTML = `<a href="${replaceLastDirectory}/map" target="_blank" rel="noopener noreferrer">View on map</a>`
 return response;
 })
+
+.catch(error => {
+  console.error('Error fetching earthquake data:', error.message);
+  alert('There was an error fetching earthquake data. Please try again later.');
+});
