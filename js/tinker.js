@@ -1,23 +1,13 @@
-//Stuff from practice coding challenges
-export const knightIsAwake = true;
+/*Stuff from practice coding challenges, tutorials, and other random things
+My virtual notebook*/
+
 export function canExecuteFastAttack(knightIsAwake) {
-    if knightIsAwake = true
-    {return true;}
-     else
-     {return false;}
-   
+    if (!knightIsAwake) {
+        return true;
+    }
+    else {
+        return false;
+    }
   }
-  
 
-
-/* ----NOTEPAD-----
-
-if (b === 2)
-      console.log("a is 1 and b is 2");
-  else
-
-
-
-
-
-  */
+  alert(canExecuteFastAttack(true));
