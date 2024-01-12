@@ -5,12 +5,7 @@ A place to tinker with JS.
 */
 
 export function canExecuteFastAttack(knightIsAwake) {
-    if (!knightIsAwake) {
-        return true;
-    }
-    else {
-        return false;
-    }
+    return !knightIsAwake;
   }
 
   alert(canExecuteFastAttack(true));
