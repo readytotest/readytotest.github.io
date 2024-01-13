@@ -15,5 +15,5 @@ myRepoInfo.onreadystatechange = function() {
    writeRepoTimeStamp.innerHTML= `Repository last commit info should be here! There is a problem!<br>Ready State: ${this.readyState}<br>Status Code: ${this.status}<br>`;
  }
 };
-myRepoInfo.open("GET", "https://api.github.com/users/readytotest/repos/test", true);
+myRepoInfo.open("GET", "https://api.github.com/users/readytotest/repos", true);
 myRepoInfo.send();
