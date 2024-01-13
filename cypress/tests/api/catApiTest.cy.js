@@ -17,7 +17,7 @@ describe('My First Cypress API Test', () => {
         qs: { name: 'Abyssinian' },
         }).then((response)=>{
             /*Logging the entire API response body to the console for inspection and to understand the structure 
-            I didn't have the aray index specified at first and it was coming back as undefined and I'm just
+            I didn't have the array index specified at first and it was coming back as undefined and I'm just
             going to leave it in here because I think it's useful*/
         console.log('Response Body:', response.body);
         expect(response.status).to.eq(200)
