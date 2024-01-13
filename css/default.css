@@ -54,4 +54,9 @@ body {background-color: black;
       pre {
         margin: 0;
       }
+
+      .white-music-note {
+        background-color: white;
+        padding: 0;
+    }
     
