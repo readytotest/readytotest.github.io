@@ -8,7 +8,11 @@ body {background-color: black;
       font-family: monospace, "Courier New", Courier;
       margin: 0;
     }
-    
+
+    #up-arrow{
+      font-family: Tahoma, sans-serif;
+  }
+      
     h1, h2 {
         color:  snow;
       }
