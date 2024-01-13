@@ -9,6 +9,11 @@ myRepoInfo.onreadystatechange = function() {
     writeRepoTimeStamp.insertAdjacentHTML('beforeend', `<a href="${repo.html_url}" target="_blank" rel="noopener noreferrer">${repo.name}</a>: ${new Date(repo.pushed_at)}<br>`);
     });
  }
+ else {
+   // Handle the error and show an alert
+   console.log(`Error fetching repository information. Ready State: ${this.readyState} Status Code: ${this.status}.`);
+   writeRepoTimeStamp.innerHTML= `Repository last commit info should be here! There is a problem!<br>Ready State: ${this.readyState}<br>Status Code: ${this.status}<br>`;
+ }
 };
-myRepoInfo.open("GET", "https://api.github.com/users/readytotest/repos", true);
+myRepoInfo.open("GET", "https://api.github.com/users/readytotest/repos/test", true);
 myRepoInfo.send();
