@@ -10,7 +10,7 @@ myRepoInfo.onreadystatechange = function() {
     });
  }
  else {
-   // Handle the error and show an alert
+   // Log the error and display it on the page
    console.log(`Error fetching repository information. Ready State: ${this.readyState} Status Code: ${this.status}.`);
    writeRepoTimeStamp.innerHTML= `Repository last commit info should be here! There is a problem!<br>Ready State: ${this.readyState}<br>Status Code: ${this.status}<br>`;
  }
