@@ -5,7 +5,7 @@ body {background-color: black;
     color: snow;}
 
     pre {
-      font-family: "Courier New", Courier, monospace;
+      font-family: monospace, "Courier New", Courier;
       margin: 0;
     }
     
