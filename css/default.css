@@ -1,6 +1,6 @@
 body {background-color: black;
     background-image: url('/html/img/galaxy-animated.gif');
-    font-family:  "Comic Sans MS", Tahoma, Arial, Verdana, sans-serif;
+    font-family:  "Comic Sans MS", "Chalkboard", Tahoma, sans-serif;
     font-size: 15pt;
     color: snow;}
 
@@ -42,6 +42,7 @@ body {background-color: black;
       --background: snow;
       --background-hover:#f6f6f7;
       --foreground: black;
+      --font-family: "Comic Sans MS", "Chalkboard", Tahoma, sans-serif;
       --submit-background: hotpink;
       --submit-background-hover: hotpink;
       --submit-border: hotpink;
