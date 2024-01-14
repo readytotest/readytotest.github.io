@@ -12,11 +12,15 @@ myRepoInfo.onreadystatechange = function() {
     });
  }
  else {
-   //Log the error in the console and display it on the page
-   //so there isn't an empty section on the page if the api has a problem
+   //Display errors on the page so there isn't an empty section on the page if the api has a problem
    console.log(`Error fetching repository information. Ready State: ${this.readyState} Status Code: ${this.status}.`);
    writeRepoTimeStamp.innerHTML= `Repository last commit info should be here! There is a problem!<br>Ready State: ${this.readyState}<br>Status Code: ${this.status}<br>`;
  }
 };
+/*The third parameter async is optional. We don't need to have it because
+by default it is true, but I wanted to add true there to make it clear that
+this is not a synchronous request. Synchronous can cause the page to hang up
+if there is a problem getting the data.
+https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest_API/Synchronous_and_Asynchronous_Requests*/
 myRepoInfo.open("GET", "https://api.github.com/users/readytotest/repos", true);
 myRepoInfo.send();
