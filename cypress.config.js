@@ -25,7 +25,7 @@ module.exports = defineConfig({
     experimentalRunAllSpecs: true,
     baseUrl: 'https://readytotest.github.io',
     setupNodeEvents(cypressOn, config) { //note: Changed from 'on' to 'cypressOn'
-      const on = require('cypress-on-fix')(cypressOn); //Fixes multiple Cypress plugins subscribing to "on" events. Need this or the Mochawesome stops generating HTML!!!
+      const on = require('cypress-on-fix')(cypressOn); //Fixes multiple Cypress plugins subscribing to "on" events. Need this if you use multiple plugins or the Mochawesome stops generating HTML! (not needed if only using Mochawesome by itself).
       require('cypress-mochawesome-reporter/plugin')(on);
       return getCompareSnapshotsPlugin(on, config);
     },
