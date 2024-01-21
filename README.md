@@ -26,4 +26,8 @@ This repo contains Cypress scripts that test <a href="https://opensource-demo.or
 + npm run lambda-test-demo //cleans reports and download directories, then runs tests against LambdaTest demo site
 + npm run ready-to-test //cleans reports and download directories, then runs tests against my GitHub page
 + npm run scratch-pad //cleans reports and download directories, then runs experimental tests
++ npm run clean-image-diff //removes cypress-image-diff-html-report directory and recreates it
++ npm run visual-testing //cleans cypress-image-diff-html-report directory, then runs visual tests
++ npm run create-visual-report //run this if you want to save an HTML report of the visual test run
++ npm run start-visual-report-server //this starts a web server to view HTML report w/o saving as file
 ```
