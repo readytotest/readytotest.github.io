@@ -1,0 +1,48 @@
+{
+  "total": 2,
+  "totalPassed": 2,
+  "totalFailed": 0,
+  "totalSuites": 2,
+  "suites": [
+    {
+      "name": "checkGitHubPage.cy.js",
+      "path": "cypress/tests/visual-testing/checkGitHubPage.cy.js",
+      "tests": [
+        {
+          "status": "pass",
+          "name": "checkGitHubPage.cy-my-github-site",
+          "percentage": 0.025017070674573632,
+          "failureThreshold": 0.1,
+          "specPath": "cypress/tests/visual-testing/checkGitHubPage.cy.js",
+          "specFilename": "checkGitHubPage.cy.js",
+          "baselinePath": "cypress-image-diff-screenshots/baseline/checkGitHubPage.cy-my-github-site.png",
+          "diffPath": "",
+          "comparisonPath": "cypress-image-diff-screenshots/comparison/checkGitHubPage.cy-my-github-site.png"
+        }
+      ]
+    },
+    {
+      "name": "checkMusicalNoteElement.cy.js",
+      "path": "cypress/tests/visual-testing/checkMusicalNoteElement.cy.js",
+      "tests": [
+        {
+          "status": "pass",
+          "name": "checkMusicalNoteElement.cy-music-note-emoji",
+          "percentage": 0,
+          "failureThreshold": 0.1,
+          "specPath": "cypress/tests/visual-testing/checkMusicalNoteElement.cy.js",
+          "specFilename": "checkMusicalNoteElement.cy.js",
+          "baselinePath": "cypress-image-diff-screenshots/baseline/checkMusicalNoteElement.cy-music-note-emoji.png",
+          "diffPath": "",
+          "comparisonPath": "cypress-image-diff-screenshots/comparison/checkMusicalNoteElement.cy-music-note-emoji.png"
+        }
+      ]
+    }
+  ],
+  "startedAt": "2024-01-21T06:36:28.037Z",
+  "endedAt": "2024-01-21T06:36:39.307Z",
+  "duration": 8606,
+  "browserName": "chrome",
+  "browserVersion": "120.0.6099.234",
+  "cypressVersion": "13.6.3"
+}
