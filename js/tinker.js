@@ -33,3 +33,6 @@ alert(canExecuteFastAttack(true));
   }
   alert(frontDoorPassword('pLANETS SuN MooN'))
   //Expect alert to be Planets sun moon
+
+
+  //test
