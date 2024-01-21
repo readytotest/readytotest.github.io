@@ -1,4 +1,5 @@
 const { defineConfig } = require("cypress");
+const getCompareSnapshotsPlugin = require('cypress-image-diff-js/plugin');
 
 module.exports = defineConfig({
   projectId: "dm22wp", //for Cypress Cloud
@@ -23,9 +24,12 @@ module.exports = defineConfig({
     specPattern: '**/*.cy.js',
     experimentalRunAllSpecs: true,
     baseUrl: 'https://readytotest.github.io',
-    setupNodeEvents(on, config) {
+    setupNodeEvents(cypressOn, config) { //note: Changed from 'on' to 'cypressOn'
+      const on = require('cypress-on-fix')(cypressOn); //Fixes multiple Cypress plugins subscribing to "on" events. Need this or the Mochawesome stops generating HTML!!!
       require('cypress-mochawesome-reporter/plugin')(on);
+      return getCompareSnapshotsPlugin(on, config);
     },
+    
   },
 
 });
