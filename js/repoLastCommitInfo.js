@@ -6,26 +6,46 @@ fetch('https://api.github.com/users/readytotest/repos')
   return response.json();
 })
 
-.then(response => { document.querySelector("repo-update-timestamp").innerHTML = `<a href="${response[0]?.html_url}" target="_blank" rel="noopener noreferrer">${response[0]?.name}</a>: ${new Date(response[0]?.pushed_at)}<br>`
+// Removing this part and replacing it with more dynamic code
+// .then(response => { document.querySelector("repo-update-timestamp").innerHTML = `<a href="${response[0]?.html_url}" target="_blank" rel="noopener noreferrer">${response[0]?.name}</a>: ${new Date(response[0]?.pushed_at)}<br>`
 
-return response;
-})
+// return response;
+// })
 
-.then(response => { document.querySelector("repo-update-timestamp").insertAdjacentHTML('beforeend', `<a href="${response[1]?.html_url}" target="_blank" rel="noopener noreferrer">${response[1]?.name}</a>: ${new Date(response[1]?.pushed_at)}<br>`)
+// .then(response => { document.querySelector("repo-update-timestamp").insertAdjacentHTML('beforeend', `<a href="${response[1]?.html_url}" target="_blank" rel="noopener noreferrer">${response[1]?.name}</a>: ${new Date(response[1]?.pushed_at)}<br>`)
 
-return response;
-})
+// return response;
+// })
 
+
+// Updating code so if we create a new repo, it will appear automatically
+// Otherwise I'd need to create a new line with the array index for each repo manually
+.then(repositories => {
+  const repoTimestamper = document.querySelector("repo-update-timestamp");
+
+     repositories.forEach(repo => {
+      repoTimestamper.insertAdjacentHTML(
+        'beforeend',
+        `<a href="${repo.html_url}" target="_blank" rel="noopener noreferrer">${repo.name}</a>: ${new Date(repo.pushed_at)}<br>`
+      );
+    });
+  
+    return repositories;
+  })
 
 .catch(error => {
   console.error('Error fetching earthquake data:', error.message);
-  document.querySelector("repo-update-timestamp").innerHTML = `Last commit info should be here!<br>${error.message}<br>`;
+  document.querySelector("repo-update-timestamp").innerHTML = `⚠️ Last commit info should be here!<br>⚠️ ${error.message}<br>`;
 });
 
-/* The old code using XHR to get the API data is below. 
-I am now using Fetch for simplicity.
-Keeping the old code for reference and as a comparison for learning.
 
+
+// The old code below is using XHR to get the API data 
+// I am now using Fetch for simplicity
+// Keeping the old code for reference and as a comparison for learning
+
+
+/*
 const writeRepoTimeStamp = document.querySelector('repo-update-timestamp');
 
 const myRepoInfo = new XMLHttpRequest();
