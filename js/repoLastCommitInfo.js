@@ -1,3 +1,31 @@
+fetch('https://api.github.com/users/readytotest/repos') 
+.then(response => {
+  if (!response.ok) {
+    throw new Error(`HTTP error! Status: ${response.status}`);
+  }
+  return response.json();
+})
+
+.then(response => { document.querySelector("repo-update-timestamp").innerHTML = `<a href="${response[0]?.html_url}" target="_blank" rel="noopener noreferrer">${response[0]?.name}</a>: ${new Date(response[0]?.pushed_at)}<br>`
+
+return response;
+})
+
+.then(response => { document.querySelector("repo-update-timestamp").insertAdjacentHTML('beforeend', `<a href="${response[1]?.html_url}" target="_blank" rel="noopener noreferrer">${response[1]?.name}</a>: ${new Date(response[1]?.pushed_at)}<br>`)
+
+return response;
+})
+
+
+.catch(error => {
+  console.error('Error fetching earthquake data:', error.message);
+  document.querySelector("repo-update-timestamp").innerHTML = `Last commit info should be here!<br>${error.message}<br>`;
+});
+
+/* The old code using XHR to get the API data is below. 
+I am now using Fetch for simplicity.
+Keeping the old code for reference and as a comparison for learning.
+
 const writeRepoTimeStamp = document.querySelector('repo-update-timestamp');
 
 const myRepoInfo = new XMLHttpRequest();
@@ -20,10 +48,11 @@ myRepoInfo.onreadystatechange = function() {
    writeRepoTimeStamp.innerHTML= `Repository last commit info should be here! There is a problem!<br>Ready State: ${this.readyState}<br>Status Code: ${this.status}<br>`;
  }
 };
-/*The third parameter async is optional. We don't need to have it because
-by default it is true, but I wanted to add true there to make it clear that
-this is not a synchronous request. Synchronous can cause the page to hang up
-if there is a problem getting the data.
-https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest_API/Synchronous_and_Asynchronous_Requests*/
-myRepoInfo.open("GET", "https://api.github.com/users/readytotest/repos", true);
+//The third parameter async is optional. We don't need to have it because
+//by default it is true, but I wanted to add true there to make it clear that
+//this is not a synchronous request. Synchronous can cause the page to hang up
+//if there is a problem getting the data.
+//https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest_API/Synchronous_and_Asynchronous_Requests
+myRepoInfo.open("GET", "https://api.github.com/users/name-here/repos", true);
 myRepoInfo.send();
+*/
