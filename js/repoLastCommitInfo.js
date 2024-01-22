@@ -11,11 +11,11 @@ myRepoInfo.onreadystatechange = function() {
     writeRepoTimeStamp.insertAdjacentHTML('beforeend', `<a href="${repo.html_url}" target="_blank" rel="noopener noreferrer">${repo.name}</a>: ${new Date(repo.pushed_at)}<br>`);
     });
     // Logging ready state of XHR request and Http response from server beause I'm exploring how this works.
-    console.log(`Ready State of XHR: ${this.readyState} HTTP status code received from server: ${this.status}.`);
+    console.log(`Ready State of XHR: ${this.readyState} HTTP status code received from server: ${this.status} (retrieving repo last commit from API)`);
  }
  else {
    // Logging ready state of XHR request and Http response from server because I'm exploring how this works.
-   console.log(`Ready State of XHR: ${this.readyState} HTTP status code received from server: ${this.status}.`);
+   console.log(`Ready State of XHR: ${this.readyState} HTTP status code received from server: ${this.status} (retrieving repo last commit from API)`);
    // Show error message on page if there is a problem getting the data
    writeRepoTimeStamp.innerHTML= `Repository last commit info should be here! There is a problem!<br>Ready State: ${this.readyState}<br>Status Code: ${this.status}<br>`;
  }
