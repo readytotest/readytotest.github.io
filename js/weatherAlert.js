@@ -19,7 +19,7 @@ fetch('https://api.weather.gov')
 
 //Weather alert
 
-fetch('https://api.weather.gov/alerts/active?limit=8') 
+fetch('https://api.weather.gov/alerts/active?area=CA&limit=8') 
 .then(response => {
     if (!response.ok) {
         throw new Error(`Weather Alerts HTTP error! Status: ${response.status}`);
@@ -27,7 +27,13 @@ fetch('https://api.weather.gov/alerts/active?limit=8')
     return response.json();
 })
 
-.then(response => { document.querySelector("weather-title").textContent = (response.title)
+.then(response => {
+  // Log the response body to the console
+  console.log('Response Body Weather API:', response);
+  return response;
+})
+
+.then(response => { document.querySelector("weather-title").innerHTML = (`<b>${response.title}</b>`)
 return response;
 })
 
@@ -37,7 +43,7 @@ return response;
 })
 
 //Alert 1 if available
-.then(response => { document.querySelector("weather-sender-name").textContent= (response.features[0]?.properties.senderName)
+.then(response => { document.querySelector("weather-sender-name").textContent= (response.features[0]?.properties.senderName ?? 'No data available. Alert data is populated when received.')
 return response;   
 })
 
@@ -74,7 +80,7 @@ return response;
 })
 
 //Alert 2 if available
-.then(response => { document.querySelector("weather-sender-name2").textContent= (response.features[1]?.properties.senderName)
+.then(response => { document.querySelector("weather-sender-name2").textContent= (response.features[1]?.properties.senderName ?? 'No data available. Alert data is populated when received.')
 return response;   
 })
 
@@ -111,7 +117,7 @@ return response;
 })
 
 //Alert 3 if available
-.then(response => { document.querySelector("weather-sender-name3").textContent= (response.features[2]?.properties.senderName)
+.then(response => { document.querySelector("weather-sender-name3").textContent= (response.features[2]?.properties.senderName ?? 'No data available. Alert data is populated when received.')
 return response;   
 })
 
@@ -148,7 +154,7 @@ return response;
 })
 
 //Alert 4 if available
-.then(response => { document.querySelector("weather-sender-name4").textContent= (response.features[3]?.properties.senderName)
+.then(response => { document.querySelector("weather-sender-name4").textContent= (response.features[3]?.properties.senderName ?? 'No data available. Alert data is populated when received.')
 return response;   
 })
 
@@ -185,7 +191,7 @@ return response;
 })
 
 //Alert 5 if available
-.then(response => { document.querySelector("weather-sender-name5").textContent= (response.features[4]?.properties.senderName)
+.then(response => { document.querySelector("weather-sender-name5").textContent= (response.features[4]?.properties.senderName ?? 'No data available. Alert data is populated when received.')
 return response;   
 })
 
@@ -222,7 +228,7 @@ return response;
 })
 
 //Alert 6 if available
-.then(response => { document.querySelector("weather-sender-name6").textContent= (response.features[5]?.properties.senderName)
+.then(response => { document.querySelector("weather-sender-name6").textContent= (response.features[5]?.properties.senderName ?? 'No data available. Alert data is populated when received.')
 return response;   
 })
 
@@ -259,7 +265,7 @@ return response;
 })
 
 //Alert 7 if available
-.then(response => { document.querySelector("weather-sender-name7").textContent= (response.features[6]?.properties.senderName)
+.then(response => { document.querySelector("weather-sender-name7").textContent= (response.features[6]?.properties.senderName ?? 'No data available. Alert data is populated when received.')
 return response;   
 })
 
@@ -296,7 +302,7 @@ return response;
 })
 
 //Alert 8 if available
-.then(response => { document.querySelector("weather-sender-name8").textContent= (response.features[7]?.properties.senderName)
+.then(response => { document.querySelector("weather-sender-name8").textContent= (response.features[7]?.properties.senderName ?? 'No data available. Alert data is populated when received.')
 return response;   
 })
 
