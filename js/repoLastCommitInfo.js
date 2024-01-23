@@ -6,6 +6,12 @@ fetch('https://api.github.com/users/readytotest/repos')
   return response.json();
 })
 
+.then(repositories => {
+  // Log the response body to the console
+  console.log('Response Body Repo API:', repositories);
+  return repositories;
+})
+
 // Removing this part and replacing it with more dynamic code
 // .then(response => { document.querySelector("repo-update-timestamp").innerHTML = `<a href="${response[0]?.html_url}" target="_blank" rel="noopener noreferrer">${response[0]?.name}</a>: ${new Date(response[0]?.pushed_at)}<br>`
 

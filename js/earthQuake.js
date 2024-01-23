@@ -6,6 +6,12 @@ fetch('https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_hour.geojso
   return response.json();
 })
 
+.then(response => {
+  // Log the response body to the console
+  console.log('Response Body Earthquake API:', response);
+  return response;
+})
+
 //The response is in Unix Time, which isn't human readable so converting time to Pacific.
 .then(response => { document.querySelector("earthquake-time").textContent = new Date((response.features[0]?.properties.time)).toLocaleString("en-US", {
     timeZone: "America/Los_Angeles"
