@@ -7,3 +7,4 @@
 /cypress-image-diff-html-report
 .DS_Store
 cypress.env.json
+/.vscode
