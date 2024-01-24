@@ -41,7 +41,7 @@ fetch('https://api.github.com/users/readytotest/repos')
 
 .catch(error => {
   console.error('Error fetching earthquake data:', error.message);
-  document.querySelector("repo-update-timestamp").innerHTML = `⚠️ Last commit info should be here!<br>⚠️ ${error.message}<br>`;
+  document.querySelector("repo-update-timestamp").innerHTML = `🛑 Unable to fetch repo info❕<br>🛑 ${error.message}<br>`;
 });
 
 
