@@ -9,16 +9,13 @@ body {background-color: black;
       margin: 0;
     }
 
-    #up-arrow{
+    .up-arrow{
       font-family: Tahoma, sans-serif;
   }
 
-    #up-arrow-2{
-      font-family: Tahoma, sans-serif;
-  }
-
-    #up-arrow-3{
-      font-family: Tahoma, sans-serif;
+    #white-music-note {
+    background-color: white;
+    padding: 0;
   }
       
     h1, h2 {
@@ -44,11 +41,6 @@ body {background-color: black;
         text-decoration: underline;
         color: hotpink;
       }
-
-      .white-music-note {
-        background-color: white;
-        padding: 0;
-    }
 
     #sentry-feedback {
       --background: snow;
