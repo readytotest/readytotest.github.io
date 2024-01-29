@@ -20,7 +20,7 @@ describe('Smoke Test GitHub Page', () => {
         cy.get('center').should('include.text', 'Click on the test results above ^^ to expand it and view the video')
         cy.get('[href="/index.htm"]').click() 
         cy.get('body').should('include.text', 'Ready to Test (QA) GitHub Profile')
-        cy.get('body').should('include.text', 'Cypress Test Automation Scripts')
+        cy.get('body').should('include.text', 'UI Test Automation with Cypress')
         cy.get('body').should('include.text', 'Cypress Cloud')
         cy.get('body').should('include.text', 'GitHub Actions')
         cy.get('body').should('include.text', 'National Weather Service API')
