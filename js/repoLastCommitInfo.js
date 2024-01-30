@@ -1,5 +1,6 @@
 fetch('https://api.github.com/users/readytotest/repos') 
 .then(response => {
+  console.log('Repo API Status:', response.status);
   if (!response.ok) {
     throw new Error(`HTTP error! Status: ${response.status}`);
   }
