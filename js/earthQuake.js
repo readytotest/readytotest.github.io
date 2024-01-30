@@ -1,5 +1,6 @@
 fetch('https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_hour.geojson') 
 .then(response => {
+  console.log('Earthquake API Status:', response.status);
   if (!response.ok) {
     throw new Error(`HTTP error! Status: ${response.status}`);
   }

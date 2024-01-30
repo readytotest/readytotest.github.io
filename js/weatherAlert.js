@@ -21,6 +21,7 @@ fetch('https://api.weather.gov')
 
 fetch('https://api.weather.gov/alerts/active?area=CA&limit=8') 
 .then(response => {
+  console.log('Weather API Status:', response.status);
     if (!response.ok) {
         throw new Error(`Weather Alerts HTTP error! Status: ${response.status}`);
     }
