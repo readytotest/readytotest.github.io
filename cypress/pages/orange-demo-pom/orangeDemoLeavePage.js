@@ -1,5 +1,5 @@
 import orangeDemoTestData from '../../fixtures/orange-demo/orangeDemoTestData.json';
-import { employeeStaticPartialFirstName } from '/cypress/fixtures/orange-demo/orangeDemoFakeDataGenerator.js';
+import { employeeStaticPartialFirstName } from "../../fixtures/orange-demo/orangeDemoFakeDataGenerator.js";
 
 class OrangeDemoLeavePage{
     elements = {

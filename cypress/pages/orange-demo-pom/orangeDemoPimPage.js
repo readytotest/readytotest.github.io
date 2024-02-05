@@ -1,4 +1,4 @@
-import { passwordGenerator } from '/cypress/fixtures/orange-demo/orangeDemoFakeDataGenerator.js';
+import { passwordGenerator } from '../../fixtures/orange-demo/orangeDemoFakeDataGenerator.js';
 import orangeDemoTestData from '../../fixtures/orange-demo/orangeDemoTestData.json';
 class OrangeDemoPimPage{
 

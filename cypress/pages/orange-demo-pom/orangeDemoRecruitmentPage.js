@@ -1,4 +1,4 @@
-import { randomEmailGenerator, randomFirstNameGenerator, randomMiddleNameGenerator, randomLastNameGenerator } from '/cypress/fixtures/orange-demo/orangeDemoFakeDataGenerator.js';
+import { randomEmailGenerator, randomFirstNameGenerator, randomMiddleNameGenerator, randomLastNameGenerator } from '../../fixtures/orange-demo/orangeDemoFakeDataGenerator.js';
 
 class OrangeDemoRecruitmentPage{
 
