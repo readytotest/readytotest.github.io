@@ -8,7 +8,17 @@ const config = {
 /cypress/videos
 /cypress/screenshots
 /cypress/downloads
+/cypress-image-diff-screensh/node_modules
+/cypress/reports
+/cypress/videos
+/cypress/screenshots
+/cypress/downloads
 /cypress-image-diff-screenshots
+/cypress-image-diff-html-report
+.DS_Store
+cypress.env.json
+/.vscode
+ots
 /cypress-image-diff-html-report
 .DS_Store
 cypress.env.json
