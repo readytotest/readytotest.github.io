@@ -12,7 +12,17 @@
 // -- This is a parent command --
 // Cypress.Commands.add('login', (email, password) => { ... })
 //
-//
+///node_modules
+/cypress/reports
+/cypress/videos
+/cypress/screenshots
+/cypress/downloads
+/cypress-image-diff-screenshots
+/cypress-image-diff-html-report
+.DS_Store
+cypress.env.json
+/.vscode
+
 // -- This is a child command --
 // Cypress.Commands.add('drag', { prevSubject: 'element'}, (subject, options) => { ... })
 //
