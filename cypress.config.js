@@ -6,7 +6,17 @@ module.exports = defineConfig({
   reporter: 'cypress-mochawesome-reporter',
   video: true,
   numTestsKeptInMemory: 25,
-  experimentalMemoryManagement: true,
+  experimentalMemoryManagement: /node_modules
+/cypress/reports
+/cypress/videos
+/cypress/screenshots
+/cypress/downloads
+/cypress-image-diff-screenshots
+/cypress-image-diff-html-report
+.DS_Store
+cypress.env.json
+/.vscode
+true,
   screenshotOnRunFailure: true,
   trashAssetsBeforeRuns: true,
   watchForFileChanges: false,
