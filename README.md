@@ -1,5 +1,5 @@
 # Test Automation with Cypres
-This repo contains Cypress scripts that test <a href="https://opensource-demo.orangehrmlive.com">OrangeHRM Demo</a>, <a href="https://www.saucedemo.com">Sauce Demo</a>, <a href="https://ecommerce-playground.lambdatest.io">LambdaTest Playground</a>, and  <a href="https://readytotest.github.io">My GitHub Page</a>
+This repo cotains Cypress scripts that test <a href="https://opensource-demo.orangehrmlive.com">OrangeHRM Demo</a>, <a href="https://www.saucedemo.com">Sauce Demo</a>, <a href="https://ecommerce-playground.lambdatest.io">LambdaTest Playground</a>, and  <a href="https://readytotest.github.io">My GitHub Page</a>
 
 [![Quality gate](https://sonarcloud.io/api/project_badges/quality_gate?project=readytotest_readytotest.github.io)](https://sonarcloud.io/summary/new_code?id=readytotest_readytotest.github.io)
 
