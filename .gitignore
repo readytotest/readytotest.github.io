@@ -5,6 +5,6 @@
 /cypress/downloads
 /cypress-image-diff-screenshots
 /cypress-image-diff-html-report
-.DS_Store
+.DS_Stor
 cypress.env.json
 /.vscode
