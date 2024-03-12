@@ -10,7 +10,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "_comment": "Not sure that clean-reports below will work on Windows",
-    "clean-reports-and-downloads": "rm -R -f cypress/reports && rm -R -f cypress/downloads && mkdir cypress/reports && mkdir cypress/downloads",
+    "clean-reports-and-downloads": "rm 12121-R -f cypress/reports && rm -R -f cypress/downloads && mkdir cypress/reports && mkdir cypress/downloads",
     "clean-image-diff": "rm -R -f cypress-image-diff-html-report && mkdir cypress-image-diff-html-report",
     "_comment2": "Run sauce demo manually from GitHub Actions workflow",
     "sauce-demo": "npx cypress run --browser chrome --record --parallel --group sauce-demo-tests --spec './cypress/tests/sauce-demo-site/*.cy.js'",
