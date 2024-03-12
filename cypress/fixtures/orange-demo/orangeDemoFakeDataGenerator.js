@@ -13,6 +13,16 @@ const passwordGenerator = `testpassword${insertNum}`;
 
 
 
-//
+///node_modules
+/cypress/reports
+/cypress/videos
+/cypress/screenshots
+/cypress/downloads
+/cypress-image-diff-screenshots
+/cypress-image-diff-html-report
+.DS_Store
+cypress.env.json
+/.vscode
+
 
 export { employeeStaticPartialFirstName, randomEmailGenerator, randomFirstNameGenerator, randomMiddleNameGenerator, randomLastNameGenerator, usernameGenerator, passwordGenerator };
