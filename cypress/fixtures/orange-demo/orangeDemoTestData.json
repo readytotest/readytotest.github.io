@@ -10,7 +10,17 @@
       "expenseDatePicker": "2023-10-01",
       "expenseAmount": "45.99",
       "expenseNote": "expense-note-test-text",
-      "organizationName": "ACME Corporation",
+      "organizationName": "AC/node_modules
+/cypress/reports
+/cypress/videos
+/cypress/screenshots
+/cypress/downloads
+/cypress-image-diff-screenshots
+/cypress-image-diff-html-report
+.DS_Store
+cypress.env.json
+/.vscode
+ME Corporation",
       "vacationDays": "14",
       "leaveDateStart": "2024-11-01",
       "leaveDateEnd": "2024-11-01",
