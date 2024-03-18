@@ -16,7 +16,7 @@ jobs:
           run: echo This performs a test of my GitHub page after each page build and daily at 17:00 UTC
 
         - name: Checkout Repo
-          uses: actions/checkout@v4.1.1
+          uses: actions/checkout@v4.1.2
 
         - name: Setup Node.js environment
           uses: actions/setup-node@v4.0.2
