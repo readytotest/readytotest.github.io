@@ -9,7 +9,7 @@ Sentry.init({
         formTitle: "Report Bug🕷️Feedback",
         submitButtonLabel: "Send Now!",
         messagePlaceholder: "<Type your message here>",
-        successMessageText: "Message sent succesfully!",
+        successMessageText: "Message sent successfully!",
       }),
     ],
   });
