@@ -10,7 +10,7 @@ const mill = getTimeDate.getMilliseconds()
 const mill3Places = `00${mill}`.slice(-3)
 const dateTimePacific = `${getTimeDate.toLocaleString('en-ZA', {
 timeZone: "America/Los_Angeles"})}.${mill3Places}`;
-document.getElementById('#current-time').textContent = dateTimePacific;
+document.getElementById('current-time').textContent = dateTimePacific;
 }
 
 //Call the function directly first so there isn't a slight delay in displaying the text
