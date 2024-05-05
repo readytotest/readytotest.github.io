@@ -13,10 +13,8 @@ jobs:
         - name: Message
           run: echo "Running Playwright tests against pull requests or commits"
 
-        # This YAML exists in the main repo with the website files
-        # Playwright test automation scripts exists in a separate repo
-        # So we need to check out two repos
-
+        # We will check out two repos because the website files
+        # exist in one repo and Playwright exists in a different repo
        
         # Check out primary repo where I will start a server locally in the GH Runner environment
         - name: Checkout Website Repo
