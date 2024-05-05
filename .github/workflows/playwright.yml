@@ -18,9 +18,9 @@ jobs:
         - name: Checkout Playwright Repo
           uses: actions/checkout@v4.1.4
           with:
-           repository: test-playwright
-           ref: main
-           path: ./playwright-tests #Copy the Playwright repo to this directory within the GitHub page repo
+            repository: test-playwright
+            ref: main
+            path: ./playwright-tests #Copy the Playwright repo to this directory within the GitHub page repo
        
         - name: Install dependencies
           working-directory: ./playwright-tests
