@@ -11,16 +11,16 @@ jobs:
           run: echo Check out GitHub page repo and Playwright repo
 
         # Check out primary repo where website lives
-        - name: Checkout Repo
+        - name: Checkout GitHub Pages Repo
           uses: actions/checkout@v4.1.4
           
         # Check out secondary repo where Playwright scripts live
-        - name: Checkout Repo
+        - name: Checkout Playwright Repo
           uses: actions/checkout@v4.1.4
           with:
-            ref: main
-          repository: test-playwright
-          path: ./playwright-tests #Copy the Playwright repo to this directory within the GitHub page repo
+           repository: test-playwright
+           ref: main
+           path: ./playwright-tests #Copy the Playwright repo to this directory within the GitHub page repo
        
         - name: Install dependencies
           working-directory: ./playwright-tests
