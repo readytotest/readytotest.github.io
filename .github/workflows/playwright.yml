@@ -1,4 +1,4 @@
-name: Playwright GitHub Page (manual)
+name: Playwright GitHub Page (manual, pr/push)
 on:   
   push:
   pull_request:
