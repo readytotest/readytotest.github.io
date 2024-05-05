@@ -21,6 +21,9 @@ jobs:
         # I don't need this part since I'm testing an external URL, but I left it in as an example
         - name: Checkout Primary Repo where web application lives
           uses: actions/checkout@v4.1.4
+        
+        - name: List current directory
+          run: ls
           
         # Check out secondary repo where Playwright scripts live
         - name: Checkout Playwright Repo
@@ -39,10 +42,6 @@ jobs:
           uses: actions/setup-node@v4.0.2
           with:
             node-version: 'latest'
-            working-directory: ./playwright-tests #This is the sub-directory where the Playwright repo was copied to
-
-        - name: List current directory
-          run: ls
 
         - name: Print Node.js version in playwright-tests directory and list contents
           run: |
