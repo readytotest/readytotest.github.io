@@ -18,7 +18,7 @@ jobs:
         # This may be helpful if the web app and automation scripts are in separate repos
 
        
-        # I don't need this part since I'm testing an external URL, but i left it in as an example
+        # I don't need this part since I'm testing an external URL, but I left it in as an example
         - name: Checkout Primary Repo where web application lives
           uses: actions/checkout@v4.1.4
           
