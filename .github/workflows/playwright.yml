@@ -16,7 +16,7 @@ jobs:
         # the path and working-directory using the checkout action.
 
         # Checkout primary repo where this YAML script lives.
-        - name: Checkout GitHub Pages Repo
+        - name: Checkout Primary Repo
           uses: actions/checkout@v4.1.4
           
         # Check out secondary repo where Playwright scripts live
