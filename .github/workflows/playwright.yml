@@ -19,11 +19,11 @@ jobs:
 
        
         # I don't need this part since I'm testing an external URL, but I left it in as an example
-        #- name: Checkout Primary Repo where web application lives
-        # uses: actions/checkout@v4.1.4
+        - name: Checkout Web Application Repo (Example for demo purposes, not needed for these tests)
+          uses: actions/checkout@v4.1.4
           
         # Check out secondary repo where Playwright scripts live
-        - name: Checkout Playwright Repo
+        - name: Checkout Playwright Tests Repo
           uses: actions/checkout@v4.1.4
           with:
             repository: readytotest/test-playwright
