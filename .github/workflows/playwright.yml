@@ -12,12 +12,15 @@ jobs:
 
         # Since we are just running this workflow manually against the production URL 
         # I could have put this YAML in the Playwright Repo but I wanted to provide
-        # an example of checking out a second repo and showing the syntax for specifying
-        # the path and working-directory using the checkout action.
+        # an example of the YAML being in one repo and Playwright being in a different
+        # repo. This shows the syntax for specifying the path and working-directory 
+        # using the checkout action.
+        # This may be helpful if automation scripts are in a diferent repo.
 
-        # Checkout primary repo where this YAML script lives.
-        - name: Checkout Primary Repo
-          uses: actions/checkout@v4.1.4
+       
+        # I don't need this part since I'm testing an external URL
+        #- name: Checkout Primary Repo where web application lives
+        #  uses: actions/checkout@v4.1.4
           
         # Check out secondary repo where Playwright scripts live
         - name: Checkout Playwright Repo
