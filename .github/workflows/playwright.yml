@@ -45,7 +45,7 @@ jobs:
 
         - name: Print Node.js version in playwright-tests directory and list contents
           run: |
-             
+              cd playwright-tests
               node -v
               ls
 
