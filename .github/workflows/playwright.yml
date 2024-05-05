@@ -32,6 +32,12 @@ jobs:
           working-directory: ./playwright-tests #This is the sub-directory where the Playwright repo was copied to
           run: npm ci
 
+        - name: Setup Node.js environment with most recent version
+          uses: actions/setup-node@v4.0.2
+          with:
+            node-version: 'latest'
+            working-directory: ./playwright-tests #This is the sub-directory where the Playwright repo was copied to
+
         - name: Print system node version and current directory
           run: |
             node -v
