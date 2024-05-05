@@ -38,12 +38,12 @@ jobs:
           working-directory: ./playwright-tests #This is the sub-directory where the Playwright repo was copied to
           run: npm ci
 
-        - name: Setup Node.js environment in playwright-tests directory with most recent version
+        - name: Setup Node.js environment with most recent version
           uses: actions/setup-node@v4.0.2
           with:
             node-version: 'latest'
 
-        - name: Print Node.js version in playwright-tests directory and list contents
+        - name: CD to playwright-tests directory, print node version, and list contents
           run: |
               cd playwright-tests
               node -v
