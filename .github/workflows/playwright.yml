@@ -8,22 +8,19 @@ jobs:
    steps:
        
         - name: Message
-          run: echo You have manually initiated the Playwright tests against the production environment
+          run: Running Playwright tests against pull requests or commits
 
-        # Since we are just running this workflow manually against the production URL 
-        # I could have put this YAML in the Playwright Repo but I wanted to provide
-        # an example of the YAML being in one repo and Playwright being in a different
-        # repo. This shows the syntax for specifying the path and working-directory 
-        # using the checkout action.
-        # This may be helpful if the web app and automation scripts are in separate repos
+        # This YAML exists in the main repo with the website files
+        # Playwright test automation scripts exists in a separate repo
+        # So we need to check out two repos
 
        
-        # I don't need this part since I'm testing an external URL, but I left it in as an example
-        - name: Checkout Web Application Repo (Example for demo purposes, not needed for these tests)
+        # Check out primary repo where I will start a server locally in the GH Runner environment
+        - name: Checkout Website Repo
           uses: actions/checkout@v4.1.4
           
         # Check out secondary repo where Playwright scripts live
-        - name: Checkout Playwright Tests Repo
+        - name: Checkout Playwright Repo
           uses: actions/checkout@v4.1.4
           with:
             repository: readytotest/test-playwright
@@ -42,6 +39,10 @@ jobs:
           uses: actions/setup-node@v4.0.2
           with:
             node-version: 'latest'
+
+        - name: Start Local Webserver in GH Runner environment (http://localhost:3000)
+          run: |
+            node server.js & sleep 5   
 
         - name: CD to playwright-tests directory, print node version, and list contents
           run: |
