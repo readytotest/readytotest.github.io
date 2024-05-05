@@ -1,5 +1,5 @@
-name: Playwright GitHub Page (manual, push/pr)
-on: push
+name: Playwright GitHub Page (manual)
+on: workflow_dispatch
 
 jobs:
  GitHub-Page-Test:
@@ -8,9 +8,14 @@ jobs:
    steps:
        
         - name: Message
-          run: echo Check out GitHub page repo and Playwright repo
+          run: echo You have manually initiated the Playwright tests against the production environment
 
-        # Check out primary repo where website lives
+        # Since we are just running this workflow manually against the production URL 
+        # I could have put this YAML in the Playwright Repo but I wanted to provide
+        # an example of checking out a second repo and showing the syntax for specifying
+        # the path and working-directory using the checkout action.
+
+        # Checkout primary repo where this YAML script lives.
         - name: Checkout GitHub Pages Repo
           uses: actions/checkout@v4.1.4
           
@@ -23,7 +28,7 @@ jobs:
             path: ./playwright-tests #Copy the Playwright repo to this directory within the GitHub page repo
        
         - name: Install dependencies
-          working-directory: ./playwright-tests
+          working-directory: ./playwright-tests #This is the sub-directory where the Playwright repo was copied to
           run: npm ci
 
         - name: Print system node version and current directory
@@ -32,11 +37,12 @@ jobs:
             ls
 
         - name: Install Playwright Browsers
-          working-directory: ./playwright-tests
+          working-directory: ./playwright-tests #This is the sub-directory where the Playwright repo was copied to
           run: npx playwright install --with-deps
 
         - name: Run Playwright tests
-          working-directory: ./playwright-tests
+          working-directory: ./playwright-tests #This is the sub-directory where the Playwright repo was copied to
+          #Tests against https://readytotest.github.io
           run: npx playwright test
 
         - name: Upload Report to GitHub
