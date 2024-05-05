@@ -1,0 +1,52 @@
+name: Playwright GitHub Page (manual, push/pr)
+on:
+ workflow_dispatch:
+ push:
+ pull:
+
+jobs:
+ GitHub-Page-Test:
+   runs-on: ubuntu-latest
+   timeout-minutes: 10
+   steps:
+       
+        - name: Message
+          run: echo Check out GitHub page repo and Playwright repo
+
+        # Check out primary repo where website lives
+        - name: Checkout Repo
+          uses: actions/checkout@v4.1.4
+          
+        # Check out secondary repo where Playwright scripts live
+        - name: Checkout Repo
+          uses: actions/checkout@v4.1.4
+          with:
+            ref: main
+          repository: readytotest/test-playwright
+          path: ./playwright-tests #Copy the Playwright repo to this directory within the GitHub page repo
+       
+        - name: Install dependencies
+          working-directory: ./playwright-tests
+          run: npm ci
+
+        - name: Print system node version and current directory
+          run: |
+            node -v
+            ls
+
+        - name: Install Playwright Browsers
+          working-directory: ./playwright-tests
+          run: npx playwright install --with-deps
+
+        - name: Run Playwright tests
+          working-directory: ./playwright-tests
+          run: npx playwright test
+
+        - name: Upload Report to GitHub
+          uses: actions/upload-artifact@v4.3.3
+          if: always()
+          with:
+              name: Test Results + Video
+              path: ./playwright-tests/playwright-report/
+              if-no-files-found: warn
+              retention-days: 60
