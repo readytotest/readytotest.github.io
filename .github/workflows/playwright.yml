@@ -11,7 +11,7 @@ jobs:
    steps:
        
         - name: Message
-          run: Running Playwright tests against pull requests or commits
+          run: echo "Running Playwright tests against pull requests or commits"
 
         # This YAML exists in the main repo with the website files
         # Playwright test automation scripts exists in a separate repo
