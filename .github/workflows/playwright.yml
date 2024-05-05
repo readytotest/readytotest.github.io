@@ -1,8 +1,6 @@
 name: Playwright GitHub Page (manual, push/pr)
-on:
+on: push
  workflow_dispatch:
- push:
- pull:
 
 jobs:
  GitHub-Page-Test:
