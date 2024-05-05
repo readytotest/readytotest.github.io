@@ -11,7 +11,7 @@ jobs:
    steps:
        
         - name: Message
-          run: echo "Running Playwright tests against pull requests or commits"
+          run: echo "Running Playwright tests against pull requests and commits"
 
         # We will check out two repos because the website files
         # exist in one repo and Playwright exists in a different repo
