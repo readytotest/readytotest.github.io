@@ -13,9 +13,9 @@ jobs:
         - name: Message
           run: |
             commitSubject="${{ github.event.commits[0].message }}"
-            echo "${{ github.actor }} initiated this test run with ${commitSubject}"
-            echo "Running Playwright tests against pull requests and commits ${{ github.sha }} ${{ github.ref }}"
-            echo "Link to GitHub Workflow: ${{ github.server_url }}/${{ github.repository }}/actions/workflows/${{ github.workflow }}"
+            echo "This action executes Playwright tests against pull requests and commits"
+            echo "User: ${{ github.actor }} initiated this test run with: ${ commitSubject } ${{ github.sha }} ${{ github.ref }}"
+            echo "GitHub workflow run: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
 
         # We will check out two repos because the website files
         # exist in one repo and Playwright exists in a different repo
