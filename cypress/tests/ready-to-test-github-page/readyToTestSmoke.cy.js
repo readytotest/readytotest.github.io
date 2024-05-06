@@ -1,7 +1,7 @@
 /*
-  Note: This Cypress script was initially created to test specific functionalities of the site.
-  As the site has evolved, there may be new features or changes that are not covered by this script.
-  I will be reviewing and updating it to ensure comprehensive testing of the latest site version.
+  Note: This is just a basic test and it runs on a cron schedule in a GH Actions
+  workflow. I'm not doing much with this test as I've created new tests for my
+  Github Pages site using Playwright. Check out my Playwright repo to see.
 */
 
 
