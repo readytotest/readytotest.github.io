@@ -14,7 +14,7 @@ jobs:
           run: |
             commitSubject="${{ github.event.commits[0].message }}"
             echo "This action executes Playwright tests against pull requests and commits"
-            echo "User: ${{ github.actor }} initiated this test run with: ${ commitSubject } ${{ github.sha }} ${{ github.ref }}"
+            echo "User: ${{ github.actor }} initiated this test run with: ${commitSubject} ${{ github.sha }} ${{ github.ref }}"
             echo "GitHub workflow run: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
 
         # We will check out two repos because the website files
