@@ -13,8 +13,9 @@ jobs:
         - name: Message
           run: |
             echo "This action executes Playwright tests against pull requests and commits"
-            echo "User: ${{ github.actor }} initiated this test run
-            echo "Commit Info: ${{ github.event.commits[0].message }} ${{ github.sha }} 
+            echo "User: [${{ github.actor }}] initiated this test run
+            echo "Commit subject: ${{ github.event.commits[0].message }}
+            echo "Commit hash: ${{ github.sha }} 
             echo "Branch: ${{ github.ref_name }}"
             echo "GitHub workflow run: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
 
