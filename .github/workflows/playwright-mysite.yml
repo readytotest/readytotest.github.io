@@ -5,8 +5,8 @@ on:
   workflow_dispatch:
 
 jobs:
- GitHub-Page-Test:
-   runs-on: ubuntu-latest
+ Playwright-GitHub-Page-Test:
+   runs-on: ubuntu-latestß
    timeout-minutes: 10
    steps:
        

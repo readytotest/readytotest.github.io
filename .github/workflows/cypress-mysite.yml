@@ -6,7 +6,7 @@ on:
 
 
 jobs:
- GitHub-Page-Test:
+ Cypress-GitHub-Page-Test:
    runs-on: ubuntu-latest
    timeout-minutes: 10
    steps:
