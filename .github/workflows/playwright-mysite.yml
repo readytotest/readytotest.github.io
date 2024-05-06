@@ -10,14 +10,12 @@ jobs:
    timeout-minutes: 10
    steps:
        
-    - name: Message
-      run: |
-        commitSubject=$(git log --format=%B -n 1 ${{ github.sha }})
-        echo "${{ github.actor }} initiated this test run with ${ commitSubject }"
-        echo "Running Playwright tests against pull requests and commits ${{ github.sha }} ${{ github.ref }}"
-        echo "Link to GitHub Workflow: ${{ github.server_url }}/${{ github.repository }}/actions/workflows/${{ github.workflow }}"
-  
-  
+        - name: Message
+          run: |
+            commitSubject=$(git log --format=%B -n 1 ${{ github.sha }})
+            echo "${{ github.actor }} initiated this test run with ${commitSubject}"
+            echo "Running Playwright tests against pull requests and commits ${{ github.sha }} ${{ github.ref }}"
+            echo "Link to GitHub Workflow: ${{ github.server_url }}/${{ github.repository }}/actions/workflows/${{ github.workflow }}"
 
         # We will check out two repos because the website files
         # exist in one repo and Playwright exists in a different repo
