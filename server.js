@@ -40,3 +40,24 @@ const server = http.createServer((req, res) => {
 server.listen(port, () => {
   console.log(`Server is running on http://localhost:${port}`);
 });
+
+// Function to determine Content-Type header based on file extension
+function getContentType(filePath) {
+  const extname = path.extname(filePath);
+  switch (extname) {
+    case '.html':
+      return 'text/html';
+    case '.css':
+      return 'text/css';
+    case '.js':
+      return 'application/javascript';
+    case '.png':
+      return 'image/png';
+    case '.jpg':
+      return 'image/jpeg';
+    case '.gif':
+      return 'image/gif'; // Set Content-Type to image/gif for GIF files
+    default:
+      return 'application/octet-stream';
+  }
+}
