@@ -1,4 +1,4 @@
-name: Cypress GitHub Page (page build, scheduled, manual)
+name: Cypress GitHub Page (manual, scheduled)
 on:
  workflow_dispatch:
  schedule:
