@@ -6,7 +6,7 @@ on:
 
 jobs:
  Playwright-GitHub-Page-Test:
-   runs-on: ubuntu-latestß
+   runs-on: ubuntu-latest
    timeout-minutes: 10
    steps:
        
