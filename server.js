@@ -5,7 +5,7 @@ const path = require('path');
 const port = process.env.PORT || 3000;
 
 const server = http.createServer((req, res) => {
-  let filePath = req.url === '/' ? '/index.htm' : req.url; // Default to index.html if root path
+  let filePath = req.url === '/' ? '/index.htm' : req.url;
   filePath = path.join(__dirname, filePath);
 
   // Check if the requested file is in the 'html' folder
