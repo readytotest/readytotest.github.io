@@ -1,3 +1,7 @@
+//This script is ran from the GH Actions workflow for testing against
+//pull requests and commits using Playwright
+//We need this to start a local server in the GitHub Runner
+
 const http = require('http');
 const fs = require('fs');
 const path = require('path');
@@ -42,6 +46,8 @@ server.listen(port, () => {
 });
 
 // Function to determine Content-Type header based on file extension
+// Without this part the animated dog gif doesn't appear and there
+// is just a blank spot there
 function getContentType(filePath) {
   const extname = path.extname(filePath);
   switch (extname) {
