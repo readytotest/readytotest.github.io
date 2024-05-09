@@ -63,7 +63,7 @@ jobs:
 
         - name: Run Playwright tests
           working-directory: ./playwright-tests #This is the sub-directory where the Playwright repo was copied to
-          #Tests against https://readytotest.github.io
+          #Tests against http://localhost:3000
           run: npx playwright test
 
         - name: Upload Report to GitHub
