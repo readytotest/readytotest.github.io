@@ -1,9 +1,10 @@
 name: Playwright GitHub Page (manual, pr/push)
 #I'm using a different Playwright configuration for Github Actions
-#Mostly because I like to have sloMo and headed mode enabled in my local 
+#because I like to have sloMo and headed mode enabled in my local 
 #environment so I can watch the tests run and I don't want those settings in the
-#GitHub runner..
-#So I created an repository variable in the GitHub repo settings and included it
+#GitHub runner..otherwise I'd have an unstaged change of the config file always
+#present. Having unique config files for Playwright local vs CI/CD solves the problem.
+#So I created a repository variable in the GitHub repo settings and included it
 #in this YAML below, and further down below you can see I used the --config flag 
 #and specify the variable when starting the tests
 #If you go look in the root of the Playwright repo, you'll see two separate config files
