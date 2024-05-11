@@ -3,7 +3,7 @@ name: Playwright GitHub Page (manual, pr/push)
 #Mostly because I like to have sloMo and headed mode enabled in my local 
 #environment so I can watch the tests run and I don't want those settings in the
 #GitHub runner..
-#So I created an environment variable in the GitHub repo settings and included it
+#So I created an repository variable in the GitHub repo settings and included it
 #in this YAML below, and further down below you can see I used the --config flag 
 #and specify the variable when starting the tests
 #If you go look in the root of the Playwright repo, you'll see two separate config files
