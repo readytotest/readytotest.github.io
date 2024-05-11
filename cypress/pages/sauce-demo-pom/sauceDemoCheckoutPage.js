@@ -11,7 +11,7 @@ class SauceDemoCheckoutPage{
         shippingType:() => cy.get('.summary_value_label'),
         subtotalPrice:() => cy.get('.summary_subtotal_label'),
         taxPrice:() => cy.get('.summary_tax_label'),
-        totalPrice:() => cy.get('#total-label'),
+        totalPrice:() => cy.get('[data-test="#total-label"]'),
         finishButton:() => cy.get('#finish'),
         completeHeader:() => cy.get('.complete-header'),
 
