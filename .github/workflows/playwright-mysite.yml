@@ -1,4 +1,6 @@
 name: Playwright GitHub Page (manual, pr/push)
+env:
+  PLAYWRIGHT_ACTIONS_CONFIG: ${{ vars.PLAYWRIGHT_ACTIONS_CONFIG }}
 on:   
   push:
   pull_request:
@@ -64,7 +66,7 @@ jobs:
         - name: Run Playwright tests
           working-directory: ./playwright-tests #This is the sub-directory where the Playwright repo was copied to
           #Tests against http://localhost:3000
-          run: npx playwright test
+          run: npx playwright test --config $PLAYWRIGHT_ACTIONS_CONFIG
 
         - name: Upload Report to GitHub
           uses: actions/upload-artifact@v4.3.3
