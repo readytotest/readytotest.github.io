@@ -3,6 +3,8 @@ const ytPlaylist = [
     "https://youtu.be/pJDyJowRlhc?feature=shared",
     //Metallica - Whiskey in the Jar (Slane Castle - Meath, Ireland - June 8, 2019)
     "https://youtu.be/9MNdOCQYOL8?feature=shared",
+    //Pink Floyd - Have a Cigar
+    "https://youtu.be/Zyj1K5Lyr_Y?feature=shared",
     //Lima Papa - Superlovin' (Original Vox Mix) (2001)
     "https://youtu.be/CgkkudRCGB0?feature=shared",
     //Simon - Free at Last (original Mix) (2001)
