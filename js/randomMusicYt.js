@@ -19,6 +19,8 @@ const ytPlaylist = [
     "https://youtu.be/pwYx26t-Su4?feature=shared",
     //Alan Jackson - The Older I Get
     "https://youtu.be/kElHR66Y3es?feature=shared",
+    //Brad Paisley - Celebrity
+    "https://youtu.be/B9mpDAJOPac?feature=shared",
     //Johnny Cash - Orange Blossom Special (Live at San Quentin)
     "https://youtu.be/Xhs5j7HN8wM?feature=shared",
     //Garth Brooks - Much Too Young to Feel This Damn Old
