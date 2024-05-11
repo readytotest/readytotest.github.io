@@ -16,7 +16,7 @@ const ytPlaylist = [
 document.getElementById('randomVideoLink').onclick = function() {
     const randomIndex = Math.floor(Math.random() * ytPlaylist.length);
     const randomVideoUrl = ytPlaylist[randomIndex];
-    window.open(randomVideoUrl, '_blank');
+    window.open(randomVideoUrl);
     return false;
 };
 
