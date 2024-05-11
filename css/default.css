@@ -42,6 +42,23 @@ body {background-color: black;
         color: hotpink;
       }
 
+      #randomVideoLink {
+        color: yellow; /* Default color */
+    }
+    
+    #randomVideoLink:hover {
+        color: yellow /* Color when hovered */
+    }
+    
+    #randomVideoLink:active {
+        color: yellow /* Color when clicked */
+    }
+    
+    #randomVideoLink:visited {
+        color: yellow; /* Color for visited links */
+    }
+   
+
     #sentry-feedback {
       --background: snow;
       --background-hover:#f6f6f7;
