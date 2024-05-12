@@ -42,19 +42,19 @@ body {background-color: black;
         color: hotpink;
       }
 
-      #randomVideoLink {
+    #gitHubProfilelink {
         color: yellow; /* Default color */
     }
     
-    #randomVideoLink:hover {
+    #gitHubProfilelink:hover {
         color: yellow /* Color when hovered */
     }
     
-    #randomVideoLink:active {
+    #gitHubProfilelink:active {
         color: yellow /* Color when clicked */
     }
     
-    #randomVideoLink:visited {
+    #gitHubProfilelink:visited {
         color: yellow; /* Color for visited links */
     }
    
