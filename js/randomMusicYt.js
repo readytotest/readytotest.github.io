@@ -7,6 +7,10 @@ const ytPlaylist = [
     "https://youtu.be/tbdpv7G_PPg?feature=shared",
     //The Rolling Stones - Honky Tonk Women
     "https://youtu.be/hqqkGxZ1_8I?feature=shared",
+    //REO Speedwagon - Take It on the Run
+    "https://youtu.be/ZQ-uWQJNx7w?feature=shared",
+    //Journey - Faithfully
+    "https://youtu.be/OMD8hBsA-RI?feature=shared",
     //Lima Papa - Superlovin' (Original Vox Mix) (2001)
     "https://youtu.be/CgkkudRCGB0?feature=shared",
     //Simon - Free at Last (original Mix) (2001)
