@@ -19,7 +19,7 @@ fetch('https://api.weather.gov')
 
 //Weather alert
 
-fetch('https://api.weather.gov/alerts/active?area=CA&limit=8') 
+fetch('https://api.weather.gov/alerts/active?area=AK&limit=8') 
 .then(response => {
   console.log('Weather API Status:', response.status);
     if (!response.ok) {
