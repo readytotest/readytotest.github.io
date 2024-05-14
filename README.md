@@ -16,7 +16,7 @@
 
 ! YAML files for GitHub Actions workflows,
 ! including playwright-mysite.yml, which checks
-! out this repo and the test-playwright repo
+! out both this repo and the test-playwright repo
 ! and then runs tests against PRs and commits
 
 - Cypress scripts, which I'm no longer maintaining
