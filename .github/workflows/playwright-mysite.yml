@@ -61,8 +61,7 @@ jobs:
         - name: Start Local Webserver in GH Runner environment (http://localhost:3000)
           run: |
             chmod +x start-server.sh
-            ./start-server.sh &
-            sleep 5
+            ./start-server.sh
 
         - name: CD to playwright-tests directory, print node version, and list contents
           run: |
