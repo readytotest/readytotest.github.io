@@ -38,6 +38,7 @@ if ! lsof -i:3000 | grep -q LISTEN; then
 fi
 
 # Additional comments
+echo "Press CTRL+C to end server OR....."
 echo "# lsof -i:3000 <to see the PID of the server>"
 echo "# kill -9 (PID goes here remove parenthesis) <to end server>"
 
