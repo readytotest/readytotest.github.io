@@ -27,29 +27,20 @@ cleanup() {
 trap cleanup SIGINT
 
 # Print the initial message
-echo "The server is starting....please wait."
-echo "After server has started you will see a message that confirms it's up."
+echo "The server is starting... Please wait."
 
-# Define a timeout in seconds
-TIMEOUT=30
-elapsed=0
-server_started=false
+# Sleep to allow the server to start (adjust as needed)
+sleep 10
 
 # Check if the server is running on port 3000
-while [ $elapsed -lt $TIMEOUT ]; do
-  if lsof -i:3000 | grep -q LISTEN; then
-    server_started=true
-    break
-  fi
-  sleep 1
-  elapsed=$((elapsed + 1))
-done
-
-# Check if the server started successfully
-if ! $server_started; then
-  echo "Node server failed to start within $TIMEOUT seconds."
+if ! lsof -i:3000 | grep -q LISTEN; then
+  echo "Node server failed to start."
   cleanup
 fi
 
-# Wait for the Node server process to finish
-wait $NODE_PID
+# Keep the script running in the background
+# This prevents the script from terminating prematurely
+while true; do
+  sleep 10
+done
+
