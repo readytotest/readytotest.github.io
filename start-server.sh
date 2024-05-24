@@ -30,17 +30,9 @@ trap cleanup SIGINT
 # Print the initial message
 echo "The server is starting... Please wait."
 
-# Sleep to allow the server to start (adjust as needed)
-sleep 10
-
 # Check if the server is running on port 3000
 if ! lsof -i:3000 | grep -q LISTEN; then
   echo "Node server failed to start."
   cleanup
 fi
-
-# Keep the script running in the background
-# This prevents the script from terminating prematurely
-#while true; do
-#done
 
