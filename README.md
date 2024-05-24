@@ -9,6 +9,14 @@
 <br> 
 <sup>Note: Cypress Cloud only used for Sauce Demo specs. All other tests will use Mochawesome report.</sup>
 
+You can start up the local server by typing node server.js in the VS Code terminal
+<br>
+or if you want to start it by the bash script you can type: chmod +x start-server.sh
+<br>
+and then ./start-server.sh (Note: Bash script isn't necessary, it was just something
+<br>
+I was tinkering with)
+
 ```diff
 @@ This repo contains: @@
 
