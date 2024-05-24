@@ -39,8 +39,8 @@ fi
 
 # Additional comments
 echo "Press CTRL+C to end server OR....."
-echo "# lsof -i:3000 <to see the PID of the server>"
-echo "# kill -9 (PID goes here remove parenthesis) <to end server>"
+echo "lsof -i:3000 <to see the PID of the server>"
+echo "kill -9 (PID goes here remove parenthesis) <to end server>"
 
 # Keep the script running until you press Ctrl+C to stop the server
 # If you remove this line, then pressing Ctrl+C won't stop the server
