@@ -62,7 +62,6 @@ jobs:
           run: |
             chmod +x start-server.sh
             ./start-server.sh &
-            wait_for_server=$!
             sleep 5
 
         - name: CD to playwright-tests directory, print node version, and list contents
