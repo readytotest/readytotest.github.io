@@ -17,6 +17,12 @@
 node server.js &
 NODE_PID=$!
 
+# Print the initial message
+echo "The server is starting... Please wait."
+
+# Sleep to allow the server to start (adjust as needed)
+sleep 10
+
 # Function to handle termination and clean up
 cleanup() {
   echo "Stopping Node server..."
@@ -26,9 +32,6 @@ cleanup() {
 
 # Trap SIGINT (Ctrl+C) and call the cleanup function
 trap cleanup SIGINT
-
-# Print the initial message
-echo "The server is starting... Please wait."
 
 # Check if the server is running on port 3000
 if ! lsof -i:3000 | grep -q LISTEN; then
