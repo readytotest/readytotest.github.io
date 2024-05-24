@@ -9,6 +9,7 @@
 # Then to run the script just type in ./start-server.sh from the
 # root of this repo in the VS Code terminal
 # Leave the terminal open while the server is running
+# Go to http://localhost:3000
 # Press CTRL+C to stop the server
 #-------
 
