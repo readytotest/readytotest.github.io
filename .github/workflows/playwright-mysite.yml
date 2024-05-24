@@ -59,9 +59,10 @@ jobs:
             node-version: 'latest'
 
         - name: Start Local Webserver in GH Runner environment (http://localhost:3000)
-          run: |
+          run: | #We need the & sleep 5 or it will hang on this step and won't progress
             chmod +x start-server.sh
-            ./start-server.sh
+            ./start-server.sh &
+            sleep 5
 
         - name: CD to playwright-tests directory, print node version, and list contents
           run: |
