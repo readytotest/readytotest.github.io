@@ -39,3 +39,6 @@ if ! lsof -i:3000 | grep -q LISTEN; then
   cleanup
 fi
 
+# Wait indefinitely while the server is running
+wait
+
