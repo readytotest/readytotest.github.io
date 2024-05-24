@@ -20,9 +20,6 @@ NODE_PID=$!
 # Print the initial message
 echo "The server is starting... Please wait."
 
-# Sleep to allow the server to start (adjust as needed)
-sleep 10
-
 # Function to handle termination and clean up
 cleanup() {
   echo "Stopping Node server..."
@@ -33,12 +30,24 @@ cleanup() {
 # Trap SIGINT (Ctrl+C) and call the cleanup function
 trap cleanup SIGINT
 
+sleep 5
+
 # Check if the server is running on port 3000
 if ! lsof -i:3000 | grep -q LISTEN; then
   echo "Node server failed to start."
-  cleanup
 fi
 
-# Wait indefinitely while the server is running
-wait
+# Additional comments
+echo "# lsof -i:3000 <to see the PID of the server>"
+echo "# kill -9 (PID goes here remove parenthesis) <to end server>"
+
+# Keep the script running until you press Ctrl+C to stop the server
+# If you remove this line, then pressing Ctrl+C won't stop the server
+# because you'll be back at the regular command prompt when the script 
+# finishes running
+wait $NODE_PID
+
+
+
+
 
