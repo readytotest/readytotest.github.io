@@ -42,6 +42,5 @@ fi
 # Keep the script running in the background
 # This prevents the script from terminating prematurely
 while true; do
-  sleep 10
 done
 
