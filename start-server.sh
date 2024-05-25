@@ -23,8 +23,8 @@ if lsof -i:3000 | grep -q LISTEN; then
   exit 1
 fi
 
-# Start the Node server in the background using nohup and store its process ID (PID)
-nohup node server.js > server.log 2>&1 &
+# Start the Node server using screen to keep it running after closing the terminal and store its process ID (PID)
+node server.js &
 NODE_PID=$!
 
 # Print the initial message
@@ -45,12 +45,12 @@ sleep 5
 
 # Check if the server is running on port 3000
 if lsof -i:3000 | grep -q LISTEN; then
-  echo "### ✅ The server is running on http://localhost:3000"
-  echo "### 🖱️ Press CTRL+C to end server."
+  echo "### ✅ Open your browser and type in http://localhost:3000"
+  echo "### ❕ Press CTRL+C to stop the server."
 else
   echo "❌ Node server failed to start."
   cleanup
 fi
 
-# Keep the script running until you press Ctrl+C to stop the server
+# Keep the script running indefinitely until you manually stop it
 wait $NODE_PID
