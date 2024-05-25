@@ -23,7 +23,7 @@ if lsof -i:3000 | grep -q LISTEN; then
   exit 1
 fi
 
-# Start the Node server using screen to keep it running after closing the terminal and store its process ID (PID)
+# Start the Node server and store its process ID (PID)
 node server.js &
 NODE_PID=$!
 
