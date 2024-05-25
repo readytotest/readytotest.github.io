@@ -59,7 +59,7 @@ jobs:
             node-version: 'latest'
 
         - name: Start Local Webserver in GH Runner environment (http://localhost:3000)
-          run: | #We need the & sleep 5 or it will hang on this step and won't progress
+          run: | #We need the & sleep 1 or it will hang on this step and won't progress
             chmod +x start-server.sh
             ./start-server.sh &
             sleep 1
