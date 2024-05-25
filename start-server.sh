@@ -46,7 +46,7 @@ sleep 5
 # Check if the server is running on port 3000
 if lsof -i:3000 | grep -q LISTEN; then
   echo "### ✅ Open your browser and type in http://localhost:3000"
-  echo "### ❕ Press CTRL+C to stop the server."
+  echo "### 🖱️  Press CTRL+C to stop the server."
 else
   echo "❌ Node server failed to start."
   cleanup
