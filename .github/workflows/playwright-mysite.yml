@@ -62,7 +62,7 @@ jobs:
           run: | #We need the & sleep 5 or it will hang on this step and won't progress
             chmod +x start-server.sh
             ./start-server.sh &
-            sleep 5
+            sleep 1
 
         - name: CD to playwright-tests directory, print node version, and list contents
           run: |
