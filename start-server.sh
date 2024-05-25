@@ -15,23 +15,24 @@
 
 # Check if port 3000 is already in use
 if lsof -i:3000 | grep -q LISTEN; then
-  echo "### A service is listening on port 3000 currently." 
-  echo "### Go to http://localhost:3000 and see what happens.."
-  echo "### or type in lsof -i:3000 in your terminal to see what's running."
-  echo "### Script will now exit!"
+  echo "### 🚫 Port 3000 is already in use."
+  echo "### 🌐 Go to http://localhost:3000 and see what happens."
+  echo "### 🔍 Type in lsof -i:3000 in your terminal to find the PID of what's running."
+  echo "### 💀 Type kill -9 (PID) in your terminal to end service."
+  echo "### ❌ Script will now exit!"
   exit 1
 fi
 
-# Start the Node server in the background and store its process ID (PID)
-node server.js &
+# Start the Node server in the background using nohup and store its process ID (PID)
+nohup node server.js > server.log 2>&1 &
 NODE_PID=$!
 
 # Print the initial message
-echo "### The server is attempting to start..."
+echo "### 🚀 The server is attempting to start..."
 
 # Function to handle termination and clean up
 cleanup() {
-  echo "### Stopping Node server..."
+  echo "🛑 Stopping Node server..."
   kill $NODE_PID
   exit 1
 }
@@ -39,32 +40,17 @@ cleanup() {
 # Trap SIGINT (Ctrl+C) and call the cleanup function
 trap cleanup SIGINT
 
-echo "### Waiting 5 seconds for server to start."
+echo "### ⏳ Waiting 5 seconds for server to start."
 sleep 5
-
-# Print waiting for server to start message
-
 
 # Check if the server is running on port 3000
 if lsof -i:3000 | grep -q LISTEN; then
-  echo "### The server is running on http://localhost:3000"
-  echo "### Press CTRL+C to end server."
+  echo "### ✅ The server is running on http://localhost:3000"
+  echo "### 🖱️ Press CTRL+C to end server."
 else
-  echo "### Node server failed to start."
+  echo "❌ Node server failed to start."
   cleanup
 fi
 
 # Keep the script running until you press Ctrl+C to stop the server
-# If you remove this line, then pressing Ctrl+C won't stop the server
-# because you'll be back at the regular command prompt when the script 
-# finishes running
 wait $NODE_PID
-
-# HELPFUL COMMANDS
-# lsof -i:3000 <to see the PID of the server>"
-# "kill -9 (PID goes here remove parenthesis) <to end server>"
-
-
-
-
-
