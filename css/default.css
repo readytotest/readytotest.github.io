@@ -59,12 +59,17 @@ body {background-color: black;
     }
 
     #video-embedded {
-      width:480px;
-      height:270px;
-      padding:2px;
-      background-color:white;
+      width: 480px;
+      height: 270px;
+      margin-top: 10px; /* Adjusted margin to create space above the video */
+      overflow: hidden; /* Ensures the video container respects its dimensions */
     }
-   
+  
+    #video-embedded video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* Ensures the video fills the container */
+    }
 
     #sentry-feedback {
       --background: snow;
