@@ -61,6 +61,8 @@ body {background-color: black;
     #video-embedded {
       width: 480px;
       height: 270px;
+      padding:2px;
+      background-color:white;
       margin-top: 10px; /* Adjusted margin to create space above the video */
       overflow: hidden; /* Ensures the video container respects its dimensions */
     }
