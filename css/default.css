@@ -57,6 +57,13 @@ body {background-color: black;
     #gitHubProfilelink:visited {
         color: yellow; /* Color for visited links */
     }
+
+    #video-embedded {
+      width:480px;
+      height:270px;
+      padding:2px;
+      background-color:white;
+    }
    
 
     #sentry-feedback {
