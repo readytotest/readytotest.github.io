@@ -61,17 +61,31 @@ body {background-color: black;
     #video-embedded {
       width: 480px;
       height: 270px;
-      padding:2px;
-      background-color:white;
-      margin-top: 10px; /* Adjusted margin to create space above the video */
-      overflow: hidden; /* Ensures the video container respects its dimensions */
-    }
+      margin-top: 10px;
+      overflow: hidden;
+      position: relative; /* Added relative positioning */
+      border: 2px solid snow; /* Initial transparent border */
+      border-radius: 10px;
+      
+  }
   
-    #video-embedded video {
+  #video-embedded:hover {
+      border-color: hotpink; /* Border color changes on hover */
+  }
+  
+  #video-embedded video {
       width: 100%;
       height: 100%;
       object-fit: cover; /* Ensures the video fills the container */
-    }
+      display: block; /* Ensures the video behaves as a block-level element */
+      border-radius: inherit; /* Inherits rounded corners from the parent */
+      opacity: .5; /* Initially partially transparent */
+  }
+  
+  #video-embedded video:hover {
+      opacity: 1; /* Reduced opacity on hover */
+  }
+  
 
     #sentry-feedback {
       --background: snow;
