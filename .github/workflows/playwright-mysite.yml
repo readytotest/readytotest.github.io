@@ -1,13 +1,20 @@
+# I've customized the Playwright configuration for GitHub Actions
+# to omit 'sloMo' and 'headed' modes used in my local environment,
+# ensuring my configuration files remain consistent. This approach
+# resolves the issue of having uncommitted changes to the configuration file.
+# Additionally, I excluded a specific file from running in GitHub Actions
+# by adding it to 'testIgnore' in the actions configuration.
+#
+# To achieve this, I created a repository variable in the GitHub repo settings,
+# which is utilized in the YAML below. Further down, you'll notice that
+# I've used the '--config' flag to specify this variable when starting the tests.
+#
+# If you explore the root of the test-playwright repo, you'll find two separate
+# configuration files.
+# playwright.actions.config.ts (for GitHub Actions)
+# playwright.config.ts (for running tests locally)
+
 name: Playwright GitHub Page (manual, pr/push)
-#I'm using a different Playwright configuration for Github Actions
-#because I like to have sloMo and headed mode enabled in my local 
-#environment so I can watch the tests run and I don't want those settings in the
-#GitHub runner..otherwise I'd have an unstaged change of the config file always
-#present. Having unique config files for Playwright local vs CI/CD solves the problem.
-#So I created a repository variable in the GitHub repo settings and included it
-#in this YAML below, and further down below you can see I used the --config flag 
-#and specify the variable when starting the tests
-#If you go look in the root of the Playwright repo, you'll see two separate config files
 env:
   PLAYWRIGHT_ACTIONS_CONFIG: ${{ vars.PLAYWRIGHT_ACTIONS_CONFIG }}
 on:   
