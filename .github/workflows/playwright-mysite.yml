@@ -31,6 +31,7 @@ jobs:
         - name: Message
           run: |
             echo "This action executes Playwright tests against pull requests and commits"
+            echo "Configuration: playwright.actions.config.ts"
             echo "User: [${{ github.actor }}] initiated this test run"
             echo "Commit subject: ${{ github.event.commits[0].message }}"
             echo "Commit hash: ${{ github.sha }}"
