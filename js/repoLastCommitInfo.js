@@ -1,49 +1,47 @@
-fetch('https://api.github.com/users/readytotest/repos') 
-.then(response => {
-  console.log('Repo API Status:', response.status);
-  if (!response.ok) {
-    throw new Error(`HTTP error! Status: ${response.status}`);
-  }
-  return response.json();
-})
-
-.then(repositories => {
-  // Log the response body to the console
-  console.log('Response Body Repo API:', repositories);
-  return repositories;
-})
-
-// Removing this part and replacing it with more dynamic code
-// .then(response => { document.querySelector("repo-update-timestamp").innerHTML = `<a href="${response[0]?.html_url}" target="_blank" rel="noopener noreferrer">${response[0]?.name}</a>: ${new Date(response[0]?.pushed_at)}<br>`
-
-// return response;
-// })
-
-// .then(response => { document.querySelector("repo-update-timestamp").insertAdjacentHTML('beforeend', `<a href="${response[1]?.html_url}" target="_blank" rel="noopener noreferrer">${response[1]?.name}</a>: ${new Date(response[1]?.pushed_at)}<br>`)
-
-// return response;
-// })
-
-
-// Updating code so if we create a new repo, it will appear automatically
-// Otherwise I'd need to create a new line with the array index for each repo manually
-.then(repositories => {
-  const repoTimestamper = document.querySelector("repo-update-timestamp");
-
-     repositories.forEach(repo => {
-      repoTimestamper.insertAdjacentHTML(
-        'beforeend',
-        `<a href="${repo.html_url}" target="_blank" rel="noopener noreferrer">${repo.name}</a>: ${new Date(repo.pushed_at)}<br>`
-      );
-    });
-  
+fetch('https://api.github.com/users/readytotest/repos')
+  .then(response => {
+    console.log('Repo API Status:', response.status);
+    if (!response.ok) {
+      throw new Error(`HTTP error! Status: ${response.status}`);
+    }
+    return response.json();
+  })
+  .then(repositories => {
+    console.log('Response Body Repo API:', repositories);
     return repositories;
   })
+  .then(repositories => {
+    const repoTimestamper = document.querySelector("repo-update-timestamp");
 
-.catch(error => {
-  console.error('Error fetching earthquake data:', error.message);
-  document.querySelector("repo-update-timestamp").innerHTML = `🛑 Unable to fetch repo info❕<br>🛑 ${error.message}<br>`;
-});
+    // Fetch the last commit message for each repository
+    repositories.forEach(repo => {
+      fetch(`https://api.github.com/repos/readytotest/${repo.name}/commits`)
+        .then(response => {
+          if (!response.ok) {
+            throw new Error(`HTTP error! Status: ${response.status}`);
+          }
+          return response.json();
+        })
+        .then(commits => {
+          const lastCommitMsg = commits[0]?.commit?.message || 'No commit message available';
+          repoTimestamper.insertAdjacentHTML(
+            'beforeend',
+            `<a href="${repo.html_url}" target="_blank" rel="noopener noreferrer">${repo.name}</a>:<br>${new Date(repo.pushed_at)}<br>${lastCommitMsg}<br>`
+          );
+        })
+        .catch(error => {
+          console.error('Error fetching commit data:', error.message);
+          repoTimestamper.insertAdjacentHTML('beforeend', `🛑 Unable to fetch commit info for ${repo.name}❕<br>🛑 ${error.message}<br><br>`);
+        });
+    });
+
+    return repositories;
+  })
+  .catch(error => {
+    console.error('Error fetching repo data:', error.message);
+    document.querySelector("repo-update-timestamp").innerHTML = `🛑 Unable to fetch repo info❕<br>🛑 ${error.message}<br>`;
+  });
+
 
 
 
