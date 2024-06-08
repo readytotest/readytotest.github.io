@@ -26,7 +26,7 @@ fetch('https://api.github.com/users/readytotest/repos')
           const lastCommitMsg = commits[0]?.commit?.message || 'No commit message available❕';
           repoTimestamper.insertAdjacentHTML(
             'beforeend',
-            `<a href="${repo.html_url}" target="_blank" rel="noopener noreferrer">${repo.name}</a>:<br>${new Date(repo.pushed_at)}<br>"${lastCommitMsg}"<br>`
+            `<a href="${repo.html_url}" target="_blank" rel="noopener noreferrer">${repo.name}</a>:<br>${repo.topic}:<br>${new Date(repo.pushed_at)}<br>"${lastCommitMsg}"<br>`
           );
         })
         .catch(error => {
