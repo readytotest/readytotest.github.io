@@ -11,9 +11,9 @@
     alert is shown only once per user, even if they reload the page.
 */
 
-if (!localStorage.getItem('alertDismissed')) {
+if (!localStorage.getItem('alertTinkerDismissed')) {
 window.alert("Tinker:\nTo make small changes or adjustments to something in order to improve it or to learn more about it.\n\nExample usage:\n- He enjoys tinkering with old cars to learn how they work.\n- She spent the afternoon tinkering in her workshop.");
 
 // Set a flag in local storage to indicate the alert has been shown
-localStorage.setItem('alertDismissed', 'true');
+localStorage.setItem('alertTinkerDismissed', 'true');
 }
