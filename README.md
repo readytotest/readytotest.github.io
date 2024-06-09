@@ -5,6 +5,10 @@
 
 [![GitHub Actions GitGuardian](https://github.com/readytotest/readytotest.github.io/actions/workflows/gitGuardian.yml/badge.svg)](https://github.com/readytotest/readytotest.github.io/actions/workflows/gitGuardian.yml)
 
+[![Playwright GitHub Page (manual, pr/push)](https://github.com/readytotest/readytotest.github.io/actions/workflows/playwright-mysite.yml/badge.svg)](https://github.com/readytotest/readytotest.github.io/actions/workflows/playwright-mysite.yml)
+
+[![Cypress GitHub Page (manual, scheduled)](https://github.com/readytotest/readytotest.github.io/actions/workflows/cypress-mysite.yml/badge.svg)](https://github.com/readytotest/readytotest.github.io/actions/workflows/cypress-mysite.yml)
+
 [![Sauce Demo GH Actions Parallel](https://img.shields.io/endpoint?url=https://cloud.cypress.io/badge/detailed/dm22wp&style=flat&logo=cypress)](https://cloud.cypress.io/projects/dm22wp/runs)
 <br> 
 <sup>Note: Cypress Cloud only used for Sauce Demo specs. All other tests will use Mochawesome report.</sup>
