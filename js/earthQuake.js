@@ -50,5 +50,27 @@ return response;
 
 .catch(error => {
   console.error('Error fetching earthquake data:', error.message);
-  alert('There was an error fetching earthquake data. Please try again later.');
+
+  /*
+    We don't want this alert popping up constantly for the visitor
+    because it will be too annoying. So if they have never seen it
+    then we show it to them or if they have seen it more than one 
+    hour ago, we will show it again.
+
+    https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage
+    https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API
+  */
+
+  const alertQuakeDismissed = localStorage.getItem('alertQuakeDismissed');
+  const dismissedTime = localStorage.getItem('dismissedTime');
+
+  // Check if the alert should be shown
+  if (!alertQuakeDismissed || (dismissedTime && (Date.now() - dismissedTime > 3600000))) {
+     // Show the alert
+    window.alert("There was an error fetching earthquake data.\nThe earthquake section on this page might be blank.");
+
+    // Set a flag in localStorage to indicate the alert has been shown
+    localStorage.setItem('alertQuakeDismissed', 'true');
+    localStorage.setItem('dismissedTime', Date.now());
+  }
 });
