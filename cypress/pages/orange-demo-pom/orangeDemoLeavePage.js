@@ -14,8 +14,8 @@ class OrangeDemoLeavePage{
         entitlementConfirmSaveModal:() => cy.contains('Confirm'),
         firstListedEntitlementDays:() => cy.get('.oxd-table-cell.oxd-padding-cell').eq(5),
         applyHeaderMenu:() => cy.contains('.oxd-topbar-body-nav-tab-item', 'Apply'),
-        leaveDatePickerStart:() => cy.get('input[placeholder="yyyy-mm-dd"]').eq(0),
-        leaveDatePickerEnd:() => cy.get('input[placeholder="yyyy-mm-dd"]').eq(1),
+        leaveDatePickerStart:() => cy.get('input[placeholder="yyyy-dd-mm"]').eq(0),
+        leaveDatePickerEnd:() => cy.get('input[placeholder="yyyy-dd-mm"]').eq(1),
         myLeaveBalanceDaysFirstListed:() => cy.get('.oxd-table-cell.oxd-padding-cell').eq(4)
 
 
