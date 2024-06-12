@@ -5,8 +5,8 @@ Sentry.init({
       new Sentry.Feedback({
         // Additional SDK configuration goes in here, for example:
         colorScheme: "light",
-        buttonLabel: "Report Bug🕷️Feedback",
-        formTitle: "Report Bug🕷️Feedback",
+        buttonLabel: "Send Message",
+        formTitle: "Send Message",
         submitButtonLabel: "Send Now!",
         messagePlaceholder: "<Type your message here>",
         successMessageText: "Message sent successfully!",
