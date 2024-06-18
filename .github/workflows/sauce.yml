@@ -12,7 +12,7 @@ jobs:
       containers: [1, 2] # parallel instances
    steps:
         - name: Checkout Repo
-          uses: actions/checkout@v4.1.6
+          uses: actions/checkout@v4.1.7
 
         - name: Setup Node.js environment
           uses: actions/setup-node@v4.0.2
