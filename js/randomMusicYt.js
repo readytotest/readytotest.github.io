@@ -13,8 +13,6 @@ const ytPlaylist = [
     "https://youtu.be/9MNdOCQYOL8?feature=shared",
     //Social Distortion - Prison Bound (Guitar Center Sessions)
     "https://youtu.be/lIWHlIhvt3Y?feature=shared",
-    //Social Distortion - California (Hustle and Flow) (Guitar Center Sessions)
-    "https://youtu.be/ksTUQ7ciHXU?feature=shared",
     //Social Distortion - Ball and Chain (Acoustic)
     "https://youtu.be/mkfnNUdeo3w?feature=shared",
     //Alan Jackson - The Older I Get (Official Music Video)
