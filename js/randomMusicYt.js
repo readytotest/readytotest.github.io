@@ -15,8 +15,8 @@ const ytPlaylist = [
     "https://youtu.be/lIWHlIhvt3Y?feature=shared",
     //Social Distortion - California (Hustle and Flow) (Guitar Center Sessions)
     "https://youtu.be/ksTUQ7ciHXU?feature=shared",
-    //Social Distortion - Ball and Chain
-    "https://youtu.be/_NWjehpGSO0?feature=shared",
+    //Social Distortion - Ball and Chain (Acoustic)
+    "https://youtu.be/mkfnNUdeo3w?feature=shared",
     //Alan Jackson - The Older I Get (Official Music Video)
     "https://youtu.be/kElHR66Y3es?feature=shared",
     //REO Speedwagon - Take it on the Run (Video Version)
