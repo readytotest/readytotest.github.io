@@ -11,6 +11,8 @@ const ytPlaylist = [
     "https://youtu.be/veK0oeGdxLo?feature=shared",
     //Metallica - Whiskey in the Jar (Slane Castle - Meath, Ireland - June 8, 2019)
     "https://youtu.be/9MNdOCQYOL8?feature=shared",
+    //Chris Cornell - Nothing Compares 2 U
+    "https://youtu.be/IuUDRU9-HRk?feature=shared",
     //Social Distortion - Prison Bound (Guitar Center Sessions)
     "https://youtu.be/lIWHlIhvt3Y?feature=shared",
     //Social Distortion - Ball and Chain (Acoustic)
@@ -18,7 +20,7 @@ const ytPlaylist = [
     //Alan Jackson - The Older I Get (Official Music Video)
     "https://youtu.be/kElHR66Y3es?feature=shared",
     //REO Speedwagon - Take it on the Run (Video Version)
-    "https://youtu.be/ZQ-uWQJNx7w?feature=shared",
+    "https://youtu.be/ZQ-uWQJNx7w?feature=shared"
 
 ];
 
