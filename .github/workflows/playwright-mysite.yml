@@ -2,7 +2,7 @@
 # to omit 'sloMo' and 'headed' modes used in my local environment,
 # ensuring my configuration files remain consistent. This approach
 # resolves the issue of having uncommitted changes to the configuration file.
-# Additionally, I excluded a specific file from running in GitHub Actions
+# Additionally, I excluded a few old specs that I don't want running in GitHub Actions
 # by adding it to 'testIgnore' in the actions configuration.
 #
 # To achieve this, I created a repository variable in the GitHub repo settings,
