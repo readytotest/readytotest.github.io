@@ -64,7 +64,15 @@
             <br>       
             <b>UI Test Automation with Playwright</b> <img src="/html/img/playwright.png" width="22" height="22"></img>
             <br>
-            Spec: <a href="https://github.com/readytotest/test-playwright/blob/main/tests/homePage.spec.ts" target="_blank" rel="noopener noreferrer">homePage.spec.ts</a>
+            <sup>
+                Using function-based page objects as they are simpler and easier to maintain.
+                <br>
+                Look in the <a href="#repo-list">test-playwright</a> repo 'pages' directory for examples of class-based
+                <br>
+                page objects I'm no longer using.
+            </sup>
+            <br>
+            Spec: <a href="https://github.com/readytotest/test-playwright/blob/main/tests/homePage.spec.ts" target="_blank" rel="noopener noreferrer">homePage.spec.ts</a> | 📸 <a href="/html/img/playwright-report1a.png" target="_blank" rel="noopener noreferrer">look1</a> | 📸 <a href="/html/img/playwright-report1b.png" target="_blank" rel="noopener noreferrer">look2</a>
             <br>
             Spec: <a href="https://github.com/readytotest/test-playwright/blob/main/tests/weatherAlertPage.spec.ts" target="_blank" rel="noopener noreferrer">weatherAlertPage.spec.ts</a>
             <br>
@@ -78,7 +86,7 @@
             <br>
             Test Data: <a href="https://github.com/readytotest/test-playwright/blob/main/test-data/testData.ts" target="_blank" rel="noopener noreferrer">testData.ts</a>
             <br>
-            Feedback Widget Test 🎥 <a href="/html/vid/widget-test.webm" target="_blank" rel="noopener noreferrer">watch</a> (in sloMo so you can follow along)
+            Feedback Widget: 📸 <a href="/html/img/sentry-user-feedback.png" target="_blank" rel="noopener noreferrer">look</a> | 🎥 <a href="/html/vid/widget-test.webm" target="_blank" rel="noopener noreferrer">watch</a> (in sloMo so you can follow along)
             <br>
             Playwright Config Local: <a href="https://github.com/readytotest/test-playwright/blob/main/playwright.config.ts" target="_blank" rel="noopener noreferrer">playwright.config.ts</a>
             <br>
@@ -86,13 +94,15 @@
             <br>
             CI/CD: <a href="https://github.com/readytotest/readytotest.github.io/blob/main/.github/workflows/playwright-mysite.yml" target="_blank" rel="noopener noreferrer">playwright-mysite.yml</a> | <a href="https://github.com/readytotest/readytotest.github.io/actions/workflows/playwright-mysite.yml" target="_blank" rel="noopener noreferrer">Actions workflow</a> | 📸 <a href="/html/img/playwright-action.png" target="_blank" rel="noopener noreferrer">look1</a> | 📸 <a href="/html/img/branch-status-checks.png" target="_blank" rel="noopener noreferrer">look2</a>
             <br>
-            This GitHub Actions YAML file sets up a workflow to run Playwright
-            <br>
-            in a GitHub Runner environment when a pull request or push occurs.
-            <br>
-            It checks out two repositories, installs dependencies, starts a local 
-            <br>
-            web server, executes the tests, and uploads the results.
+            <sup>
+                This GitHub Actions YAML file sets up a workflow to run Playwright
+                <br>
+                in a GitHub Runner environment when a pull request or push occurs.
+                <br>
+                It checks out two repositories, installs dependencies, starts a local 
+                <br>
+                web server, executes the tests, and uploads the results.
+            </sup>
             <br>
             ------------------------------------------------------------------------
             <br>
@@ -105,15 +115,6 @@
             ------------------------------------------------------------------------   
             <br>        
             <b>UI Test Automation with Cypress</b> <img src="/html/img/cypress.png" height="22" width="22"></img>
-            <br>
-            <sup>The Orange Demo site is popular among those learning test automation,
-                <br>
-                 but the high number of users means people are constantly stomping on 
-                 <br>
-                 each other's data, causing tests to fail. I recommend using another 
-                 <br>
-                 site to avoid these issues and ensure more reliable results.
-            </sup>
             <br>
             Spec: <a href="https://github.com/readytotest/readytotest.github.io/blob/main/cypress/tests/orange-demo-site/orangeDemoSmoke.cy.js" target="_blank" rel="noopener noreferrer">orangeDemoSmoke.cy.js</a> View run in Mochawesome report 👇
             <br>
@@ -295,7 +296,9 @@
             <br>
             <b>Repository Last Commit 💾</b>
             <br>
+            <div id="repo-list">              
             <repo-update-timestamp></repo-update-timestamp>
+            </div>
             -----
             <br>
             Source File: <a href="https://github.com/readytotest/readytotest.github.io/blob/main/js/repoLastCommitInfo.js" target="_blank" rel="noopener noreferrer">repoLastCommitInfo.js</a>
