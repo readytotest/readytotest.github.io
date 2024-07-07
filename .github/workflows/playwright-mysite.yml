@@ -1,16 +1,8 @@
-# I've customized the Playwright configuration for GitHub Actions
-# to omit 'sloMo' and 'headed' modes used in my local environment,
-# ensuring my configuration files remain consistent. This approach
-# resolves the issue of having uncommitted changes to the configuration file.
-# Additionally, I excluded a few old specs that I don't want running in GitHub Actions
-# by adding it to 'testIgnore' in the actions configuration. And lastly, in the
-# CI environment, I'm running the tests headless, but locally I want a browser
-# to open so I can watch the tests run.
-#
-# To achieve this, I created a repository variable in the GitHub repo settings,
-# which is utilized in the YAML below. Further down, you'll notice that
-# I've used the '--config' flag to specify this variable when starting the tests.
-#
+# We have two separate Playwright config files.
+# Why? Running Playwright locally, I want it the tests to
+# run in headed mode and slowMo so I can watch them, but
+# I don't want that in the CI env. Also I don't want the old
+# class based tests running in the CI env either.
 # If you explore the root of the test-playwright repo, you'll find two separate
 # configuration files.
 # playwright.actions.config.ts (for GitHub Actions)
