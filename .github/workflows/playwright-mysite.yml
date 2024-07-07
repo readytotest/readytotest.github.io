@@ -3,7 +3,9 @@
 # ensuring my configuration files remain consistent. This approach
 # resolves the issue of having uncommitted changes to the configuration file.
 # Additionally, I excluded a few old specs that I don't want running in GitHub Actions
-# by adding it to 'testIgnore' in the actions configuration.
+# by adding it to 'testIgnore' in the actions configuration. And lastly, in the
+# CI environment, I'm running the tests headless, but locally I want a browser
+# to open so I can watch the tests run.
 #
 # To achieve this, I created a repository variable in the GitHub repo settings,
 # which is utilized in the YAML below. Further down, you'll notice that
