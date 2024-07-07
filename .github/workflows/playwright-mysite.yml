@@ -7,6 +7,8 @@
 # configuration files.
 # playwright.actions.config.ts (for GitHub Actions)
 # playwright.config.ts (for running tests locally)
+# I created a GitHub Actions variable to specify the CI version of the config
+# to run in the GitHub runner environment
 
 name: Playwright GitHub Page (manual, pr/push)
 env:
