@@ -1,8 +1,20 @@
-/*https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date
-https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/slice
-https://developer.mozilla.org/en-US/docs/Web/API/setInterval
-Using slice so the ms is always at three digits
-Using en-ZA format so it uses military time instead of adding a PM between the seconds and ms*/
+/*
+
+(^_^) [o_o] (^.^)  (".") ($.$)
+______________________________________________________________________________________________________
+___                                                                                                ___
+___  JavaScript References Used:                                                                   ___
+___  https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date         ___
+___  https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/slice ___
+___  https://developer.mozilla.org/en-US/docs/Web/API/setInterval                                  ___
+___                                                                                                ___
+___  Approach:                                                                                     ___
+___  Using slice so the ms is always at three digits                                               ___
+___  Using en-ZA format so it uses military time                                                   ___
+___                                                                                                ___
+______________________________________________________________________________________________________
+
+*/
 
 function timeAndDateRealTime() {
 const getTimeDate = new Date();
