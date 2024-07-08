@@ -9,8 +9,8 @@ to the bottom of the page before the closing body tag
 const ytPlaylist = [
     //Pearl Jam - Yellow Ledbetter (Live at Madison Square Garden)
     "https://youtu.be/veK0oeGdxLo?feature=shared",
-    //Metallica - Whiskey in the Jar (Slane Castle - Meath, Ireland - June 8, 2019)
-    "https://youtu.be/9MNdOCQYOL8?feature=shared",
+    //Simon - Free At Last (Original Mix) (2001)
+    "https://youtu.be/HaafC6GSqEU?feature=shared",
     //Social Distortion - Prison Bound (Guitar Center Sessions)
     "https://youtu.be/lIWHlIhvt3Y?feature=shared",
 
