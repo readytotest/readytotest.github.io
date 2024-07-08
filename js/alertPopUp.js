@@ -1,11 +1,14 @@
 /*
-    We don't want this alert popping up constantly for the visitor
-    because it will be too annoying. So if they have never seen it
-    then we show it to them or if they have seen it more than one 
-    hour ago, we will show it again.
-
-    https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage
-    https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API
+    ┌───────────────────────────────────────────────────────────────────────┐
+    │ We don't want this alert popping up constantly for the visitor        │
+    │ because it will be too annoying. So if they have never seen it        │
+    │ then we show it to them or if they have seen it more than one         │
+    │ hour ago, we will show it again.                                      │
+    │                                                                       │
+    │ Links:                                                                │
+    │ https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage  │
+    │ https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API      │
+    └───────────────────────────────────────────────────────────────────────┘
 */
 
 const dismissedTime = localStorage.getItem('dismissedTimeTinker');
