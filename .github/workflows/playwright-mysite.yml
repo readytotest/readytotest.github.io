@@ -1,6 +1,6 @@
 # ╔═════════════════════════════════════════════════════════════╗
 # ║  We have two separate Playwright config files.              ║
-# ║  Why? Running Playwright locally, I want it the tests to    ║
+# ║  Why? Running Playwright locally, I want the tests to       ║
 # ║  run in headed mode and slowMo so I can watch them, but     ║
 # ║  I don't want that in the CI env. Also I don't want the old ║
 # ║  class based tests running in the CI env either.            ║
