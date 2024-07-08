@@ -63,7 +63,7 @@ const ytPlaylist = [
     "https://youtu.be/kElHR66Y3es?feature=shared",
     //Johnny Cash - Orange Blossom Special
     "https://youtu.be/Xhs5j7HN8wM?feature=shared",
-    //Garth Brookes - Much Too Young to Feel This Damnn Old
+    //Garth Brooks - Much Too Young to Feel This Damnn Old
     "https://youtu.be/nIHWhUVxJh8?feature=shared"
 
 ];
