@@ -19,11 +19,11 @@ ___----             ___------              \
                 ===========================================================
                 =                                                         =
                 =   This script is used to generate random URLs from an   =
-                =   array. Just paste this in your HTML <a href="#"        =
+                =   array. Just paste this in your HTML <a href="#"       =
                 =   id="randomVideoLink" target="_blank" rel="noopener    =
                 =   noreferrer">click here</a> where you want the link to =
                 =   appear and then add this <script                      =
-                =   src="/yourdirectorypath/randomMusicYt.js"></script> to =
+                =   src="/yourdirectorypath/randomMusicYt.js"></script> to=
                 =   the bottom of the page before the closing body tag.   =
                 =                                                         =
                 ===========================================================
