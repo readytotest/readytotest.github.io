@@ -1,33 +1,16 @@
 /*
-
-                _________-----_____
-       _____------           __      ----_
-___----             ___------              \
-   ----________        ----                 \
-               -----__    |             _____)
-                    __-                /     \
-        _______-----    ___--          \    /)\
-  ------_______      ---____            \__/  /
-               -----__    \ --    _          /\
-                      --__--__     \_____/   \_/\
-                              ----|   /          |
-                                  |  |___________|
-                                  |  | ((_(_)| )_)
-                                  |  \_((_(_)|/(_)
-                                  \             (
-                                   \_____________)
-                ===========================================================
-                =                                                         =
-                =   This script is used to generate random URLs from an   =
-                =   array. Just paste this in your HTML <a href="#"       =
-                =   id="randomVideoLink" target="_blank" rel="noopener    =
-                =   noreferrer">click here</a> where you want the link to =
-                =   appear and then add this <script                      =
-                =   src="/yourdirectorypath/randomMusicYt.js"></script> to=
-                =   the bottom of the page before the closing body tag.   =
-                =                                                         =
-                ===========================================================
-                */     
+===========================================================
+=                                                         =
+=   This script is used to generate random URLs from an   =
+=   array. Just paste this in your HTML <a href="#"       =
+=   id="randomVideoLink" target="_blank" rel="noopener    =
+=   noreferrer">click here</a> where you want the link to =
+=   appear and then add this <script                      =
+=   src="/yourdirectorypath/randomMusicYt.js"></script> to=
+=   the bottom of the page before the closing body tag.   =
+=                                                         =
+===========================================================
+*/     
 
 const ytPlaylist = [
 
@@ -50,15 +33,7 @@ const ytPlaylist = [
     "https://youtu.be/CgkkudRCGB0?feature=shared",
    
 
-    /* COUNTRY MUSIC
-    ,*-.
-    |  |
-,.  |  |
-| |_|  | ,.
-`---.  |_| |
-    |  .--`
-    |  |
-    |  |  */
+    /* COUNTRY MUSIC */
     //Alan Jackson - The Older I Get
     "https://youtu.be/kElHR66Y3es?feature=shared",
     //Johnny Cash - Orange Blossom Special
