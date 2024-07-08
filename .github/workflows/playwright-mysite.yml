@@ -1,14 +1,17 @@
-# We have two separate Playwright config files.
-# Why? Running Playwright locally, I want it the tests to
-# run in headed mode and slowMo so I can watch them, but
-# I don't want that in the CI env. Also I don't want the old
-# class based tests running in the CI env either.
-# If you explore the root of the test-playwright repo, you'll find two separate
-# configuration files.
-# playwright.actions.config.ts (for GitHub Actions)
-# playwright.config.ts (for running tests locally)
-# I created a GitHub Actions variable to specify the CI version of the config
-# to run in the GitHub runner environment
+# ╔═════════════════════════════════════════════════════════════╗
+# ║  We have two separate Playwright config files.              ║
+# ║  Why? Running Playwright locally, I want it the tests to    ║
+# ║  run in headed mode and slowMo so I can watch them, but     ║
+# ║  I don't want that in the CI env. Also I don't want the old ║
+# ║  class based tests running in the CI env either.            ║
+# ║  If you explore the root of the test-playwright repo, you'll║
+# ║  find two separate configuration files.                     ║
+# ║  playwright.actions.config.ts (for GitHub Actions)          ║
+# ║  playwright.config.ts (for running tests locally)           ║
+# ║  I created a GitHub Actions variable to specify the CI      ║
+# ║  version of the config to run in the GitHub runner          ║
+# ║  environment.║
+# ╚═════════════════════════════════════════════════════════════╝
 
 name: Playwright GitHub Page (manual, pr/push)
 env:
