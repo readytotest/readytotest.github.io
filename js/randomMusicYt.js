@@ -13,6 +13,8 @@ const ytPlaylist = [
     "https://youtu.be/HaafC6GSqEU?feature=shared",
     //Social Distortion - Prison Bound (Guitar Center Sessions)
     "https://youtu.be/lIWHlIhvt3Y?feature=shared",
+    //Social Distorion - Ball and Chain (Acoustic)
+    "https://youtu.be/mkfnNUdeo3w?feature=shared"
 
 ];
 
