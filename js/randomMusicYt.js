@@ -14,7 +14,7 @@
 
 const ytPlaylist = [
 
-    // ROCK ᕙ(⇀‸↼‶)ᕗ
+    // ROCK \m/_(>_<)_\m/
 
     // Pearl Jam - Yellow Ledbetter (Live at Madison Square Garden)
     "https://youtu.be/veK0oeGdxLo?feature=shared",
