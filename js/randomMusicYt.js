@@ -38,7 +38,7 @@ const ytPlaylist = [
 
     // Alan Jackson - The Older I Get
     "https://youtu.be/kElHR66Y3es?feature=shared",
-    // Much Too Young (To Feel This Damn Old)
+    // Garth Brooks - Much Too Young (To Feel This Damn Old)
     "https://youtu.be/nIHWhUVxJh8?feature=shared",
     // Kenny Chesney - Save It for a Rainy Day
     "https://youtu.be/zY9es8R4PD4?si=f_eimHkbb-EcepsZ" 
