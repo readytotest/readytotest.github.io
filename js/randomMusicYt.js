@@ -28,8 +28,8 @@ const ytPlaylist = [
 
     // Simon - Free At Last (Original Mix) (2001)
     "https://youtu.be/HaafC6GSqEU?feature=shared",
-    // Peter Heller - Big Love
-    "https://youtu.be/S1i5D2_XNSw?feature=shared",
+    // Ben Kim - Somebody to Love
+    "https://youtu.be/FlCSy3p0gNg?feature=shared",
     // Lima Papa - Superlovin' (Original Vox Mix) (2001)
     "https://youtu.be/CgkkudRCGB0?feature=shared",
    
