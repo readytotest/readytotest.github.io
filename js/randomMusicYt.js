@@ -14,7 +14,12 @@
 
 const ytPlaylist = [
 
-    // ROCK \m/_(>_<)_\m/
+    /*
+    ________________________________
+    | // ROCK \m/_(>_<)_\m/        |
+    |______________________________|
+    */
+
 
     // Pearl Jam - Yellow Ledbetter (Live at Madison Square Garden)
     "https://youtu.be/veK0oeGdxLo?feature=shared",
@@ -22,9 +27,18 @@ const ytPlaylist = [
     "https://youtu.be/lIWHlIhvt3Y?feature=shared",
     // REO Speedwagon - Take It on the Run 
     "https://youtu.be/ZQ-uWQJNx7w?feature=shared",
+    // Metallica: Whiskey in the Jar (Slane Castle - Meath, Ireland)
+    "https://youtu.be/9MNdOCQYOL8?feature=shared",
+    // Danzig - Mother 93 Live
+    "https://youtu.be/zO6nRXPzX1A?feature=shared",
 
 
-    // HOUSE ᕕ(⌐■_■)ᕗ ♪♬
+    /*
+    ________________________________
+    | // HOUSE ᕕ(⌐■_■)ᕗ ♪♬        |
+    |______________________________|
+    */
+
 
     // Simon - Free At Last (Original Mix) (2001)
     "https://youtu.be/HaafC6GSqEU?feature=shared",
@@ -32,17 +46,36 @@ const ytPlaylist = [
     "https://youtu.be/FlCSy3p0gNg?feature=shared",
     // Lima Papa - Superlovin' (Original Vox Mix) (2001)
     "https://youtu.be/CgkkudRCGB0?feature=shared",
+
+
+    /*
+    _____________________________
+    | // POP and R&B (๑˃̵ᴗ˂̵)و     |
+    |____________________________|
+    */
+
+
+    // Robin Thicke - Blurred Lines ft. T.I., Pharrell
+    "https://youtu.be/yyDUC1LUXSU?feature=shared",
+    // Maroon 5 - Girls Like You ft. Cardi B (Official Music Video)
+    "https://youtu.be/aJOTlE1K90k?feature=shared",
+    // Akon - Sorry, Blame It On Me
+    "https://youtu.be/ynMk2EwRi4Q?feature=shared",
    
 
-    // COUNTRY ♪└(￣◇￣)┐♪
+    /*
+    ________________________________
+    | // COUNTRY ♪└(￣◇￣)┐♪        |
+    |______________________________|
+    */
 
-    // Alan Jackson - The Older I Get
+
+    // Alan Jackson - The Older I Get 
     "https://youtu.be/kElHR66Y3es?feature=shared",
     // Garth Brooks - Much Too Young (To Feel This Damn Old)
     "https://youtu.be/nIHWhUVxJh8?feature=shared",
-    // Kenny Chesney - Save It for a Rainy Day
-    "https://youtu.be/zY9es8R4PD4?si=f_eimHkbb-EcepsZ" 
-
+    // Johnny Cash - Orange Blossom Special - Live at San Quentin
+    "https://youtu.be/Xhs5j7HN8wM?feature=shared",
 
 
 ];
