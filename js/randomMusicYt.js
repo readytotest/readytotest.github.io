@@ -46,6 +46,8 @@ const ytPlaylist = [
     "https://youtu.be/FlCSy3p0gNg?feature=shared",
     // Lima Papa - Superlovin' (Original Vox Mix) (2001)
     "https://youtu.be/CgkkudRCGB0?feature=shared",
+    // Groovy Disco and R&B Mix at a New York Basement Party
+    "https://youtu.be/4nvewes8Inc?feature=shared",
 
 
     /*
@@ -59,9 +61,7 @@ const ytPlaylist = [
     "https://youtu.be/yyDUC1LUXSU?feature=shared",
     // Maroon 5 - Girls Like You ft. Cardi B (Official Music Video)
     "https://youtu.be/aJOTlE1K90k?feature=shared",
-    // Akon - Sorry, Blame It On Me
-    "https://youtu.be/ynMk2EwRi4Q?feature=shared",
-   
+
 
     /*
     ________________________________
