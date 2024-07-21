@@ -53,9 +53,6 @@ jobs:
             #token: ${{ secrets.GH_PAT }} If checking out a private repo, create a secret called `GH_PAT` that contains your personal access token
             ref: main
             path: ./playwright-tests #Copy the Playwright repo to this directory within the GitHub page repo
-
-        - name: List current directory
-          run: ls
        
         - name: Install dependencies
           working-directory: ./playwright-tests #This is the sub-directory where the Playwright repo was copied to
