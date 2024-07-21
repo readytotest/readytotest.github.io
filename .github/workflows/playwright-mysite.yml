@@ -29,7 +29,6 @@ jobs:
        
         - name: Message
           run: |
-            echo "🍺🍺🍺🍺🍺🍺🍺🍺🍺🍺🍺🍺🍺🍺🍺🍺🍺🍺🍺🍺🍺🍺🍺🍺🍺🍺"
             echo "This action executes Playwright tests against pull requests and commits"
             echo "Configuration: playwright.actions.config.ts"
             echo "User: [${{ github.actor }}] initiated this test run"
@@ -38,7 +37,7 @@ jobs:
             echo "Branch: ${{ github.ref_name }}"
             echo "GitHub workflow run: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
             echo "🍺🍺🍺🍺🍺🍺🍺🍺🍺🍺🍺🍺🍺🍺🍺🍺🍺🍺🍺🍺🍺🍺🍺🍺🍺🍺"
-            
+
         # We will check out two repos because the website files
         # exist in one repo and Playwright exists in a different repo
        
