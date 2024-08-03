@@ -9,6 +9,10 @@ body {background-color: black;
       margin: 0;
     }
 
+    .thoughts {
+      color: #AAFF00;
+  }
+
     .arrow{
       font-family: Tahoma, sans-serif;
   }
