@@ -85,7 +85,7 @@ jobs:
           run: npx playwright test --config $PLAYWRIGHT_ACTIONS_CONFIG
 
         - name: Upload Report to GitHub
-          uses: actions/upload-artifact@v4.3.4
+          uses: actions/upload-artifact@v4.3.5
           if: always()
           with:
               name: Test Results + Video
