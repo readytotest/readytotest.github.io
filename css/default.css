@@ -1,8 +1,28 @@
+:root {
+  --yellow-color: yellow;
+}
+
 body {background-color: black;
     background-image: url('/html/img/galaxy-animated.gif');
     font-family:  "Comic Sans MS", "Chalkboard SE-Regular", "Chalkboard", "Comic Neue", Tahoma, sans-serif;
     font-size: 15pt;
     color: snow;}
+
+  .yellowFont {
+      color: var(--yellow-color);
+  }
+  
+  .yellowFont:hover {
+      color: var(--yellow-color);
+  }
+  
+  .yellowFont:active {
+      color: var(--yellow-color);
+  }
+  
+  .yellowFont:visited {
+      color: var(--yellow-color);
+  }
 
     pre {
       font-family: monospace, "Courier New", Courier;
@@ -45,22 +65,6 @@ body {background-color: black;
         text-decoration: underline;
         color: hotpink;
       }
-
-    #gitHubProfilelink {
-        color: yellow; /* Default color */
-    }
-    
-    #gitHubProfilelink:hover {
-        color: yellow /* Color when hovered */
-    }
-    
-    #gitHubProfilelink:active {
-        color: yellow /* Color when clicked */
-    }
-    
-    #gitHubProfilelink:visited {
-        color: yellow; /* Color for visited links */
-    }
 
     #video-embedded {
       width: 480px;
