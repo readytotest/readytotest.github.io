@@ -13,7 +13,6 @@ fetch('https://api.weather.gov')
 
 .catch(error => {
     console.error('Error fetching API status:', error.message);
-    alert('There was an error fetching API status. Please try again later.');
   });
 
 
@@ -82,5 +81,4 @@ return response;
 
 .catch(error => {
     console.error('Error fetching weather data:', error.message);
-    alert('There was an error fetching weather data. Please try again later.');
   });
