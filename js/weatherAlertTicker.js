@@ -38,10 +38,10 @@ fetch('https://api.weather.gov/alerts/active?severity=Extreme,Severe,Moderate,Mi
 return response;
 })
 
-// .then(response => { document.querySelector("weather-updated").textContent = new Date(response.updated.toLocaleString("en-US", {
-//     timeZone: "America/Los_Angeles"}))
-// return response;
-// })
+.then(response => { document.querySelector("weather-updated").textContent = new Date(response.updated.toLocaleString("en-US", {
+    timeZone: "America/Los_Angeles"}))
+return response;
+})
 
 //Alert 1 if available
 .then(response => { document.querySelector("weather-sender-name").textContent= (response.features[0]?.properties.senderName ?? 'No data available. Alert data is populated when received.')
@@ -60,25 +60,25 @@ return response;
 return response;
 })
 
-// .then(response => { document.querySelector("weather-severity").textContent = (response.features[0]?.properties.severity)
-// return response;
-// })
+.then(response => { document.querySelector("weather-severity").textContent = (response.features[0]?.properties.severity)
+return response;
+})
 
 .then(response => { document.querySelector("weather-event").textContent = (response.features[0]?.properties.event)
 return response;
 })
 
-// .then(response => { document.querySelector("weather-area-description").textContent = (response.features[0]?.properties.areaDesc)
-// return response;
-// })
+.then(response => { document.querySelector("weather-area-description").textContent = (response.features[0]?.properties.areaDesc)
+return response;
+})
 
-// .then(response => { document.querySelector("weather-description").textContent = (response.features[0]?.properties.description)
-// return response;
-// })
+.then(response => { document.querySelector("weather-description").textContent = (response.features[0]?.properties.description)
+return response;
+})
 
-// .then(response => { document.querySelector("weather-instruction").textContent = (response.features[0]?.properties.instruction)
-// return response;
-// })
+.then(response => { document.querySelector("weather-instruction").textContent = (response.features[0]?.properties.instruction)
+return response;
+})
 
 .catch(error => {
     console.error('Error fetching weather data:', error.message);
