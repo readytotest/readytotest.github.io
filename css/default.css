@@ -119,17 +119,17 @@ body {background-color: black;
     white-space: nowrap;
     position: absolute;
     left: 100%;
-    animation: scroll-left 45s linear infinite;
+    animation: scroll-left 60s linear infinite;
     color: black;
+    font-weight: bold;
     -webkit-transform: translateZ(0); /* For WebKit browsers */
     -moz-transform: translateZ(0);    /* For Mozilla browsers */
     transform: translateZ(0);         /* Standard syntax */
-    will-change: transform;  
+    will-change: transform;
 }
 
 .alert {
     margin-right: 10px; /* Space between alerts */
-    font-weight: normal;
     color: black;
 }
 
