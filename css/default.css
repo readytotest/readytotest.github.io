@@ -135,7 +135,7 @@ body {background-color: black;
 
 @keyframes scroll-left {
     0% {
-        transform: translate3d(5%, 0, 0); /* 3D transform for smoother animations */
+        transform: translate3d(1%, 0, 0); /* 3D transform for smoother animations */
     }
     100% {
         transform: translate3d(-100%, 0, 0); /* 3D transform for smoother animations */
