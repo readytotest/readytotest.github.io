@@ -1,16 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>
-            Ready to Test (QA)
-        </title>
-        <link rel="icon" type="image/x-icon" href="/fav.ico">
-        <link rel="stylesheet" href="/css/default.css">
         <meta charset="UTF-8">
-        <!-- Prevent caching for the HTML page itself and associated resources -->
         <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
         <meta http-equiv="Pragma" content="no-cache">
         <meta http-equiv="Expires" content="0">
+        <title>Ready to Test (QA)</title>
+        
+        <!-- Preconnect to Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        
+        <!-- Import Roboto font from Google Fonts -->
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+        
+        <!-- Favicon -->
+        <link rel="icon" type="image/x-icon" href="/fav.ico">
+        
+        <!-- CSS Stylesheets -->
+        <link rel="stylesheet" href="/css/default.css">
     </head>
     <body>
         <div id="top-index"></div>
@@ -24,6 +32,17 @@
             <br>
             <i>Current Date & Time (Pacific) ★ <a href="https://github.com/readytotest/readytotest.github.io/blob/main/js/dateAndTime.js" target="_blank" rel="noopener noreferrer"><span id="current-time"></span></a></i>
             <br>
+            <div class="weather-alert-container">
+                <div class="weather-alert">
+                    Weather API Status:&nbsp;<weather-api-status class="alert"></weather-api-status>
+                    <weather-title class="alert"> </weather-title>
+                    <weather-sender-name class="alert"></weather-sender-name>
+                    <weather-time-sent class="alert"></weather-time-sent>
+                    <weather-headline class="alert"></weather-headline>
+                    <weather-headline-extra class="alert"></weather-headline-extra>
+                    <weather-event class="alert"></weather-event>
+                </div>
+            </div>
             ------------------------------------------------------------------------
             <br>
             <div id="about-section">
@@ -406,11 +425,29 @@
             ></script>
             <script src="/js/sentryFeedbackWidget.js"></script>
             <!-- End <script> tags for Sentry bug report widget and monitoring -->
+            <script src="/js/weatherAlertTicker.js"></script>
             <script src="/js/repoLastCommitInfo.js"></script>
             <script src="/js/earthQuake.js"></script>
             <script src="/js/dateAndTime.js"></script>
             <script src="/js/randomMusicYt.js"></script>
             <script src="/js/alertPopUp.js"></script>
+            
+            <!-- The below script is a workaround since Safari has issues with scrolling text in CSS
+                Safari mishandles the CSS animations in the weather ticker at the top of this page 
+                 after page reloads due to caching issues. The animation can slow down or become inconsistent
+                 until the cache is cleared. This script works around that by forcing the browser to
+                 recalculate the animation on page load. -->
+            <script>
+            window.addEventListener('load', function() {
+                const weatherAlert = document.querySelector('.weather-alert');
+                
+                // Force a reflow by reading the offsetHeight
+                weatherAlert.style.animation = 'none'; // Temporarily stop the animation
+                void weatherAlert.offsetHeight; // Trigger a reflow
+                weatherAlert.style.animation = ''; // Restart the animation
+              });
+            </script>
+              
                         
         </body>
 </html>
