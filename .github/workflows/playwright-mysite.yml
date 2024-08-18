@@ -10,7 +10,7 @@
 # ║  playwright.config.ts (for running tests locally)           ║
 # ║  I created a GitHub Actions variable to specify the CI      ║
 # ║  version of the config to run in the GitHub runner          ║
-# ║  environment.║
+# ║  environment.                                               ║
 # ╚═════════════════════════════════════════════════════════════╝
 
 name: Playwright GitHub Page (manual, pr/push)
