@@ -1,7 +1,7 @@
 // -----------------------------------------------------
 // The below script is a workaround since Safari has issues with scrolling text in CSS
-// Safari mishandles the CSS animations in the weather ticker at the top of this page
-// after page reloads due to caching issues. The animation can slow down or become inconsistent
+// Safari mishandles the CSS animations in the weather ticker
+// after page reloads due to caching issues. The animation can slow down or become inconsistent 
 // until the cache is cleared. This script works around that by forcing the browser to
 // recalculate the animation on page load.
 // -----------------------------------------------------
