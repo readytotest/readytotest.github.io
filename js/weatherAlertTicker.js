@@ -68,17 +68,17 @@ return response;
 return response;
 })
 
-.then(response => { document.querySelector("weather-area-description").textContent = (response.features[0]?.properties.areaDesc)
-return response;
-})
+// .then(response => { document.querySelector("weather-area-description").textContent = (response.features[0]?.properties.areaDesc)
+// return response;
+// })
 
-.then(response => { document.querySelector("weather-description").textContent = (response.features[0]?.properties.description)
-return response;
-})
+// .then(response => { document.querySelector("weather-description").textContent = (response.features[0]?.properties.description)
+// return response;
+// })
 
-.then(response => { document.querySelector("weather-instruction").textContent = (response.features[0]?.properties.instruction)
-return response;
-})
+// .then(response => { document.querySelector("weather-instruction").textContent = (response.features[0]?.properties.instruction)
+// return response;
+// })
 
 .catch(error => {
     console.error('Error fetching weather data:', error.message);
