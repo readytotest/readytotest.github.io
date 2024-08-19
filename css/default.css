@@ -142,6 +142,16 @@ body {background-color: black;
     }
 }
 
+@keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.blinking-text {
+  animation: blink 2s infinite;
+}
+
   
 
     #sentry-feedback {
