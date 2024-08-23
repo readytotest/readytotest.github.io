@@ -26,17 +26,13 @@ jobs:
    runs-on: ubuntu-latest
    timeout-minutes: 3
    steps:
-        - name: Set Time Zone to Pacific
-          run: |
-           #sudo timedatectl set-timezone America/Los_Angeles
-        
+        - name: Set Time Zone (Adding this here for an alternative way to set TZ)
+          uses: szenius/set-timezone@v2.0
+          with:
+            timezoneLinux: 'America/Los_Angeles'
+
         - name: Print Date and Time
           run: date
-
-        #- name: Set Time Zone (Adding this here for an alternative way to set TZ)
-          #uses: szenius/set-timezone@v2.0
-          #with:
-            #timezoneLinux: 'America/Los_Angeles'
         
         - name: Message
           run: |
