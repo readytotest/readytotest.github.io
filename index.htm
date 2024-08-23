@@ -148,6 +148,8 @@
             <br>
             Helper Function 5: <a href="https://github.com/readytotest/test-playwright/blob/main/scripts/typeTodaysDate.ts" target="_blank" rel="noopener noreferrer">typeTodaysDate.ts</a>
             <br>
+            Helper Function 6: <a href="https://github.com/readytotest/test-playwright/blob/main/scripts/getTimeZoneInfo.ts target="_blank" rel="noopener noreferrer">getTimeZoneInfo.ts</a>
+            <br>
             -----
             <br>
             Test ID Generator: <a href="https://github.com/readytotest/test-playwright/blob/main/scripts/testIdGenerator.ts" target="_blank" rel="noopener noreferrer">testIdGenerator.ts</a>
@@ -166,7 +168,9 @@
             <br>
             -----
             <br>
-            CI/CD: <a href="https://github.com/readytotest/readytotest.github.io/blob/main/.github/workflows/playwright-mysite.yml" target="_blank" rel="noopener noreferrer">playwright-mysite.yml</a> | <a href="https://github.com/readytotest/readytotest.github.io/actions/workflows/playwright-mysite.yml" target="_blank" rel="noopener noreferrer">Actions workflow</a> | 📸 <a href="/html/img/playwright-action.png" target="_blank" rel="noopener noreferrer">look1</a> | 📸 <a href="/html/img/branch-status-checks.png" target="_blank" rel="noopener noreferrer">look2</a>
+            CI/CD: 
+            <br>
+            <a href="https://github.com/readytotest/readytotest.github.io/blob/main/.github/workflows/playwright-mysite.yml" target="_blank" rel="noopener noreferrer">playwright-mysite.yml</a> | <a href="https://github.com/readytotest/readytotest.github.io/actions/workflows/playwright-mysite.yml" target="_blank" rel="noopener noreferrer">Actions workflow</a> | 📸 <a href="/html/img/playwright-action.png" target="_blank" rel="noopener noreferrer">look1</a> | 📸 <a href="/html/img/branch-status-checks.png" target="_blank" rel="noopener noreferrer">look2</a>
             <br>
             <sup>
                 This GitHub Actions YAML file sets up a workflow to run Playwright
@@ -177,14 +181,15 @@
                 <br>
                 web server, executes the tests, and uploads the results.
                 <br>
+                -----
                 <br>
-                <span class="yellowFont">Helpful Tip!</span>
+                <span class="yellowFont">Helpful Tip</span> 💡
                 <br>
                 The default time zone for GitHub runners is UTC. To prevent issues such as
                 <br>
                 the date being a day ahead in the runner environment and causing date assertions
                 <br>
-                to fail, set the time zone of the CI/CD runner environment using a <a href="https://github.com/readytotest/readytotest.github.io/blob/52628ef8a1a71ece2bba5037a4c1d5e4676bc1b7/.github/workflows/playwright-mysite.yml#L29" target="_blank" rel="noopener noreferrer">Linux command</a>
+                to fail, set the time zone of the CI/CD runner environment using a <a href="https://github.com/readytotest/readytotest.github.io/blob/fcf410bc03a0edc91ff555f4757ccbbce7406db4/.github/workflows/playwright-mysite.yml#L29" target="_blank" rel="noopener noreferrer">Linux command</a>
                 <br>
                 or a <a href="https://github.com/marketplace/actions/set-timezone" target="_blank" rel="noopener noreferrer">Marketplace action</a> in your YAML configuration.
             </sup>
