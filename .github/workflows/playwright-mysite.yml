@@ -26,7 +26,12 @@ jobs:
    runs-on: ubuntu-latest
    timeout-minutes: 3
    steps:
-       
+        - name: Set Time Zone to Pacific Time and Display Current Date
+          run: |
+           sudo timedatectl set-timezone America/Los_Angeles
+           printf "Date in GitHub Runner Env:\n"
+           date
+        
         - name: Message
           run: |
             echo "This action executes Playwright tests against pull requests and commits"
