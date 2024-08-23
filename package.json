@@ -24,6 +24,6 @@
   },
   "dependencies": {
     "cypress-real-events": "^1.10.3",
-    "dayjs": "^1.11.10"
+    "dayjs": "^1.11.13"
   }
 }
