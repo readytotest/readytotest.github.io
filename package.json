@@ -23,7 +23,7 @@
     "start-visual-report-server": "npx cypress-image-diff-html-report start"
   },
   "dependencies": {
-    "cypress-real-events": "^1.10.3",
+    "cypress-real-events": "^1.13.0",
     "dayjs": "^1.11.13"
   }
 }
