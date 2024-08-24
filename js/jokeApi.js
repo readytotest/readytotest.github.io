@@ -5,8 +5,9 @@ fetch('https://official-joke-api.appspot.com/jokes/knock-knock/random')
       throw new Error(`Joke API Error: ${response.status}`);
     }
     return response.json();
-  })
+  }) 
   .then((data) => {
+    console.log('Joke API Response Body:', data);
     const joke = data[0];
 
     document.getElementById('joke-id').textContent = `Joke ID: ${joke?.id ?? "This is unavailable at the moment"}`;
