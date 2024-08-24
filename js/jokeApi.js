@@ -8,11 +8,14 @@ fetch('https://official-joke-api.appspot.com/jokes/knock-knock/random')
   })
   .then((data) => {
     const joke = data[0];
-    document.getElementById('joke-setup').textContent = joke.setup;
-    document.getElementById('joke-punchline').textContent = joke.punchline;
+
+    document.getElementById('joke-id').textContent = `Joke ID: ${joke?.id ?? "This is unavailable at the moment"}`;
+    document.getElementById('joke-setup').textContent = joke?.setup ?? "Joke setup unavailable";
+    document.getElementById('joke-punchline').textContent = joke?.punchline ?? "Joke punchline unavailable";
   })
   .catch((error) => {
-    console.error(`Problem with joke Api! ${error.message}`);
+    console.error(`Problem with joke API! ${error.message}`);
+    document.getElementById('joke-id').textContent = "Looks like the API is down!";
     document.getElementById('joke-setup').textContent = "A joke should be here...but something went wrong.";
     document.getElementById('joke-punchline').textContent = error.message;
   });
