@@ -12,7 +12,7 @@ fetch('https://official-joke-api.appspot.com/jokes/knock-knock/random')
     document.getElementById('joke-punchline').textContent = joke.punchline;
   })
   .catch((error) => {
-    console.error("Error fetching the joke:", error);
+    console.error(`Problem with joke Api! ${error.message}`);
     document.getElementById('joke-setup').textContent = "A joke should be here...but something went wrong.";
     document.getElementById('joke-punchline').textContent = error.message;
   });
