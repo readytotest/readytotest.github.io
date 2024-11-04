@@ -50,11 +50,11 @@ jobs:
        
         # Check out primary repo where I will start a server locally in the GH Runner environment
         - name: Checkout Website Repo
-          uses: actions/checkout@v4.2.1
+          uses: actions/checkout@v4.2.2
           
         # Check out secondary repo where Playwright scripts live
         - name: Checkout Playwright Repo
-          uses: actions/checkout@v4.2.1
+          uses: actions/checkout@v4.2.2
           with:
             repository: readytotest/test-playwright
             #token: ${{ secrets.GH_PAT }} If checking out a private repo, create a secret called `GH_PAT` that contains your personal access token
@@ -66,7 +66,7 @@ jobs:
           run: npm ci
 
         - name: Setup Node.js environment with most recent version
-          uses: actions/setup-node@v4.0.4
+          uses: actions/setup-node@v4.1.0
           with:
             node-version: 'latest'
 
