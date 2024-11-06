@@ -197,23 +197,42 @@ body {background-color: black;
   color: #551A8B; /* Classic purple for visited links */
 }
 
-#well-lid {
-  text-decoration: none;
-  color: yellow;
-}
-#well-lid:visited {
-  text-decoration: none;
-  color: yellow;
-}
-#well-lid:hover {
-  text-decoration: underline;
-  color: yellow;
-}
-#well-lid:active {
-  text-decoration: underline;
-  color: yellow;
+@keyframes colorShift {
+  0% {
+    color: hotpink;
+  }
+  50% {
+    color: snow;
+  }
+  100% {
+    color: hotpink;
+  }
 }
 
+@keyframes colorShift {
+  0% {
+    color: hotpink;
+  }
+  50% {
+    color: snow;
+  }
+  100% {
+    color: hotpink;
+  }
+}
+
+#well-lid {
+  text-decoration: none;
+  animation: colorShift 5s infinite ease-in-out;
+}
+
+#well-lid:hover {
+  text-decoration: underline;
+}
+
+#well-lid:active {
+  text-decoration: underline;
+}
     #sentry-feedback {
       --background: snow;
       --background-hover:#f6f6f7;
