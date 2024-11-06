@@ -196,7 +196,23 @@ body {background-color: black;
 #site-map a:visited {
   color: #551A8B; /* Classic purple for visited links */
 }
-  
+
+#well-lid {
+  text-decoration: none;
+  color: yellow;
+}
+#well-lid:visited {
+  text-decoration: none;
+  color: yellow;
+}
+#well-lid:hover {
+  text-decoration: underline;
+  color: yellow;
+}
+#well-lid:active {
+  text-decoration: underline;
+  color: yellow;
+}
 
     #sentry-feedback {
       --background: snow;
