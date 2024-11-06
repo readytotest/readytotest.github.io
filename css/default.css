@@ -189,10 +189,13 @@ body {background-color: black;
   }
 }
 
-
-
-
-
+#site-map a {
+  color: #0000EE; /* Classic blue for unvisited links */
+  text-decoration: underline; /* Underline links */
+}
+#site-map a:visited {
+  color: #551A8B; /* Classic purple for visited links */
+}
   
 
     #sentry-feedback {
