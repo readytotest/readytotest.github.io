@@ -25,6 +25,10 @@ const ytPlaylist = [
     "https://youtu.be/veK0oeGdxLo?feature=shared",
     // Social Distortion - Prison Bound (Guitar Center Sessions)
     "https://youtu.be/lIWHlIhvt3Y?feature=shared",
+    // Social Distortion - Story of My Life (Acoustic)
+    "https://youtu.be/IPfB7Qnm0MI?feature=shared",
+    // Social Distortion - Ball and Chain
+    "https://youtu.be/_NWjehpGSO0?feature=shared",
     // REO Speedwagon - Take It on the Run 
     "https://youtu.be/ZQ-uWQJNx7w?feature=shared",
     // Metallica: Whiskey in the Jar (Slane Castle - Meath, Ireland)
