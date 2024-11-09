@@ -233,6 +233,14 @@ body {background-color: black;
 #well-lid:active {
   text-decoration: underline;
 }
+
+.weather-page {
+  background-image: url('../html/img/nv-flag.png');
+  background-repeat: no-repeat;
+  background-size: 200px;
+  background-position: center;
+  background-attachment: fixed;
+}
     #sentry-feedback {
       --background: snow;
       --background-hover:#f6f6f7;
