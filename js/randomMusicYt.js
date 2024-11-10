@@ -31,8 +31,8 @@ const ytPlaylist = [
     "https://youtu.be/_NWjehpGSO0?feature=shared",
     // REO Speedwagon - Take It on the Run 
     "https://youtu.be/ZQ-uWQJNx7w?feature=shared",
-    // Metallica: Whiskey in the Jar (Slane Castle - Meath, Ireland)
-    "https://youtu.be/9MNdOCQYOL8?feature=shared",
+    // Metallica: Whiskey in the Jar (Castle Donington, England)
+    "https://youtu.be/YfouL5PyORU?feature=shared",
     // Danzig - Mother 93 Live
     "https://youtu.be/zO6nRXPzX1A?feature=shared",
 
