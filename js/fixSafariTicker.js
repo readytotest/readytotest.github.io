@@ -11,6 +11,6 @@ window.addEventListener('load', function() {
     
     // Force a reflow by reading the offsetHeight
     weatherAlert.style.animation = 'none'; // Temporarily stop the animation
-    void weatherAlert.offsetHeight; // Trigger a reflow
+    weatherAlert.offsetHeight; // Trigger a reflow
     weatherAlert.style.animation = ''; // Restart the animation
   });
