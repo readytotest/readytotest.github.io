@@ -309,6 +309,10 @@ body {background-color: black;
   opacity: 1;
 }
 
+.guestbook-input[readonly] {
+  background-color: black !important;
+}
+
 .guestbook-author-link {
   font-size: 14px;
   color: hotpink;
