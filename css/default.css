@@ -242,48 +242,29 @@ body {background-color: black;
   background-attachment: fixed;
 }
 
-.guestbook-btn-submit {
-  background-color: hotpink;
-  color: snow;
-  border: none;
-  font-size: 16px;
-  padding: 10px 20px;
-  margin-top: 10px;
-  border-radius: 5px;
-  cursor: pointer;
-  text-transform: uppercase;
-}
-
 .guestbook-btn-submit:disabled {
   background-color: hotpink;
-  cursor: not-allowed;
-}
-
-.guestbook-btn-clear {
-  background-color: hotpink;
   color: snow;
   border: none;
   font-size: 16px;
   padding: 10px 20px;
   margin-top: 10px;
   border-radius: 5px;
-  cursor: pointer;
+  cursor: not-allowed;
   text-transform: uppercase;
 }
 
 .guestbook-btn-clear:disabled {
   background-color: darkgray;
+  color: snow;
+  border: none;
+  font-size: 16px;
+  padding: 10px 20px;
+  margin-top: 10px;
+  border-radius: 5px;
   cursor: not-allowed;
+  text-transform: uppercase;
 }
-
-.guestbook-btn:hover {
-  background-color: hotpink;
-}
-
-.guestbook-btn:active {
-  background-color: hotpink;
-}
-
 
 .guestbook-entry {
   background-color: #333;
