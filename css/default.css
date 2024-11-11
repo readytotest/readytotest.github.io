@@ -292,7 +292,7 @@ body {background-color: black;
 
 .guestbook-input {
   width: 90%;
-  background-color: black;
+  background-color: #333;
   border: 1px solid hotpink;
   color: snow;
   font-family: 'Courier New', monospace;
@@ -308,7 +308,7 @@ body {background-color: black;
 }
 
 .guestbook-input[readonly] {
-  background-color: black !important;
+  background-color: #333 !important;
 }
 
 .guestbook-author-link {
