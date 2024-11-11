@@ -304,8 +304,17 @@ body {background-color: black;
   border-radius: 5px;
 }
 
-textarea.guestbook-input {
-  color: snow;
+.guestbook-input:disabled {
+  color: snow !important;
+  background-color: #444 !important;
+  border: 1px solid hotpink !important;
+  opacity: 1 !important;
+}
+
+@media (max-width: 768px) {
+  .guestbook-input:disabled {
+    color: snow !important;  /* Force snow text color on mobile as well */
+  }
 }
 
 .guestbook-author-link {
