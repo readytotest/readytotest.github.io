@@ -304,6 +304,10 @@ body {background-color: black;
   border-radius: 5px;
 }
 
+textarea.guestbook-input {
+  color: snow;
+}
+
 .guestbook-author-link {
   font-size: 14px;
   color: hotpink;
