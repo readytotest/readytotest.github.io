@@ -304,17 +304,9 @@ body {background-color: black;
   border-radius: 5px;
 }
 
-.guestbook-input:disabled {
-  color: snow !important;
-  background-color: #444 !important;
-  border: 1px solid hotpink !important;
-  opacity: 1 !important;
-}
-
-@media (max-width: 768px) {
-  .guestbook-input:disabled {
-    color: snow !important;  /* Force snow text color on mobile as well */
-  }
+.guestbook-input[readonly]::placeholder {
+  color: snow;
+  opacity: 1;
 }
 
 .guestbook-author-link {
