@@ -242,7 +242,7 @@ body {background-color: black;
   background-attachment: fixed;
 }
 
-.guestbook-btn {
+.guestbook-btn-submit {
   background-color: hotpink;
   color: snow;
   border: none;
@@ -254,7 +254,24 @@ body {background-color: black;
   text-transform: uppercase;
 }
 
-.guestbook-btn:disabled {
+.guestbook-btn-submit:disabled {
+  background-color: hotpink;
+  cursor: not-allowed;
+}
+
+.guestbook-btn-clear {
+  background-color: hotpink;
+  color: snow;
+  border: none;
+  font-size: 16px;
+  padding: 10px 20px;
+  margin-top: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.guestbook-btn-clear:disabled {
   background-color: darkgray;
   cursor: not-allowed;
 }
