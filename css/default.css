@@ -294,7 +294,7 @@ body {background-color: black;
 
 .guestbook-input {
   width: 90%;
-  background-color: #444;
+  background-color: black;
   border: 1px solid hotpink;
   color: snow;
   font-family: 'Courier New', monospace;
