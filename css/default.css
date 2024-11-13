@@ -221,16 +221,16 @@ body {background-color: black;
   }
 }
 
-#well-lid {
+#guestbook {
   text-decoration: none;
   animation: colorShift 5s infinite ease-in-out;
 }
 
-#well-lid:hover {
+#guestbook:hover {
   text-decoration: underline;
 }
 
-#well-lid:active {
+#guestbook:active {
   text-decoration: underline;
 }
 
