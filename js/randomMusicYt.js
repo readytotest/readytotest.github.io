@@ -37,6 +37,12 @@ const ytPlaylist = [
     "https://youtu.be/zO6nRXPzX1A?feature=shared",
     // Janis Joplin - Piece of My Heart
     "https://youtu.be/7uG2gYE5KOs?feature=shared",
+    // AC/DC - Hells Bells
+    "https://youtu.be/etAIpkdhU9Q?feature=shared",
+    // David Gilmour - Wish You Were Here (Live)
+    "https://youtu.be/WaEKXGlfYj8?feature=shared",
+    // The Beatles - Let It Be
+    "https://youtu.be/egCy1KoE1Ss?feature=shared",
 
 
     /*
@@ -69,6 +75,16 @@ const ytPlaylist = [
     "https://youtu.be/o0LK-cetrXE?feature=shared&t=33",
     // The Velvet Candles - Duke of Earl
     "https://youtu.be/3q_DNRtEkxI?feature=shared",
+
+
+    /*
+    _____________________________
+    | // Rap (>'-')>             |
+    |____________________________|
+    */
+
+    // Cypress Hill - Insane in the Brain (Instrumental)
+    "https://youtu.be/vH3qzcG989w?feature=shared",
 
 
     /*
