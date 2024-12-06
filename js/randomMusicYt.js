@@ -35,6 +35,8 @@ const ytPlaylist = [
     "https://youtu.be/YfouL5PyORU?feature=shared",
     // Danzig - Mother 93 Live
     "https://youtu.be/zO6nRXPzX1A?feature=shared",
+    // Janis Joplin - Piece of My Heart
+    "https://youtu.be/7uG2gYE5KOs?feature=shared",
 
 
     /*
@@ -52,6 +54,21 @@ const ytPlaylist = [
     "https://youtu.be/CgkkudRCGB0?feature=shared",
     // Groovy Disco and R&B Mix at a New York Basement Party
     "https://youtu.be/4nvewes8Inc?feature=shared",
+
+
+    /*
+    _____________________________
+    | // Acoustic Cover /o/o/o/  |
+    |____________________________|
+    */
+
+
+    // Chris Cornell - Nothing Compares 2 U
+    "https://youtu.be/IuUDRU9-HRk?feature=shared",
+    // Jelly Roll - Good Riddance Greenday Cover
+    "https://youtu.be/o0LK-cetrXE?feature=shared&t=33",
+    // The Velvet Candles - Duke of Earl
+    "https://youtu.be/3q_DNRtEkxI?feature=shared",
 
 
     /*
@@ -80,6 +97,8 @@ const ytPlaylist = [
     "https://youtu.be/nIHWhUVxJh8?feature=shared",
     // Johnny Cash - Orange Blossom Special - Live at San Quentin
     "https://youtu.be/Xhs5j7HN8wM?feature=shared",
+    // Randy Travis - Storms of Life
+    "https://youtu.be/aKH9bAVTrwA?feature=shared",
 
 
 ];
