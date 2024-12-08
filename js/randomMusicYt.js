@@ -71,8 +71,8 @@ const ytPlaylist = [
 
     // Chris Cornell - Nothing Compares 2 U
     "https://youtu.be/IuUDRU9-HRk?feature=shared",
-    // Jelly Roll - Good Riddance Greenday Cover
-    "https://youtu.be/o0LK-cetrXE?feature=shared&t=33",
+    // Jelly Roll - Greenday/John Denver Cover
+    "https://youtu.be/6p_vTfI114Q?feature=shared",
     // The Velvet Candles - Duke of Earl
     "https://youtu.be/3q_DNRtEkxI?feature=shared",
 
