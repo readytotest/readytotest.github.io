@@ -29,6 +29,9 @@ const ytPlaylist = [
     "https://youtu.be/IPfB7Qnm0MI?feature=shared",
     // Social Distortion - Ball and Chain
     "https://youtu.be/_NWjehpGSO0?feature=shared",
+    /* Social Distortion - Live Oct 8 2024
+    Story of My Life - Bad Luck - Ring of Fire */
+    "https://youtu.be/Ase-qZaXou0?feature=shared",
     // REO Speedwagon - Take It on the Run 
     "https://youtu.be/ZQ-uWQJNx7w?feature=shared",
     // Metallica: Whiskey in the Jar (Castle Donington, England)
