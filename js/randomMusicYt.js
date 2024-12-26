@@ -46,6 +46,10 @@ const ytPlaylist = [
     "https://youtu.be/WaEKXGlfYj8?feature=shared",
     // The Beatles - Let It Be
     "https://youtu.be/egCy1KoE1Ss?feature=shared",
+    // Pink Floyd - Have a Cigar
+    "https://youtu.be/tbdpv7G_PPg?feature=shared",
+    // The Rolling Stones - Honky Tonk Women
+    "https://youtu.be/hqqkGxZ1_8I?feature=shared",
 
 
     /*
