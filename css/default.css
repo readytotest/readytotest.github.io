@@ -33,6 +33,10 @@ body {background-color: black;
       color: #AAFF00;
   }
 
+  .orangeFont {
+    color: orange;
+  }
+
     .arrow{
       font-family: Tahoma, sans-serif;
   }
