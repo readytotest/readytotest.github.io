@@ -91,6 +91,36 @@
             <br>
             -----
             <br>
+            <span class="blinking-text yellowFont">CI/CD</span> 
+            <br>
+             <a href="https://github.com/readytotest/readytotest.github.io/actions/workflows/playwright-mysite.yml" target="_blank" rel="noopener noreferrer"><img src="https://github.com/readytotest/readytotest.github.io/actions/workflows/playwright-mysite.yml/badge.svg"></a>
+            <br>
+            <a href="https://github.com/readytotest/readytotest.github.io/blob/main/.github/workflows/playwright-mysite.yml" target="_blank" rel="noopener noreferrer">playwright-mysite.yml</a> | <a href="https://github.com/readytotest/readytotest.github.io/actions/workflows/playwright-mysite.yml" target="_blank" rel="noopener noreferrer">Actions workflow</a> | 📸 <a href="/html/img/playwright-action.png" target="_blank" rel="noopener noreferrer">look1</a> | 📸 <a href="/html/img/branch-status-checks.png" target="_blank" rel="noopener noreferrer">look2</a>
+            <br>
+            <sup>
+                This GitHub Actions YAML file sets up a workflow to run Playwright
+                <br>
+                in a GitHub Runner environment when a pull request or push occurs.
+                <br>
+                It checks out two repositories, installs dependencies, starts a local 
+                <br>
+                web server, executes the tests, and uploads the results.
+                <br>
+                -----
+                <br>
+                <span class="yellowFont">Helpful Tip</span> 💡
+                <br>
+                The default time zone for GitHub runners is UTC. To prevent issues such as
+                <br>
+                the date being a day ahead in the runner environment and causing date
+                <br>
+                assertions to fail, set the time zone of the CI/CD runner environment using a
+                <br>
+                <a href="https://github.com/marketplace/actions/set-timezone" target="_blank" rel="noopener noreferrer">Marketplace action</a> in your <a href="https://github.com/readytotest/readytotest.github.io/blob/4c5dca5c3ccc1d76b438188d22c88bea3a4aa781/.github/workflows/playwright-mysite.yml#L29" target="_blank" rel="noopener noreferrer">YAML</a> configuration.
+            </sup>
+            <br>
+            -----
+            <br>
             Spec: <a href="https://github.com/readytotest/test-playwright/blob/main/tests/homePage.spec.ts" target="_blank" rel="noopener noreferrer">homePage.spec.ts</a> | 📸 <a href="/html/img/playwright-report1a.png" target="_blank" rel="noopener noreferrer">look1</a> | 📸 <a href="/html/img/playwright-report1b.png" target="_blank" rel="noopener noreferrer">look2</a>
             <br>
             <sup>
@@ -158,36 +188,6 @@
             Playwright Config Local: <a href="https://github.com/readytotest/test-playwright/blob/main/playwright.config.ts" target="_blank" rel="noopener noreferrer">playwright.config.ts</a>
             <br>
             Playwright Config CI: <a href="https://github.com/readytotest/test-playwright/blob/main/playwright.actions.config.ts" target="_blank" rel="noopener noreferrer">playwright.actions.config.ts</a>
-            <br>
-            -----
-            <br>
-            <span class="blinking-text yellowFont">CI/CD</span> 
-            <br>
-             <a href="https://github.com/readytotest/readytotest.github.io/actions/workflows/playwright-mysite.yml" target="_blank" rel="noopener noreferrer"><img src="https://github.com/readytotest/readytotest.github.io/actions/workflows/playwright-mysite.yml/badge.svg"></a>
-            <br>
-            <a href="https://github.com/readytotest/readytotest.github.io/blob/main/.github/workflows/playwright-mysite.yml" target="_blank" rel="noopener noreferrer">playwright-mysite.yml</a> | <a href="https://github.com/readytotest/readytotest.github.io/actions/workflows/playwright-mysite.yml" target="_blank" rel="noopener noreferrer">Actions workflow</a> | 📸 <a href="/html/img/playwright-action.png" target="_blank" rel="noopener noreferrer">look1</a> | 📸 <a href="/html/img/branch-status-checks.png" target="_blank" rel="noopener noreferrer">look2</a>
-            <br>
-            <sup>
-                This GitHub Actions YAML file sets up a workflow to run Playwright
-                <br>
-                in a GitHub Runner environment when a pull request or push occurs.
-                <br>
-                It checks out two repositories, installs dependencies, starts a local 
-                <br>
-                web server, executes the tests, and uploads the results.
-                <br>
-                -----
-                <br>
-                <span class="yellowFont">Helpful Tip</span> 💡
-                <br>
-                The default time zone for GitHub runners is UTC. To prevent issues such as
-                <br>
-                the date being a day ahead in the runner environment and causing date
-                <br>
-                assertions to fail, set the time zone of the CI/CD runner environment using a
-                <br>
-                <a href="https://github.com/marketplace/actions/set-timezone" target="_blank" rel="noopener noreferrer">Marketplace action</a> in your <a href="https://github.com/readytotest/readytotest.github.io/blob/4c5dca5c3ccc1d76b438188d22c88bea3a4aa781/.github/workflows/playwright-mysite.yml#L29" target="_blank" rel="noopener noreferrer">YAML</a> configuration.
-            </sup>
             <br>
             ------------------------------------------------------------------------
             <br>
