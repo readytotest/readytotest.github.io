@@ -45,6 +45,10 @@ body {background-color: black;
     background-color: white;
     padding: 0;
   }
+
+  #page-404-error {
+    align-items: center;
+  }
       
     h1, h2 {
         color:  snow;
