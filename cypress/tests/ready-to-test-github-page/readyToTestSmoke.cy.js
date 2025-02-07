@@ -10,8 +10,8 @@ describe('Smoke Test GitHub Page', () => {
 
     beforeEach(() => {
 
-        cy.visit('/')
-        cy.log('Visit Base URL')
+        cy.visit('/cypress.htm')
+        cy.log('Visit Cypress Page')
       
       })
      
