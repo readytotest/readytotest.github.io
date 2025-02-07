@@ -200,74 +200,14 @@
             Node: <a href="https://github.com/readytotest/readytotest.github.io/blob/main/server.js" target="_blank" rel="noopener noreferrer">server.js</a>
             <br>
             ------------------------------------------------------------------------   
-            <br>        
-            <span class="sections"><b>UI Test Automation with Cypress</b> <img src="/html/img/cypress.png" height="22" width="22"></img></span>
             <br>
-            <sup>
-                <span class="yellowFont">Note:</span> I haven't used Cypress for a while and have switched to Playwright.
-            </sup>
+            <span class="sections"><b>Cypress</b></span> <span class="bounce"><img src="/html/img/cypress.png" height="22" width="22"></img></span>
+            <br>      
+            All things related to Cypress test automation have been moved
             <br>
-            Spec: <a href="https://github.com/readytotest/readytotest.github.io/blob/main/cypress/tests/orange-demo-site/orangeDemoSmoke.cy.js" target="_blank" rel="noopener noreferrer">orangeDemoSmoke.cy.js</a> View run in Mochawesome report 👇
+            to it's own page which you can find <a href="/html/cypress.htm">here</a>
             <br>
-            Spec: <a href="https://github.com/readytotest/readytotest.github.io/blob/main/cypress/tests/sauce-demo-site/sauceDemoSmoke.cy.js" target="_blank" rel="noopener noreferrer">sauceDemoSmoke.cy.js</a> View run in Cypress Cloud 👇
-            <br>
-            Spec: <a href="https://github.com/readytotest/readytotest.github.io/blob/main/cypress/tests/sauce-demo-site/sauceDemoLoginOnlyTest.cy.js" target="_blank" rel="noopener noreferrer">sauceDemoLoginOnlyTest.cy.js</a> View run in Cypress Cloud 👇
-            <br>
-            Spec: <a href="https://github.com/readytotest/readytotest.github.io/blob/main/cypress/tests/lambda-test-demo-site/lambdaTestDemoRegistration.cy.js" target="_blank" rel="noopener noreferrer">lambdaTestDemoRegistration.cy.js</a> | 🎥 <a href="/html/vid/lambdaTestDemoRegistration.cy.js.mp4" target="_blank" rel="noopener noreferrer">watch</a> | 📸 <a href="/html/img/cli-run-lambda-test.png" target="_blank" rel="noopener noreferrer">look</a>
-            <br>
-            Spec: <a href="https://github.com/readytotest/readytotest.github.io/blob/main/cypress/tests/ready-to-test-github-page/readyToTestSmoke.cy.js" target="_blank" rel="noopener noreferrer">readyToTestSmoke.cy.js</a> | 🎥 <a href="/html/vid/readyToTestSmoke.cy.js.mp4" target="_blank" rel="noopener noreferrer">watch</a> | 📸 <a href="/html/img/gui-run-ready-to-test.png" target="_blank" rel="noopener noreferrer">look</a>
-            <br>
-            Spec: <a href="https://github.com/readytotest/readytotest.github.io/blob/main/cypress/tests/experimental-test-scripts/scratchPad.cy.js" target="_blank" rel="noopener noreferrer">scratchPad.cy.js</a> (experimental) | 🎥 <a href="/html/vid/scratchPad.cy.js.mp4" target="_blank" rel="noopener noreferrer">watch</a> | 📸 <a href="/html/img/scratch-pad.png" target="_blank" rel="noopener noreferrer">look</a>
-            <br>
-            ------------------------------------------------------------------------
-            <br>
-            <span class="sections"><b>API Test Automation with Cypress</b></span> ☇
-            <br>
-            Spec: <a href="https://github.com/readytotest/readytotest.github.io/blob/main/cypress/tests/api/catApiTest.cy.js" target="_blank" rel="noopener noreferrer">catApiTest.cy.js</a> | 📸 <a href="/html/img/cat-report.png" target="_blank" rel="noopener noreferrer">look1</a> | 📸 <a href="/html/img/catApi-run.png" target="_blank" rel="noopener noreferrer">look2</a>
-            <br>
-            ------------------------------------------------------------------------
-            <br>
-            <span class="sections"><b>Automated Visual Testing with Cypress</b></span> 🖼️
-            <br>
-            Spec: <a href="https://github.com/readytotest/readytotest.github.io/blob/main/cypress/tests/visual-testing/checkGitHubPage.cy.js" target="_blank" rel="noopener noreferrer">checkGitHubPage.cy.js</a> | 📸 <a href="/html/img/visual-testing-github-page.png" target="_blank" rel="noopener noreferrer">image diff</a>| 📸 <a href="/html/img/visual-testing-slider.png" target="_blank" rel="noopener noreferrer">slider</a> | 📸 <a href="/html/img/visual-testing-mirror.png" target="_blank" rel="noopener noreferrer">mirror</a>
-            <br>
-            Spec: <a href="https://github.com/readytotest/readytotest.github.io/blob/main/cypress/tests/visual-testing/checkMusicalNoteElement.cy.js" target="_blank" rel="noopener noreferrer">checkMusicalNoteElement.cy.js</a> | 📸 <a href="/html/img/visual-testing-music-note.png" target="_blank" rel="noopener noreferrer">image diff</a> | 📸 <a href="/html/img/image-diff-start-report-server.png" target="_blank" rel="noopener noreferrer">server</a>
-            <br>
-            ------------------------------------------------------------------------
-            <br>
-            <span class="sections"><b>Mochawesome Report</b></span> 📝
-            <br>
-            Cypress doesn't have built-in test reports so I used this
-            <br>
-            <a href="/html/cypress-report/cypress-report.htm" data-cy="cypress-report">Orange demo: sample script results and video</a> 
-            <br>
-            ------------------------------------------------------------------------
-            <br>
-            <span class="sections"><b>Cypress Cloud</b></span> 📊
-            <br>
-            I set this up primarily to explore parallel test execution,
-            <br>
-            but there is also test reporting and a centralized dashboard.
-            <br>
-            <a href="https://cloud.cypress.io/projects/dm22wp/runs" target="_blank" rel="noopener noreferrer">Sauce demo: two sample scripts ran in parallel results and video</a>
-            <br>
-            ------------------------------------------------------------------------
-            <br>
-            <span class="sections"><b>GitHub Actions</b></span> 🎬
-            <br>
-            These are some YAML files I was tinkering with early on. I have
-            <br>
-            a Cypress test that runs against this site on a cron schedule.
-            <br>
-            There's also an integration with Cypress Cloud in the sauce YAML,
-            <br>
-            and a few manually triggered Cypress tests for some random sites.
-            <br>
-            <a href="https://github.com/readytotest/readytotest.github.io/blob/main/.github/workflows/cypress-mysite.yml" target="_blank" rel="noopener noreferrer">cypress-mysite.yml</a> | <a href="https://github.com/readytotest/readytotest.github.io/blob/main/.github/workflows/orange.yml" target="_blank" rel="noopener noreferrer">orange.yml</a> | <a href="https://github.com/readytotest/readytotest.github.io/blob/main/.github/workflows/sauce.yml" target="_blank" rel="noopener noreferrer">sauce.yml</a> | <a href="https://github.com/readytotest/readytotest.github.io/blob/main/.github/workflows/lambdaTest.yml" target="_blank" rel="noopener noreferrer">lambdaTest.yml</a>
-            <br>
-            <a href="https://github.com/readytotest/readytotest.github.io/actions" target="_blank" rel="noopener noreferrer">View workflows</a>
-            <br>
-            ------------------------------------------------------------------------
+            ------------------------------------------------------------------------   
             <br>
             <span class="sections"><b>Postman API Testing</b></span> 📬
             <br>
@@ -277,7 +217,7 @@
             <div id="weather-section">
             <span class="sections"><b>National Weather Service API</b></span> ⛈️🌡️❄️☔🌤
             <br>
-            <span class="pulse">Click Here --&gt;</span> <a href="/html/weather-api.htm" class="bounce" data-testid="weather-alerts" data-cy="weather-api">View weather alerts on my page</a> <span class="pulse">&lt;-- Click Here</span>
+            <span class="pulse">Click Here --&gt;</span> <a href="/html/weather-api.htm" data-testid="weather-alerts" data-cy="weather-api">View weather alerts on my page</a> <span class="pulse">&lt;-- Click Here</span>
             <br>
             <br>
                  <!-- Note: The CSS weather ticker may experience some issues on Safari and iOS browsers.
