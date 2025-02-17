@@ -256,6 +256,8 @@ body {background-color: black;
   background-size: cover;
   background-position: left;
   background-attachment: fixed;
+  height: 100vh;
+  margin: 0;
 }
 
 .work-style-page-div {
