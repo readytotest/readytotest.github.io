@@ -253,10 +253,9 @@ body {background-color: black;
 .work-style-page {
   background-image: url('../html/img/arcade.jpg');
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 1030px;
   background-position: left;
   background-attachment: fixed;
-  margin: 0;
 }
 
 .work-style-page-div {
@@ -264,7 +263,7 @@ body {background-color: black;
   padding: 20px;
   background-color: rgba(0, 0, 0, 0.5); /* 50% opacity black background */
   color: white;
- 
+  width: 975px;
   border-radius: 10px;
 }
 
