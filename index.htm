@@ -216,40 +216,7 @@
             <span class="sections"><b>National Weather Service API</b></span> ⛈️🌡️❄️☔🌤
             <br>
             <span class="pulse">Click Here --&gt;</span> <a href="/html/weather-api.htm" data-testid="weather-alerts" data-cy="weather-api">View weather alerts on my page</a> <span class="pulse">&lt;-- Click Here</span>
-            <br>
-            <br>
-                 <!-- Note: The CSS weather ticker may experience some issues on Safari and iOS browsers.
-                 Adjustments have been made, but it may not always work perfectly across all devices
-                 and versions. -->
-                 <div class="weather-alert-container">
-                    <div class="weather-alert">
-                        <img src="/html/img/thunderstorms-snow.svg" height="50px" width="50px"></img>
-                        Weather API Status:&nbsp;<weather-api-status class="alert blinking-text"></weather-api-status>
-                        🕘 Last Update:&nbsp;<weather-updated class="alert"></weather-updated> 
-                        <img src="/html/img/sun-hot.svg" height="50px" width="50px"></img>
-                        <img src="/html/img/thunderstorms-overcast-rain.svg" height="50px" width="50px"></img>
-                        <img src="/html/img/dust-wind.svg" height="50px" width="50px"></img>
-                        <weather-title class="alert"> </weather-title>
-                        <weather-sender-name class="alert"></weather-sender-name>
-                        <weather-time-sent class="alert"></weather-time-sent>
-                        <weather-headline class="alert"></weather-headline>
-                        <weather-headline-extra class="alert"></weather-headline-extra>
-                        <weather-event class="alert"></weather-event>
-                        <weather-severity class="alert"></weather-severity>
-                        <img src="/html/img/lightning-bolt.svg" height="50px" width="50px"></img>
-                        <img src="/html/img/thermometer-fahrenheit.svg" height="50px" width="50px"></img>
-                        <img src="/html/img/umbrella-wind-alt.svg" height="50px" width="50px"></img>
-                        <img src="/html/img/clear-day.svg" height="50px" width="50px"></img>
-                        • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • •
-                        • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • •
-                    </div>
-                </div>
             </div>
-                    <sup>
-                    Safari/IOS users: <strong><a href="javascript:location.reload()">Refresh</a></strong>
-                    your browser if you encounter issues with ticker.
-                    </sup>
-                <br>
             ------------------------------------------------------------------------
             <br>
             <span class="sections" id="earthquake-api"><b>Most Recent Earthquake</b></span> via 📳 <a href="https://earthquake.usgs.gov/earthquakes/feed/v1.0/geojson.php" target="_blank" rel="noopener noreferrer">USGS Realtime GeoJSON Feed</a>
@@ -367,14 +334,9 @@
             ></script>
             <script src="/js/sentryFeedbackWidget.js"></script>
             <!-- End <script> tags for Sentry bug report widget and monitoring -->
-            <script src="/js/weatherAlertTicker.js"></script>
             <script src="/js/repoLastCommitInfo.js"></script>
             <script src="/js/earthQuake.js"></script>
             <script src="/js/dateAndTime.js"></script>
             <script src="/js/randomMusicYt.js"></script>
-            
-            <!-- For cross-platform stability of weather ticker scrolling text in Safari and IOS browser -->
-            <script src="/js/fixSafariTicker.js"></script>           
-
         </body>
 </html>
