@@ -14,6 +14,6 @@ window.addEventListener('load', function() {
     /* The next line forces the browser to recalculate the layout, refreshing the element’s rendering.
     The logging part isn't necessary for the functionality, but it’s added here as a visible reminder
     of what’s happening when the offsetHeight is accessed. */
-    console.log('Accessing offsetHeight forces the browser to recalculate styles. The value of offsetHeight is', weatherAlert.offsetHeight, 'pixels, which represents the height of the .weather-alert element.');
+    console.log('Accessing offsetHeight forces the browser to recalculate styles. The value of offsetHeight is', weatherAlert.offsetHeight, 'pixels, which represents the height of the .weather-alert-container element.');
     weatherAlert.style.animation = ''; // Restart the animation
   });
