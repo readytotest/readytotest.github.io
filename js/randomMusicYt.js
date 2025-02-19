@@ -17,10 +17,10 @@ const ytPlaylist = [
     /* Social Distortion - Live Oct 8 2024
     Story of My Life - Bad Luck - Ring of Fire */
     "https://youtu.be/Ase-qZaXou0?feature=shared",
-    // Metallica: Whiskey in the Jar (Castle Donington, England)
-    "https://youtu.be/YfouL5PyORU?feature=shared",
-    // AC/DC - Hells Bells
-    "https://youtu.be/etAIpkdhU9Q?feature=shared",
+    // Metallica: Whiskey in the Jar (Slane Castle - Meath, Ireland - June 8, 2019)
+    "https://www.youtube.com/watch?v=9MNdOCQYOL8",
+    // mgk & Jelly Roll - Lonely Road (Amazon Music Live)
+    "https://youtu.be/yV8eR8-It4w?feature=shared",
     // Pearl Jam “Yellow Ledbetter” Live on the Stern Show
     "https://youtu.be/2cyp1g7idYc?feature=shared",
 
