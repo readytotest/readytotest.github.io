@@ -17,3 +17,5 @@ window.addEventListener('load', function() {
     console.log('Accessing offsetHeight forces the browser to recalculate styles. The value of offsetHeight is', weatherAlert.offsetHeight, 'pixels, which represents the height of the .weather-alert-container element.');
     weatherAlert.style.animation = ''; // Restart the animation
   });
+
+  // https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/offsetHeight
