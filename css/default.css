@@ -250,6 +250,23 @@ body {background-color: black;
   background-attachment: fixed;
 }
 
+.work-style-page {
+  background-image: url('../html/img/arcade.jpg');
+  background-repeat: no-repeat;
+  background-size: 1030px;
+  background-position: left;
+  background-attachment: fixed;
+}
+
+.work-style-page-div {
+  position: relative;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.5); /* 50% opacity black background */
+  color: white;
+  width: 975px;
+  border-radius: 10px;
+}
+
 .guestbook-btn-submit:disabled {
   background-color: hotpink;
   color: snow;
