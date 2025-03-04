@@ -14,8 +14,7 @@
 
 const ytPlaylist = [
 
-    /* Social Distortion - Live Oct 8 2024
-    Story of My Life - Bad Luck - Ring of Fire */
+    // Social Distortion - Live Oct 8 2024 -Story of My Life - Bad Luck - Ring of Fire
     "https://youtu.be/Ase-qZaXou0?feature=shared",
     // AC/DC- Who Made Who (12" Extended Mix)
     "https://youtu.be/m7PELm_JgVk?feature=shared",
