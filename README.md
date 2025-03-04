@@ -16,6 +16,8 @@
 [![GitHub commit activity](https://img.shields.io/github/commit-activity/t/readytotest/readytotest.github.io?style=social&color=%23FF69B4)](https://github.com/readytotest/readytotest.github.io/commits/main/)
 [![GitHub last commit](https://img.shields.io/github/last-commit/readytotest/readytotest.github.io?style=social)](https://github.com/readytotest/readytotest.github.io/commits/main/)
 
+**After cloning the repo, make sure you have [Node.js](https://nodejs.org/) installed, then run `npm install` to set up dependencies.**
+
 You can start up the local server by typing node server.js in the VS Code terminal
 <br>
 or if you want to start it by the bash script you can type: chmod +x start-server.sh
