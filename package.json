@@ -1,12 +1,22 @@
 {
   "devDependencies": {
+    "@eslint/js": "^9.21.0",
     "@faker-js/faker": "^9.5.1",
+    "@html-eslint/eslint-plugin": "^0.35.0",
+    "@html-eslint/parser": "^0.35.0",
     "cypress": "^14.1.0",
     "cypress-image-diff-html-report": "^2.2.0",
     "cypress-image-diff-js": "^2.3.0",
     "cypress-mochawesome-reporter": "^3.8.2",
     "cypress-on-fix": "^1.1.0",
-    "cypress-real-events": "^1.14.0"
+    "cypress-real-events": "^1.14.0",
+    "eslint": "^9.21.0",
+    "eslint-config-prettier": "^10.0.2",
+    "eslint-plugin-prettier": "^5.2.3",
+    "globals": "^16.0.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^15.4.3",
+    "prettier": "^3.5.3"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -21,8 +31,20 @@
     "scratch-pad": "npm run clean-reports-and-downloads && npx cypress run --browser chrome --spec ./cypress/tests/experimental-test-scripts/scratchPad.cy.js",
     "visual-testing": "npm run clean-image-diff && npx cypress run --browser chrome --spec './cypress/tests/visual-testing/*.cy.js'",
     "create-visual-report": "npx cypress-image-diff-html-report generate",
-    "start-visual-report-server": "npx cypress-image-diff-html-report start"
+    "start-visual-report-server": "npx cypress-image-diff-html-report start",
+    "prepare": "husky",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "prettier": "prettier . --check",
+    "prettier:fix": "prettier . --write",
+    "precommit": "lint-staged"
   },
+"lint-staged": {
+  "*.{js,jsx,cjs,htm,html}": [
+    "eslint --fix"
+  ],
+  "_comment": "Prettier is now handled by ESLint with eslint-plugin-prettier, so prettier --write was removed."
+},
   "dependencies": {
     "dayjs": "^1.11.13"
   }
