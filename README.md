@@ -16,8 +16,24 @@
 [![GitHub commit activity](https://img.shields.io/github/commit-activity/t/readytotest/readytotest.github.io?style=social&color=%23FF69B4)](https://github.com/readytotest/readytotest.github.io/commits/main/)
 [![GitHub last commit](https://img.shields.io/github/last-commit/readytotest/readytotest.github.io?style=social)](https://github.com/readytotest/readytotest.github.io/commits/main/)
 
+### Important Change: March 4th, 2025
+
+- **Added pre-commit hook** with Husky and Lint Staged for staged file linting.
+- Set up **ESLint** and **Prettier** to ensure code consistency and quality.
+- Integrated **HTML linting** using `@html-eslint/eslint-plugin` to catch issues like duplicate IDs in HTML files.
+- Configured linting to run on **JavaScript, JSX, HTML, CJS, and HTM** files.
+- Enforced code formatting automatically with Prettier during commits.
+- Improved development workflow by preventing bad commits with automated lint checks.
+
+This setup ensures that all code adheres to a consistent style guide before being committed, preventing any potential issues in the codebase.
+
+**Context:**  
+I had been using a similar setup on the Playwright repo for a while, but had been lagging on getting it done for this repo. It’s kind of tedious and requires a lot of troubleshooting to work out all the kinks, but it’s finally sorted out and working as expected. 😅
+
 **After cloning the repo, make sure you have [Node.js](https://nodejs.org/) installed, then run `npm install` to set up dependencies.**
 
+----------------------------------
+----------------------------------
 You can start up the local server by typing node server.js in the VS Code terminal
 <br>
 or if you want to start it by the bash script you can type: chmod +x start-server.sh
