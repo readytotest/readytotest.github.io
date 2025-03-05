@@ -9,6 +9,11 @@ module.exports = [
       prettier: prettierPlugin,
       "@html-eslint": require("@html-eslint/eslint-plugin"),
     },
+    languageOptions: {
+      globals: {
+        console: "readonly",
+      },
+    },
     rules: {
       "prettier/prettier": "error",
     },
