@@ -1,13 +1,15 @@
+const prettierPlugin = require("eslint-plugin-prettier");
+const htmlEslintPlugin = require("@html-eslint/eslint-plugin");
+const htmlEslintParser = require("@html-eslint/parser");
+
 //https://eslint.org/docs/latest/rules/
 //https://html-eslint.org/docs/rules
-
-const prettierPlugin = require("eslint-plugin-prettier");
 
 module.exports = [
   {
     plugins: {
       prettier: prettierPlugin,
-      "@html-eslint": require("@html-eslint/eslint-plugin"),
+      "@html-eslint": htmlEslintPlugin,
     },
     languageOptions: {
       globals: {
@@ -30,7 +32,7 @@ module.exports = [
   {
     files: ["**/*.html", "**/*.htm"],
     languageOptions: {
-      parser: require("@html-eslint/parser"),
+      parser: htmlEslintParser,
     },
     rules: {
       "@html-eslint/no-duplicate-id": "error",
