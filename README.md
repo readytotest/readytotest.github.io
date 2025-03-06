@@ -19,9 +19,9 @@
 
 ---
 
-This repo has a pre-commit hook that lints staged files using Husky, Lint Staged,
+**This repo has a pre-commit hook that lints staged files using Husky, Lint Staged,
 <br>
-ESLint, Prettier, and HTML linting. If a commit fails, check the logs to see why.
+ESLint, Prettier, and HTML linting. If a commit fails, check the logs to see why.**
 
 You can start up the local server by typing node server.js in the VS Code terminal
 <br>
