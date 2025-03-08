@@ -10,24 +10,21 @@
 =   the bottom of the page before the closing body tag.   =
 =                                                         =
 ===========================================================
-*/     
+*/
 
 const ytPlaylist = [
-
-    // Social Distortion - Live Oct 8 2024 - Story of My Life - Bad Luck - Ring of Fire
-    "https://youtu.be/Ase-qZaXou0?feature=shared",
-    // AC/DC- Who Made Who (12" Extended Mix)
-    "https://youtu.be/m7PELm_JgVk?feature=shared",
-    // Pearl Jam “Yellow Ledbetter” Live on the Stern Show
-    "https://youtu.be/2cyp1g7idYc?feature=shared",
-
+  // Social Distortion - Live Oct 8 2024 - Story of My Life - Bad Luck - Ring of Fire
+  "https://youtu.be/Ase-qZaXou0?feature=shared",
+  // AC/DC- Who Made Who (12" Extended Mix)
+  "https://youtu.be/m7PELm_JgVk?feature=shared",
+  // Pearl Jam “Yellow Ledbetter” Live on the Stern Show
+  "https://youtu.be/2cyp1g7idYc?feature=shared",
 ];
-
-document.getElementById('randomVideoLink').onclick = function() {
-    const randomIndex = Math.floor(Math.random() * ytPlaylist.length);
-    const randomVideoUrl = ytPlaylist[randomIndex];
-    window.open(randomVideoUrl);
-    return false;
+// eslint-disable-next-line no-undef
+document.getElementById("randomVideoLink").onclick = function () {
+  const randomIndex = Math.floor(Math.random() * ytPlaylist.length);
+  const randomVideoUrl = ytPlaylist[randomIndex];
+  // eslint-disable-next-line no-undef
+  window.open(randomVideoUrl);
+  return false;
 };
-
-
