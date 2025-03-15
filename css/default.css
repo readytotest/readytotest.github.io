@@ -169,6 +169,10 @@ a:active {
   animation: blink 3s infinite;
 }
 
+.italic {
+  font-style: italic;
+}
+
 .bounce {
   display: inline-block;
   animation: bounce 3s ease infinite;
