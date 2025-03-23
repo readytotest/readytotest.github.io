@@ -10,6 +10,7 @@ module.exports = [
     plugins: {
       prettier: prettierPlugin,
       "@html-eslint": htmlEslintPlugin,
+      cypress: require("eslint-plugin-cypress"),
     },
     languageOptions: {
       globals: {
