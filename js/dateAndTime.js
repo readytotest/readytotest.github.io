@@ -17,15 +17,16 @@ ________________________________________________________________________________
 */
 
 function timeAndDateRealTime() {
-const getTimeDate = new Date();
-const mill = getTimeDate.getMilliseconds()
-const mill3Places = `00${mill}`.slice(-3)
-const dateTimePacific = `${getTimeDate.toLocaleString('en-ZA', {
-timeZone: "America/Los_Angeles"})}.${mill3Places}`;
-document.getElementById('current-time').textContent = dateTimePacific;
+  const getTimeDate = new Date();
+  const mill = getTimeDate.getMilliseconds();
+  const mill3Places = `00${mill}`.slice(-3);
+  const dateTimePacific = `${getTimeDate.toLocaleString("en-ZA", {
+    timeZone: "America/Los_Angeles",
+  })}.${mill3Places}`;
+  document.getElementById("current-time").textContent = dateTimePacific;
 }
 
 //Call the function directly first so there isn't a slight delay in displaying the text
 
 timeAndDateRealTime();
-setInterval(timeAndDateRealTime,75);
+setInterval(timeAndDateRealTime, 75);
