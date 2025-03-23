@@ -1,20 +1,28 @@
 const prettierPlugin = require("eslint-plugin-prettier");
 const htmlEslintPlugin = require("@html-eslint/eslint-plugin");
 const htmlEslintParser = require("@html-eslint/parser");
+const pluginCypress = require("eslint-plugin-cypress/flat");
 
 //https://eslint.org/docs/latest/rules/
 //https://html-eslint.org/docs/rules
 
 module.exports = [
+  pluginCypress.configs.globals, // so we don't get all those eslint errors in the Cypress scripts about undefined variables
+  pluginCypress.configs.recommended, // so we get the recommended Cypress rules
   {
     plugins: {
       prettier: prettierPlugin,
       "@html-eslint": htmlEslintPlugin,
-      cypress: require("eslint-plugin-cypress"),
     },
     languageOptions: {
       globals: {
         console: "readonly",
+        localStorage: "readonly",
+        setInterval: "readonly",
+        window: "readonly",
+        document: "readonly",
+        fetch: "readonly",
+        require: "readonly",
       },
     },
     rules: {
@@ -23,7 +31,7 @@ module.exports = [
   },
 
   {
-    files: ["**/*.js", "**/*.jsx", "**/*.cjs"],
+    files: ["**/*.js", "**/*.jsx", "**/*.cjs", "**/cy.js"],
     rules: {
       "no-unused-vars": "error",
       "no-undef": "error",
