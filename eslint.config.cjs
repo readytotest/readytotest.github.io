@@ -23,6 +23,7 @@ module.exports = [
         document: "readonly",
         fetch: "readonly",
         require: "readonly",
+        Sentry: "readonly",
       },
     },
     rules: {

@@ -20,11 +20,10 @@ const ytPlaylist = [
   // Pearl Jam “Yellow Ledbetter” Live on the Stern Show
   "https://youtu.be/2cyp1g7idYc?feature=shared",
 ];
-// eslint-disable-next-line no-undef
+
 document.getElementById("randomVideoLink").onclick = function () {
   const randomIndex = Math.floor(Math.random() * ytPlaylist.length);
   const randomVideoUrl = ytPlaylist[randomIndex];
-  // eslint-disable-next-line no-undef
   window.open(randomVideoUrl);
   return false;
 };
