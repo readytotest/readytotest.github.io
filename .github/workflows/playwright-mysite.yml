@@ -2,8 +2,11 @@
 # ║  We have two separate Playwright config files.              ║
 # ║  Why? Running Playwright locally, I want the tests to       ║
 # ║  run in headed mode and slowMo so I can watch them, but     ║
-# ║  I don't want that in the CI env. Also I don't want the old ║
-# ║  class based tests running in the CI env either.            ║
+# ║  I don't want that in the CI env. And locally...            ║
+# ║  I run one spec at a time and one test at a time so I can   ║
+# ║  watch it playback, whereas in CI/CD the tests run in       ║
+# ║  parallel for faster execution.                             ║
+# ║                                                             ║
 # ║  If you explore the root of the test-playwright repo, you'll║
 # ║  find two separate configuration files.                     ║
 # ║  playwright.actions.config.ts (for GitHub Actions)          ║
@@ -16,86 +19,86 @@
 name: Playwright GitHub Page (manual, pr/push)
 env:
   PLAYWRIGHT_ACTIONS_CONFIG: ${{ vars.PLAYWRIGHT_ACTIONS_CONFIG }}
-on:   
+on:
   push:
   pull_request:
   workflow_dispatch:
 
 jobs:
- Playwright-GitHub-Page-Test:
-   runs-on: ubuntu-latest
-   timeout-minutes: 10
-   steps:
-        - name: Set Time Zone
-          uses: szenius/set-timezone@v2.0
-          with:
-            timezoneLinux: 'America/Los_Angeles'
+  Playwright-GitHub-Page-Test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Set Time Zone
+        uses: szenius/set-timezone@v2.0
+        with:
+          timezoneLinux: "America/Los_Angeles"
 
-        - name: Print Date and Time
-          run: date
-        
-        - name: Message
-          run: |
-            echo "This action executes Playwright tests against pull requests and commits"
-            echo "Configuration: playwright.actions.config.ts"
-            echo "User: [${{ github.actor }}] initiated this test run"
-            echo "Commit subject: ${{ github.event.commits[0].message }}"
-            echo "Commit hash: ${{ github.sha }}"
-            echo "Branch: ${{ github.ref_name }}"
-            echo "GitHub workflow run: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
-            echo "🧪🧪🧪🧪🧪🧪🧪🧪🧪🧪🧪🧪🧪🧪🧪🧪🧪🧪🧪🧪🧪🧪"
+      - name: Print Date and Time
+        run: date
 
-        # We will check out two repos because the website files
-        # exist in one repo and Playwright exists in a different repo
-       
-        # Check out primary repo where I will start a server locally in the GH Runner environment
-        - name: Checkout Website Repo
-          uses: actions/checkout@v4.2.2
-          
-        # Check out secondary repo where Playwright scripts live
-        - name: Checkout Playwright Repo
-          uses: actions/checkout@v4.2.2
-          with:
-            repository: readytotest/test-playwright
-            #token: ${{ secrets.GH_PAT }} If checking out a private repo, create a secret called `GH_PAT` that contains your personal access token
-            ref: main
-            path: ./playwright-tests #Copy the Playwright repo to this directory within the GitHub page repo
-       
-        - name: Install dependencies
-          working-directory: ./playwright-tests #This is the sub-directory where the Playwright repo was copied to
-          run: npm ci
+      - name: Message
+        run: |
+          echo "This action executes Playwright tests against pull requests and commits"
+          echo "Configuration: playwright.actions.config.ts"
+          echo "User: [${{ github.actor }}] initiated this test run"
+          echo "Commit subject: ${{ github.event.commits[0].message }}"
+          echo "Commit hash: ${{ github.sha }}"
+          echo "Branch: ${{ github.ref_name }}"
+          echo "GitHub workflow run: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+          echo "🧪🧪🧪🧪🧪🧪🧪🧪🧪🧪🧪🧪🧪🧪🧪🧪🧪🧪🧪🧪🧪🧪"
 
-        - name: Setup Node.js environment with most recent version
-          uses: actions/setup-node@v4.2.0
-          with:
-            node-version: 'latest'
+      # We will check out two repos because the website files
+      # exist in one repo and Playwright exists in a different repo
 
-        - name: Start Local Webserver in GH Runner environment (http://localhost:3000)
-          run: | #We need the & sleep 1 or it will hang on this step and won't progress
-            chmod +x start-server.sh
-            ./start-server.sh &
-            sleep 1
+      # Check out primary repo where I will start a server locally in the GH Runner environment
+      - name: Checkout Website Repo
+        uses: actions/checkout@v4.2.2
 
-        - name: CD to playwright-tests directory, print node version, and list contents
-          run: |
-              cd playwright-tests
-              node -v
-              ls
+      # Check out secondary repo where Playwright scripts live
+      - name: Checkout Playwright Repo
+        uses: actions/checkout@v4.2.2
+        with:
+          repository: readytotest/test-playwright
+          #token: ${{ secrets.GH_PAT }} If checking out a private repo, create a secret called `GH_PAT` that contains your personal access token
+          ref: main
+          path: ./playwright-tests #Copy the Playwright repo to this directory within the GitHub page repo
 
-        - name: Install Playwright Browsers
-          working-directory: ./playwright-tests #This is the sub-directory where the Playwright repo was copied to
-          run: npx playwright install --with-deps
+      - name: Install dependencies
+        working-directory: ./playwright-tests #This is the sub-directory where the Playwright repo was copied to
+        run: npm ci
 
-        - name: Run Playwright tests
-          working-directory: ./playwright-tests #This is the sub-directory where the Playwright repo was copied to
-          #Tests against http://localhost:3000
-          run: npx playwright test --config $PLAYWRIGHT_ACTIONS_CONFIG
+      - name: Setup Node.js environment with most recent version
+        uses: actions/setup-node@v4.2.0
+        with:
+          node-version: "latest"
 
-        - name: Upload Report to GitHub
-          uses: actions/upload-artifact@v4.6.1
-          if: always()
-          with:
-              name: Test Results + Video
-              path: ./playwright-tests/playwright-report/
-              if-no-files-found: warn
-              retention-days: 60
+      - name: Start Local Webserver in GH Runner environment (http://localhost:3000)
+        run: | #We need the & sleep 1 or it will hang on this step and won't progress
+          chmod +x start-server.sh
+          ./start-server.sh &
+          sleep 1
+
+      - name: CD to playwright-tests directory, print node version, and list contents
+        run: |
+          cd playwright-tests
+          node -v
+          ls
+
+      - name: Install Playwright Browsers
+        working-directory: ./playwright-tests #This is the sub-directory where the Playwright repo was copied to
+        run: npx playwright install --with-deps
+
+      - name: Run Playwright tests
+        working-directory: ./playwright-tests #This is the sub-directory where the Playwright repo was copied to
+        #Tests against http://localhost:3000
+        run: npx playwright test --config $PLAYWRIGHT_ACTIONS_CONFIG
+
+      - name: Upload Report to GitHub
+        uses: actions/upload-artifact@v4.6.1
+        if: always()
+        with:
+          name: Test Results + Video
+          path: ./playwright-tests/playwright-report/
+          if-no-files-found: warn
+          retention-days: 60
