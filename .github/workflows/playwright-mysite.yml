@@ -85,10 +85,6 @@ jobs:
           node -v
           ls
 
-      - name: Install Playwright Browsers
-        working-directory: ./playwright-tests #This is the sub-directory where the Playwright repo was copied to
-        run: npx playwright install --with-deps
-
       - name: Run Playwright tests
         working-directory: ./playwright-tests #This is the sub-directory where the Playwright repo was copied to
         #Tests against http://localhost:3000
