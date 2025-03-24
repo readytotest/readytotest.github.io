@@ -69,9 +69,12 @@ jobs:
         run: npm ci
 
       - name: Setup Node.js environment with most recent version
-        uses: actions/setup-node@v4.2.0
+        uses: actions/setup-node@v4.3.0
         with:
           node-version: "latest"
+        #actions/setup-node installs Node.js globally for the entire GitHub Actions runner,
+        #not just within a specific directory or repository.
+        #That's why I didn't specify a working directory in this step.
 
       - name: Start Local Webserver in GH Runner environment (http://localhost:3000)
         run: | #We need the & sleep 1 or it will hang on this step and won't progress
@@ -88,6 +91,7 @@ jobs:
       - name: Install Playwright Browsers
         working-directory: ./playwright-tests #This is the sub-directory where the Playwright repo was copied to
         run: npx playwright install --with-deps
+        #Yeah we need this step! Even though npm ci installs Playwright, it doesn't download browsers in CI/CD
 
       - name: Run Playwright tests
         working-directory: ./playwright-tests #This is the sub-directory where the Playwright repo was copied to
@@ -95,7 +99,7 @@ jobs:
         run: npx playwright test --config $PLAYWRIGHT_ACTIONS_CONFIG
 
       - name: Upload Report to GitHub
-        uses: actions/upload-artifact@v4.6.1
+        uses: actions/upload-artifact@v4.6.2
         if: always()
         with:
           name: Test Results + Video
