@@ -69,7 +69,7 @@ jobs:
         run: npm ci
 
       - name: Setup Node.js environment with most recent version
-        uses: actions/setup-node@v4.2.0
+        uses: actions/setup-node@v4.3.0
         with:
           node-version: "latest"
         #actions/setup-node installs Node.js globally for the entire GitHub Actions runner,
