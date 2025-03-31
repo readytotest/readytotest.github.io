@@ -16,8 +16,10 @@
 # ║  environment.                                               ║
 # ╚═════════════════════════════════════════════════════════════╝
 
-# Note: Tests are triggered on both push and pull_request events,
-# which results in duplicate runs (for PRs). Not an issue for this personal project.
+# Note:
+# Tests are triggered on both push and pull_request events,
+# which results in duplicate runs (for PRs).
+#
 # Since I push directly to 'main' for most updates (except Dependabot PRs),
 # this setup works fine for me.
 #
@@ -29,10 +31,11 @@
 # approaches work in practice.
 #
 # For real company production environments, pushing directly to 'main' is usually
-# disabled, and you’d typically remove the push event from this YAML
-# and only use PRs (or maybe manual events). Also, you'd choose either
-# the GitHub App integration or the YAML-based configuration, not both,
-# to avoid redundant checks.
+# disabled, and you’d typically remove the push event from this YAML and only use
+# PRs (or maybe manual events).
+#
+# Also, you'd choose either the GitHub App integration or the YAML-based
+# configuration, not both, to avoid redundant checks.
 
 name: Playwright GitHub Page (manual, pr/push)
 env:
