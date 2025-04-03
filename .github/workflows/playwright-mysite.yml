@@ -155,3 +155,4 @@ jobs:
           external_repository: readytotest/playwright-allure-report
           publish_branch: main
           publish_dir: ./allure-report #This is the directory of my main repo where the Allure report is copied FROM!
+          keep_files: true
