@@ -22,6 +22,11 @@
 **This repo has a pre-commit hook that lints staged files using Husky, Lint Staged,
 <br>
 ESLint, Prettier, and HTML linting. If a commit fails, check the logs to see why.**
+<br>
+<br>
+After cloning the repo, make sure you have [Node.js](https://nodejs.org/) installed, then run `npm install` to set up dependencies.
+<br>
+**This will attempt to overwrite the Husky pre-commit and .gitignore files! Be sure to undo those changes!**
 
 You can start up the local server by typing node server.js in the VS Code terminal
 <br>
