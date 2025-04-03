@@ -152,5 +152,5 @@ jobs:
         with:
           personal_token: ${{ secrets.PERSONAL_TOKEN }}
           external_repository: readytotest/playwright-allure-report
-          publish_dir: ./allure-playwright-reports
+          #publish_dir: ./allure-playwright-reports
           publish_branch: main
