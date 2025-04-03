@@ -150,7 +150,7 @@ jobs:
       - name: Deploy Allure Report to GitHub Pages (Main Repo)
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          personal_token: ${{ secrets.PERSONAL_TOKEN }}
           external_repository: readytotest/playwright-allure-report
           publish_dir: ./allure-playwright-reports
           publish_branch: main
