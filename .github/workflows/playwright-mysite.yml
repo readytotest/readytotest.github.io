@@ -155,4 +155,4 @@ jobs:
           external_repository: readytotest/playwright-allure-report
           #publish_dir: ./allure-playwright-reports
           publish_branch: main
-#test
+#test2
