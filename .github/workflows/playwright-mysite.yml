@@ -109,6 +109,10 @@ jobs:
           node -v
           ls
 
+        #Install OpenJDK 11 for Allure to work
+      - name: Install OpenJDK 11
+        run: sudo apt-get install -y openjdk-11-jdk
+
       - name: Install Playwright Browsers
         working-directory: ./playwright-tests #This is the sub-directory where the Playwright repo was copied to
         run: npx playwright install --with-deps
@@ -119,7 +123,13 @@ jobs:
         #Tests against http://localhost:3000
         run: npx playwright test --config $PLAYWRIGHT_ACTIONS_CONFIG
 
-      - name: Upload Report to GitHub
+      # Generate Allure Report
+      - name: Generate Allure Report
+        working-directory: ./playwright-tests
+        run: |
+          allure generate ./allure-results --clean -o ./allure-playwright-reports
+
+      - name: Upload Built-In HTML (Not Allure) Report to GitHub
         uses: actions/upload-artifact@v4.6.2
         if: always()
         with:
@@ -127,3 +137,11 @@ jobs:
           path: ./playwright-tests/playwright-report/
           if-no-files-found: warn
           retention-days: 60
+
+        # Deploy Allure Report to GitHub Pages (Main Repo)
+      - name: Deploy Allure Report to GitHub Pages (Main Repo)
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          publish_dir: ./allure-playwright-reports
+          publish_branch: main
+          keep_files: false
