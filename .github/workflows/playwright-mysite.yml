@@ -123,11 +123,10 @@ jobs:
         #Tests against http://localhost:3000
         run: npx playwright test --config $PLAYWRIGHT_ACTIONS_CONFIG
 
-      # Generate Allure Report
       - name: Generate Allure Report
         working-directory: ./playwright-tests
         run: |
-          allure generate ./allure-results --clean -o ./allure-playwright-reports
+          npm run allure
 
       - name: Upload Built-In HTML (Not Allure) Report to GitHub
         uses: actions/upload-artifact@v4.6.2
