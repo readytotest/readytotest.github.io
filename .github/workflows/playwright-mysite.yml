@@ -143,7 +143,7 @@ jobs:
           else
             echo "No previous history found, skipping copy."
           fi
-          continue-on-error: true
+        continue-on-error: true
 
       #This is going to create the Allure report in the playwright-test repo (directory) we checked out earlier
       - name: Generate Allure Report
