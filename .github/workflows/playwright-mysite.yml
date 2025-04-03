@@ -42,7 +42,7 @@ env:
   PLAYWRIGHT_ACTIONS_CONFIG: ${{ vars.PLAYWRIGHT_ACTIONS_CONFIG }}
 on:
   push:
-  #pull_request:
+  pull_request:
   workflow_dispatch:
 
 jobs:
@@ -116,7 +116,7 @@ jobs:
       - name: Install Playwright Browsers
         working-directory: ./playwright-tests #This is the sub-directory where the Playwright repo was copied to
         run: npx playwright install --with-deps
-        #Yeah we need this step! Even though npm ci installs Playwright, it doesn't download browsers in CI/CD
+        #Yeah we need this step!
 
       - name: Run Playwright tests
         working-directory: ./playwright-tests #This is the sub-directory where the Playwright repo was copied to
@@ -124,6 +124,7 @@ jobs:
         run: npx playwright test --config $PLAYWRIGHT_ACTIONS_CONFIG
         continue-on-error: true
 
+      #This is going to create the Allure report in the playwright-test repo (directory) we checked out earlier
       - name: Generate Allure Report
         working-directory: ./playwright-tests
         run: |
