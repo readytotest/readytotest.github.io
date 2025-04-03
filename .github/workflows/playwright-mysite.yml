@@ -17,18 +17,31 @@
 # ╚═════════════════════════════════════════════════════════════╝
 
 # Note:
-# I have GitGuardian configured both through YAML and as a GitHub
+# Tests are triggered on both push and pull_request events,
+# which results in duplicate runs (for PRs).
+#
+# Since I push directly to 'main' for most updates (except Dependabot PRs),
+# this setup works fine for me.
+#
+# I could split the workflow into two to avoid this, but it doesn't really matter
+# for this personal project.
+#
+# Additionally, I have GitGuardian configured both through YAML and as a GitHub
 # App integration. This results in redundant checks, but I wanted to see how both
 # approaches work in practice.
 #
-# In a production env choose either the GitHub App integration or the YAML-based
+# For real company production environments, pushing directly to 'main' is usually
+# disabled, and you’d typically remove the push event from this YAML and only use
+# PRs (or maybe manual events).
+#
+# Also, you'd choose either the GitHub App integration or the YAML-based
 # configuration, not both, to avoid redundant checks.
 
 name: Playwright GitHub Page (manual, pr/push)
 env:
   PLAYWRIGHT_ACTIONS_CONFIG: ${{ vars.PLAYWRIGHT_ACTIONS_CONFIG }}
 on:
-  #push:
+  push:
   pull_request:
   workflow_dispatch:
 
@@ -109,22 +122,32 @@ jobs:
         working-directory: ./playwright-tests #This is the sub-directory where the Playwright repo was copied to
         #Tests against http://localhost:3000
         run: npx playwright test --config $PLAYWRIGHT_ACTIONS_CONFIG
-        continue-on-error: true
+        continue-on-error: true #This allows the workflow to continue even if the tests fail
+        #I don't think I need the if always() on the next steps, but I put it there just in case
+
+      - name: Upload Built-In HTML Report (Not Allure) to GitHub Actions Workflow Run Summary Page
+        uses: actions/upload-artifact@v4.6.2
+        if: always()
+        with:
+          name: Built-in Playwright HTML Report Test Results + Video
+          path: ./playwright-tests/playwright-report/
+          if-no-files-found: warn
+          retention-days: 60
+
+      - name: Upload Allure Report to GitHub Actions Workflow Run Summary Page
+        uses: actions/upload-artifact@v4.6.2
+        if: always()
+        with:
+          name: Allure Playwright Report Test Results + Video
+          path: ./allure-report/ #This is the directory of my main repo where the Allure report is copied to!
+          if-no-files-found: warn
+          retention-days: 60
 
       #This is going to create the Allure report in the playwright-test repo (directory) we checked out earlier
       - name: Generate Allure Report
         working-directory: ./playwright-tests
         run: |
           npm run allure-ci
-
-      - name: Upload Built-In HTML Report (Not Allure) to GitHub Actions Workflow Run Summary Page
-        uses: actions/upload-artifact@v4.6.2
-        if: always()
-        with:
-          name: Test Results + Video
-          path: ./playwright-tests/playwright-report/
-          if-no-files-found: warn
-          retention-days: 60
 
       # Deploy Allure Report to GitHub Pages https://readytotest.github.io/playwright-allure-report/
       - name: Deploy Allure Report to GitHub Pages (in playwright-allure-report repo)
