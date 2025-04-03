@@ -126,7 +126,7 @@ jobs:
       - name: Generate Allure Report
         working-directory: ./playwright-tests
         run: |
-          npm run allure
+          npm run allure-ci
 
       - name: Upload Built-In HTML (Not Allure) Report to GitHub
         uses: actions/upload-artifact@v4.6.2
