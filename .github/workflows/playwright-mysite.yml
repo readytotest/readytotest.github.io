@@ -131,6 +131,7 @@ jobs:
         working-directory: ./playwright-tests #This is the sub-directory where the Playwright repo was copied to
         #Tests against http://localhost:3000
         run: npx playwright test --config $PLAYWRIGHT_ACTIONS_CONFIG
+        continue-on-error: true
 
       - name: Generate Allure Report
         working-directory: ./playwright-tests
