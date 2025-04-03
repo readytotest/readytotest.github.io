@@ -83,7 +83,16 @@ jobs:
           repository: readytotest/test-playwright
           #token: ${{ secrets.GH_PAT }} If checking out a private repo, create a secret called `GH_PAT` that contains your personal access token
           ref: main
-          path: ./playwright-tests #Copy the Playwright repo to this directory within the GitHub page repo
+          path: ./playwright-tests #Copy the Playwright repo to this directory within the main repo
+
+      # Check out third repo where Playwright Allure Reports will be published to for GitHub Pages
+      - name: Checkout Playwright Repo
+        uses: actions/checkout@v4.2.2
+        with:
+          repository: readytotest/playwright-allure-report
+          #token: ${{ secrets.GH_PAT }} If checking out a private repo, create a secret called `GH_PAT` that contains your personal access token
+          ref: main
+          path: ./playwright-allure-report #Copy the Allure reports repo to this directory within the main repo
 
       - name: Install dependencies
         working-directory: ./playwright-tests #This is the sub-directory where the Playwright repo was copied to
@@ -137,10 +146,11 @@ jobs:
           if-no-files-found: warn
           retention-days: 60
 
-        # Deploy Allure Report to GitHub Pages (Main Repo)
+      # Deploy Allure Report to GitHub Pages
       - name: Deploy Allure Report to GitHub Pages (Main Repo)
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
+          external_repository: readytotest/playwright-allure-report
           publish_dir: ./allure-playwright-reports
           publish_branch: main
