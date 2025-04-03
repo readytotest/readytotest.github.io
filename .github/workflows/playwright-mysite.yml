@@ -144,4 +144,3 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./allure-playwright-reports
           publish_branch: main
-          keep_files: false
