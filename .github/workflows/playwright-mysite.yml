@@ -134,24 +134,28 @@ jobs:
           if-no-files-found: warn
           retention-days: 60
 
+      #https://allurereport.org/docs/history-and-retries/#tests-history
+      - name: Copy previous Allure report history (if exists)
+        run: |
+          if [ -d "../allure-report/history" ]; then
+            echo "Copying previous history from allure-report/history"
+            cp -r ../allure-report/history ./playwright-tests/allure-results/history
+          else
+            echo "No previous history found, skipping copy."
+          fi
+          continue-on-error: true
+
       #This is going to create the Allure report in the playwright-test repo (directory) we checked out earlier
       - name: Generate Allure Report
+        if: always()
         working-directory: ./playwright-tests
         run: |
           npm run allure-ci
 
-      - name: Upload Allure Report to GitHub Actions Workflow Run Summary Page
-        uses: actions/upload-artifact@v4.6.2
-        if: always()
-        with:
-          name: Allure Playwright Report Test Results + Video
-          path: ./allure-report/ #This is the directory of my main repo where the Allure report is copied to!
-          if-no-files-found: warn
-          retention-days: 60
-
       # Deploy Allure Report to GitHub Pages https://readytotest.github.io/playwright-allure-report/
       - name: Deploy Allure Report to GitHub Pages (in playwright-allure-report repo)
         uses: peaceiris/actions-gh-pages@v4.0.0
+        if: always()
         with:
           personal_token: ${{ secrets.PERSONAL_TOKEN }}
           external_repository: readytotest/playwright-allure-report
