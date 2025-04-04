@@ -161,49 +161,24 @@
     | 📸 <a href="/html/img/playwright-action.png" target="_blank" rel="noopener noreferrer">look1</a> | 📸
     <a href="/html/img/branch-status-checks.png" target="_blank" rel="noopener noreferrer">look2</a>
     <br />
+    <sup> Playwright tests run against every push or PR to my main repo. </sup>
+    <br />
+    -----
+    <br />
+    Test Reporting
+    <br />
+    <a href="https://readytotest.github.io/playwright-allure-report" target="_blank" rel="noopener noreferrer">
+      Allure test report</a
+    >
+    <br />
     <sup>
-      This GitHub Actions YAML file sets up a workflow to run Playwright
+      After every test run in CI/CD, the Allure report is generated and uploaded
       <br />
-      in a GitHub Runner environment when a pull request or push occurs.
+      to a GitHub Pages website. Allure is also available to be ran locally in
       <br />
-      It checks out three repositories, installs dependencies, starts a local
+      the project as well. I also use the built in Playwright HTML reporter to
       <br />
-      web server, executes the tests, and uploads the results using the
-      <br />
-      built-in Playwright HTML reporter as an artifact on the GitHub Actions
-      <br />
-      Workflow Summary page and deploys an
-      <a
-        href="https://readytotest.github.io/playwright-allure-report"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="blinking-text"
-      >
-        Allure test report</a
-      >
-      to GitHub Pages.
-      <br />
-      -----
-      <br />
-      <span class="yellowFont">Helpful Tip</span> 💡
-      <br />
-      The default time zone for GitHub runners is UTC. To prevent issues such as
-      <br />
-      the date being a day ahead in the runner environment and causing date
-      <br />
-      assertions to fail, set the time zone of the CI/CD runner environment using a
-      <br />
-      <a href="https://github.com/marketplace/actions/set-timezone" target="_blank" rel="noopener noreferrer"
-        >Marketplace action</a
-      >
-      in your
-      <a
-        href="https://github.com/readytotest/readytotest.github.io/blob/4c5dca5c3ccc1d76b438188d22c88bea3a4aa781/.github/workflows/playwright-mysite.yml#L29"
-        target="_blank"
-        rel="noopener noreferrer"
-        >YAML</a
-      >
-      configuration.
+      upload a report as an artifact to each GitHub Actions run summary page.
     </sup>
     <br />
     -----
