@@ -131,11 +131,23 @@
         rel="noopener noreferrer"
         >pre-commit hook</a
       >.
-      <br />
-      I also use separate
-      <a href="/html/img/playwright-config.png" target="_blank" rel="noopener noreferrer">Playwright configs</a> for
-      local and CI/CD environments.
     </sup>
+    <br />
+    -----
+    <br />
+    Allure Playwright Report: 📸
+    <a href="/html/img/Allure-1.png" target="_blank" rel="noopener noreferrer">look1</a> | 📸
+    <a href="/html/img/Allure-2.png" target="_blank" rel="noopener noreferrer">look2</a>
+    <br />
+    <sup
+      >Allure is available locally and every CI/CD run deploys the report
+      <br />
+      to a GitHub pages site. Below is a link to view the report.
+    </sup>
+    <br />
+    <a href="https://readytotest.github.io/playwright-allure-report" target="_blank" rel="noopener noreferrer"
+      >https://readytotest.github.io/playwright-allure-report</a
+    >
     <br />
     -----
     <br />
@@ -170,18 +182,13 @@
       <br />
       in a GitHub Runner environment when a pull request or push occurs.
       <br />
-      It checks out two repositories, installs dependencies, starts a local
+      It checks out three repositories, installs dependencies, starts a local
       <br />
       web server, executes the tests, and uploads the results using the
       <br />
-      built-in Playwright HTML reporter to the workflow run summary.
+      built-in Playwright HTML reporter as an artifact on the GitHub Actions
       <br />
-      Also every CI/CD run deploys the report online using the Allure reporter.
-      <br />
-      Real-time report:
-      <a href="https://readytotest.github.io/playwright-allure-report" target="_blank" rel="noopener noreferrer"
-        >https://readytotest.github.io/playwright-allure-report</a
-      >
+      Workflow Summary page. This is a different report than the Allure report.
       <br />
       -----
       <br />
@@ -365,6 +372,10 @@
     <br />
     -----
     <br />
+    Separate
+    <a href="/html/img/playwright-config.png" target="_blank" rel="noopener noreferrer">Playwright configs</a> for local
+    + CI/CD environments.
+    <br />
     Playwright Config Local:
     <a
       href="https://github.com/readytotest/test-playwright/blob/main/playwright.config.ts"
@@ -380,14 +391,6 @@
       rel="noopener noreferrer"
       >playwright.actions.config.ts</a
     >
-    <br />
-    -----
-    <br />
-    Allure Playwright Report: 📸
-    <a href="/html/img/Allure-1.png" target="_blank" rel="noopener noreferrer">look1</a> | 📸
-    <a href="/html/img/Allure-2.png" target="_blank" rel="noopener noreferrer">look2</a>
-    <br />
-    <sup>Allure is available to run locally and automatically runs in the CI/CD environment. </sup>
     <br />
     ------------------------------------------------------------------------
     <br />
