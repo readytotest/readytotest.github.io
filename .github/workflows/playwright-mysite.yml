@@ -143,6 +143,9 @@ jobs:
           ref: main
           path: ./playwright-allure-report/history # This is the destination path in the current repo in the GitHub Actions runner
 
+      # https://allurereport.org/docs/history-and-retries/#tests-history
+      # https://allurereport.org/docs/integrations-github/#build-test-report
+      # https://github.com/peaceiris/actions-gh-pages
       # Build the new Allure Report
       - name: Build test report
         uses: simple-elf/allure-report-action@v1.7
