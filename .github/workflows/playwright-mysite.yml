@@ -23,18 +23,8 @@
 # Since I push directly to 'main' for most updates (except Dependabot PRs),
 # this setup works fine for me.
 #
-# I could split the workflow into two to avoid this, but it doesn't really matter
-# for this personal project.
-#
 # I have GitGuardian configured both through YAML and as a GitHub App integration.
 # This results in redundant checks, but I wanted to see how both approaches work.
-#
-# For real company production environments, pushing directly to 'main' is usually
-# disabled, and you’d typically remove the push event from this YAML and only use
-# PRs (or maybe manual events).
-#
-# Also, you'd choose either the GitHub App integration or the YAML-based
-# configuration, not both, to avoid redundant checks.
 
 name: Playwright GitHub Page (manual, pr/push)
 env:
