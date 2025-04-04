@@ -134,7 +134,7 @@ jobs:
           if-no-files-found: warn
           retention-days: 60
 
-      - name: Load test report history
+      - name: Load Allure test report history (Checkout Playwright-Allure-Report repo)
         uses: actions/checkout@v4.2.2
         if: always()
         continue-on-error: true
