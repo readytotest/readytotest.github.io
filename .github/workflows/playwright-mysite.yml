@@ -156,4 +156,4 @@ jobs:
           external_repository: readytotest/playwright-allure-report
           publish_branch: main
           publish_dir: ./allure-report #This is the directory of the readytotest.github.io repo where the new Allure report is copied FROM!
-          keep_files: true
+          keep_files: false #Setting to false as the repo size will grow too largeß
