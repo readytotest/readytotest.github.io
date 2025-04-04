@@ -172,7 +172,16 @@
       <br />
       It checks out two repositories, installs dependencies, starts a local
       <br />
-      web server, executes the tests, and uploads the results.
+      web server, executes the tests, and uploads the results using the
+      <br />
+      built-in Playwright HTML reporter to the workflow run summary.
+      <br />
+      Also every CI/CD run deploys the report online using the Allure reporter.
+      <br />
+      Real-time report:
+      <a href="https://readytotest.github.io/playwright-allure-report" target="_blank" rel="noopener noreferrer"
+        >https://readytotest.github.io/playwright-allure-report</a
+      >
       <br />
       -----
       <br />
@@ -378,13 +387,7 @@
     <a href="/html/img/Allure-1.png" target="_blank" rel="noopener noreferrer">look1</a> | 📸
     <a href="/html/img/Allure-2.png" target="_blank" rel="noopener noreferrer">look2</a>
     <br />
-    <sup>
-      Currently I've got Allure running locally, but I plan to also add it to the
-      <br />
-      GitHub Actions workflow. In the CI/CD environment, I've just got the built-in
-      <br />
-      Playwright HTML report.
-    </sup>
+    <sup>Allure is available to run locally and automatically runs in the CI/CD environment. </sup>
     <br />
     ------------------------------------------------------------------------
     <br />
