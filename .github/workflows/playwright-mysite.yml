@@ -152,7 +152,7 @@ jobs:
         with:
           gh_pages: ./playwright-allure-report/history # The path to the previous report history
           allure_results: ./allure-results # Path to the current test results
-          allure_history: ./playwright-allure-report/ # Directory to save the new Allure report
+          allure_history: ./allure-report # Directory to save the new Allure report
 
       #This is going to create the Allure report in the playwright-test repo (directory) we checked out earlier
       #- name: Generate Allure Report
