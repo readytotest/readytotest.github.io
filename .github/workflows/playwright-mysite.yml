@@ -134,23 +134,32 @@ jobs:
           if-no-files-found: warn
           retention-days: 60
 
-      #https://allurereport.org/docs/history-and-retries/#tests-history
-      - name: Copy previous Allure report history (if exists)
-        run: |
-          if [ -d "../allure-report/history" ]; then
-            echo "Copying previous history from allure-report/history"
-            cp -r ../allure-report/history ./playwright-tests/allure-results/history
-          else
-            echo "No previous history found, skipping copy."
-          fi
+      # https://allurereport.org/docs/integrations-github/#load-test-report-history
+      # This is so you can see previous test results in the Allure report
+      - name: Load test report history
+        uses: actions/checkout@v4.2.2
+        if: always()
         continue-on-error: true
+        with:
+          repository: readytotest/playwright-allure-report # The repo where the previous history Allure report is stored
+          ref: main # The branch where the Allure report is stored
+          path: ./history # The directory to store previous report history
+
+      # Build the new Allure Report
+      - name: Build test report
+        uses: simple-elf/allure-report-action@v1.7
+        if: always()
+        with:
+          gh_pages: ./playwright-allure-report/history # The path to the previous report history
+          allure_results: ./allure-results # Path to the current test results
+          allure_history: ./playwright-allure-report/ # Directory to save the new Allure report
 
       #This is going to create the Allure report in the playwright-test repo (directory) we checked out earlier
-      - name: Generate Allure Report
-        if: always()
-        working-directory: ./playwright-tests
-        run: |
-          npm run allure-ci
+      #- name: Generate Allure Report
+      #if: always()
+      #working-directory: ./playwright-tests
+      #run: |
+      #npm run allure-ci
 
       # Deploy Allure Report to GitHub Pages https://readytotest.github.io/playwright-allure-report/
       - name: Deploy Allure Report to GitHub Pages (in playwright-allure-report repo)
