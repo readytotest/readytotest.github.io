@@ -152,7 +152,7 @@ jobs:
           allure_results: ./playwright-tests/allure-results # Path to the current test results in the test-playwright repo (subdir)
           allure_history: ./allure-report # Directory to save the new Allure report in the readytotest.github.io repo
 
-      #This is going to create the Allure report in the playwright-test repo (directory) we checked out earlier
+      #This was before I added the above step
       #- name: Generate Allure Report
       #if: always()
       #working-directory: ./playwright-tests
