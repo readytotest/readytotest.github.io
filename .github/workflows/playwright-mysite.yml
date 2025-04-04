@@ -69,8 +69,9 @@ jobs:
           echo "GitHub workflow run: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
           echo "🧪🧪🧪🧪🧪🧪🧪🧪🧪🧪🧪🧪🧪🧪🧪🧪🧪🧪🧪🧪🧪🧪"
 
-      # We will check out two repos because the website files
+      # First, we will check out two repos because the website files
       # exist in one repo and Playwright exists in a different repo
+      # Further down we will check out a third repo Playwright-Allure-Report
 
       # Check out primary repo where I will start a server locally in the GH Runner environment
       - name: Checkout Website Repo
