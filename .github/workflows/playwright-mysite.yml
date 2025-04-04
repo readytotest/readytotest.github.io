@@ -5,7 +5,9 @@
 # ║  I don't want that in the CI env. And locally...            ║
 # ║  I run one spec at a time and one test at a time so I can   ║
 # ║  watch it playback, whereas in CI/CD the tests run in       ║
-# ║  parallel for faster execution.                             ║
+# ║  parallel for faster execution. Also I'm specifying retry   ║
+# ║  attempts in the CI/CD config with no need to check the env ║
+# ║  variable (process.env.CI) as I separate the two configs.   ║
 # ║                                                             ║
 # ║  If you explore the root of the test-playwright repo, you'll║
 # ║  find two separate configuration files.                     ║
