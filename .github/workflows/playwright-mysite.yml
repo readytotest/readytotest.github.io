@@ -160,7 +160,7 @@ jobs:
         uses: peaceiris/actions-gh-pages@v4.0.0
         if: always()
         with:
-          personal_token: ${{ secrets.PERSONAL_TOKEN }}
+          personal_token: ${{ secrets.PERSONAL_TOKEN_ALLURE }}
           external_repository: readytotest/playwright-allure-report
           publish_branch: main
           publish_dir: ./allure-report #This is the directory of the readytotest.github.io repo where the new Allure report is copied FROM!
