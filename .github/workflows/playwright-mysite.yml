@@ -135,13 +135,13 @@ jobs:
           retention-days: 60
 
       - name: Load test report history
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4.2.2
         if: always()
         continue-on-error: true
         with:
           repository: readytotest/playwright-allure-report # Specify the external repo
           ref: main
-          path: ./playwright-allure-report/history # Save previous test history to the directory where you want previous data
+          path: ./playwright-allure-report/history # This is the destination path in the current repo in the GitHub Actions runner
 
       # Build the new Allure Report
       - name: Build test report
