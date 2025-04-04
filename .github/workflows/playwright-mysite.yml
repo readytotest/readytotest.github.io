@@ -85,15 +85,6 @@ jobs:
           ref: main
           path: ./playwright-tests #Copy the Playwright repo to this directory within the main repo
 
-      # Check out third repo where Allure reports live
-      - name: Checkout Playwright Repo
-        uses: actions/checkout@v4.2.2
-        with:
-          repository: readytotest/playwright-allure-report
-          #token: ${{ secrets.GH_PAT }} If checking out a private repo, create a secret called `GH_PAT` that contains your personal access token
-          ref: main
-          path: ./playwright-allure-report #Copy the Playwright repo to this directory within the main repo
-
       - name: Install dependencies
         working-directory: ./playwright-tests #This is the sub-directory where the Playwright repo was copied to
         run: npm ci
@@ -143,13 +134,22 @@ jobs:
           if-no-files-found: warn
           retention-days: 60
 
+      - name: Load test report history
+        uses: actions/checkout@v2
+        if: always()
+        continue-on-error: true
+        with:
+          repository: readytotest/playwright-allure-report # Specify the external repo
+          ref: main
+          path: ./playwright-allure-report # Save it to the directory where you want previous data
+
       # Build the new Allure Report
       - name: Build test report
         uses: simple-elf/allure-report-action@v1.7
         if: always()
         with:
           gh_pages: ./playwright-allure-report/history # The path to the previous report history in the playwright-allure-report repo(subdir)
-          allure_results: ./playwright-tests/allure-report # Path to the current test results in the test-playwright repo (subdir)
+          allure_results: ./playwright-tests/allure-results # Path to the current test results in the test-playwright repo (subdir)
           allure_history: ./allure-report # Directory to save the new Allure report in the readytotest.github.io repo
 
       #This is going to create the Allure report in the playwright-test repo (directory) we checked out earlier
