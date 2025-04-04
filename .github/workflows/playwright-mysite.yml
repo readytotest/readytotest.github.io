@@ -76,14 +76,14 @@ jobs:
       - name: Checkout Website Repo
         uses: actions/checkout@v4.2.2
 
-      # Check out secondary repo where Playwright scripts live
+      # Check out second repo where Playwright scripts live
       - name: Checkout Playwright Repo
         uses: actions/checkout@v4.2.2
         with:
           repository: readytotest/test-playwright
           #token: ${{ secrets.GH_PAT }} If checking out a private repo, create a secret called `GH_PAT` that contains your personal access token
           ref: main
-          path: ./playwright-tests #Copy the Playwright repo to this directory within the GitHub page repo
+          path: ./playwright-tests #Copy the Playwright repo to this directory within the main repo
 
       - name: Install dependencies
         working-directory: ./playwright-tests #This is the sub-directory where the Playwright repo was copied to
@@ -109,21 +109,56 @@ jobs:
           node -v
           ls
 
+        #Install OpenJDK 11 for Allure to work
+      - name: Install OpenJDK 11
+        run: sudo apt-get install -y openjdk-11-jdk
+
       - name: Install Playwright Browsers
         working-directory: ./playwright-tests #This is the sub-directory where the Playwright repo was copied to
         run: npx playwright install --with-deps
-        #Yeah we need this step! Even though npm ci installs Playwright, it doesn't download browsers in CI/CD
+        #Yeah we need this step!
 
       - name: Run Playwright tests
         working-directory: ./playwright-tests #This is the sub-directory where the Playwright repo was copied to
         #Tests against http://localhost:3000
         run: npx playwright test --config $PLAYWRIGHT_ACTIONS_CONFIG
+        continue-on-error: true #This allows the workflow to continue even if the tests fail
+        #I don't think I need the if always() on the next steps, but I put it there just in case
 
-      - name: Upload Report to GitHub
+      - name: Upload Built-In HTML Report (Not Allure) to GitHub Actions Workflow Run Summary Page
         uses: actions/upload-artifact@v4.6.2
         if: always()
         with:
-          name: Test Results + Video
+          name: Built-in Playwright HTML Report Test Results + Video
           path: ./playwright-tests/playwright-report/
           if-no-files-found: warn
           retention-days: 60
+
+      - name: Load test report history
+        uses: actions/checkout@v4.2.2
+        if: always()
+        continue-on-error: true
+        with:
+          repository: readytotest/playwright-allure-report # Specify the external repo
+          ref: main
+          path: ./playwright-allure-report/history # This is the destination path in the current repo in the GitHub Actions runner
+
+      # Build the new Allure Report
+      - name: Build test report
+        uses: simple-elf/allure-report-action@v1.7
+        if: always()
+        with:
+          gh_pages: ./playwright-allure-report/history # The path to the previous report history in the playwright-allure-report repo(subdir)
+          allure_results: ./playwright-tests/allure-results # Path to the current test results in the test-playwright repo (subdir)
+          allure_history: ./allure-report # Directory to save the new Allure report in the readytotest.github.io repo
+
+      # Deploy Allure Report to GitHub Pages https://readytotest.github.io/playwright-allure-report/
+      - name: Deploy Allure Report to GitHub Pages (in playwright-allure-report repo)
+        uses: peaceiris/actions-gh-pages@v4.0.0
+        if: always()
+        with:
+          personal_token: ${{ secrets.PERSONAL_TOKEN }}
+          external_repository: readytotest/playwright-allure-report
+          publish_branch: main
+          publish_dir: ./allure-report #This is the directory of the readytotest.github.io repo where the new Allure report is copied FROM!
+          keep_files: false
