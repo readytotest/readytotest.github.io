@@ -26,9 +26,8 @@
 # I could split the workflow into two to avoid this, but it doesn't really matter
 # for this personal project.
 #
-# Additionally, I have GitGuardian configured both through YAML and as a GitHub
-# App integration. This results in redundant checks, but I wanted to see how both
-# approaches work in practice.
+# I have GitGuardian configured both through YAML and as a GitHub App integration.
+# This results in redundant checks, but I wanted to see how both approaches work.
 #
 # For real company production environments, pushing directly to 'main' is usually
 # disabled, and you’d typically remove the push event from this YAML and only use
