@@ -19,6 +19,8 @@ const ytPlaylist = [
   "https://www.youtube.com/watch?v=lIWHlIhvt3Y",
   // Pearl Jam “Yellow Ledbetter” Live on the Stern Show
   "https://youtu.be/2cyp1g7idYc?feature=shared",
+  // The Black Crowes - "She Talks to Angels" @ LOCKN' Festival
+  "https://youtu.be/lgYTTM6BfjU?feature=shared",
 ];
 
 document.getElementById("randomVideoLink").onclick = function () {
