@@ -141,7 +141,7 @@ jobs:
         with:
           repository: readytotest/playwright-allure-report # Specify the external repo
           ref: main
-          path: ./playwright-allure-report # Save it to the directory where you want previous data
+          path: ./playwright-allure-report/history # Save previous test history to the directory where you want previous data
 
       # Build the new Allure Report
       - name: Build test report
