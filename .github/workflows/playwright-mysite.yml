@@ -44,7 +44,7 @@ jobs:
       - name: Set Time Zone
         uses: szenius/set-timezone@v2.0
         with:
-          timezoneLinux: "America/Los_Angeles"
+          timezoneLinux: "America/Los_Angeles" # GitHub Actions runner is in UTC time zone by default, which can cause date assertions to fail
 
       - name: Print Date and Time
         run: date
@@ -148,6 +148,9 @@ jobs:
           allure_history: ./allure-report # Directory to save the new Allure report in the readytotest.github.io repo
 
       # Deploy Allure Report to GitHub Pages https://readytotest.github.io/playwright-allure-report/
+      # Don't forget to add the token to your Actions secrets in the repo the YAML is running in
+      # AND ---> if you use Dependabot like I do, you need to add that same token to the Dependabot secrets as well
+      # OR ---> All your Dependabot PRs will fail because it can't access the token!!!!
       - name: Deploy Allure Report to GitHub Pages (in playwright-allure-report repo)
         uses: peaceiris/actions-gh-pages@v4.0.0
         if: always()
