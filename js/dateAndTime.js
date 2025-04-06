@@ -26,7 +26,8 @@ function timeAndDateRealTime() {
   document.getElementById("current-time").textContent = dateTimePacific;
 }
 
-//Call the function directly first so there isn't a slight delay in displaying the text
-
+// Call the function directly first so there isn't a slight delay in displaying the text
+// Don't really need to do it since it updates so fast now, but I think before it was longer
+// I'm just gonna leave it in here so it reminds me what to do if I change it to a longer interval
 timeAndDateRealTime();
 setInterval(timeAndDateRealTime, 75);
