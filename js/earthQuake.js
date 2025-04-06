@@ -1,29 +1,3 @@
-/*
-
-Fetching Earthquake Data: The fetch function makes a request to the USGS Earthquake API for data about earthquakes that happened in the last hour.
-
-Checking if the Request Worked: After the request is made, the .then(response => {...}) block checks if the request was successful. If it wasn’t, an error is thrown, and it shows a message.
-
-Getting the Data: Once the request is successful, we convert the response into a format we can use. This JSON data contains earthquake details like time, magnitude, location, etc.
-
-Converting the Time: The time in the API response is in Unix Time, which is a numeric format not easy to read by humans. The code converts it into a more readable date and time, adjusting it to Pacific Time.
-
-Displaying the Earthquake's Magnitude: The magnitude of the earthquake is pulled from the data and displayed on the webpage. If no magnitude is found, it defaults to 0.
-
-Displaying the Location: The location of the earthquake is shown on the webpage. It’s extracted from the API response and displayed.
-
-Displaying the Coordinates: The code extracts the earthquake's latitude and longitude (east-west position) and shows them on the page.
-
-Displaying the Depth: The depth of the earthquake is also displayed. If no depth is found, it defaults to 0.
-
-Link to the Earthquake on a Map: The API response includes a URL, but it needs to be modified slightly to link directly to a map. This part of the code fixes the URL and creates a clickable link to show the earthquake's location on a map.
-
-Handling Errors: If something goes wrong while trying to get the earthquake data, the .catch(error => {...}) block runs. It will log the error and display an alert to the user telling them there was a problem, so the earthquake data might not show up.
-
-However, the alert will only pop up once per hour, thanks to the use of localStorage. This prevents the alert from showing repeatedly and annoying the user.
-
-*/
-
 fetch("https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_hour.geojson")
   .then((response) => {
     console.log("Earthquake API Status:", response.status);
