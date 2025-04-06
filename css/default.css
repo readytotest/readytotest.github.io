@@ -240,7 +240,7 @@ a:active {
   background-attachment: fixed;
 }
 
-.work-style-page-div {
+.work-style-page-overlay {
   position: relative;
   padding: 20px;
   background-color: rgba(0, 0, 0, 0.5);
