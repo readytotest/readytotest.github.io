@@ -83,73 +83,34 @@ a:active {
   height: 270px;
   margin-top: 10px;
   overflow: hidden;
-  position: relative; /* Added relative positioning */
-  border: 2px solid snow; /* Initial transparent border */
+  position: relative;
+  border: 2px solid snow;
   border-radius: 10px;
 }
 
 #video-embedded:hover {
-  border-color: hotpink; /* Border color changes on hover */
+  border-color: hotpink;
 }
 
 #video-embedded video {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Ensures the video fills the container */
-  display: block; /* Ensures the video behaves as a block-level element */
-  border-radius: inherit; /* Inherits rounded corners from the parent */
-  opacity: 0.5; /* Initially partially transparent */
+  object-fit: cover;
+  display: block;
+  border-radius: inherit;
+  opacity: 0.5;
 }
 
 #video-embedded video:hover {
-  opacity: 1; /* Reduced opacity on hover */
-}
-
-.weather-alert-container {
-  width: 600px;
-  height: 50px;
-  background-color: hotpink;
-  border: 2px solid snow;
-  padding: 0px;
-  margin: 0px;
-  box-sizing: border-box;
-  overflow: hidden;
-  position: relative;
-  display: flex;
-  align-items: center;
-  font-family: "Roboto", sans-serif;
-  -webkit-backface-visibility: hidden;
-  -moz-backface-visibility: hidden;
-  backface-visibility: hidden;
-}
-
-.weather-alert {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  white-space: nowrap;
-  position: absolute;
-  left: 100%;
-  animation: scroll-left 70s linear infinite;
-  color: black;
-  font-weight: bold;
-  -webkit-transform: translateZ(0); /* For WebKit browsers */
-  -moz-transform: translateZ(0); /* For Mozilla browsers */
-  transform: translateZ(0); /* Standard syntax */
-  will-change: transform;
-}
-
-.alert {
-  margin-right: 10px; /* Space between alerts */
-  color: black;
+  opacity: 1;
 }
 
 @keyframes scroll-left {
   0% {
-    transform: translate3d(1%, 0, 0); /* 3D transform for smoother animations */
+    transform: translate3d(1%, 0, 0);
   }
   100% {
-    transform: translate3d(-100%, 0, 0); /* 3D transform for smoother animations */
+    transform: translate3d(-100%, 0, 0);
   }
 }
 
@@ -215,11 +176,11 @@ a:active {
 }
 
 #site-map a {
-  color: #0000ee; /* Classic blue for unvisited links */
-  text-decoration: underline; /* Underline links */
+  color: #0000ee;
+  text-decoration: underline;
 }
 #site-map a:visited {
-  color: #551a8b; /* Classic purple for visited links */
+  color: #551a8b;
 }
 
 @keyframes colorShift {
@@ -282,7 +243,7 @@ a:active {
 .work-style-page-div {
   position: relative;
   padding: 20px;
-  background-color: rgba(0, 0, 0, 0.5); /* 50% opacity black background */
+  background-color: rgba(0, 0, 0, 0.5);
   color: white;
   width: 975px;
   border-radius: 10px;
