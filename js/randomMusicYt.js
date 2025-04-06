@@ -17,6 +17,8 @@ const ytPlaylist = [
   "https://youtu.be/Ase-qZaXou0?feature=shared",
   // Pearl Jam “Yellow Ledbetter” Live on the Stern Show
   "https://youtu.be/2cyp1g7idYc?feature=shared",
+  // Eric Church - Some Of It (Official Lyric Video)
+  "https://youtu.be/pY_9y7QKoVg?si=ruJzvqPdvMUS-YLM",
 ];
 
 document.getElementById("randomVideoLink").onclick = function () {
