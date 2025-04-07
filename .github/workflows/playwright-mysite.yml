@@ -39,7 +39,7 @@ on:
 jobs:
   Playwright-GitHub-Page-Test:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 10 #I'd set a timeout in case something hangs, which I've seen happen, which could waste your github minutes.
     steps:
       - name: Set Time Zone
         uses: szenius/set-timezone@v2.0
