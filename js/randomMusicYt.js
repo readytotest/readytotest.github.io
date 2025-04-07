@@ -17,8 +17,8 @@ const ytPlaylist = [
   "https://youtu.be/OZgrURofhQA?si=q7ekV-4hctNWqfyn",
   // Pearl Jam “Yellow Ledbetter” Live on the Stern Show
   "https://youtu.be/2cyp1g7idYc?si=gCu1VwdWYxasfU_5&t=89",
-  // Eric Church - Some Of It (Official Lyric Video)
-  "https://youtu.be/pY_9y7QKoVg?si=ruJzvqPdvMUS-YLM",
+  // Metallica: Enter Sandman (Vienna, Austria - June 1, 2024)
+  "https://youtu.be/ZcWkXYzNilY?feature=shared",
 ];
 
 document.getElementById("randomVideoLink").onclick = function () {
