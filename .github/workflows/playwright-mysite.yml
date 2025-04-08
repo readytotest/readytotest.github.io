@@ -176,9 +176,9 @@ jobs:
           webhook: ${{ secrets.PLAYWRIGHT_SLACK }}
           webhook-type: incoming-webhook
           payload: |
-            text: "*Playwright Test Summary*\n*Commit by:* ${{ github.actor }}\n*Commit hash:* ${{ github.sha }}\n*Test Status:* ${{ job.status }}\n*Branch:* ${{ github.ref_name }}\n*GitHub Workflow URL:* https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}\n*Allure Report:* https://readytotest.github.io/playwright-allure-report/"
+            text: "*Playwright Test Summary*\n*Commit by:* ${{ github.actor }}\n*Commit hash:* ${{ github.sha }}\n*Test Status:* ${{ job.status }}\n*Branch:* ${{ github.ref_name }}\n*GitHub Workflow URL:*\nhttps://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}\n*Allure Report:*\nhttps://readytotest.github.io/playwright-allure-report/"
             blocks:
               - type: "section"
                 text:
                   type: "mrkdwn"
-                  text: "*Playwright Test Summary*\n*Commit by:* ${{ github.actor }}\n*Commit hash:* ${{ github.sha }}\n*Job Status:* ${{ job.status }}\n*Branch:* ${{ github.ref_name }}\n*GitHub Workflow URL:* https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}\n*Allure Report:* https://readytotest.github.io/playwright-allure-report/"
+                  text: "*Playwright Test Summary*\n*Commit by:* ${{ github.actor }}\n*Commit hash:* ${{ github.sha }}\n*Job Status:* ${{ job.status }}\n*Branch:* ${{ github.ref_name }}\n*GitHub Workflow URL:*\nhttps://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}\n*Allure Report:*\nhttps://readytotest.github.io/playwright-allure-report/"
