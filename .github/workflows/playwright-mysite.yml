@@ -168,3 +168,17 @@ jobs:
           publish_dir: ./allure-report #This is the directory of the readytotest.github.io repo where the new Allure report is copied FROM!
           keep_files: false #Setting to false as the repo size will grow too large.
           #Also be aware if you have keep_files at true, it will erase EVERTYHING IN the repo that is not an allure report file
+
+      - name: Send to Slack channel
+        if: always()
+        uses: slackapi/slack-github-action@v2.0.0
+        with:
+          webhook: ${{ secrets.PLAYWRIGHT_SLACK }}
+          webhook-type: incoming-webhook
+          payload: |
+            text: "*Playwright Test Summary*\n*Commit by:* ${{ github.actor }}\n*Commit hash:* ${{ github.sha }}\n*Test Status:* ${{ job.status }}\n*Branch:* ${{ github.ref_name }}\n*GitHub Workflow URL:* https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}\n*Allure Report:* https://readytotest.github.io/playwright-allure-report/"
+            blocks:
+              - type: "section"
+                text:
+                  type: "mrkdwn"
+                  text: "*Playwright Test Summary*\n*Commit by:* ${{ github.actor }}\n*Commit hash:* ${{ github.sha }}\n*Job Status:* ${{ job.status }}\n*Branch:* ${{ github.ref_name }}\n*GitHub Workflow URL:* https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}\n*Allure Report:* https://readytotest.github.io/playwright-allure-report/"
