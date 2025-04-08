@@ -35,6 +35,8 @@
 # - Once you merge in the first PR, just wait for the second PR to rebase as usual. If it doesn't, click the "Update Branch" button in the PR.
 # - Maybe if I get curious enough, I'll try to look into a solution, but it seems like it would take more time than I'm willing to dig into at the moment LOL.
 
+# GitHub Contexts: https://docs.github.com/en/enterprise-cloud@latest/actions/writing-workflows/choosing-what-your-workflow-does/accessing-contextual-information-about-workflow-runs#github-context
+
 name: Playwright GitHub Page (manual, pr/push)
 env:
   PLAYWRIGHT_ACTIONS_CONFIG: ${{ vars.PLAYWRIGHT_ACTIONS_CONFIG }}
