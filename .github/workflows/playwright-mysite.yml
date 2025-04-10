@@ -69,10 +69,6 @@ jobs:
           echo "GitHub workflow run: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
           echo "🧪🧪🧪🧪🧪🧪🧪🧪🧪🧪🧪🧪🧪🧪🧪🧪🧪🧪🧪🧪🧪🧪"
 
-      # First, we will check out two repos because the website files
-      # exist in one repo and Playwright exists in a different repo
-      # Further down we will check out a third repo Playwright-Allure-Report
-
       # Check out primary repo where I will start a server locally in the GH Runner environment
       - name: Checkout Website Repo
         uses: actions/checkout@v4.2.2
@@ -85,6 +81,15 @@ jobs:
           #token: ${{ secrets.GH_PAT }} If checking out a private repo, create a secret called `GH_PAT` that contains your personal access token
           ref: main
           path: ./test-playwright #Copy the Playwright repo to this directory within the main repo
+
+      # Check out third repo where Allure report history is stored
+      - name: Load Allure test report history (Checkout Playwright-Allure-Report repo)
+        uses: actions/checkout@v4.2.2
+        if: always()
+        with:
+          repository: readytotest/playwright-allure-report
+          ref: main
+          path: ./playwright-allure-report/history # This is the destination path in the GitHub Actions runner
 
       - name: Install dependencies
         working-directory: ./test-playwright #This is the sub-directory where the Playwright repo was copied to
@@ -132,14 +137,6 @@ jobs:
           path: ./test-playwright/playwright-report/
           if-no-files-found: warn
           retention-days: 60
-
-      - name: Load Allure test report history (Checkout Playwright-Allure-Report repo)
-        uses: actions/checkout@v4.2.2
-        if: always()
-        with:
-          repository: readytotest/playwright-allure-report # Specify the external repo
-          ref: main
-          path: ./playwright-allure-report/history # This is the destination path in the current repo in the GitHub Actions runner
 
       # https://allurereport.org/docs/history-and-retries/#tests-history
       # https://allurereport.org/docs/integrations-github/#build-test-report
