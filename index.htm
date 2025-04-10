@@ -586,9 +586,17 @@
     <br />
     <br />
     <!-- Begin <script> tags for Sentry bug report widget and monitoring -->
+    <!-- Note to self: It's been a while, but if I recall correctly, using the loader script 
+     at the same time as the feedback script can cause issues. Adding this note here 
+     so I don't forget. It's easy to overlook, and I think it caused me problems initially 
+     when setting it up, since the CDN for the feedback script already includes the loader script, 
+    https://sentry.io/changelog/2023-12-7-new-and-improved-user-feedback-widget-beta-release/
+    https://docs.sentry.io/platforms/javascript/install/loader/
+    https://docs.sentry.io/platforms/javascript/user-feedback/    
+     -->
     <script
-      src="https://browser.sentry-cdn.com/7.92.0/bundle.tracing.replay.feedback.min.js"
-      integrity="sha384-vNrwKX1mpBPi+hCnoCBgJdsKBwZ25ZKSfqfgBAn9Q75leI/mnQ9SgrCndQ2MKRlu"
+      src="https://browser.sentry-cdn.com/9.12.0/bundle.tracing.replay.feedback.min.js"
+      integrity="sha384-nPdu5BWt5xWb44N3AmZ8TWj+ZNFVQ7rg90RR3wPspTsiFt4e0HxKf97f3IX2Nog4"
       crossorigin="anonymous"
     ></script>
     <script src="/js/sentryFeedbackWidget.js"></script>
