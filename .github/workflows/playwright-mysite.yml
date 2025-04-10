@@ -139,7 +139,6 @@ jobs:
       - name: Load Allure test report history (Checkout Playwright-Allure-Report repo)
         uses: actions/checkout@v4.2.2
         if: always()
-        continue-on-error: true
         with:
           repository: readytotest/playwright-allure-report # Specify the external repo
           ref: main
