@@ -9,6 +9,7 @@ Sentry.init({
       submitButtonLabel: "Send Now!",
       messagePlaceholder: "Type your message here",
       successMessageText: "Message sent successfully!",
+      messageLabel: "Message",
       enableScreenshot: false,
     }),
   ],
