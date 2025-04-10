@@ -339,7 +339,7 @@ a:active {
 
 /* 
   Sentry User Feedback Widget Configuration Guide:
-  https://docs.sentry.io/platforms/javascript/guides/solidstart/user-feedback/configuration/
+  https://docs.sentry.io/platforms/javascript/user-feedback/configuration/
 */
 #sentry-feedback {
   --background: snow;
