@@ -85,7 +85,6 @@ jobs:
       # Check out third repo where Allure report history is stored
       - name: Load Allure test report history (Checkout Playwright-Allure-Report repo)
         uses: actions/checkout@v4.2.2
-        if: always()
         with:
           repository: readytotest/playwright-allure-report
           ref: main
