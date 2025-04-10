@@ -123,8 +123,9 @@ jobs:
         working-directory: ./test-playwright #This is the sub-directory where the Playwright repo was copied to
         #Tests against http://localhost:3000
         run: npx playwright test --config $PLAYWRIGHT_ACTIONS_CONFIG
-        continue-on-error: true #This allows the workflow to continue even if the tests fail
-        #I don't think I need the if always() on the next steps, but I put it there just in case
+        #Remove the continue-on-error: true I was tinking with to see how it works
+        #Just keep the if always below, otherwise the workflow looks like it passed
+        #the Playwright tests (even if it failed)
 
       - name: Upload Built-In HTML Report (Not Allure) to GitHub Actions Workflow Run Summary Page
         uses: actions/upload-artifact@v4.6.2
