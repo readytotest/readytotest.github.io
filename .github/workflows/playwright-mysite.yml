@@ -83,7 +83,7 @@ jobs:
           path: ./test-playwright #Copy the Playwright repo to this directory within the main repo
 
       # Check out third repo where Allure report history is stored
-      - name: Load Allure test report history (Checkout Playwright-Allure-Report repo)
+      - name: Checkout Allure Report Repo
         uses: actions/checkout@v4.2.2
         with:
           repository: readytotest/playwright-allure-report
