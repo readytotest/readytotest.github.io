@@ -81,6 +81,8 @@ jobs:
           #token: ${{ secrets.GH_PAT }} If checking out a private repo, create a secret called `GH_PAT` that contains your personal access token
           ref: main
           path: ./test-playwright #Copy the Playwright repo to this directory within the main repo
+          # Note: Don't worry, it won't copy to your real repo on the GitHub site.. I mean in the
+          # "virtual repo", basically a directory in the GitHub Actions runner environment.
 
       # Check out third repo where Allure report history is stored
       - name: Checkout Allure Report Repo
