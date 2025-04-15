@@ -40,6 +40,10 @@ pre {
   color: orange;
 }
 
+.brownFont {
+  color: brown;
+}
+
 .arrow {
   font-family: Tahoma, sans-serif;
 }
