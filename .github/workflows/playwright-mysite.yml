@@ -178,6 +178,7 @@ jobs:
       # Scale is set to 3 decimal places
       # This is to keep tabs on the Allure repo size
       - name: Check Allure repository size
+        continue-on-error: true # Want the workflow to continue even if this step fails
         run: |
           size=$(curl -s "https://api.github.com/repos/readytotest/playwright-allure-report" | jq -r '.size')
           size_gb=$(echo "scale=3; $size / 1024 / 1024" | bc)
