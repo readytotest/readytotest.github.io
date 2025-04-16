@@ -173,6 +173,10 @@ jobs:
           # the git history to keep that repo size down.... all that repo is for is those reports anyway, so im not
           # concerned about it much.
 
+      # Curl gets the repo info from GitHub, then jq filters out just the size.
+      # It's converted from KB to GB using basic calculator
+      # Scale is set to 3 decimal places
+      # This is to keep tabs on the Allure repo size
       - name: Check Allure repository size
         run: |
           size=$(curl -s "https://api.github.com/repos/readytotest/playwright-allure-report" | jq -r '.size')
