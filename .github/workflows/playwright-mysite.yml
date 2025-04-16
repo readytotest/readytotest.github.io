@@ -163,9 +163,9 @@ jobs:
           external_repository: readytotest/playwright-allure-report
           publish_branch: main
           publish_dir: ./allure-report #This is the directory of the readytotest.github.io repo where the new Allure report is copied FROM!
-          keep_files: false #Setting to false as the repo size will grow too large.
-          #Also be aware if you have keep_files at true, it will erase EVERTYHING IN whatever branch you are using
-          #for GitHub Pages that is not an allure report file
+          keep_files: false # If you have keep_files at true, it will delete everything in the branch you are using for GitHub Pages
+          #Even if the files are deleted, looks like GitHub still tracks them and the repo size will grow too big.
+          #I'll have to look into a way of figuring out how to reduce the repo size or just stop deploying the reports to that repo.
 
       # https://tools.slack.dev/slack-github-action/sending-techniques/sending-data-slack-incoming-webhook/
       - name: Send to Slack channel
