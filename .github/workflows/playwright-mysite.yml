@@ -174,11 +174,9 @@ jobs:
           # concerned about it much.
 
       - name: Check Allure repository size
-        id: repo_size
         run: |
           size=$(curl -s "https://api.github.com/repos/readytotest/playwright-allure-report" | jq -r '.size')
           size_gb=$(echo "scale=3; $size / 1024 / 1024" | bc)
-          echo "repo_size=${size_gb} GB" >> $GITHUB_ENV
           echo "playwright-allure-report repo size: ${size_gb} GB"
 
       # https://tools.slack.dev/slack-github-action/sending-techniques/sending-data-slack-incoming-webhook/
