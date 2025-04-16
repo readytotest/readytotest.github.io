@@ -5,6 +5,7 @@
 body {
   background-color: black;
   background-image: url("/html/img/galaxy-animated.gif");
+  background-attachment: fixed;
   font-family: "Comic Sans MS", "Chalkboard SE-Regular", "Chalkboard", "Comic Neue", Tahoma, sans-serif;
   font-size: 15pt;
   color: snow;
