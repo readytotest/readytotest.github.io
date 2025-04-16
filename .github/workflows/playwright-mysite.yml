@@ -137,7 +137,7 @@ jobs:
           name: Built-in Playwright HTML Report Test Results + Video
           path: ./test-playwright/playwright-report/
           if-no-files-found: warn
-          retention-days: 60
+          retention-days: 7
 
       # https://allurereport.org/docs/history-and-retries/#tests-history
       # https://allurereport.org/docs/integrations-github/#build-test-report
