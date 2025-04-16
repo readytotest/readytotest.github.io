@@ -1,3 +1,5 @@
+//https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch
+
 fetch("https://api.github.com/users/readytotest/repos")
   .then((response) => {
     console.log("Repo API Status:", response.status);

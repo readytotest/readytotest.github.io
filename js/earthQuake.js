@@ -1,3 +1,5 @@
+//https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch
+
 fetch("https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_hour.geojson")
   .then((response) => {
     console.log("Earthquake API Status:", response.status);
