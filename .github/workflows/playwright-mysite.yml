@@ -89,7 +89,7 @@ jobs:
         uses: actions/checkout@v4.2.2
         with:
           repository: readytotest/playwright-allure-report
-          ref: main
+          ref: live-reports
           path: ./playwright-allure-report/history # This is the destination path in the GitHub Actions runner
 
       - name: Install dependencies
@@ -161,7 +161,7 @@ jobs:
         with:
           personal_token: ${{ secrets.PERSONAL_TOKEN_ALLURE }}
           external_repository: readytotest/playwright-allure-report
-          publish_branch: main
+          publish_branch: live-reports # This is the branch in the Allure repo where the new Allure report is copied TO!
           publish_dir: ./allure-report # This is the directory of the readytotest.github.io repo where the new Allure report is copied FROM!
           keep_files: false # If you have keep_files at false, it will delete the files in the branch you are using for GitHub Pages.
           # I set it at false so there wouldn't be a ton of directories cluttering up the repo and it appears to keep history.
