@@ -1,35 +1,35 @@
 name: Orange Smoke (manual)
 on:
- workflow_dispatch:
- 
+  workflow_dispatch:
+
 jobs:
- Orange-Smoke-Test:
-   runs-on: ubuntu-latest
-   timeout-minutes: 10
-   steps:
-        - name: Checkout Repo
-          uses: actions/checkout@v4.2.2
+  Orange-Smoke-Test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v4.2.2
 
-        - name: Setup Node.js environment
-          uses: actions/setup-node@v4.4.0
-          with:
-            node-version: 'latest'    
-        
-        - name: Print system node version and current directory
-          run: |
-            node -v
-            ls
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v4.4.0
+        with:
+          node-version: "latest"
 
-        - name: Test
-          uses: cypress-io/github-action@v6
-          with:
-            command: npm run orange-demo
+      - name: Print system node version and current directory
+        run: |
+          node -v
+          ls
 
-        - name: Upload Report to GitHub
-          uses: actions/upload-artifact@v4.6.2
-          if: always()
-          with:
-              name: Test Results + Video
-              path: ./cypress/reports/
-              if-no-files-found: warn
-              retention-days: 60
+      - name: Test
+        uses: cypress-io/github-action@v6
+        with:
+          command: npm run orange-demo
+
+      - name: Upload Report to GitHub
+        uses: actions/upload-artifact@v4.6.2
+        if: always()
+        with:
+          name: Test Results + Video
+          path: ./cypress/reports/
+          if-no-files-found: warn
+          retention-days: 7

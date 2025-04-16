@@ -1,42 +1,40 @@
 name: Cypress GitHub Page (manual, scheduled)
 on:
- workflow_dispatch:
- schedule:
-   - cron: '00 17 * * *' #Daily 17:00 UTC
-
+  workflow_dispatch:
+  schedule:
+    - cron: "00 17 * * *" #Daily 17:00 UTC
 
 jobs:
- Cypress-GitHub-Page-Test:
-   runs-on: ubuntu-latest
-   timeout-minutes: 10
-   steps:
-       
-        - name: Message
-          run: echo This performs a test of my GitHub page daily at 17:00 UTC
+  Cypress-GitHub-Page-Test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Message
+        run: echo This performs a test of my GitHub page daily at 17:00 UTC
 
-        - name: Checkout Repo
-          uses: actions/checkout@v4.2.2
+      - name: Checkout Repo
+        uses: actions/checkout@v4.2.2
 
-        - name: Setup Node.js environment
-          uses: actions/setup-node@v4.4.0
-          with:
-            node-version: 'latest'     
-        
-        - name: Print system node version and current directory
-          run: |
-            node -v
-            ls
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v4.4.0
+        with:
+          node-version: "latest"
 
-        - name: Test
-          uses: cypress-io/github-action@v6
-          with:
-            command: npm run ready-to-test
+      - name: Print system node version and current directory
+        run: |
+          node -v
+          ls
 
-        - name: Upload Report to GitHub
-          uses: actions/upload-artifact@v4.6.2
-          if: always()
-          with:
-              name: Test Results + Video
-              path: ./cypress/reports/
-              if-no-files-found: warn
-              retention-days: 60
+      - name: Test
+        uses: cypress-io/github-action@v6
+        with:
+          command: npm run ready-to-test
+
+      - name: Upload Report to GitHub
+        uses: actions/upload-artifact@v4.6.2
+        if: always()
+        with:
+          name: Test Results + Video
+          path: ./cypress/reports/
+          if-no-files-found: warn
+          retention-days: 7
