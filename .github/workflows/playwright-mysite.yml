@@ -168,7 +168,10 @@ jobs:
           # Even if you don't keep the files, git still tracks those deleted files and the repo keeps getting bigger.
           # Eventually the Allure repo is going to hit the repo size limit, so glad I created a separate repo for the Allure report.
           # https://docs.github.com/en/repositories/working-with-files/managing-large-files/about-large-files-on-github#repository-size-limits
-          # I'll have to look into a way of figuring out how to reduce the repo size or just stop deploying the reports to that repo.
+          # My current idea is to create an action workflow in that Allure repo, that runs on a cron schedule,
+          # uses the GitHub api to check the repo size and if it's over 1GB then to start rewriting/delete
+          # the git history to keep that repo size down.... all that repo is for is those reports anyway, so im not
+          # concerned about it much.
 
       # https://tools.slack.dev/slack-github-action/sending-techniques/sending-data-slack-incoming-webhook/
       - name: Send to Slack channel
