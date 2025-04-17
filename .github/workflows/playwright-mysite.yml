@@ -179,8 +179,9 @@ jobs:
         continue-on-error: true # Want the workflow to continue and not flag as failed (even if this step fails)
         run: |
           size=$(curl -s "https://api.github.com/repos/readytotest/playwright-allure-report" | jq -r '.size')
+          size_mb=$(echo "scale=2; $size / 1024" | bc)
           size_gb=$(echo "scale=3; $size / 1024 / 1024" | bc)
-          echo "playwright-allure-report repo size: ${size_gb} GB"
+          echo "Repo size after cleanup: ${size_mb} MB (or ${size_gb} GB if you prefer)"
 
       # https://tools.slack.dev/slack-github-action/sending-techniques/sending-data-slack-incoming-webhook/
       - name: Send to Slack channel
