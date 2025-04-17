@@ -164,14 +164,12 @@ jobs:
           publish_branch: live-reports # This is the branch in the Allure repo where the new Allure report is copied TO!
           publish_dir: ./allure-report # This is the directory of the readytotest.github.io repo where the new Allure report is copied FROM!
           keep_files: false # If you have keep_files at false, it will delete the files in the branch you are using for GitHub Pages.
-          # I set it at false so there wouldn't be a ton of directories cluttering up the repo and it appears to keep history.
+          # I set it at false so there wouldn't be a ton of directories cluttering up the repo and it doesn't appear to affect history.
           # Even if you don't keep the files, git still tracks those deleted files and the repo keeps getting bigger.
-          # Eventually the Allure repo is going to hit the repo size limit, so glad I created a separate repo for the Allure report.
+          # Eventually the Allure repo is going to hit the repo size limit.
           # https://docs.github.com/en/repositories/working-with-files/managing-large-files/about-large-files-on-github#repository-size-limits
-          # My current idea is to create an action workflow in that Allure repo, that runs on a cron schedule,
-          # uses the GitHub api to check the repo size and if it's over 1GB then to start rewriting/delete
-          # the git history to keep that repo size down.... all that repo is for is those reports anyway, so im not
-          # concerned about it much.
+          # I ended up creating a workflow to run on that Allure repo which rewrites the git history to remove the webm and png files.
+          # That shrunk the repo size from 1GB to .006GB!
 
       # Curl gets the repo info from GitHub, then jq filters out just the size.
       # It's converted from KB to GB using basic calculator
