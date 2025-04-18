@@ -28,12 +28,19 @@
 # I have GitGuardian configured both through YAML and as a GitHub App integration.
 # This results in redundant checks, but I wanted to see how both approaches work.
 
-# One time it appears a race condition occured when multiple Dependabot PRs were open and tried to push the Allure report to the main branch in the Allure repo.
-# You may see this error:
-# ! [remote rejected] main -> main (cannot lock ref 'refs/heads/main').
-# - This doesn't slow things down because after merging a PR, Dependabot automatically rebases any other open Dependabot PRs and reruns the tests.
-# - Once you merge in the first PR, just wait for the second PR to rebase as usual. If it doesn't, click the "Update Branch" button in the PR.
-# - If it happens again I'll look into it further, but for now it doesn't seem to be a big issue.
+# Race Conditions on Concurrent PRs
+# If multiple pull requests are open and their workflows try to push the Allure report
+# to the live-reports branch, you might hit a race condition.
+# Each workflow checks out the repo at whatever the latest commit was when that job started.
+# If another job finishes and pushes changes before the current job does, then the current job
+# is now pushing based on an outdated state. Git rejects it, and you'll see something like:
+# ! [remote rejected] live-reports -> live-reports (cannot lock ref 'refs/heads/live-reports': is locked
+# In my case it's multiple Dependabot PRs all being opened at the same time that cause this, and it's
+# not a big deal for me. I just merge whichever one passed clean, and the others sort themselves out
+# by automatically rebasing and rerunning. That error just means the branch has moved on since that
+# job started. I'm not looking into a fix because it doesn't disrupt anything for me. Worst case, I
+# hit 'rerun job' and it's fine. If you're using this setup in a busier repo or with a team making
+# a bunch of PRs at once, you're probably gonna have to figure out a solution.
 
 # GitHub Contexts: https://docs.github.com/en/enterprise-cloud@latest/actions/writing-workflows/choosing-what-your-workflow-does/accessing-contextual-information-about-workflow-runs#github-context
 
