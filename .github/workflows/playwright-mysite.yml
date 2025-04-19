@@ -33,7 +33,7 @@
 # the Allure reports live in, you might hit a race condition when one of the workflows
 # tries to push the report back to that repo. `! [remote rejected] live-reports -> live-reports
 # (cannot lock ref 'refs/heads/live-reports': is locked`
-#I n my case it's multiple Dependabot PRs all being opened at the same time that cause this,
+# In my case it's multiple Dependabot PRs all being opened at the same time that cause this,
 # and it's not a big deal for me. I just merge whichever one passed clean, and the others
 # sort themselves out by automatically rebasing and rerunning. I'm not looking into a fix
 # because it doesn't disrupt anything for me.  Worst case, I hit 'rerun job' and it's fine.
