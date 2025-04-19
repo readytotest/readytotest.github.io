@@ -1,6 +1,6 @@
 # 💻 My GitHub Pages Site: QA, Automation & Tinkering
 
-Welcome to the repo for my personal site. This is where I mess around with software QA, test automation, and web stuff. Currently Playwright and CI/CD obsessed.
+Welcome to the repo for my personal site. This is where I mess around with software QA, test automation, and web stuff.
 
 ## 🔍 What this repo's about
 
