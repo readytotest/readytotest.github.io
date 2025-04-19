@@ -56,7 +56,11 @@ If your commit fails, check the logs.
 
 ```
 
----
+## 🛠️ Workspace Files
+
+If you are using VS Code, I recommend you open the repo with **VS Code's workspace files**. The file is located in the root of the repo and has the `.code.workspace` extension. It contains configurations for the **Prettier** extension and **recommended extensions**.
+
+If you want, you can add the paths to both this repo and the test-playwright repo in your workspace, which allows you to work on them simultaneously. However, I personally prefer working with one repo at a time to keep things organized, unless I'm wanting to test Playwright against my site locally.
 
 ## 🚦 Badges
 
