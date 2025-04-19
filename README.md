@@ -26,7 +26,7 @@ If you want to run the tests locally with the dev server:
 1. Run the server with:
    `node server.js`  
    Or with the bash script (not necessary, just for fun):  
-   `chmod +x start-server.sh`
+   `chmod +x start-server.sh` (Only need to do this if permissions aren't set 1st time)  
    `./start-server.sh`
 
 ## 🧼 Pre-commit Hooks
