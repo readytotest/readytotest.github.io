@@ -24,6 +24,8 @@ module.exports = [
         fetch: "readonly",
         require: "readonly",
         Sentry: "readonly",
+        process: "readonly",
+        __dirname: "readonly",
       },
     },
     rules: {
