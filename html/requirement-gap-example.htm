@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <title>Ready to Test (QA)</title>
+
+    <!-- Preconnect to Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Import from Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/fav.ico" />
+
+    <!-- CSS Stylesheets -->
+    <link rel="stylesheet" href="/css/default.css" />
+  </head>
+  <body>
+    <div id="top-requirement-gap"></div>
+    <pre>
+88""Yb 888888    db    8888b.  Yb  dP   888888  dP"Yb    888888 888888 .dP"Y8 888888 
+88__dP 88__     dPYb    8I  Yb  YbdP      88   dP   Yb     88   88__   `Ybo."   88   
+88"Yb  88""    dP__Yb   8I  dY   8P       88   Yb   dP     88   88""   o.`Y8b   88   
+88  Yb 888888 dP""""Yb 8888Y"   dP        88    YbodP      88   888888 8bodP'   88                                                                                                  
+            </pre
+    >
+    <i>Software QA and Support ★ Automation ★ Manual Testing</i>
+    <br />
+    <i
+      >Current Date & Time (Pacific) ★
+      <a
+        href="https://github.com/readytotest/readytotest.github.io/blob/main/js/dateAndTime.js"
+        target="_blank"
+        rel="noopener noreferrer"
+        ><span id="current-time"></span></a
+    ></i>
+    <br />
+    <img src="/html/img/star.svg" height="50px" width="50px" />
+    <img src="/html/img/star.svg" height="50px" width="50px" />
+    <img src="/html/img/star.svg" height="50px" width="50px" />
+    <img src="/html/img/star.svg" height="50px" width="50px" />
+    <img src="/html/img/star.svg" height="50px" width="50px" />
+    <img src="/html/img/star.svg" height="50px" width="50px" />
+    <img src="/html/img/star.svg" height="50px" width="50px" />
+    <img src="/html/img/star.svg" height="50px" width="50px" />
+    <img src="/html/img/star.svg" height="50px" width="50px" />
+    <img src="/html/img/star.svg" height="50px" width="50px" />
+    <img src="/html/img/star.svg" height="50px" width="50px" />
+    <br />
+    ------------------------------------------------------------------------
+    <br />
+    <span class="sections"> Requirement Gap Example</span>
+    <br /><a href="/html/philosophy.htm">philosophy.htm ⮐</a>
+    <br />
+    <br />
+    ⚠️ Fictional Scenario: E-commerce site / Shipping options
+    <br />
+    <br />
+    <span class="yellowFont">What's Built</span>
+    <br />
+    A checkout page where users can select their shipping method:
+    <br />
+    Standard, Express, or Overnight.
+    <br />
+    <br />
+    <span class="yellowFont">What Was Missing</span>
+    <br />
+    The requirement never mentioned that certain items like batteries
+    <br />
+    or hazardous goods cannot legally be shipped via Overnight (Air)
+    <br />
+    due to safety regulations.
+    <br />
+    <br />
+    <span class="yellowFont">What Happens</span>
+    <br />
+    A user adds a lithium battery to their cart, goes to checkout, and
+    <br />
+    selects Overnight shipping and the system allows it, because the devs
+    <br />
+    didn't know there should be a restriction.
+    <br />
+    <br />
+    <span class="yellowFont">Bug Outcome</span>
+    <br />
+    The order gets flagged manually by the warehouse team. Delay in
+    <br />
+    shipping. Confused customer wondering why they paid for overnight
+    <br />
+    but didn't get it.
+    <br />
+    <br />
+    <span class="yellowFont">Why It's a Bug</span>
+    <br />
+    A key rule was missing that some products aren't supposed
+    <br />
+    to allow overnight shipping. Users can do something they shouldn't.
+    <br />
+    That's a bug from a missing requirement.
+    <br />
+    <br />
+    <span class="yellowFont">How It Could've Been Prevented</span>
+    <br />
+    If QA had been involved during the spec review, they might've asked
+    <br />
+    "Any shipping limits based on item type?" and this question could've
+    <br />
+    exposed the gap early. Catching it later in testing means devs have
+    <br />
+    to context switch, go back, rework things, and fix something that
+    <br />
+    could've just been built right the first time.
+    <br />
+    ------------------------------------------------------------------------
+    <br />
+    <a href="#top-requirement-gap">Top <span class="arrow" data-testid="up-arrow-requirement-gap">⇧</span></a>
+    <!-- Keep three line breaks at bottom so it's easier to access the 'Top' link using iphone -->
+    <br />
+    <br />
+    <br />
+    <script
+      src="https://js.sentry-cdn.com/67cde871b86c2bc34ccf16cbbd00f446.min.js"
+      integrity="sha384-Qahst9HuvCM5NFn63+0bd3vv5tZ0ZoxJMxt061RU0dfyOOwHEElLKayYjis4JG/N"
+      crossorigin="anonymous"
+    ></script>
+    <script src="/js/dateAndTime.js"></script>
+  </body>
+</html>
