@@ -13,12 +13,12 @@
 */
 
 const ytPlaylist = [
-  // Social Distortion "Story of My Life" LIVE
-  "https://youtu.be/OZgrURofhQA?si=q7ekV-4hctNWqfyn",
+  // Social Distortion "Story of My Life" & "Bad Luck" & "Ring of Fire" LIVE
+  "https://youtu.be/Ase-qZaXou0?feature=shared",
   // Pearl Jam “Yellow Ledbetter” Live on the Stern Show
   "https://youtu.be/2cyp1g7idYc?si=gCu1VwdWYxasfU_5&t=89",
-  // Metallica: Enter Sandman (Vienna, Austria - June 1, 2024)
-  "https://youtu.be/ZcWkXYzNilY?feature=shared",
+  // Social Distortion "Ball and Chain" & "Reach for the Sky" LIVE
+  "https://youtu.be/S74oFu3SieI?feature=shared",
 ];
 
 document.getElementById("randomVideoLink").onclick = function () {
