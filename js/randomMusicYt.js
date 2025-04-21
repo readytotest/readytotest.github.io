@@ -19,6 +19,8 @@ const ytPlaylist = [
   "https://youtu.be/2cyp1g7idYc?si=gCu1VwdWYxasfU_5&t=89",
   // Social Distortion "Ball and Chain" & "Reach for the Sky" LIVE
   "https://youtu.be/S74oFu3SieI?feature=shared",
+  // Pearl Jam - Even Flow - LIVE (Countdown, 1992)
+  "https://youtu.be/Z_-trti0GfM?feature=shared",
 ];
 
 document.getElementById("randomVideoLink").onclick = function () {
