@@ -15,12 +15,18 @@
 const ytPlaylist = [
   // Social Distortion "Story of My Life" & "Bad Luck" & "Ring of Fire" LIVE
   "https://youtu.be/Ase-qZaXou0?feature=shared",
-  // Pearl Jam “Yellow Ledbetter” Live on the Stern Show
-  "https://youtu.be/2cyp1g7idYc?si=gCu1VwdWYxasfU_5&t=89",
+
   // Social Distortion "Ball and Chain" & "Reach for the Sky" LIVE
   "https://youtu.be/S74oFu3SieI?feature=shared",
+
+  // Pearl Jam “Yellow Ledbetter” Live on the Stern Show
+  "https://youtu.be/2cyp1g7idYc?si=gCu1VwdWYxasfU_5&t=89",
+
   // Pearl Jam - Even Flow - LIVE (Countdown, 1992)
   "https://youtu.be/Z_-trti0GfM?feature=shared",
+
+  // Metallica: Enter Sandman (Vienna, Austria - June 1, 2024)
+  "https://youtu.be/ZcWkXYzNilY?feature=shared",
 ];
 
 document.getElementById("randomVideoLink").onclick = function () {
