@@ -6,6 +6,7 @@ jobs:
   scanning:
     name: GitGuardian scan
     runs-on: ubuntu-latest
+    timeout-minutes: 10 #I'd set a timeout in case something hangs, which I've seen happen. This could waste your GitHub Actions minutes.
     steps:
       - name: Checkout
         uses: actions/checkout@v4.2.2
@@ -16,6 +17,6 @@ jobs:
         env:
           GITHUB_PUSH_BEFORE_SHA: ${{ github.event.before }}
           GITHUB_PUSH_BASE_SHA: ${{ github.event.base }}
-          GITHUB_PULL_BASE_SHA:  ${{ github.event.pull_request.base.sha }}
+          GITHUB_PULL_BASE_SHA: ${{ github.event.pull_request.base.sha }}
           GITHUB_DEFAULT_BRANCH: ${{ github.event.repository.default_branch }}
           GITGUARDIAN_API_KEY: ${{ secrets.GITGUARDIAN_API_KEY }}
