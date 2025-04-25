@@ -6,7 +6,7 @@ https://developer.mozilla.org/en-US/docs/Web/API/Node/textContent
 https://developer.mozilla.org/en-US/docs/Web/API/Element/innerHTML
 
 I made this script to stop me from having to update the year manually every time.
-The copy on my homepage says, "It's Alive and Kicking in 2025," but I'll only need
+The copy on my homepage says, "It's Alive and Kicking in ${currentYear}," but I'll only need
 to update that if I ever stop working on this project. It grabs the current year
 and puts it into this custom HTML element <kicking-year>  on index.htm.
 You can check the page source or inspect the element if you wanna see it in action.
