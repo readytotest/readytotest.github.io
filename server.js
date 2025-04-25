@@ -60,28 +60,3 @@ const server = http.createServer((req, res) => {
 server.listen(port, () => {
   console.log(`Server is running on http://localhost:${port}`);
 });
-
-// Function to determine Content-Type header based on file extension
-// Without this part the animated dog gif doesn't appear and there
-// is just a blank spot there
-// function getContentType(filePath) {
-//   const extname = path.extname(filePath);
-//   switch (extname) {
-// case '.html':
-//   return 'text/html';
-// case '.css':
-//   return 'text/css';
-// case '.js':
-//   return 'application/javascript';
-// case '.png':
-//   return 'image/png';
-// case '.jpg':
-//   return 'image/jpeg';
-//case '.gif':
-//return 'image/gif';
-//case '.mp4':
-//return 'video/mp4';
-//   default:
-//     return 'application/octet-stream';
-// }
-//}
