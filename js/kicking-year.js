@@ -24,6 +24,6 @@ const currentYear = currentDate.getFullYear();
 // Select the <kicking-year> custom element
 const kickingYearElement = document.querySelector("kicking-year");
 
-// Initally had textcontent, but then switched to innerHTML bcause I decided to link to the source file
+// Initally had textContent, but then switched to innerHTML bcause I decided to link to the source file
 // and textcontent doesn't allow for that
 kickingYearElement.innerHTML = `<a href="https://github.com/readytotest/readytotest.github.io/blob/main/js/kicking-year.js" target="_blank" rel="noreferrer noopener">${currentYear}</a>`;
