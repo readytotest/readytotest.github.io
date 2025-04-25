@@ -3,6 +3,7 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/new
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date
 https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector
 https://developer.mozilla.org/en-US/docs/Web/API/Node/textContent
+https://developer.mozilla.org/en-US/docs/Web/API/Element/innerHTML
 
 I made this script to stop me from having to update the year manually every time.
 The copy on my homepage says, "It's Alive and Kicking in 2025," but I'll only need
@@ -23,5 +24,6 @@ const currentYear = currentDate.getFullYear();
 // Select the <kicking-year> custom element
 const kickingYearElement = document.querySelector("kicking-year");
 
-// Set the text content of the <kicking-year> element to the current year
-kickingYearElement.textContent = currentYear;
+// Initally had textcontent, but then switched to innerHTML bcause I decided to link to the source file
+// and textcontent doesn't allow for that
+kickingYearElement.innerHTML = `<a href="https://github.com/readytotest/readytotest.github.io/blob/main/js/kicking-year.js" target="_blank" rel="noreferrer noopener">${currentYear}</a>`;
