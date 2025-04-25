@@ -22,7 +22,7 @@ const server = http.createServer((req, res) => {
   }
 
   // Check if the requested file is an SVG file
-  // Need this or the SVG animated starts up top are broken images (locally)
+  // Need this or the SVG animated stars on the header of the pages are broken images (locally)
   // They will show up without this though in Github Pages
   if (path.extname(filePath) === ".svg") {
     res.setHeader("Content-Type", "image/svg+xml"); // Set Content-Type for SVG files
