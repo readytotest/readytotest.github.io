@@ -187,7 +187,7 @@ jobs:
         if: always()
         uses: slackapi/slack-github-action@v2.0.0
         with:
-          webhook: ${{ secrets.PLAYWRIGHT_SLACK_TEST_FAILURE_FROM_WEBHOOK }}
+          webhook: ${{ secrets.PLAYWRIGHT_SLACK }}
           webhook-type: incoming-webhook
           payload: |
             text: "*Test Summary*\n*Commit by:* ${{ github.actor }}\n*Commit hash:* ${{ github.sha }}\n*Test Status:* ${{ job.status }}\n*Branch:* ${{ github.ref_name }}\n*GitHub Workflow:*\nhttps://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}\n*Allure Report:*\nhttps://readytotest.github.io/playwright-allure-report/"
