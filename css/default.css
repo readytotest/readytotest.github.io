@@ -110,6 +110,22 @@ a:active {
   opacity: 1;
 }
 
+.control-unit {
+  overflow: hidden;
+  position: relative;
+  border: 2px solid snow;
+  border-radius: 10px;
+  display: inline-block;
+  width: 480px;
+  height: 270px;
+}
+
+.control-unit video {
+  border-radius: 10px;
+  width: 480px;
+  height: 270px;
+}
+
 @keyframes scroll-left {
   0% {
     transform: translate3d(1%, 0, 0);
