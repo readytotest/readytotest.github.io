@@ -118,7 +118,7 @@ a:active {
 }
 
 .control-unit video {
-  border-radius: 10px;
+  border-radius: inherit;
   width: 480px;
   height: 270px;
 }
