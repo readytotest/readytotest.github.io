@@ -99,6 +99,9 @@ a:active {
 
 #video-embedded video {
   border-radius: inherit;
+
+  width: inherit;
+  height: inherit;
   opacity: 0.5;
 }
 
