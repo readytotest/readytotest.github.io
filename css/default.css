@@ -98,7 +98,6 @@ a:active {
 }
 
 #video-embedded video {
-  display: block;
   border-radius: inherit;
   opacity: 0.5;
 }
@@ -108,19 +107,16 @@ a:active {
 }
 
 .control-unit {
-  overflow: hidden;
-  position: relative;
   border: 2px solid snow;
   border-radius: 10px;
-  display: inline-block;
   width: 480px;
   height: 270px;
 }
 
 .control-unit video {
   border-radius: inherit;
-  width: 480px;
-  height: 270px;
+  width: inherit;
+  height: inherit;
 }
 
 @keyframes scroll-left {
