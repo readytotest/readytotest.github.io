@@ -11,6 +11,12 @@ body {
   color: snow;
 }
 
+blockquote.markdown-style-quote {
+  border-left: 4px solid snow;
+  padding-left: 1em;
+  margin-left: 0;
+}
+
 .yellowFont {
   color: var(--yellow-color);
 }
