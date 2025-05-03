@@ -11,6 +11,13 @@ body {
   color: snow;
 }
 
+/*
+ I'm using CSS specificity here, restricting this selector to only the blockquote element,
+ just to tinker with it and see how it works, which I understand now...since I tested it.
+ I didn't know about this approach before..
+ Learned something new tonight 5/2/2025.
+ In busy repos, this could help avoid unintended styling on other elements.
+ */
 blockquote.markdown-style-quote {
   border-left: 4px solid snow;
   padding-left: 1em;
