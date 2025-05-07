@@ -1,5 +1,5 @@
 # ╔═════════════════════════════════════════════════════════════╗
-# ║  We have two separate Playwright config files.              ║
+# ║  We have three separate Playwright config files.            ║
 # ║  Why? Running Playwright locally, I want the tests to       ║
 # ║  run in headed mode and slowMo so I can watch them, but     ║
 # ║  I don't want that in the CI env. And locally...            ║
@@ -7,12 +7,14 @@
 # ║  watch it playback, whereas in CI/CD the tests run in       ║
 # ║  parallel for faster execution. Also I'm specifying retry   ║
 # ║  attempts in the CI/CD config with no need to check the env ║
-# ║  variable (process.env.CI) as I separate the two configs.   ║
+# ║  variable (process.env.CI) as I separate configs.           ║
 # ║                                                             ║
 # ║  If you explore the root of the test-playwright repo, you'll║
-# ║  find two separate configuration files.                     ║
+# ║  find three separate configuration files.                   ║
 # ║  playwright.actions.config.ts (for GitHub Actions)          ║
 # ║  playwright.config.ts (for running tests locally)           ║
+# ║  playwright.actions-db.config.ts (for API test only)        ║
+# ║                                                             ║
 # ║  I created a GitHub Actions variable to specify the CI      ║
 # ║  version of the config to run in the GitHub runner          ║
 # ║  environment.                                               ║
