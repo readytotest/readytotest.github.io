@@ -169,6 +169,10 @@ jobs:
       - name: Deploy Allure Report to GitHub Pages (in playwright-allure-report repo)
         uses: peaceiris/actions-gh-pages@v4.0.0
         if: always()
+        continue-on-error: true # Gonna try this as a workaround to the race condition issue.
+        # So what should happen is if it can't push the Allure report the whole run won't fail.
+        # You'll just have to look at the HTML report uploaded as an artifact to the workflow summary page.
+        # See the readme on the playwright-allure-report repo for more details about the race condition.
         with:
           personal_token: ${{ secrets.PERSONAL_TOKEN_ALLURE }}
           external_repository: readytotest/playwright-allure-report
