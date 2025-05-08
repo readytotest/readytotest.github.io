@@ -121,11 +121,10 @@ jobs:
           node -v
           ls
 
-        #Install OpenJDK 11 for Allure to work
-        #- name: Install OpenJDK 11
-        #run: sudo apt-get install -y openjdk-11-jdk
-        #Using the Marketplace action to see if this works, since the apt-get install is giving a 404 today and failing
-
+      # Install OpenJDK 11 for Allure to work
+      # Previously, I was manually installing Java, as I didn't even think about there being a
+      # Marketplace action. Anyways, thr manual install failed today with a 404, so that's what
+      # got me to thinking there must be a Marketplace action.
       - name: Setup Java JDK
         uses: actions/setup-java@v4.7.1
         with:
