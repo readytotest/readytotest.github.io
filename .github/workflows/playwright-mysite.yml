@@ -122,8 +122,15 @@ jobs:
           ls
 
         #Install OpenJDK 11 for Allure to work
-      - name: Install OpenJDK 11
-        run: sudo apt-get install -y openjdk-11-jdk
+        #- name: Install OpenJDK 11
+        #run: sudo apt-get install -y openjdk-11-jdk
+        #Using the Marketplace action to see if this works, since the apt-get install is giving a 404 today and failing
+
+      - name: Setup Java JDK
+        uses: actions/setup-java@v4.7.1
+        with:
+          distribution: "temurin"
+          java-version: "11"
 
       - name: Install Playwright Browsers
         working-directory: ./test-playwright #This is the sub-directory where the Playwright repo was copied to
