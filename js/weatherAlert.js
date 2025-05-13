@@ -1,5 +1,10 @@
 //https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch
 
+/* Yeah, I know it's long and repetitive, but it works. There should probably be a loop
+instead of writing all the .then() blocks over and over for each alert. I think I could just put
+everything inside the loop, but I'd need to look up how to do that, tinker with it, and then
+test it. */
+
 //API status
 fetch("https://api.weather.gov")
   .then((response) => {
