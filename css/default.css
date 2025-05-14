@@ -266,8 +266,8 @@ a:active {
 .design-page {
   background-image: url("../html/img/nevada-no-gas.png");
   background-repeat: no-repeat;
-  background-size: 500px;
-  background-position: center;
+  background-size: 1055px;
+  background-position: left;
   background-attachment: fixed;
 }
 
@@ -283,7 +283,7 @@ a:active {
   padding: 20px;
   background-color: rgba(0, 0, 0, 0.5);
   color: white;
-  width: 975px;
+  width: 1000px;
   border-radius: 10px;
 }
 
