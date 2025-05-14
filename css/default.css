@@ -279,7 +279,7 @@ a:active {
   background-attachment: fixed;
 }
 
-.work-style-page-overlay {
+.transparent-page-overlay {
   padding: 20px;
   background-color: rgba(0, 0, 0, 0.5);
   color: white;
