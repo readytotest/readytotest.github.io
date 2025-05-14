@@ -263,6 +263,14 @@ a:active {
   background-attachment: fixed;
 }
 
+.design-page {
+  background-image: url("../html/img/nevada-no-gas.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: bottom;
+  background-attachment: fixed;
+}
+
 .work-style-page {
   background-image: url("../html/img/arcade.jpg");
   background-repeat: no-repeat;
@@ -272,7 +280,6 @@ a:active {
 }
 
 .work-style-page-overlay {
-  position: relative;
   padding: 20px;
   background-color: rgba(0, 0, 0, 0.5);
   color: white;
