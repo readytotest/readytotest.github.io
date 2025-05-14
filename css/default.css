@@ -266,8 +266,8 @@ a:active {
 .design-page {
   background-image: url("../html/img/nevada-no-gas.png");
   background-repeat: no-repeat;
-  background-size: contain;
-  background-position: bottom;
+  background-size: 500px;
+  background-position: center;
   background-attachment: fixed;
 }
 
