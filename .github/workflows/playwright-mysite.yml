@@ -183,7 +183,7 @@ jobs:
           # Even if you don't keep the files, git still tracks those deleted files and the repo keeps getting bigger.
           # Eventually the Allure repo is going to hit the repo size limit.
           # https://docs.github.com/en/repositories/working-with-files/managing-large-files/about-large-files-on-github#repository-size-limits
-          # I ended up creating a "REPO-CLEAN-O-MATIC" workflow to run on that Allure repo which rewrites the git history on a cron schedule to remove the webm and png files.
+          # I ended up creating a "REPO-CLEAN-O-MATIC" workflow to run on that Allure repo which rewrites the git history on a cron schedule to remove a list of file types.
 
       - name: Check Allure repository size
         if: always()
