@@ -268,8 +268,7 @@ a:active {
   background-repeat: no-repeat;
   background-size: 1055px;
   background-position: left;
-  background-attachment: scroll;
-  padding-bottom: 200px;
+  background-attachment: fixed;
 }
 
 .work-style-page {
