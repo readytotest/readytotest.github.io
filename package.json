@@ -1,6 +1,6 @@
 {
   "devDependencies": {
-    "@eslint/js": "^9.26.0",
+    "@eslint/js": "^9.27.0",
     "@faker-js/faker": "^9.8.0",
     "@html-eslint/eslint-plugin": "^0.40.3",
     "@html-eslint/parser": "^0.40.0",
