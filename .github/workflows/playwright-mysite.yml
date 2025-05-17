@@ -123,7 +123,7 @@ jobs:
 
       # Install OpenJDK 11 for Allure to work
       # Previously, I was manually installing Java, as I didn't even think about there being a
-      # Marketplace action. Anyways, thr manual install failed today with a 404, so that's what
+      # Marketplace action. Anyways, the manual install failed today with a 404, so that's what
       # got me to thinking there must be a Marketplace action.
       - name: Setup Java JDK
         uses: actions/setup-java@v4.7.1
