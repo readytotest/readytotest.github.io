@@ -1,5 +1,10 @@
 //https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch
 
+/* Yeah it’s repetitive, but it works and it was easier to get this working
+ at first. I know a loop would be cleaner but haven't taken the time to
+ figure it out, since this is my personal site, and it’s good enough for that.
+*/
+
 fetch("https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_hour.geojson")
   .then((response) => {
     console.log("Earthquake API Status:", response.status);
