@@ -253,10 +253,24 @@
       - Focus on the critical paths and high-risk areas of the application.
       <br />
       <br />
-      - Be prepared to deal with and troubleshoot flaky tests.
+      - Don't forget to <span class="color-shift-usa">test your tests</span>
+      <br />
+      - You want to avoid flaky ones. You'll have flaky tests no matter what,
+      <br />
+      - like assertions failing due to time zones or environment quirks, so
+      <br />
+      - be ready when devs say, “Hey, your test broke my PR for no reason.”
       <br />
       <br />
-      - Don't forget to <span class="color-shift-usa">test your tests</span>.
+      - And brittle tests? They break with small changes like targeting the
+      <br />
+      - nth element, then a front-end dev adds one above it, and boom, your
+      <br />
+      - test fails. Sometimes you can't avoid those selectors because of how
+      <br />
+      - the code's built, and if you can't add a custom HTML attribute like
+      <br />
+      - datatest-id, you'll just learn to live with it.
       <br />
       <br />
       - Looking ahead is important. If the product roadmap says a part
