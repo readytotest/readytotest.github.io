@@ -37,8 +37,11 @@
 # (cannot lock ref 'refs/heads/live-reports': is locked`
 # In my case it's multiple Dependabot PRs all being opened at the same time that cause this,
 # and it's not a big deal for me. I just merge whichever one passed clean, and the others
-# sort themselves out by automatically rebasing and rerunning. I'm not looking into a fix
-# because it doesn't disrupt anything for me.  Worst case, I hit 'rerun job' and it's fine.
+# sort themselves out by automatically rebasing and rerunning.
+# UPDATE: I've since worked around this issue..
+# by adding "continue-on-error: true" to the step that deploys the Allure report.
+# Now if the report fails to deploy, the workflow doesn't fail.
+# I can still see the HTML report in the workflow summary page anyways.
 
 # GitHub Contexts: https://docs.github.com/en/enterprise-cloud@latest/actions/writing-workflows/choosing-what-your-workflow-does/accessing-contextual-information-about-workflow-runs#github-context
 
@@ -169,10 +172,10 @@ jobs:
       - name: Deploy Allure Report to GitHub Pages (in playwright-allure-report repo)
         uses: peaceiris/actions-gh-pages@v4.0.0
         if: always()
-        continue-on-error: true # Gonna try this as a workaround to the race condition issue.
-        # So what should happen is if it can't push the Allure report the whole run won't fail.
+        continue-on-error: true # This is a workaround to the race condition issue.
+        # If it can't push the Allure report the whole run won't fail.
         # You'll just have to look at the HTML report uploaded as an artifact to the workflow summary page.
-        # See the readme on the playwright-allure-report repo for more details about the race condition.
+        # See the README on the playwright-allure-report repo for more details about the race condition.
         with:
           personal_token: ${{ secrets.PERSONAL_TOKEN_ALLURE }}
           external_repository: readytotest/playwright-allure-report
