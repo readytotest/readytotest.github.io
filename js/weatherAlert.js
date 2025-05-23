@@ -5,29 +5,18 @@ instead of writing all the .then() blocks over and over for each alert. I think 
 everything inside the loop, but I'd need to look up how to do that, tinker with it, and then
 test it. */
 
-// API status
-// This used to fetch the main api.weather.gov endpoint, but they changed it to serve a website,
-// so I switched to fetching a specific API endpoint instead.
-fetch("https://api.weather.gov/alerts/active?area=NV")
-  .then((response) => {
-    // Success = “OK”, bad response = error with code, no reply = network error.
-    // https://developer.mozilla.org/en-US/docs/Web/API/Response/ok
-    // Response: ok property of the response object. This is what fetch() returns a promise for.
-    // ok status means in the range 200-299
-    document.querySelector("weather-api-status").textContent = response.ok ? "OK" : `Error ${response.status}`;
-  })
-  .catch(() => {
-    document.querySelector("weather-api-status").textContent = "Network Error";
-  });
-
 //Weather alert
 
 fetch("https://api.weather.gov/alerts/active?area=NV")
   .then((response) => {
+    /* API status
+    Success = “OK”, bad response = error with code, no reply = network error.
+    https://developer.mozilla.org/en-US/docs/Web/API/Response/ok
+    Response: ok property of the response object. This is what fetch() returns a promise for.
+    ok status means in the range 200-299 */
     console.log("Weather API Status:", response.status);
-    if (!response.ok) {
-      throw new Error(`Weather Alerts HTTP error! Status: ${response.status}`);
-    }
+    document.querySelector("weather-api-status").textContent = response.ok ? "OK" : `Error ${response.status}`;
+    if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
     return response.json();
   })
 
@@ -436,6 +425,7 @@ fetch("https://api.weather.gov/alerts/active?area=NV")
   })
 
   .catch((error) => {
+    document.querySelector("weather-api-status").textContent = "Network Error";
     console.error("Error fetching weather data:", error.message);
     alert("There was an error fetching weather data. Please try again later.");
   });
