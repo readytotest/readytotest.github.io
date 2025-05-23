@@ -12,8 +12,12 @@ fetch("https://api.weather.gov/alerts/active?area=NV")
     /* API status
     Success = “OK”, bad response = error with code, no reply = network error.
     https://developer.mozilla.org/en-US/docs/Web/API/Response/ok
-    Response: ok property of the response object. This is what fetch() returns a promise for.
-    ok status means in the range 200-299 */
+    Note to self to remember how this works and help others undestand.
+    ok status means in the range 200-299 
+    response.ok is a boolean property of the response object from the Fetch API call, so it's
+    just going to either be true or false, so that's why I have the ternary operator there
+    to display OK on my site or if it's false then it will display an error with the status code.
+    */
     console.log("Weather API Status:", response.status);
     document.querySelector("weather-api-status").textContent = response.ok ? "OK" : `Error ${response.status}`;
     if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
