@@ -6,20 +6,13 @@ everything inside the loop, but I'd need to look up how to do that, tinker with 
 test it. */
 
 //API status
-fetch("https://api.weather.gov")
+fetch("https://api.weather.gov/alerts/active?area=NV")
   .then((response) => {
-    if (!response.ok) {
-      throw new Error(`HTTP error! Status: ${response.status}`);
-    }
-    return response.json();
+    // Success = “OK”, bad response = error with code, no reply = network error.
+    document.querySelector("weather-api-status").textContent = response.ok ? "OK" : `Error ${response.status}`;
   })
-  .then((response) => {
-    document.querySelector("weather-api-status").textContent = response.status;
-  })
-
-  .catch((error) => {
-    console.error("Error fetching API status:", error.message);
-    alert("There was an error fetching API status. Please try again later.");
+  .catch(() => {
+    document.querySelector("weather-api-status").textContent = "Network Error";
   });
 
 //Weather alert
