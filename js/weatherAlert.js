@@ -5,7 +5,9 @@ instead of writing all the .then() blocks over and over for each alert. I think 
 everything inside the loop, but I'd need to look up how to do that, tinker with it, and then
 test it. */
 
-//API status
+// API status
+// This used to fetch the main api.weather.gov endpoint, but they changed it to serve a website,
+// so I switched to fetching a specific API endpoint instead.
 fetch("https://api.weather.gov/alerts/active?area=NV")
   .then((response) => {
     // Success = “OK”, bad response = error with code, no reply = network error.
