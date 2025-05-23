@@ -19,6 +19,12 @@ const ytPlaylist = [
   // Social Distortion "Ball and Chain" & "Reach for the Sky" LIVE
   "https://youtu.be/S74oFu3SieI?feature=shared",
 
+  // AC⚡DC - For Those About to Rock (We Salute You)
+  "https://youtu.be/nBM1-DwjA8I?feature=shared",
+
+  // AC⚡DC - Who Made Who (12" Extended Mix)
+  "https://youtu.be/m7PELm_JgVk?feature=shared",
+
   // Pearl Jam “Yellow Ledbetter” Live on the Stern Show
   "https://youtu.be/2cyp1g7idYc?si=gCu1VwdWYxasfU_5&t=89",
 
@@ -27,6 +33,9 @@ const ytPlaylist = [
 
   // Metallica: Enter Sandman (Vienna, Austria - June 1, 2024)
   "https://youtu.be/ZcWkXYzNilY?feature=shared",
+
+  // Metallica: Whiskey in the Jar (Castle Donington, England - June 10, 2023)
+  "https://youtu.be/YfouL5PyORU?feature=shared",
 ];
 
 document.getElementById("randomVideoLink").onclick = function () {
