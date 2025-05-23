@@ -9,6 +9,9 @@ test it. */
 fetch("https://api.weather.gov/alerts/active?area=NV")
   .then((response) => {
     // Success = “OK”, bad response = error with code, no reply = network error.
+    // https://developer.mozilla.org/en-US/docs/Web/API/Response/ok
+    // Response: ok property of the response object. This is what fetch() returns a promise for.
+    // ok status means in the range 200-299
     document.querySelector("weather-api-status").textContent = response.ok ? "OK" : `Error ${response.status}`;
   })
   .catch(() => {
