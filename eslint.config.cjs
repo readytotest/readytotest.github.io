@@ -12,7 +12,6 @@ module.exports = [
   {
     plugins: {
       prettier: prettierPlugin,
-      "@html-eslint": htmlEslintPlugin,
     },
     languageOptions: {
       globals: {
@@ -43,6 +42,9 @@ module.exports = [
 
   {
     files: ["**/*.html", "**/*.htm"],
+    plugins: {
+      "@html-eslint": htmlEslintPlugin,
+    },
     languageOptions: {
       parser: htmlEslintParser,
     },
