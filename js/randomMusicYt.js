@@ -12,36 +12,20 @@
 ===========================================================
 */
 
+// Going to keep this all concert music videos
+
 const ytPlaylist = [
   // Social Distortion "Story of My Life" & "Bad Luck" & "Ring of Fire" LIVE
   "https://youtu.be/Ase-qZaXou0?feature=shared",
 
-  // Social Distortion "Ball and Chain" & "Reach for the Sky" LIVE
-  "https://youtu.be/S74oFu3SieI?feature=shared",
-
-  // EXCLUSIVE Social Distortion "Prison Bound" Guitar Center Sessions on DIRECTV
-  "https://youtu.be/lIWHlIhvt3Y?feature=shared",
-
-  // AC⚡DC - For Those About to Rock (We Salute You)
-  "https://youtu.be/nBM1-DwjA8I?feature=shared",
-
-  // AC⚡DC - Who Made Who (12" Extended Mix)
-  "https://youtu.be/m7PELm_JgVk?feature=shared",
-
-  // Zac Brown Band & Jimmy Buffett Perform 'Chicken Fried' 🍗 #TBT | CMT Crossroads
-  "https://youtu.be/K2MR5h4eWuE?feature=shared",
+  // AC⚡DC - Thunderstruck (Live at Donington, August 17, 1991 - Official HD Video)
+  "https://youtu.be/Af0P6XEkI7Y?feature=shared",
 
   // Alan Jackson Performs "Drive"
   "https://youtu.be/rj9Bh-ibp6U?feature=shared",
 
-  // Eric Church - Mr. Misunderstood (Official Music Video)
-  "https://youtu.be/rOuF3k_-asA?feature=shared",
-
-  // Eric Church - Some Of It (Official Lyric Video)
-  "https://youtu.be/pY_9y7QKoVg?feature=shared",
-
-  // Florida Georgia Line - Cruise
-  "https://youtu.be/8PvebsWcpto?feature=shared",
+  // The Black Crowes - 'She Talks to Angels' @ LOCKN' Festival
+  "https://youtu.be/lgYTTM6BfjU?feature=shared",
 
   // Pearl Jam “Yellow Ledbetter” Live on the Stern Show
   "https://youtu.be/2cyp1g7idYc?si=gCu1VwdWYxasfU_5&t=89",
