@@ -12,7 +12,7 @@ fetch("https://api.weather.gov/alerts/active?area=NV")
     /* API status
     Success = “OK”, bad response = error with code, no reply = network error.
     https://developer.mozilla.org/en-US/docs/Web/API/Response/ok
-    Note to self to remember how this works and help others undestand.
+    Note to self to remember how this works and help others understand.
     ok status means in the range 200-299 
     response.ok is a boolean property of the response object from the Fetch API call, so it's
     just going to either be true or false, so that's why I have the ternary operator there
