@@ -1,23 +1,17 @@
 # ╔═════════════════════════════════════════════════════════════╗
-# ║  We have three separate Playwright config files.            ║
-# ║  Why? Running Playwright locally, I want the tests to       ║
-# ║  run in headed mode and slowMo so I can watch them, but     ║
-# ║  I don't want that in the CI env. And locally...            ║
-# ║  I run one spec at a time and one test at a time so I can   ║
-# ║  watch it playback, whereas in CI/CD the tests run in       ║
-# ║  parallel for faster execution. Also I'm specifying retry   ║
-# ║  attempts in the CI/CD config with no need to check the env ║
-# ║  variable (process.env.CI) as I separate configs.           ║
+# ║  We use three Playwright configs to keep local and CI       ║
+# ║  environments separate. Locally, tests run headed and slow, ║
+# ║  one at a time for easy watching. CI runs tests in parallel ║
+# ║  with retries set and no need to check process.env.CI.      ║
 # ║                                                             ║
-# ║  If you explore the root of the test-playwright repo, you'll║
-# ║  find three separate configuration files.                   ║
-# ║  playwright.actions.config.ts (for GitHub Actions)          ║
-# ║  playwright.config.ts (for running tests locally)           ║
-# ║  playwright.actions-db.config.ts (for API test only)        ║
+# ║  This avoids mistakes from env mix-ups and simplifies setup.║
 # ║                                                             ║
-# ║  I created a GitHub Actions variable to specify the CI      ║
-# ║  version of the config to run in the GitHub runner          ║
-# ║  environment.                                               ║
+# ║  The configs are:                                           ║
+# ║  - playwright.config.ts (local)                             ║
+# ║  - playwright.actions.config.ts (GitHub Actions)            ║
+# ║  - playwright.actions-db.config.ts (API tests)              ║
+# ║                                                             ║
+# ║  A GitHub Actions variable selects which CI config to use.  ║
 # ╚═════════════════════════════════════════════════════════════╝
 
 # Note:
