@@ -267,6 +267,7 @@ a:active {
   background-image: url("../html/img/nevada-no-gas.png");
   background-repeat: no-repeat;
   background-size: 1055px;
+  height: 150vh;
   background-position: left;
   background-attachment: scroll;
   padding-bottom: 200px;
