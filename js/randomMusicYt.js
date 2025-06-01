@@ -38,6 +38,9 @@ const ytPlaylist = [
 
   // Metallica: Whiskey in the Jar (Castle Donington, England - June 10, 2023)
   "https://youtu.be/YfouL5PyORU?feature=shared",
+
+  // Rancid - Roots Radicals Live {Summer Sonic 2001ᴴᴰ}
+  "https://youtu.be/hSx6MsH_vfU?si=SptZZqUSLT4akfbR",
 ];
 
 document.getElementById("randomVideoLink").onclick = function () {
