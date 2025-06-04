@@ -18,6 +18,9 @@ const ytPlaylist = [
   // AC⚡DC - Thunderstruck (Live at Donington, August 17, 1991 - Official HD Video)
   "https://youtu.be/Af0P6XEkI7Y?feature=shared",
 
+  //Alice In Chains - Man In The Box (Live at Moore Theatre) (1990)
+  "https://youtu.be/naoSdrzqh-M?feature=shared",
+
   // Alan Jackson Performs "Drive"
   "https://youtu.be/rj9Bh-ibp6U?feature=shared",
 
