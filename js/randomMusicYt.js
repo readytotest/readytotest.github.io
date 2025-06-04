@@ -27,6 +27,9 @@ const ytPlaylist = [
   // Florida Georgia Line & Nelly Perform "Cruise" | CMT Crossroads
   "https://youtu.be/Wz0oHEC1WgY?feature=shared",
 
+  // Janis Joplin - Piece Of My Heart (1969) Frankfurt, Germany
+  "https://youtu.be/I2x1yo8Ztdw?feature=shared",
+
   // Johnny Cash - San Quentin (Live at San Quentin, 1969)
   "https://youtu.be/7e2B-thaJG0?feature=shared",
 
