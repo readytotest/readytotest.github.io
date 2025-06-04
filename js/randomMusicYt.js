@@ -30,6 +30,9 @@ const ytPlaylist = [
   // The Black Crowes - 'She Talks to Angels' @ LOCKN' Festival
   "https://youtu.be/lgYTTM6BfjU?feature=shared",
 
+  // Florida Georgia Line & Nelly Perform "Cruise" | CMT Crossroads
+  "https://youtu.be/Wz0oHEC1WgY?feature=shared",
+
   // Pearl Jam “Yellow Ledbetter” Live on the Stern Show
   "https://youtu.be/2cyp1g7idYc?si=gCu1VwdWYxasfU_5&t=89",
 
