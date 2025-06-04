@@ -30,6 +30,9 @@ const ytPlaylist = [
   // The Black Crowes - 'She Talks to Angels' @ LOCKN' Festival
   "https://youtu.be/lgYTTM6BfjU?feature=shared",
 
+  // Darius Rucker "Wagon Wheel" Story + Performance | CMT Storytellers
+  "https://youtu.be/ceAJ4_3my20?feature=shared&t=120",
+
   // Florida Georgia Line & Nelly Perform "Cruise" | CMT Crossroads
   "https://youtu.be/Wz0oHEC1WgY?feature=shared",
 
