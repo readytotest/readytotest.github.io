@@ -18,6 +18,9 @@ const ytPlaylist = [
   // Social Distortion "Story of My Life" & "Bad Luck" & "Ring of Fire" LIVE
   "https://youtu.be/Ase-qZaXou0?feature=shared",
 
+  // Johnny Cash - San Quentin (Live at San Quentin, 1969)
+  "https://youtu.be/7e2B-thaJG0?feature=shared",
+
   // AC⚡DC - Thunderstruck (Live at Donington, August 17, 1991 - Official HD Video)
   "https://youtu.be/Af0P6XEkI7Y?feature=shared",
 
