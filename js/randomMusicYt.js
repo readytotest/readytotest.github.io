@@ -15,20 +15,11 @@
 // Going to keep this all concert music videos
 
 const ytPlaylist = [
-  // Social Distortion "Story of My Life" & "Bad Luck" & "Ring of Fire" LIVE
-  "https://youtu.be/Ase-qZaXou0?feature=shared",
-
-  // Johnny Cash - San Quentin (Live at San Quentin, 1969)
-  "https://youtu.be/7e2B-thaJG0?feature=shared",
-
   // AC⚡DC - Thunderstruck (Live at Donington, August 17, 1991 - Official HD Video)
   "https://youtu.be/Af0P6XEkI7Y?feature=shared",
 
   // Alan Jackson Performs "Drive"
   "https://youtu.be/rj9Bh-ibp6U?feature=shared",
-
-  // The Black Crowes - 'She Talks to Angels' @ LOCKN' Festival
-  "https://youtu.be/lgYTTM6BfjU?feature=shared",
 
   // Darius Rucker "Wagon Wheel" Story + Performance | CMT Storytellers
   "https://youtu.be/ceAJ4_3my20?feature=shared&t=120",
@@ -36,11 +27,8 @@ const ytPlaylist = [
   // Florida Georgia Line & Nelly Perform "Cruise" | CMT Crossroads
   "https://youtu.be/Wz0oHEC1WgY?feature=shared",
 
-  // Pearl Jam “Yellow Ledbetter” Live on the Stern Show
-  "https://youtu.be/2cyp1g7idYc?si=gCu1VwdWYxasfU_5&t=89",
-
-  // Pearl Jam - Even Flow - LIVE (Countdown, 1992)
-  "https://youtu.be/Z_-trti0GfM?feature=shared",
+  // Johnny Cash - San Quentin (Live at San Quentin, 1969)
+  "https://youtu.be/7e2B-thaJG0?feature=shared",
 
   // Metallica: Enter Sandman (Vienna, Austria - June 1, 2024)
   "https://youtu.be/ZcWkXYzNilY?feature=shared",
@@ -48,8 +36,20 @@ const ytPlaylist = [
   // Metallica: Whiskey in the Jar (Castle Donington, England - June 10, 2023)
   "https://youtu.be/YfouL5PyORU?feature=shared",
 
+  // Pearl Jam - Even Flow - LIVE (Countdown, 1992)
+  "https://youtu.be/Z_-trti0GfM?feature=shared",
+
+  // Pearl Jam “Yellow Ledbetter” Live on the Stern Show
+  "https://youtu.be/2cyp1g7idYc?si=gCu1VwdWYxasfU_5&t=89",
+
   // Rancid - Roots Radicals Live {Summer Sonic 2001ᴴᴰ}
   "https://youtu.be/hSx6MsH_vfU?si=SptZZqUSLT4akfbR",
+
+  // Social Distortion "Story of My Life" & "Bad Luck" & "Ring of Fire" LIVE
+  "https://youtu.be/Ase-qZaXou0?feature=shared",
+
+  // The Black Crowes - 'She Talks to Angels' @ LOCKN' Festival
+  "https://youtu.be/lgYTTM6BfjU?feature=shared",
 ];
 
 document.getElementById("randomVideoLink").onclick = function () {
