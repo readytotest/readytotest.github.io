@@ -45,6 +45,9 @@ const ytPlaylist = [
   // Metallica: Whiskey in the Jar (Castle Donington, England - June 10, 2023)
   "https://youtu.be/YfouL5PyORU?feature=shared",
 
+  // Old Crow Medicine Show - Wagon Wheel
+  "https://youtu.be/-skF6KZw54I?feature=shared",
+
   // Pearl Jam - Even Flow - LIVE (Countdown, 1992)
   "https://youtu.be/Z_-trti0GfM?feature=shared",
 
