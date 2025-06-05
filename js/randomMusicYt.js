@@ -57,6 +57,9 @@ const ytPlaylist = [
   // Social Distortion "Story of My Life" & "Bad Luck" & "Ring of Fire" LIVE
   "https://youtu.be/Ase-qZaXou0?feature=shared",
 
+  // Social Distortion "Ball and Chain" & "Reach for the Sky" LIVE
+  "https://youtu.be/S74oFu3SieI?feature=shared",
+
   // The Black Crowes - 'She Talks to Angels' @ LOCKN' Festival
   "https://youtu.be/lgYTTM6BfjU?feature=shared",
 ];
