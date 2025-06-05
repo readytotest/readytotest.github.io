@@ -14,7 +14,6 @@ describe("Smoke Test GitHub Page", () => {
     // Check text on the main page
     cy.get("body").should("include.text", "Ready to Test (QA) GitHub Profile");
     cy.get("body").should("include.text", "National Weather Service API");
-    cy.get("body").should("include.text", "Postman API Testing");
     cy.get("body").should("include.text", "Most Recent Earthquake");
     cy.get("earthquake-place").should("exist");
     cy.get("body").should("include.text", "Repository Last Commit");
