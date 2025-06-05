@@ -33,6 +33,9 @@ const ytPlaylist = [
   // Janis Joplin - Piece Of My Heart (1969) Frankfurt, Germany
   "https://youtu.be/I2x1yo8Ztdw?feature=shared",
 
+  // Jake Owen performs "Down to the HonkyTonk" at the 2022 A Capitol Fourth
+  "https://youtu.be/6UBpAj06SDs?feature=shared",
+
   // Johnny Cash - San Quentin (Live at San Quentin, 1969)
   "https://youtu.be/7e2B-thaJG0?feature=shared",
 
