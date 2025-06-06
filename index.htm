@@ -171,28 +171,21 @@
     <a href="/html/img/branch-status-checks.png" target="_blank" rel="noopener noreferrer">look2</a>
     <br />
     <sup>
-      This GitHub Actions workflow runs on every pull request or update to my
+      Runs on every PR or update. Checks out 3 repos: website, Playwright tests,
       <br />
-      website. It checks out three repos: the main website repo, the Playwright
+      Allure reports. Installs dev deps, spins up Node server, runs tests in CI env.
       <br />
-      test repo, and the Allure report repo. It installs dependencies, spins up a
-      <br />
-      Node server, and runs the Playwright tests against a local environment in the
-      <br />
-      runner with the changes from the push or PR.
       <span style="display: block; margin-top: 0.75em"></span>
-      After the tests complete, the results are uploaded as an artifact to the GitHub
+      Uploads HTML test results to the workflow summary, deploys a separate
       <br />
-      Workflow run summary using the built-in HTML reporter. An Allure report is also
-      <br />
-      generated, pushed to the dedicated Allure repo, and deployed to a GitHub Pages
-      <br />
-      site, which you can access here <span class="blinking-text">-></span>
-      <a href="https://readytotest.github.io/playwright-allure-report" target="_blank" rel="noopener noreferrer">
-        Playwright Allure Report</a
-      >. Finally, a message is
-      <br />
-      sent to the # playwright-results channel in my personal Slack workspace. 📸
+      <a
+        class="blinking-text"
+        href="https://readytotest.github.io/playwright-allure-report"
+        target="_blank"
+        rel="noopener noreferrer"
+        >Allure report</a
+      >
+      to GitHub Pages, then sends a Slack message. 📸
       <a href="/html/img/playwright-slack.png" target="_blank" rel="noopener noreferrer">look</a>
     </sup>
     <br />
