@@ -36,8 +36,8 @@ const ytPlaylist = [
   // Jake Owen performs "Down to the HonkyTonk" at the 2022 A Capitol Fourth
   "https://youtu.be/6UBpAj06SDs?feature=shared",
 
-  // Johnny Cash - San Quentin (Live at San Quentin, 1969)
-  "https://youtu.be/7e2B-thaJG0?feature=shared",
+  // Johnny Cash & The Tennessee Three • “Folsom Prison Blues” • 1968
+  "https://youtu.be/2rmzXH45f-k?feature=shared&t=36",
 
   // Metallica: Enter Sandman (Vienna, Austria - June 1, 2024)
   "https://youtu.be/ZcWkXYzNilY?feature=shared",
