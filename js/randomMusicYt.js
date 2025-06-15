@@ -51,6 +51,9 @@ const ytPlaylist = [
   // Pearl Jam - Even Flow - LIVE (Countdown, 1992)
   "https://youtu.be/Z_-trti0GfM?feature=shared",
 
+  // Pearl Jam - Alive (Live on Countdown, 1992)
+  "https://youtu.be/WdCO8nGg7U0?si=ib9qjtHTH1zwJJOC",
+
   // Pearl Jam “Yellow Ledbetter” Live on the Stern Show
   "https://youtu.be/2cyp1g7idYc?si=gCu1VwdWYxasfU_5&t=89",
 
