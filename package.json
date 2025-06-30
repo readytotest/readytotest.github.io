@@ -10,7 +10,7 @@
     "cypress-mochawesome-reporter": "^3.8.2",
     "cypress-on-fix": "^1.1.0",
     "cypress-real-events": "^1.14.0",
-    "eslint": "^9.29.0",
+    "eslint": "^9.30.0",
     "eslint-config-prettier": "^10.1.5",
     "eslint-plugin-cypress": "^5.1.0",
     "eslint-plugin-prettier": "^5.5.1",
