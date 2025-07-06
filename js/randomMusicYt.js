@@ -18,9 +18,6 @@ const ytPlaylist = [
   // Billy Idol - Rebel Yell (Rewind Live / 2023)
   "https://youtu.be/wgZJq5mXRqE?feature=shared",
 
-  // Janis Joplin - Piece Of My Heart (1969) Frankfurt, Germany
-  "https://youtu.be/I2x1yo8Ztdw?feature=shared",
-
   // Metallica: Enter Sandman (Vienna, Austria - June 1, 2024)
   "https://youtu.be/ZcWkXYzNilY?feature=shared",
 
@@ -36,11 +33,8 @@ const ytPlaylist = [
   // Rancid - Roots Radicals Live {Summer Sonic 2001ᴴᴰ}
   "https://youtu.be/hSx6MsH_vfU?si=SptZZqUSLT4akfbR",
 
-  // Social Distortion "Story of My Life" & "Bad Luck" & "Ring of Fire" LIVE
-  "https://youtu.be/Ase-qZaXou0?feature=shared",
-
-  // Social Distortion "Ball and Chain" & "Reach for the Sky" LIVE
-  "https://youtu.be/S74oFu3SieI?feature=shared",
+  // Social Distortion "Story of My Life"
+  "https://youtu.be/OZgrURofhQA?feature=shared",
 
   // Twisted Sister -  'Twisted Xmas Live In Las Vegas' (2011)
   "https://youtu.be/ujsYUMZQPdw?feature=shared",
