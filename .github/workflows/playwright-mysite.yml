@@ -194,7 +194,7 @@ jobs:
       # https://tools.slack.dev/slack-github-action/sending-techniques/sending-data-slack-incoming-webhook/
       - name: Send to Slack channel
         if: always()
-        uses: slackapi/slack-github-action@v2.1.0
+        uses: slackapi/slack-github-action@v2.1.1
         with:
           webhook: ${{ secrets.PLAYWRIGHT_SLACK }}
           webhook-type: incoming-webhook
