@@ -36,7 +36,7 @@ const ytPlaylist = [
   // Social Distortion "Story of My Life"
   "https://youtu.be/OZgrURofhQA?feature=shared",
 
-  // The Delray Rockets Rockabilly Man
+  // The Delray Rockets - Rockabilly Man
   "https://youtu.be/pwYx26t-Su4?feature=shared",
 
   // Twisted Sister -  'Twisted Xmas Live In Las Vegas' (2011)
