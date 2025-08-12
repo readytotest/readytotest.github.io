@@ -10,13 +10,13 @@
     "cypress-mochawesome-reporter": "^4.0.0",
     "cypress-on-fix": "^1.1.0",
     "cypress-real-events": "^1.14.0",
-    "eslint": "^9.32.0",
+    "eslint": "^9.33.0",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-cypress": "^5.1.0",
     "eslint-plugin-prettier": "^5.5.4",
     "globals": "^16.3.0",
     "husky": "^9.1.7",
-    "lint-staged": "^16.1.4",
+    "lint-staged": "^16.1.5",
     "prettier": "^3.6.2"
   },
   "scripts": {
