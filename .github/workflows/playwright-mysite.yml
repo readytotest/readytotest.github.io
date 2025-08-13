@@ -152,7 +152,7 @@ jobs:
       # https://github.com/peaceiris/actions-gh-pages
       # Build the new Allure Report
       - name: Build test report
-        uses: simple-elf/allure-report-action@v1.12
+        uses: simple-elf/allure-report-action@v1.13
         if: always()
         with:
           gh_pages: ./playwright-allure-report/history # The path to the previous report history in the playwright-allure-report repo(subdir)
