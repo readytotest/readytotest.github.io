@@ -18,6 +18,9 @@ const ytPlaylist = [
   // Billy Idol - Rebel Yell (Rewind Live / 2023)
   "https://youtu.be/wgZJq5mXRqE?feature=shared",
 
+  // John Fogerty - "Born On The Bayou" | Concert for the Rock & Roll Hall of Fame
+  "https://youtu.be/9Qugvm3ASEU?feature=shared",
+
   // Metallica: Enter Sandman (Vienna, Austria - June 1, 2024)
   "https://youtu.be/ZcWkXYzNilY?feature=shared",
 
