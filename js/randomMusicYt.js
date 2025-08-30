@@ -15,6 +15,9 @@
 // Going to keep this all live music
 
 const ytPlaylist = [
+  //Billy Idol - MTV’s 3rd Annual New Year's Rock N' Roll Ball, December 31, 1983
+  "https://youtu.be/mwgeWTUiQcI?feature=shared&t=1146",
+
   // Billy Idol – Dancing With Myself – Live From the Empire State Building
   "https://youtu.be/mWdx7bBWXtE?feature=shared",
 
