@@ -12,9 +12,12 @@
 ===========================================================
 */
 
-// Going to keep this all concert music videos
+// Going to keep this all live music
 
 const ytPlaylist = [
+  // Billy Idol – Dancing With Myself – Live From the Empire State Building
+  "https://youtu.be/mWdx7bBWXtE?feature=shared",
+
   // Billy Idol - Rebel Yell (Rewind Live / 2023)
   "https://youtu.be/wgZJq5mXRqE?feature=shared",
 
