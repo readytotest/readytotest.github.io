@@ -95,7 +95,7 @@ jobs:
           path: ./playwright-allure-report/history # This is the destination path in the GitHub Actions runner
 
       - name: Setup Node.js environment with most recent version
-        uses: actions/setup-node@v4.4.0
+        uses: actions/setup-node@v5.0.0
         with:
           node-version: "latest"
         #actions/setup-node installs Node.js globally for the entire GitHub Actions runner,
