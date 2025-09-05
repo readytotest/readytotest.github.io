@@ -4,7 +4,7 @@
     "@faker-js/faker": "^10.0.0",
     "@html-eslint/eslint-plugin": "^0.46.2",
     "@html-eslint/parser": "^0.46.2",
-    "cypress": "^14.4.0",
+    "cypress": "^15.1.0",
     "cypress-image-diff-html-report": "^2.2.0",
     "cypress-image-diff-js": "^2.4.0",
     "cypress-mochawesome-reporter": "^4.0.2",
