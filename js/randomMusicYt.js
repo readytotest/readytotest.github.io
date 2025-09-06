@@ -15,17 +15,14 @@
 // Going to keep this all live music
 
 const ytPlaylist = [
-  //Billy Idol - MTV’s 3rd Annual New Year's Rock N' Roll Ball, December 31, 1983
-  "https://youtu.be/mwgeWTUiQcI?feature=shared&t=1146",
-
-  // Billy Idol – Dancing With Myself – Live From the Empire State Building
-  "https://youtu.be/mWdx7bBWXtE?feature=shared",
-
   // Billy Idol - Rebel Yell (Rewind Live / 2023)
   "https://youtu.be/wgZJq5mXRqE?feature=shared",
 
-  // John Fogerty - "Born On The Bayou" | Concert for the Rock & Roll Hall of Fame
-  "https://youtu.be/9Qugvm3ASEU?feature=shared",
+  // Janis Joplin - Piece Of My Heart (1969) Frankfurt, Germany
+  "https://youtu.be/I2x1yo8Ztdw?feature=shared",
+
+  // CCR - Born On The Bayou - Live at Woodstock
+  "https://youtu.be/_9KKo8mZ5Eo?feature=shared",
 
   // Metallica: Enter Sandman (Vienna, Austria - June 1, 2024)
   "https://youtu.be/ZcWkXYzNilY?feature=shared",
