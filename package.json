@@ -47,6 +47,6 @@
     "_comment": "Prettier is now handled by ESLint with eslint-plugin-prettier, so prettier --write was removed."
   },
   "dependencies": {
-    "dayjs": "^1.11.18"
+    "dayjs": "^1.11.19"
   }
 }
