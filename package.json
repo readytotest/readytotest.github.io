@@ -6,7 +6,7 @@
     "@html-eslint/parser": "^0.47.1",
     "cypress": "^15.5.0",
     "cypress-image-diff-html-report": "^2.2.0",
-    "cypress-image-diff-js": "^2.4.0",
+    "cypress-image-diff-js": "^2.5.0",
     "cypress-mochawesome-reporter": "^4.0.2",
     "cypress-on-fix": "^1.1.0",
     "cypress-real-events": "^1.15.0",
