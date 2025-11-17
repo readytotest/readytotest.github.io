@@ -67,7 +67,7 @@ const ytPlaylist = [
   "https://youtu.be/ujsYUMZQPdw?feature=shared",
 
   // Willie Nelson - Whiskey River (Live From Austin City Limits, 1981)
-  "https://youtu.be/lPkEmBCZTlA?si=3a4_JuE98DC5Cidl"
+  "https://youtu.be/lPkEmBCZTlA?si=3a4_JuE98DC5Cidl",
 ];
 
 document.getElementById("randomVideoLink").onclick = function () {
