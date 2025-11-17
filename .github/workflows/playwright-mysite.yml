@@ -73,11 +73,11 @@ jobs:
 
       # Check out primary repo where I will start a server locally in the GH Runner environment
       - name: Checkout Website Repo
-        uses: actions/checkout@v5.0.0
+        uses: actions/checkout@v5.0.1
 
       # Check out second repo where Playwright scripts live
       - name: Checkout Playwright Repo
-        uses: actions/checkout@v5.0.0
+        uses: actions/checkout@v5.0.1
         with:
           repository: readytotest/test-playwright
           #token: ${{ secrets.GH_PAT }} If checking out a private repo, create a secret called `GH_PAT` that contains your personal access token
@@ -88,7 +88,7 @@ jobs:
 
       # Check out third repo where Allure report history is stored
       - name: Checkout Allure Report Repo
-        uses: actions/checkout@v5.0.0
+        uses: actions/checkout@v5.0.1
         with:
           repository: readytotest/playwright-allure-report
           ref: live-reports
