@@ -34,10 +34,10 @@ const ytPlaylist = [
   "https://youtu.be/I2x1yo8Ztdw?feature=shared",
 
  // Jamey Johnson - High Cost of Living (Live at Farm Aid 2021)
-  "https://youtu.be/__xqVoWdzpM?si=KYB_GDNjzNKGtHMk,
+  "https://youtu.be/__xqVoWdzpM?si=KYB_GDNjzNKGtHMk",
 
   // Johnny Cash - San Quentin (Live at San Quentin, 1969)
-  "https://youtu.be/7e2B-thaJG0?si=XYvhW9C2P8p668MH"
+  "https://youtu.be/7e2B-thaJG0?si=XYvhW9C2P8p668MH",
 
   // John Fogerty - Lodi - acoustic version
   "https://youtu.be/Wpuh3QkAxwE?si=ZZCqrGoSPreGq0vA",
