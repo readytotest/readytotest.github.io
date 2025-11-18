@@ -36,8 +36,8 @@ const ytPlaylist = [
  // Jamey Johnson - High Cost of Living (Live at Farm Aid 2021)
   "https://youtu.be/__xqVoWdzpM?si=KYB_GDNjzNKGtHMk",
 
-  // Johnny Cash - San Quentin (Live at San Quentin, 1969)
-  "https://youtu.be/7e2B-thaJG0?si=XYvhW9C2P8p668MH",
+  // Johnny Cash - Orange Blossom Special 
+  "https://youtu.be/Xhs5j7HN8wM?si=sPF8FXEpi92oqSW8",
 
   // John Fogerty - Lodi - acoustic version
   "https://youtu.be/Wpuh3QkAxwE?si=ZZCqrGoSPreGq0vA",
@@ -60,11 +60,11 @@ const ytPlaylist = [
   // Social Distortion "Story of My Life"
   "https://youtu.be/OZgrURofhQA?feature=shared",
 
-  // The Delray Rockets - Rockabilly Man
-  "https://youtu.be/pwYx26t-Su4?feature=shared",
-
   // Twisted Sister -  'Twisted Xmas Live In Las Vegas' (2011)
   "https://youtu.be/ujsYUMZQPdw?feature=shared",
+
+  // The Black Crowes - 'She Talks to Angels' @ LOCKN' Festival
+  "https://youtu.be/lgYTTM6BfjU?si=A4h_G_nyImSoypjJ",
 
   // Willie Nelson - Whiskey River (Live From Austin City Limits, 1981)
   "https://youtu.be/lPkEmBCZTlA?si=3a4_JuE98DC5Cidl",
