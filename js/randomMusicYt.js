@@ -24,6 +24,9 @@ const ytPlaylist = [
   // CCR - Born On The Bayou - Live at Woodstock
   "https://youtu.be/_9KKo8mZ5Eo?feature=shared",
 
+  // CCR - Bad Moon Rising
+  "https://youtu.be/wkqfPuQhW9I?si=yQ8P3BFkeHfxE34H",
+
   // Eric Church "Some Of It" Live at Freedom Mortgage Pavilion
   "https://youtu.be/aZjFgimLM6E?si=ceoS6prrANZBONXe",
 
@@ -38,9 +41,6 @@ const ytPlaylist = [
 
   // Johnny Cash - Orange Blossom Special 
   "https://youtu.be/Xhs5j7HN8wM?si=sPF8FXEpi92oqSW8",
-
-  // John Fogerty - Lodi - acoustic version
-  "https://youtu.be/Wpuh3QkAxwE?si=ZZCqrGoSPreGq0vA",
 
   // Metallica: Enter Sandman (Vienna, Austria - June 1, 2024)
   "https://youtu.be/ZcWkXYzNilY?feature=shared",
