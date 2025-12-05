@@ -13,7 +13,7 @@ jobs:
         run: echo This performs a test of my GitHub page daily at 17:00 UTC
 
       - name: Checkout Repo
-        uses: actions/checkout@v6.0.0
+        uses: actions/checkout@v6.0.1
 
       - name: Setup Node.js environment
         uses: actions/setup-node@v6.1.0
