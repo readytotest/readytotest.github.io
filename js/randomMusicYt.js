@@ -12,62 +12,32 @@
 ===========================================================
 */
 
-// Going to keep this all live music
 
 const ytPlaylist = [
-  // Billy Idol - Rebel Yell (Rewind Live / 2023)
-  "https://youtu.be/wgZJq5mXRqE?feature=shared",
+  // Creedence Clearwater Revival - Hey Tonight 
+  "https://youtu.be/7ByQ0Ne3SMU?si=OhFWrWqsDX5krgj3",
 
-  // Billy Idol – Dancing With Myself – Live From the Empire State Building
-  "https://youtu.be/mWdx7bBWXtE?si=BVyzAcs_31fqRc1z",
+  // Creedence Clearwater Revival - Bad Moon Rising 
+  "https://youtu.be/zUQiUFZ5RDw?si=j6xdVGUP12oV8Kqs",
 
-  // CCR - Born On The Bayou - Live at Woodstock
-  "https://youtu.be/_9KKo8mZ5Eo?feature=shared",
+  // Creedence Clearwater Revival - Born On The Bayou
+  "https://youtu.be/fcTQCNntGEs?si=jtfR3-p75pjIJTn5",
 
-  // CCR - Bad Moon Rising
-  "https://youtu.be/wkqfPuQhW9I?si=yQ8P3BFkeHfxE34H",
+  // Creedence Clearwater Revival - Lodi
+  "https://youtu.be/dIfQNB5WXmY?si=NF-MXs5fFA3tuHEu",
 
-  // Eric Church "Some Of It" Live at Freedom Mortgage Pavilion
-  "https://youtu.be/aZjFgimLM6E?si=ceoS6prrANZBONXe",
+  // Creedence Clearwater Revival - Fortunate Son
+  "https://youtu.be/ZWijx_AgPiA?si=VH-WssIvM1uDYiDU",
 
-  // George Jones & Alan Jackson - "He Stopped Loving Her Today" | Opry 100: Country's Greatest Songs
-  "https://youtu.be/Hdz5ue84UMM?si=FgYDfODn3DSjIfvD",
+  // Creedence Clearwater Revival - Travelin' Band 
+  "https://youtu.be/ZXLqECpHW2o?si=WLhcmuQAxUDj-bNh",
 
-  // Janis Joplin - Piece Of My Heart (1969) Frankfurt, Germany
-  "https://youtu.be/I2x1yo8Ztdw?feature=shared",
+  // Creedence Clearwater Revival - Green River
+  "https://youtu.be/L5V9nK7-OkM?si=izvQrAkzBrWbOW9c",
 
- // Jamey Johnson - High Cost of Living (Live at Farm Aid 2021)
-  "https://youtu.be/__xqVoWdzpM?si=KYB_GDNjzNKGtHMk",
+  // Creedence Clearwater Revival - Lookin' Out My Back Door
+  "https://youtu.be/Aae_RHRptRg?si=TixPRTcWGXwHRYXd",
 
-  // Johnny Cash - Orange Blossom Special 
-  "https://youtu.be/Xhs5j7HN8wM?si=sPF8FXEpi92oqSW8",
-
-  // Metallica: Enter Sandman (Vienna, Austria - June 1, 2024)
-  "https://youtu.be/ZcWkXYzNilY?feature=shared",
-
-  // Old Crow Medicine Show - Wagon Wheel - @Tree House Brewery
-  "https://youtu.be/-skF6KZw54I?feature=shared",
-
-  // Pearl Jam - Even Flow - LIVE (Countdown, 1992)
-  "https://youtu.be/Z_-trti0GfM?feature=shared",
-
-  // Pearl Jam “Yellow Ledbetter” Live on the Stern Show
-  "https://youtu.be/2cyp1g7idYc?si=gCu1VwdWYxasfU_5&t=89",
-
-  // Rancid - Roots Radicals Live {Summer Sonic 2001ᴴᴰ}
-  "https://youtu.be/hSx6MsH_vfU?si=SptZZqUSLT4akfbR",
-
-  // Social Distortion "Story of My Life"
-  "https://youtu.be/OZgrURofhQA?feature=shared",
-
-  // Twisted Sister -  'Twisted Xmas Live In Las Vegas' (2011)
-  "https://youtu.be/ujsYUMZQPdw?feature=shared",
-
-  // The Black Crowes - 'She Talks to Angels' @ LOCKN' Festival
-  "https://youtu.be/lgYTTM6BfjU?si=A4h_G_nyImSoypjJ",
-
-  // Willie Nelson - Whiskey River (Live From Austin City Limits, 1981)
-  "https://youtu.be/lPkEmBCZTlA?si=3a4_JuE98DC5Cidl",
 ];
 
 document.getElementById("randomVideoLink").onclick = function () {
