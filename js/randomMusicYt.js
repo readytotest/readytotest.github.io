@@ -20,15 +20,6 @@ const ytPlaylist = [
   // Creedence Clearwater Revival - Bad Moon Rising 
   "https://youtu.be/zUQiUFZ5RDw?si=j6xdVGUP12oV8Kqs",
 
-  // Creedence Clearwater Revival - Born On The Bayou
-  "https://youtu.be/fcTQCNntGEs?si=jtfR3-p75pjIJTn5",
-
-  // Creedence Clearwater Revival - Lodi
-  "https://youtu.be/dIfQNB5WXmY?si=NF-MXs5fFA3tuHEu",
-
-  // Creedence Clearwater Revival - Fortunate Son
-  "https://youtu.be/ZWijx_AgPiA?si=VH-WssIvM1uDYiDU",
-
   // Creedence Clearwater Revival - Travelin' Band 
   "https://youtu.be/ZXLqECpHW2o?si=WLhcmuQAxUDj-bNh",
 
