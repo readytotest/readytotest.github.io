@@ -24,7 +24,7 @@ const ytPlaylist = [
   "https://youtu.be/ZXLqECpHW2o?si=WLhcmuQAxUDj-bNh",
 
   // Creedence Clearwater Revival - Green River
-  "https://youtu.be/L5V9nK7-OkM?si=izvQrAkzBrWbOW9c",
+  "https://youtu.be/L5V9nK7-OkM?si=jGlV2gSGI0auATzA",
 
   // Creedence Clearwater Revival - Lookin' Out My Back Door
   "https://youtu.be/Aae_RHRptRg?si=TixPRTcWGXwHRYXd",
