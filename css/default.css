@@ -272,21 +272,43 @@ a:active {
   padding-bottom: 200px;
 }
 
-.work-style-page {
+/*.work-style-page {
   background-image: url("../html/img/tahoe-atv.jpg");
   background-repeat: no-repeat;
   background-size: 1030px;
   background-position: top left;
   background-attachment: fixed;
-}
+}*/
+
 
 .transparent-page-overlay {
+  position: relative;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.5); /* overlay tint */
+  color: white;
+  width: 1000px;
+  border-radius: 10px;
+  overflow: hidden; 
+}
+
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;   /* fills overlay width */
+  height: 100%;  /* fills overlay height */
+  object-fit: cover; /* cover the box nicely */
+  z-index: -1;   /* behind text */
+  border-radius: 10px; /* match overlay corners */
+}
+
+/*.transparent-page-overlay {
   padding: 20px;
   background-color: rgba(0, 0, 0, 0.5);
   color: white;
   width: 1000px;
   border-radius: 10px;
-}
+}*/
 
 .guestbook-btn-submit:disabled {
   background-color: hotpink;
