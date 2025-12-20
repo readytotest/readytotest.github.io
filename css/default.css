@@ -268,7 +268,7 @@ a:active {
   background-repeat: no-repeat;
   background-size: 1055px;
   background-position: top left;
-  background-attachment: scroll;
+  background-attachment: fixed;
   padding-bottom: 200px;
 }
 
