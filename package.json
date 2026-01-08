@@ -1,10 +1,10 @@
 {
   "devDependencies": {
     "@eslint/js": "^9.39.2",
-    "@faker-js/faker": "^10.1.0",
-    "@html-eslint/eslint-plugin": "^0.52.0",
+    "@faker-js/faker": "^10.2.0",
+    "@html-eslint/eslint-plugin": "^0.52.1",
     "@html-eslint/parser": "^0.52.0",
-    "cypress": "^15.8.1",
+    "cypress": "^15.8.2",
     "cypress-image-diff-html-report": "^2.2.0",
     "cypress-image-diff-js": "^2.5.0",
     "cypress-mochawesome-reporter": "^4.0.2",
@@ -12,9 +12,9 @@
     "cypress-real-events": "^1.15.0",
     "eslint": "^9.39.2",
     "eslint-config-prettier": "^10.1.8",
-    "eslint-plugin-cypress": "^5.2.0",
+    "eslint-plugin-cypress": "^5.2.1",
     "eslint-plugin-prettier": "^5.5.4",
-    "globals": "^16.5.0",
+    "globals": "^17.0.0",
     "husky": "^9.1.7",
     "lint-staged": "^16.2.7",
     "prettier": "^3.7.4"
