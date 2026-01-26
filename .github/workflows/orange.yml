@@ -21,7 +21,7 @@ jobs:
           ls
 
       - name: Test
-        uses: cypress-io/github-action@v6
+        uses: cypress-io/github-action@v7
         with:
           command: npm run orange-demo
 
