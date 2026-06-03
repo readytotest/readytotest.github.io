@@ -8,7 +8,8 @@ Sentry.init({
       triggerLabel: "Let's connect!",
       formTitle: "Send Message",
       submitButtonLabel: "Send Now!",
-      messagePlaceholder: "Type your message here",
+      messagePlaceholder:
+        "I removed the DSN so this won't actually send anything anymore since I'm no longer maintaining this website",
       successMessageText: "Message sent successfully!",
       messageLabel: "Message",
       enableScreenshot: false,
