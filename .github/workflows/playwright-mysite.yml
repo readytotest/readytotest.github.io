@@ -47,9 +47,9 @@ on:
   pull_request:
   workflow_dispatch:
 
-concurrency:
-  group: ${{ github.workflow }}
-  cancel-in-progress: false
+#concurrency: this makes it so only one job runs at a time, but im removing this since its fine if they do here and dependabot opens multiple prs at once sometimes which triggers this workflow
+# group: ${{ github.workflow }}
+#cancel-in-progress: false
 
 jobs:
   Playwright-GitHub-Page-Test:
