@@ -161,6 +161,8 @@ jobs:
           gh_pages: ./playwright-allure-report/history # The path to the previous report history in the playwright-allure-report repo(subdir)
           allure_results: ./test-playwright/allure-results # Path to the current test results in the test-playwright repo (subdir)
           allure_history: ./allure-report # Directory to save the new Allure report in the readytotest.github.io repo
+          github_repo: readytotest/playwright-allure-report
+          github_repo_owner: readytotest
 
       # Deploy Allure Report to GitHub Pages https://readytotest.github.io/playwright-allure-report/
       # Don't forget to add the token to your Actions secrets in the repo the YAML is running in
