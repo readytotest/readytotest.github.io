@@ -94,9 +94,6 @@ jobs:
           ref: live-reports
           path: ./playwright-allure-report/history # This is the destination path in the GitHub Actions runner
 
-      - name: Strip nested .git from checked-out Allure history
-        run: rm -rf ./playwright-allure-report/history/.git
-
       - name: Setup Node.js environment with most recent version
         uses: actions/setup-node@v7.0.0
         with:
