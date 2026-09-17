@@ -1,13 +1,13 @@
 {
   "devDependencies": {
     "@eslint/js": "^9.39.2",
-    "@faker-js/faker": "^10.3.0",
+    "@faker-js/faker": "^10.5.0",
     "@html-eslint/eslint-plugin": "^0.61.0",
     "@html-eslint/parser": "^0.61.0",
     "cypress": "^15.16.0",
     "cypress-image-diff-html-report": "^2.2.0",
     "cypress-image-diff-js": "^2.5.0",
-    "cypress-mochawesome-reporter": "^4.0.2",
+    "cypress-mochawesome-reporter": "^5.0.0",
     "cypress-on-fix": "^1.1.0",
     "cypress-real-events": "^1.15.0",
     "eslint": "^10.4.1",
