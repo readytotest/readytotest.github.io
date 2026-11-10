@@ -101,7 +101,7 @@ jobs:
       - name: Setup Node.js environment with most recent version
         uses: actions/setup-node@v7.1.0
         with:
-          node-version: "latest"
+          node-version: "lts/*"
         #actions/setup-node installs Node.js globally for the entire GitHub Actions runner,
         #not just within a specific directory or repository.
         #That's why I didn't specify a working directory in this step.
